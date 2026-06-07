@@ -155,8 +155,38 @@ input, textarea {
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body {
+  background: var(--smoky-black);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
+body::before {
+  content: "";
+  position: fixed;
+  top: var(--glow-y, 50%);
+  left: var(--glow-x, 50%);
+  width: 620px;
+  height: 620px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    hsla(45, 100%, 72%, 0.22) 0%,
+    hsla(45, 100%, 72%, 0.13) 28%,
+    hsla(45, 100%, 72%, 0.06) 48%,
+    transparent 72%
+  );
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
+  transition: top 1.2s ease, left 1.2s ease;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
 
 
 
@@ -640,20 +670,20 @@ main {
 }
 
 .service-item:hover .service-icon-box img {
-  animation: serviceIconHover 1.8s ease-in-out infinite;
+  animation: serviceIconHover 1.75s ease-in-out infinite;
 }
 
 @keyframes serviceIconHover {
   0% {
-    transform: scale(1.08) translateY(0);
+    transform: scale(1) translateY(0);
   }
 
   50% {
-    transform: scale(1.12) translateY(-8px);
+    transform: scale(1.10) translateY(-8px);
   }
 
   100% {
-    transform: scale(1.08) translateY(0);
+    transform: scale(1) translateY(0);
   }
 }
 

@@ -226,3 +226,42 @@ document.addEventListener("keydown", function (event) {
     closePortfolioPopup();
   }
 });
+
+// soft background glow follow + idle drift
+const root = document.documentElement;
+
+let glowX = window.innerWidth / 2;
+let glowY = window.innerHeight / 2;
+
+let targetGlowX = glowX;
+let targetGlowY = glowY;
+
+let lastMouseMoveTime = Date.now();
+let idleAngle = 0;
+
+const updateGlowPosition = function () {
+  const isIdle = Date.now() - lastMouseMoveTime > 1800;
+
+  if (isIdle) {
+    idleAngle += 0.006;
+
+    targetGlowX = window.innerWidth / 2 + Math.cos(idleAngle) * 220;
+    targetGlowY = window.innerHeight / 2 + Math.sin(idleAngle * 0.8) * 160;
+  }
+
+  glowX += (targetGlowX - glowX) * 0.045;
+  glowY += (targetGlowY - glowY) * 0.045;
+
+  root.style.setProperty("--glow-x", glowX + "px");
+  root.style.setProperty("--glow-y", glowY + "px");
+
+  requestAnimationFrame(updateGlowPosition);
+};
+
+document.addEventListener("mousemove", function (event) {
+  targetGlowX = event.clientX;
+  targetGlowY = event.clientY;
+  lastMouseMoveTime = Date.now();
+});
+
+updateGlowPosition();
