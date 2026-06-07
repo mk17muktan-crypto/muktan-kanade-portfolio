@@ -632,11 +632,29 @@ main {
   margin-top: 10px;
 }
 
-.service-icon-box img { margin: auto;
-  width: 120px !important;
-  max-width: auto;
-  height: auto;
+.service-icon-box img {
+  margin: auto;
+  transition: transform 0.45s ease;
+  transform-origin: center;
+  width: 110px;
+}
 
+.service-item:hover .service-icon-box img {
+  animation: serviceIconHover 1.8s ease-in-out infinite;
+}
+
+@keyframes serviceIconHover {
+  0% {
+    transform: scale(1.08) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.12) translateY(-8px);
+  }
+
+  100% {
+    transform: scale(1.08) translateY(0);
+  }
 }
 
 .service-content-box { text-align: left; }
