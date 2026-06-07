@@ -249,9 +249,9 @@ const updateGlowPosition = function () {
     targetGlowY = window.innerHeight / 2 + Math.sin(idleAngle * 0.8) * 160;
   }
 
-  glowX += (targetGlowX - glowX) * 0.045;
-  glowY += (targetGlowY - glowY) * 0.045;
-
+  glowX += (targetGlowX - glowX) * 0.12;
+  glowY += (targetGlowY - glowY) * 0.12;
+	
   root.style.setProperty("--glow-x", glowX + "px");
   root.style.setProperty("--glow-y", glowY + "px");
 
