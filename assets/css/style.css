@@ -550,11 +550,11 @@ main {
   width: 95px;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: left;
 }
 
 .service-icon-box img { margin: auto;
-  width: 90px !important;
+  width: 80px !important;
   max-width: 90px;
   height: auto;
 
@@ -1426,19 +1426,46 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* service */
 
   .service-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
-  }
+  display: block;
+  padding: 30px;
+}
 
-  .service-icon-box {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
+.service-icon-box {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  .service-content-box { text-align: left; }
+.service-icon-box img {
+  margin: 0;
+}
+
+.service-content-box {
+  text-align: left;
+}.service-item {
+  display: block;
+  padding: 30px;
+}
+
+.service-icon-box {
+  width: 100%;
+  margin-bottom: 16px;
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.service-icon-box img {
+  margin: 0;
+}
+
+.service-content-box {
+  text-align: left;
+}
 
   /* testimonials */
 
