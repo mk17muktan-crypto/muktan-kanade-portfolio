@@ -266,3 +266,67 @@ document.addEventListener("mousemove", function (event) {
 });
 
 updateGlowPosition();
+
+// core strengths mobile carousel dots
+const serviceList = document.querySelector(".service-list");
+const serviceDotsContainer = document.querySelector("[data-service-dots]");
+const serviceItems = document.querySelectorAll(".service-item");
+
+let serviceDots = [];
+
+const createServiceDots = function () {
+  if (!serviceList || !serviceDotsContainer || serviceItems.length === 0) return;
+
+  serviceDotsContainer.innerHTML = "";
+  serviceDots = [];
+
+  const itemsPerSlide = 2;
+  const totalSlides = Math.ceil(serviceItems.length / itemsPerSlide);
+
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement("button");
+    dot.classList.add("service-carousel-dot");
+    dot.setAttribute("type", "button");
+    dot.setAttribute("aria-label", "Go to core strength slide " + (i + 1));
+
+    if (i === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", function () {
+      serviceList.scrollTo({
+        left: serviceList.clientWidth * i,
+        behavior: "smooth"
+      });
+    });
+
+    serviceDotsContainer.appendChild(dot);
+    serviceDots.push(dot);
+  }
+};
+
+const updateServiceDots = function () {
+  if (!serviceList || serviceDots.length === 0) return;
+
+  const activeIndex = Math.round(serviceList.scrollLeft / serviceList.clientWidth);
+
+  for (let i = 0; i < serviceDots.length; i++) {
+    if (i === activeIndex) {
+      serviceDots[i].classList.add("active");
+    } else {
+      serviceDots[i].classList.remove("active");
+    }
+  }
+};
+
+if (serviceList && serviceDotsContainer) {
+  createServiceDots();
+
+  serviceList.addEventListener("scroll", function () {
+    window.requestAnimationFrame(updateServiceDots);
+  });
+
+  window.addEventListener("resize", function () {
+    updateServiceDots();
+  });
+}
