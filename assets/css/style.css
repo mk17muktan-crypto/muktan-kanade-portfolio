@@ -2082,7 +2082,7 @@ body.popup-open {
 /* Large desktop screens */
 @media (min-width: 1250px) {
   main {
-    max-width: 1450px;
+    max-width: 1300px;
     gap: 30px;
   }
 
