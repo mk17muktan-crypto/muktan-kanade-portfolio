@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Muktan Kanade | Visual Communication Designer</title>
 
   <!--
     - favicon
@@ -46,7 +46,7 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hansen">Muktan  Kanade</h1>
+          <h1 class="name" title="Muktan Kanade">Muktan Kanade</h1>
 
           <p class="title">Visual Communication Designer</p>
         </div>
@@ -103,7 +103,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">3rd December 2002</time>
+              <time datetime="2002-12-03">3rd December 2002</time>
             </div>
 
           </li>
@@ -1419,7 +1419,9 @@ Short-form Visual Content</h4>
             </li>
 			
 			<li class="project-item  active" data-filter-item data-category="ui/ux">
-              <a href="https://drive.google.com/file/d/1Ucqa4eNqie4ycFq4n8g5ntgQ3xxPWX0w/view?usp=sharing">
+              <a href="#"
+    				data-popup-desktop="./assets/images/Portfolio/UiUx OLA App desktop.jpg"
+    				data-popup-mobile="./assets/images/Portfolio/UiUx OLA App mobile.jpg">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1826,7 +1828,20 @@ Short-form Visual Content</h4>
 
 
 
+<!--
+  - portfolio image popup
+-->
+<div class="portfolio-popup" data-portfolio-popup>
+  <div class="portfolio-popup-overlay" data-portfolio-popup-close></div>
 
+  <div class="portfolio-popup-content">
+    <button class="portfolio-popup-close" data-portfolio-popup-close aria-label="Close portfolio image">
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <img src="#" alt="" class="portfolio-popup-img" data-portfolio-popup-img>
+  </div>
+</div>
 
 
   <!--

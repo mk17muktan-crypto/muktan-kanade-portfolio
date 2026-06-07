@@ -157,3 +157,72 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// portfolio image popup functionality
+const portfolioItems = document.querySelectorAll(".project-item > a");
+const portfolioPopup = document.querySelector("[data-portfolio-popup]");
+const portfolioPopupImg = document.querySelector("[data-portfolio-popup-img]");
+const portfolioPopupCloseElements = document.querySelectorAll("[data-portfolio-popup-close]");
+
+const getPortfolioImageForDevice = function (item) {
+  const isMobile = window.innerWidth <= 768;
+
+  const desktopImage = item.dataset.popupDesktop;
+  const mobileImage = item.dataset.popupMobile;
+
+  if (isMobile && mobileImage) {
+    return mobileImage;
+  }
+
+  if (desktopImage) {
+    return desktopImage;
+  }
+
+  return null;
+};
+
+const openPortfolioPopup = function (item) {
+  const popupImage = getPortfolioImageForDevice(item);
+  const thumbnailImage = item.querySelector(".project-img img");
+
+  if (!popupImage) return;
+
+  portfolioPopupImg.src = popupImage;
+  portfolioPopupImg.alt = thumbnailImage ? thumbnailImage.alt : "Portfolio image";
+
+  portfolioPopup.classList.add("active");
+  document.body.classList.add("popup-open");
+
+  portfolioPopup.querySelector(".portfolio-popup-content").scrollTop = 0;
+};
+
+const closePortfolioPopup = function () {
+  portfolioPopup.classList.remove("active");
+  document.body.classList.remove("popup-open");
+
+  setTimeout(function () {
+    portfolioPopupImg.src = "";
+    portfolioPopupImg.alt = "";
+  }, 1500);
+};
+
+for (let i = 0; i < portfolioItems.length; i++) {
+  portfolioItems[i].addEventListener("click", function (event) {
+    const popupImage = getPortfolioImageForDevice(this);
+
+    if (popupImage) {
+      event.preventDefault();
+      openPortfolioPopup(this);
+    }
+  });
+}
+
+for (let i = 0; i < portfolioPopupCloseElements.length; i++) {
+  portfolioPopupCloseElements[i].addEventListener("click", closePortfolioPopup);
+}
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && portfolioPopup.classList.contains("active")) {
+    closePortfolioPopup();
+  }
+});
