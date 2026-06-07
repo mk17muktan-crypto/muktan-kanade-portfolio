@@ -545,9 +545,20 @@ main {
   z-index: -1;
 }
 
-.service-icon-box { margin-bottom: 10px; }
+.service-icon-box {
+  flex: 0 0 95px;
+  width: 95px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto;
+  width: 90px !important;
+  max-width: 90px;
+  height: auto;
+
+}
 
 .service-content-box { text-align: center; }
 
@@ -2002,5 +2013,90 @@ body.popup-open {
     width: 42px;
     height: 42px;
     font-size: 26px;
+  }
+}
+
+
+/*-----------------------------------*\
+  #SKILLS GRID FIX
+\*-----------------------------------*/
+
+.resume > .skill {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.resume > .skill > .skills-title {
+  grid-column: 1 / -1;
+  margin-bottom: 2px;
+}
+
+.resume > .skill > .skill {
+  margin: 0;
+}
+
+.resume > .skill .skills-list {
+  height: 100%;
+  padding: 16px;
+}
+
+.resume > .skill .content-card {
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.resume > .skill .title-wrapper {
+  margin-bottom: 10px;
+}
+
+.resume > .skill .h5 {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .resume > .skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .resume > .skill {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/*-----------------------------------*\
+  #GLOBAL CONTENT WIDTH INCREASE
+\*-----------------------------------*/
+
+/* Medium screens */
+@media (min-width: 1024px) {
+  .sidebar,
+  article {
+    width: 1050px;
+  }
+}
+
+/* Large desktop screens */
+@media (min-width: 1250px) {
+  main {
+    max-width: 1450px;
+    gap: 30px;
+  }
+
+  .sidebar {
+    width: 300px;
+    flex: 0 0 300px;
+  }
+
+  .main-content {
+    width: calc(100% - 330px);
+    min-width: 0;
+  }
+
+  article {
+    width: 100%;
   }
 }
