@@ -2564,3 +2564,112 @@ body.popup-open {
     visibility: visible;
   }
 }
+
+/*-----------------------------------*\
+  #CUSTOM CONTACT DROPDOWN
+\*-----------------------------------*/
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.native-interest-select {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 1px;
+  height: 1px;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  min-height: 51px;
+  padding: 13px 20px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  background: hsla(240, 2%, 16%, 0.82);
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.custom-select-trigger:hover,
+.custom-select.active .custom-select-trigger {
+  border-color: var(--orange-yellow-crayola);
+  background: hsla(240, 2%, 18%, 0.95);
+  box-shadow: 0 12px 30px hsla(0, 0%, 0%, 0.22);
+}
+
+.custom-select-trigger ion-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.custom-select.active .custom-select-trigger ion-icon {
+  transform: rotate(180deg);
+}
+
+.custom-select-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  padding: 7px;
+  background: hsla(240, 2%, 14%, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 20px 45px hsla(0, 0%, 0%, 0.45);
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.98);
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease,
+    transform 0.22s ease;
+}
+
+.custom-select.active .custom-select-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.custom-select-menu li:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.custom-select-menu button {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: 10px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  transition:
+    background 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease;
+}
+
+.custom-select-menu button:hover {
+  background: hsla(0, 0%, 0%, 0.45);
+  color: var(--orange-yellow-crayola);
+  transform: translateX(2px);
+}
+
+.custom-select-menu button.selected {
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+}

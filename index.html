@@ -1718,14 +1718,45 @@
 
           <form action="#" class="form" data-form>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+<div class="input-wrapper">
+  <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+  <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+  <input type="tel" name="phone" class="form-input" placeholder="Enter your Phone Number" required data-form-input>
 
+<div class="custom-select" data-custom-select>
+  <select name="interest" class="native-interest-select" required data-form-input>
+    <option value="" disabled selected>I'm Interested In</option>
+    <option value="Branding">Branding</option>
+    <option value="Logo Design">Logo Design</option>
+    <option value="Illustration">Illustration</option>
+    <option value="Print Media">Print Media</option>
+    <option value="Website Design">Website Design</option>
+    <option value="AI Generated Images">AI Generated Images</option>
+    <option value="Video Editing">Video Editing</option>
+    <option value="Motion Graphics">Motion Graphics</option>
+  </select>
+
+  <button type="button" class="custom-select-trigger" data-custom-select-trigger>
+    <span data-custom-select-value>I'm Interested In</span>
+    <ion-icon name="chevron-down-outline"></ion-icon>
+  </button>
+
+  <ul class="custom-select-menu" data-custom-select-menu>
+    <li><button type="button" data-custom-select-option="Branding">Branding</button></li>
+    <li><button type="button" data-custom-select-option="Logo Design">Logo Design</button></li>
+    <li><button type="button" data-custom-select-option="Illustration">Illustration</button></li>
+    <li><button type="button" data-custom-select-option="Print Media">Print Media</button></li>
+    <li><button type="button" data-custom-select-option="Website Design">Website Design</button></li>
+    <li><button type="button" data-custom-select-option="AI Generated Images">AI Generated Images</button></li>
+    <li><button type="button" data-custom-select-option="Video Editing">Video Editing</button></li>
+    <li><button type="button" data-custom-select-option="Motion Graphics">Motion Graphics</button></li>
+  </ul>
+</div>
+</div>
+
+<textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>This Service will be available soon! till then we can connect via linkedin or call.</span>

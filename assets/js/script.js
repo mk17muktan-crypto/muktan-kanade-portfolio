@@ -353,3 +353,42 @@ const initialActiveNav = document.querySelector("[data-nav-link].active");
 if (initialActiveNav) {
   document.body.classList.add("page-" + initialActiveNav.dataset.navTarget);
 }
+
+// custom contact dropdown
+const customSelect = document.querySelector("[data-custom-select]");
+
+if (customSelect) {
+  const customSelectTrigger = customSelect.querySelector("[data-custom-select-trigger]");
+  const customSelectValue = customSelect.querySelector("[data-custom-select-value]");
+  const customSelectOptions = customSelect.querySelectorAll("[data-custom-select-option]");
+  const nativeInterestSelect = customSelect.querySelector(".native-interest-select");
+
+  customSelectTrigger.addEventListener("click", function () {
+    customSelect.classList.toggle("active");
+  });
+
+  for (let i = 0; i < customSelectOptions.length; i++) {
+    customSelectOptions[i].addEventListener("click", function () {
+      const selectedValue = this.dataset.customSelectOption;
+
+      customSelectValue.innerText = selectedValue;
+      nativeInterestSelect.value = selectedValue;
+
+      for (let j = 0; j < customSelectOptions.length; j++) {
+        customSelectOptions[j].classList.remove("selected");
+      }
+
+      this.classList.add("selected");
+      customSelect.classList.remove("active");
+
+      nativeInterestSelect.dispatchEvent(new Event("input", { bubbles: true }));
+      nativeInterestSelect.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+  }
+
+  document.addEventListener("click", function (event) {
+    if (!customSelect.contains(event.target)) {
+      customSelect.classList.remove("active");
+    }
+  });
+}
