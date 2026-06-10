@@ -2566,15 +2566,19 @@ body.popup-open {
 }
 
 /*-----------------------------------*\
-  #CUSTOM CONTACT DROPDOWN
+  #CUSTOM CONTACT MULTI SELECT
 \*-----------------------------------*/
+
+.multi-select-field {
+  grid-column: 1 / -1;
+}
 
 .custom-select {
   position: relative;
   width: 100%;
 }
 
-.native-interest-select {
+.interest-hidden-input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -2584,8 +2588,8 @@ body.popup-open {
 
 .custom-select-trigger {
   width: 100%;
-  min-height: 51px;
-  padding: 13px 20px;
+  min-height: 56px;
+  padding: 10px 48px 10px 14px;
   border: 1px solid var(--jet);
   border-radius: 14px;
   background: hsla(240, 2%, 16%, 0.82);
@@ -2596,6 +2600,7 @@ body.popup-open {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  position: relative;
   transition:
     border-color 0.25s ease,
     background 0.25s ease,
@@ -2609,14 +2614,67 @@ body.popup-open {
   box-shadow: 0 12px 30px hsla(0, 0%, 0%, 0.22);
 }
 
-.custom-select-trigger ion-icon {
+.custom-select-trigger > ion-icon {
   color: var(--orange-yellow-crayola);
   font-size: 18px;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: transform 0.25s ease;
 }
 
-.custom-select.active .custom-select-trigger ion-icon {
-  transform: rotate(180deg);
+.custom-select.active .custom-select-trigger > ion-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.select-placeholder {
+  color: var(--light-gray-70);
+}
+
+.selected-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: var(--fw-500);
+  line-height: 1;
+  box-shadow: 0 8px 18px hsla(45, 100%, 72%, 0.16);
+}
+
+.selected-tag button {
+  color: var(--smoky-black);
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.selected-tag button ion-icon {
+  position: static;
+  transform: none;
+  color: var(--smoky-black);
+  font-size: 16px;
+}
+
+.selected-tag button:hover {
+  opacity: 1;
+  transform: scale(1.12);
 }
 
 .custom-select-menu {
@@ -2674,6 +2732,19 @@ body.popup-open {
   color: var(--smoky-black);
 }
 
+@media (max-width: 580px) {
+  .custom-select-trigger {
+    min-height: 54px;
+    padding: 10px 44px 10px 12px;
+  }
+
+  .selected-tag {
+    font-size: 12px;
+    padding: 7px 9px;
+  }
+}
+
+
 /*-----------------------------------*\
   #HIDE CONTACT TITLE ON MOBILE
 \*-----------------------------------*/
@@ -2681,5 +2752,65 @@ body.popup-open {
 @media (max-width: 580px) {
   body.page-contact .contact .article-title {
     display: none;
+  }
+}
+
+
+/*-----------------------------------*\
+  #MOBILE CONTACT CTA BUTTONS
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.page-contact .contacts-list {
+    gap: 10px;
+  }
+
+  body.page-contact .contact-item {
+    gap: 10px;
+    align-items: center;
+  }
+
+  body.page-contact .contact-title {
+    display: none;
+  }
+
+  body.page-contact .contact-info {
+    width: 100%;
+    max-width: none;
+  }
+
+  body.page-contact .contact-info .contact-link {
+    min-height: 30px;
+    height: 30px;
+    width: 100%;
+    padding: 0 12px;
+    border-radius: 8px;
+	background: var(--text-gradient-yellow);
+	border: 1px solid transparent;
+	color: var(--smoky-black);
+	box-shadow: 0 8px 18px hsla(45, 100%, 72%, 0.16);
+	display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  body.page-contact .contact-info .contact-link:hover,
+body.page-contact .contact-info .contact-link:focus {
+  box-shadow: 0 10px 24px hsla(45, 100%, 72%, 0.25);
+  transform: translateY(-1px);
+}
+
+  body.page-contact .contact-info .contact-link:active {
+    transform: scale(0.96);
   }
 }

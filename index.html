@@ -96,54 +96,26 @@
 
           <li class="contact-item">
 
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
+ 			 <div class="icon-box">
+   			 <ion-icon name="logo-linkedin"></ion-icon>
+			 </div>
 
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+ 			 <div class="contact-info">
+ 			   <p class="contact-title">LinkedIn</p>
 
-              <time datetime="2002-12-03">3rd December 2002</time>
-            </div>
+ 				   <a href="https://www.linkedin.com/in/muktan-nilesh-kanade/" 
+ 				      class="contact-link" 
+					  	target="_blank" 
+  					     rel="noopener noreferrer">
+  							    Muktan Kanade
+ 				   </a>
+			</div>
 
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>
-              Pune, Maharashtra, India
-              </address>
-            </div>
-
-          </li>
+		  </li>
 
         </ul>
 
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/muktan-nilesh-kanade/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-			
-		  <li class="social-item">
-            <a href="https://drive.google.com/drive/folders/1_n8wfqM6RXfnBvdtJKxzphMjgU7GQIUt?usp=drive_link" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
-
-
-        </ul>
+        
 
       </div>
 
@@ -185,9 +157,6 @@
 
 </ul>
 </nav>
-
-
-
 
 
       <!--
@@ -1719,37 +1688,28 @@
 
   <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
 
-  <input type="tel" name="phone" class="form-input" placeholder="Enter your Phone Number" required data-form-input>
+  <div class="custom-select multi-select-field" data-custom-select>
+    <input type="text" name="interest" class="interest-hidden-input" required data-form-input tabindex="-1">
 
-<div class="custom-select" data-custom-select>
-  <select name="interest" class="native-interest-select" required data-form-input>
-    <option value="" disabled selected>I'm Interested In</option>
-    <option value="Branding">Branding</option>
-    <option value="Logo Design">Logo Design</option>
-    <option value="Illustration">Illustration</option>
-    <option value="Print Media">Print Media</option>
-    <option value="Website Design">Website Design</option>
-    <option value="AI Generated Images">AI Generated Images</option>
-	<option value="Video Editing/Motion Graphics">Video Editing/Motion Graphics</option>
-	</select>
+    <button type="button" class="custom-select-trigger" data-custom-select-trigger>
+      <span class="selected-tags" data-selected-tags>
+        <span class="select-placeholder">I'm Interested In</span>
+      </span>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </button>
 
-  <button type="button" class="custom-select-trigger" data-custom-select-trigger>
-    <span data-custom-select-value>I'm Interested In</span>
-    <ion-icon name="chevron-down-outline"></ion-icon>
-  </button>
-
-  <ul class="custom-select-menu" data-custom-select-menu>
-    <li><button type="button" data-custom-select-option="Branding">Branding</button></li>
-    <li><button type="button" data-custom-select-option="Logo Design">Logo Design</button></li>
-    <li><button type="button" data-custom-select-option="Illustration">Illustration</button></li>
-    <li><button type="button" data-custom-select-option="Print Media">Print Media</button></li>
-    <li><button type="button" data-custom-select-option="Website Design">Website Design</button></li>
-    <li><button type="button" data-custom-select-option="AI Generated Images">AI Generated Images</button></li>
-	<li><button type="button" data-custom-select-option="Video Editing/Motion Graphics">Video Editing/Motion Graphics</button></li>
-  </ul>
+    <ul class="custom-select-menu" data-custom-select-menu>
+      <li><button type="button" data-custom-select-option="Branding">Branding</button></li>
+      <li><button type="button" data-custom-select-option="Logo Design">Logo Design</button></li>
+      <li><button type="button" data-custom-select-option="Illustration">Illustration</button></li>
+      <li><button type="button" data-custom-select-option="Print Media">Print Media</button></li>
+      <li><button type="button" data-custom-select-option="Website Design">Website Design</button></li>
+      <li><button type="button" data-custom-select-option="AI Generated Images">AI Generated Images</button></li>
+      <li><button type="button" data-custom-select-option="Video Editing/Motion Graphics">Video Editing/Motion Graphics</button></li>
+    </ul>
+  </div>
 </div>
-</div>
-
+			  
 <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>

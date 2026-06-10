@@ -354,14 +354,41 @@ if (initialActiveNav) {
   document.body.classList.add("page-" + initialActiveNav.dataset.navTarget);
 }
 
-// custom contact dropdown
+// custom contact multi-select dropdown
 const customSelect = document.querySelector("[data-custom-select]");
 
 if (customSelect) {
   const customSelectTrigger = customSelect.querySelector("[data-custom-select-trigger]");
-  const customSelectValue = customSelect.querySelector("[data-custom-select-value]");
   const customSelectOptions = customSelect.querySelectorAll("[data-custom-select-option]");
-  const nativeInterestSelect = customSelect.querySelector(".native-interest-select");
+  const selectedTagsContainer = customSelect.querySelector("[data-selected-tags]");
+  const interestHiddenInput = customSelect.querySelector(".interest-hidden-input");
+
+  let selectedOptions = [];
+
+  const updateSelectedTags = function () {
+    selectedTagsContainer.innerHTML = "";
+
+    if (selectedOptions.length === 0) {
+      selectedTagsContainer.innerHTML = '<span class="select-placeholder">I\'m Interested In</span>';
+    } else {
+      for (let i = 0; i < selectedOptions.length; i++) {
+        const tag = document.createElement("span");
+        tag.classList.add("selected-tag");
+        tag.innerHTML = `
+          ${selectedOptions[i]}
+          <button type="button" aria-label="Remove ${selectedOptions[i]}" data-remove-option="${selectedOptions[i]}">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        `;
+
+        selectedTagsContainer.appendChild(tag);
+      }
+    }
+
+    interestHiddenInput.value = selectedOptions.join(", ");
+    interestHiddenInput.dispatchEvent(new Event("input", { bubbles: true }));
+    interestHiddenInput.dispatchEvent(new Event("change", { bubbles: true }));
+  };
 
   customSelectTrigger.addEventListener("click", function () {
     customSelect.classList.toggle("active");
@@ -371,24 +398,48 @@ if (customSelect) {
     customSelectOptions[i].addEventListener("click", function () {
       const selectedValue = this.dataset.customSelectOption;
 
-      customSelectValue.innerText = selectedValue;
-      nativeInterestSelect.value = selectedValue;
+      if (selectedOptions.includes(selectedValue)) {
+        selectedOptions = selectedOptions.filter(function (option) {
+          return option !== selectedValue;
+        });
 
-      for (let j = 0; j < customSelectOptions.length; j++) {
-        customSelectOptions[j].classList.remove("selected");
+        this.classList.remove("selected");
+      } else {
+        selectedOptions.push(selectedValue);
+        this.classList.add("selected");
       }
 
-      this.classList.add("selected");
-      customSelect.classList.remove("active");
-
-      nativeInterestSelect.dispatchEvent(new Event("input", { bubbles: true }));
-      nativeInterestSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      updateSelectedTags();
     });
   }
+
+  selectedTagsContainer.addEventListener("click", function (event) {
+    const removeButton = event.target.closest("[data-remove-option]");
+
+    if (!removeButton) return;
+
+    event.stopPropagation();
+
+    const optionToRemove = removeButton.dataset.removeOption;
+
+    selectedOptions = selectedOptions.filter(function (option) {
+      return option !== optionToRemove;
+    });
+
+    for (let i = 0; i < customSelectOptions.length; i++) {
+      if (customSelectOptions[i].dataset.customSelectOption === optionToRemove) {
+        customSelectOptions[i].classList.remove("selected");
+      }
+    }
+
+    updateSelectedTags();
+  });
 
   document.addEventListener("click", function (event) {
     if (!customSelect.contains(event.target)) {
       customSelect.classList.remove("active");
     }
   });
+
+  updateSelectedTags();
 }
