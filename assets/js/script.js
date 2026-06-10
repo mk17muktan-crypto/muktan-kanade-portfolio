@@ -87,8 +87,15 @@ for (let i = 0; i < filterBtn.length; i++) {
     filterFunc(selectedValue);
 
     lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
+this.classList.add("active");
+
+this.scrollIntoView({
+  behavior: "smooth",
+  inline: "center",
+  block: "nearest"
+});
+
+lastClickedBtn = this;
 
   });
 
@@ -420,4 +427,73 @@ if (customSelect) {
   });
 
   updateSelectedTags();
+}
+
+// mobile portfolio category slow idle auto-scroll
+const portfolioCategoryMenu = document.querySelector(".portfolio-category-menu");
+
+if (portfolioCategoryMenu) {
+  let categoryScrollDirection = 1;
+  let categoryIdleTimer;
+  let categoryAutoScrollFrame;
+  let isCategoryAutoScrolling = false;
+
+  const stopCategoryAutoScroll = function () {
+    isCategoryAutoScrolling = false;
+
+    if (categoryAutoScrollFrame) {
+      cancelAnimationFrame(categoryAutoScrollFrame);
+    }
+  };
+
+  const startCategoryAutoScroll = function () {
+    if (window.innerWidth > 580) return;
+
+    isCategoryAutoScrolling = true;
+
+    const autoScroll = function () {
+      if (!isCategoryAutoScrolling) return;
+
+      const maxScrollLeft = portfolioCategoryMenu.scrollWidth - portfolioCategoryMenu.clientWidth;
+
+      if (portfolioCategoryMenu.scrollLeft >= maxScrollLeft - 1) {
+        categoryScrollDirection = -1;
+      }
+
+      if (portfolioCategoryMenu.scrollLeft <= 1) {
+        categoryScrollDirection = 1;
+      }
+
+      portfolioCategoryMenu.scrollLeft += categoryScrollDirection * 0.35;
+
+      categoryAutoScrollFrame = requestAnimationFrame(autoScroll);
+    };
+
+    autoScroll();
+  };
+
+  const resetCategoryIdleScroll = function () {
+    stopCategoryAutoScroll();
+
+    clearTimeout(categoryIdleTimer);
+
+    categoryIdleTimer = setTimeout(function () {
+      startCategoryAutoScroll();
+    }, 5000);
+  };
+
+  portfolioCategoryMenu.addEventListener("touchstart", resetCategoryIdleScroll);
+  portfolioCategoryMenu.addEventListener("mousedown", resetCategoryIdleScroll);
+  portfolioCategoryMenu.addEventListener("wheel", resetCategoryIdleScroll);
+  portfolioCategoryMenu.addEventListener("scroll", function () {
+    if (!isCategoryAutoScrolling) {
+      resetCategoryIdleScroll();
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    resetCategoryIdleScroll();
+  });
+
+  resetCategoryIdleScroll();
 }
