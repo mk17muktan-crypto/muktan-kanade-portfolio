@@ -287,23 +287,16 @@ article.active {
   border-radius: 3px;
 }
 
+.has-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  display: none;
+  width: 0;
+  height: 0;
 }
-
-.has-scrollbar::-webkit-scrollbar-track {
-  background: var(--onyx);
-  border-radius: 5px;
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
-  border-radius: 5px;
-}
-
-.has-scrollbar::-webkit-scrollbar-button { width: 20px; }
-
 .content-card {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -1937,7 +1930,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: 700px; }
 
-  .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
 
 
@@ -2444,5 +2436,24 @@ body.popup-open {
 
   article {
     width: 100%;
+  }
+}
+
+/*-----------------------------------*\
+  #HIDE CORE STRENGTHS SCROLL DOTS
+\*-----------------------------------*/
+
+.service-list::-webkit-scrollbar {
+  display: none;
+}
+
+.service-list {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (min-width: 768px) {
+  .service-carousel-dots {
+    display: none !important;
   }
 }
