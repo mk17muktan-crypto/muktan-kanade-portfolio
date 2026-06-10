@@ -2469,6 +2469,7 @@ body.popup-open {
 
 .skill-mini-item {
   display: block;
+  margin-bottom: 10px;
 }
 
 .skill-mini-header {
