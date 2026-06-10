@@ -2976,8 +2976,8 @@ body.page-contact .contact-info .contact-link:focus {
   }
 
   .portfolio-category-icon img {
-    width: 38px;
-    height: 38px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
   }
 
@@ -2985,5 +2985,169 @@ body.page-contact .contact-info .contact-link:focus {
     font-size: 12px;
     line-height: 1.15;
     white-space: nowrap;
+  }
+}
+
+.portfolio-category-menu .filter-item button.active .portfolio-category-icon img {
+  animation: portfolioCategoryIconFloat 1.75s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes portfolioCategoryIconFloat {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.10) translateY(-5px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+/*-----------------------------------*\
+  #PORTFOLIO INDUSTRY TEXT
+\*-----------------------------------*/
+
+.project-industry {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  margin-left: 10px;
+}
+
+
+/*-----------------------------------*\
+  #CASE STUDY INNER PAGE
+\*-----------------------------------*/
+
+body {
+  color: var(--white-2);
+}
+
+.case-page-main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: block;
+  min-width: 0;
+}
+
+.case-shell {
+  display: block;
+  width: 100%;
+  background: hsla(240, 2%, 12%, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--shadow-5);
+}
+
+.case-back-link {
+  width: max-content;
+  margin-bottom: 28px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+.case-hero {
+  margin-bottom: 24px;
+}
+
+.case-kicker {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin-bottom: 8px;
+}
+
+.case-title {
+  color: var(--white-2);
+  font-size: 38px;
+  font-weight: var(--fw-600);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.case-industry {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+}
+
+.case-banner {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: var(--onyx);
+}
+
+.case-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.case-content-card {
+  background: hsla(240, 2%, 16%, 0.72);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.case-content-card h2 {
+  color: var(--white-2);
+  font-size: var(--fs-2);
+  margin-bottom: 12px;
+}
+
+.case-content-card p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .case-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .case-page-main {
+    margin: 18px auto 80px;
+    padding: 0 12px;
+  }
+
+  .case-shell {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .case-title {
+    font-size: 28px;
+  }
+
+  .case-banner {
+    border-radius: 16px;
+  }
+
+  .case-content-grid {
+    grid-template-columns: 1fr;
   }
 }
