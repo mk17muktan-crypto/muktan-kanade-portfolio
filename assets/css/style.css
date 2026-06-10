@@ -509,6 +509,8 @@ main {
 .navbar-item {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 110px;
 }
 
 .navbar-link {
@@ -519,7 +521,7 @@ main {
   color: var(--light-gray);
   font-size: 15px;
   padding: 10px 14px;
-  border-radius: 14px;
+  border-radius: 8px;
   overflow: hidden;
   transition:
     color 0.3s ease,
@@ -670,8 +672,13 @@ main {
 }
 
 @media (max-width: 580px) {
+ .navbar-item {
+  width: 25%;
+}
   .service {
     margin-bottom: 40px;
+	  
+
   }
 
 .service-list {
@@ -2062,7 +2069,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .navbar-list {
   gap: 24px;
-  padding: 0;
+  padding: 0 12px;
 }
 
   .navbar-link { font-weight: var(--fw-500); }
