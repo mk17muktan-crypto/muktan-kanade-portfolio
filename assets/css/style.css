@@ -2516,8 +2516,8 @@ body.popup-open {
   #MOBILE SIDEBAR VISIBILITY CONTROL
 \*-----------------------------------*/
 
-@media (max-width: 1249px) {
-
+@media (max-width: 580px) {
+	
   /* About page: show collapsed profile bar */
   body.page-about .sidebar {
     display: block;
@@ -2813,4 +2813,134 @@ body.page-contact .contact-info .contact-link:focus {
   body.page-contact .contact-info .contact-link:active {
     transform: scale(0.96);
   }
+}
+
+/*-----------------------------------*\
+  #PORTFOLIO CATEGORY MENU
+\*-----------------------------------*/
+
+.filter-select-box {
+  display: none !important;
+}
+
+/* Desktop / default layout */
+.portfolio-category-menu {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 100%;
+}
+
+.portfolio-category-menu .filter-item button {
+  min-height: 54px;
+  padding: 8px 14px 8px 9px;
+  border-radius: 18px;
+  background: hsla(240, 2%, 16%, 0.72);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  color: var(--light-gray);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: left;
+  transition:
+    background 0.28s ease,
+    border-color 0.28s ease,
+    color 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.portfolio-category-menu .filter-item button:hover {
+  background: hsla(240, 2%, 20%, 0.92);
+  border-color: hsla(45, 100%, 72%, 0.22);
+  transform: translateY(-2px);
+}
+
+.portfolio-category-menu .filter-item button.active {
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+  border-color: transparent;
+  box-shadow: 0 12px 28px hsla(45, 100%, 72%, 0.18);
+}
+
+.portfolio-category-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 30px;
+  overflow: visible;
+}
+
+.portfolio-category-menu .filter-item button.active .portfolio-category-icon {
+  background: transparent;
+}
+
+.portfolio-category-icon img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+}
+
+.portfolio-category-text {
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* Mobile only: 5-column icon layout */
+@media (max-width: 580px) {
+  .portfolio-category-menu {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+.portfolio-category-menu .filter-item button {
+  width: 100%;
+  height: 92px;
+  padding: 10px 2px 8px;
+  border-radius: 14px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: center;
+}
+	
+.portfolio-category-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-category-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+	
+.portfolio-category-text {
+  font-size: 8.2px;
+  line-height: 1.05;
+  white-space: normal;
+  min-height: 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
