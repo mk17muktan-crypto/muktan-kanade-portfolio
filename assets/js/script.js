@@ -107,6 +107,13 @@ for (let i = 0; i < filterBtn.length; i++) {
 
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
+	this.classList.remove("nav-click-bounce");
+	void this.offsetWidth;
+	this.classList.add("nav-click-bounce");
+
+	setTimeout(() => {
+  this.classList.remove("nav-click-bounce");
+	}, 750);
     lastClickedBtn = this;
 
   });

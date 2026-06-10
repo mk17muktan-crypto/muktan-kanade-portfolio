@@ -514,20 +514,47 @@ main {
 }
 
 .navbar-link {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: 0;
+  justify-content: center;
   color: var(--light-gray);
   font-size: 15px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  overflow: hidden;
+  line-height: 1;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 14px;
   transition:
     color 0.3s ease,
     background 0.3s ease,
-    padding 0.3s ease,
-    gap 0.3s ease;
+    box-shadow 0.3s ease,
+    transform 0.18s ease;
+}
+
+
+.navbar-link:active {
+  transform: scale(0.94) translateY(2px);
+}
+
+.navbar-link.nav-click-bounce {
+  animation: navButtonBounce 0.72s cubic-bezier(0.22, 1.45, 0.36, 1);
+}
+
+@keyframes navButtonBounce {
+  0% {
+    transform: scale(0.94) translateY(2px);
+  }
+
+  42% {
+    transform: scale(1.08) translateY(-3px);
+  }
+
+  68% {
+    transform: scale(0.985) translateY(1px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 .navbar-link:hover {
@@ -2344,50 +2371,6 @@ body.popup-open {
   #SKILLS GRID FIX
 \*-----------------------------------*/
 
-.resume > .skill {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-
-.resume > .skill > .skills-title {
-  grid-column: 1 / -1;
-  margin-bottom: 2px;
-}
-
-.resume > .skill > .skill {
-  margin: 0;
-}
-
-.resume > .skill .skills-list {
-  height: 100%;
-  padding: 16px;
-}
-
-.resume > .skill .content-card {
-  margin-bottom: 0;
-  cursor: default;
-}
-
-.resume > .skill .title-wrapper {
-  margin-bottom: 10px;
-}
-
-.resume > .skill .h5 {
-  white-space: nowrap;
-}
-
-@media (min-width: 768px) {
-  .resume > .skill {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .resume > .skill {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 
 /*-----------------------------------*\
@@ -2440,5 +2423,90 @@ body.popup-open {
 @media (min-width: 768px) {
   .service-carousel-dots {
     display: none !important;
+  }
+}
+
+/*-----------------------------------*\
+  #CATEGORISED SKILLS SECTION
+\*-----------------------------------*/
+
+.categorized-skills {
+  display: block !important;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.categorized-skills .skills-title {
+  margin-bottom: 22px;
+}
+
+.skills-category-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.skill-category {
+  width: 100%;
+  min-height: 100%;
+  padding: 26px !important;
+  padding-top: 26px !important;
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.skill-category-title {
+  margin-bottom: 22px;
+  color: var(--white-2);
+  line-height: 1.35;
+}
+
+.skill-mini-list {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-mini-item {
+  display: block;
+}
+
+.skill-mini-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-mini-header img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex: 0 0 36px;
+}
+
+.skill-mini-header .h5 {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  flex: 1;
+  line-height: 1.25;
+}
+
+.skill-mini-header data {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-300);
+}
+
+@media (min-width: 768px) {
+  .skills-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1250px) {
+  .skills-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
