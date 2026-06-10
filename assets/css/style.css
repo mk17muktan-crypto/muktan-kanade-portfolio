@@ -1529,9 +1529,9 @@ main {
 .form-input:focus { border-color: var(--orange-yellow-crayola); }
 
 textarea.form-input {
-  min-height: 100px;
-  height: 120px;
-  max-height: 200px;
+  min-height: 170px;
+  height: 190px;
+  max-height: 300px;
   resize: vertical;
   margin-bottom: 25px;
 }
@@ -2672,4 +2672,14 @@ body.popup-open {
 .custom-select-menu button.selected {
   background: var(--text-gradient-yellow);
   color: var(--smoky-black);
+}
+
+/*-----------------------------------*\
+  #HIDE CONTACT TITLE ON MOBILE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+  body.page-contact .contact .article-title {
+    display: none;
+  }
 }
