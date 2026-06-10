@@ -2511,3 +2511,56 @@ body.popup-open {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/*-----------------------------------*\
+  #MOBILE SIDEBAR VISIBILITY CONTROL
+\*-----------------------------------*/
+
+@media (max-width: 1249px) {
+
+  /* About page: show collapsed profile bar */
+  body.page-about .sidebar {
+    display: block;
+  }
+
+  body.page-about .sidebar:not(.active) {
+    max-height: 112px;
+    overflow: hidden;
+  }
+
+  body.page-about .sidebar.active {
+    max-height: 112px;
+    overflow: hidden;
+  }
+
+  body.page-about .info_more-btn {
+    display: none;
+  }
+
+  body.page-about .sidebar-info_more {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* Resume and Portfolio: hide profile bar */
+  body.page-resume .sidebar,
+  body.page-portfolio .sidebar {
+    display: none;
+  }
+
+  /* Contact page: show full expanded contact details */
+  body.page-contact .sidebar {
+    display: block;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body.page-contact .info_more-btn {
+    display: none;
+  }
+
+  body.page-contact .sidebar-info_more {
+    opacity: 1;
+    visibility: visible;
+  }
+}

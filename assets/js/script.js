@@ -149,10 +149,13 @@ const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav links
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+navigationLinks[i].addEventListener("click", function () {
 
-    const targetPage = this.dataset.navTarget;
+  const targetPage = this.dataset.navTarget;
 
+  document.body.classList.remove("page-about", "page-resume", "page-portfolio", "page-contact");
+  document.body.classList.add("page-" + targetPage);
+	
     for (let j = 0; j < pages.length; j++) {
       if (targetPage === pages[j].dataset.page) {
         pages[j].classList.add("active");
@@ -342,4 +345,11 @@ if (serviceList && serviceDotsContainer) {
   window.addEventListener("resize", function () {
     updateServiceDots();
   });
+}
+
+// set initial page class on load
+const initialActiveNav = document.querySelector("[data-nav-link].active");
+
+if (initialActiveNav) {
+  document.body.classList.add("page-" + initialActiveNav.dataset.navTarget);
 }
