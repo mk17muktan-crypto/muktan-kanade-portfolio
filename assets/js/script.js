@@ -497,3 +497,43 @@ if (portfolioCategoryMenu) {
 
   resetCategoryIdleScroll();
 }
+
+// open correct section/category when coming back from portfolio-detail.html
+const pageUrlParams = new URLSearchParams(window.location.search);
+const requestedSection = pageUrlParams.get("section");
+const requestedCategory = pageUrlParams.get("category");
+
+const openRequestedSectionAndCategory = function () {
+  if (!requestedSection) return;
+
+  const targetNav = document.querySelector(`[data-nav-target="${requestedSection}"]`);
+
+  if (targetNav) {
+    targetNav.click();
+  }
+
+  if (requestedSection === "portfolio" && requestedCategory) {
+    const categoryText = requestedCategory.replace(/-/g, " ");
+
+    filterFunc(categoryText);
+
+    for (let i = 0; i < filterBtn.length; i++) {
+      const buttonText = filterBtn[i].querySelector(".portfolio-category-text").innerText.toLowerCase();
+
+      if (buttonText === categoryText) {
+        filterBtn[i].classList.add("active");
+        lastClickedBtn = filterBtn[i];
+
+        filterBtn[i].scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+          block: "nearest"
+        });
+      } else {
+        filterBtn[i].classList.remove("active");
+      }
+    }
+  }
+};
+
+openRequestedSectionAndCategory();
