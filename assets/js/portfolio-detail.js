@@ -172,24 +172,101 @@ const renderHeroCarousel = function () {
 
 const renderClientStrip = function () {
   const strip = document.querySelector("[data-client-strip]");
+  if (!strip) return;
+
   strip.innerHTML = "";
+
+  const oldDots = document.querySelector("[data-client-strip-dots]");
+  if (oldDots) oldDots.remove();
 
   const images = project.clientImages.length ? project.clientImages : [
     { type: "placeholder", label: "Client Image 01" },
-
     { type: "placeholder", label: "Client Image 02" },
     { type: "placeholder", label: "Client Image 03" },
     { type: "placeholder", label: "Client Image 04" }
   ];
 
-  const doubledImages = images.concat(images);
-
-  doubledImages.forEach(function (item) {
+  images.forEach(function (item) {
     const wrap = document.createElement("div");
     wrap.classList.add("client-strip-item");
     wrap.appendChild(createImageItem(item));
     strip.appendChild(wrap);
   });
+
+  if (images.length <= 1) return;
+
+  const dots = document.createElement("div");
+  dots.classList.add("client-mobile-carousel-dots");
+  dots.setAttribute("data-client-strip-dots", "");
+
+  const getClientItems = function () {
+    return Array.from(strip.querySelectorAll(".client-strip-item"));
+  };
+
+  const updateClientDots = function () {
+    const clientItems = getClientItems();
+    const dotButtons = dots.querySelectorAll(".case-dot");
+
+    if (clientItems.length === 0 || dotButtons.length === 0) return;
+
+    const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
+    let activeIndex = 0;
+
+    if (strip.scrollLeft >= maxScrollLeft - 3) {
+      activeIndex = clientItems.length - 1;
+    } else {
+      const stripCenter = strip.scrollLeft + strip.clientWidth / 2;
+      let closestDistance = Infinity;
+
+      clientItems.forEach(function (item, index) {
+        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+        const distance = Math.abs(stripCenter - itemCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          activeIndex = index;
+        }
+      });
+    }
+
+    dotButtons.forEach(function (dot, index) {
+      dot.classList.toggle("active", index === activeIndex);
+    });
+  };
+
+  images.forEach(function (_, index) {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.classList.add("case-dot");
+
+    if (index === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", function () {
+      const clientItems = getClientItems();
+      const targetItem = clientItems[index];
+
+      if (!targetItem) return;
+
+      const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
+
+      strip.scrollTo({
+        left: index === clientItems.length - 1 ? maxScrollLeft : targetItem.offsetLeft,
+        behavior: "smooth"
+      });
+    });
+
+    dots.appendChild(dot);
+  });
+
+  strip.after(dots);
+
+  strip.addEventListener("scroll", function () {
+    window.requestAnimationFrame(updateClientDots);
+  });
+
+  window.addEventListener("resize", updateClientDots);
+
+  updateClientDots();
 };
 
 let currentPreviewItems = [];
