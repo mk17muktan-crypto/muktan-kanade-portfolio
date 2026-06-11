@@ -4297,3 +4297,262 @@ body.portfolio-detail-page .case-breadcrumb span {
     left: 16px;
   }
 }
+
+/*-----------------------------------*\
+  #MOBILE INNER PAGE NAVBAR
+\*-----------------------------------*/
+
+.case-mobile-navbar {
+  display: none;
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page {
+    padding-bottom: 76px;
+  }
+
+  body.portfolio-detail-page main.case-main {
+    margin-bottom: 96px !important;
+  }
+
+  .case-mobile-navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 66px;
+
+    background: hsla(240, 1%, 17%, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    border-radius: 18px 18px 0 0;
+
+    box-shadow: 0 -12px 35px hsla(0, 0%, 0%, 0.34);
+    z-index: 500;
+  }
+
+  .case-mobile-navbar-list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6px;
+    gap: 4px;
+  }
+
+  .case-mobile-navbar-list li {
+    width: 25%;
+  }
+
+  .case-mobile-navbar-link {
+    min-height: 44px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: var(--fw-400);
+    line-height: 1;
+
+    border-radius: 14px;
+
+    transition:
+      background 0.32s ease,
+      color 0.32s ease,
+      transform 0.22s ease,
+      box-shadow 0.32s ease;
+  }
+
+  .case-mobile-navbar-link.active {
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
+    font-weight: var(--fw-500);
+    box-shadow: 0 10px 24px hsla(45, 100%, 72%, 0.18);
+    animation: activeNavGlow 3.2s ease-in-out infinite;
+  }
+
+  .case-mobile-navbar-link:active {
+    transform: scale(0.94) translateY(2px);
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE CASE TAB MENU GRID
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page main.case-main {
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-tabs {
+    position: sticky !important;
+    top: 18px !important;
+    z-index: 420;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px 10px;
+
+    width: calc(100% - 32px) !important;
+    max-width: 100% !important;
+
+    margin: 0 auto 30px !important;
+    padding: 10px !important;
+
+    left: auto !important;
+    transform: none !important;
+
+    overflow: visible !important;
+
+    background: hsla(240, 1%, 17%, 0.82);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    border-radius: 16px;
+
+    box-shadow:
+      0 18px 42px hsla(0, 0%, 0%, 0.26),
+      0 1px 0 hsla(0, 0%, 100%, 0.04) inset;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body.portfolio-detail-page .case-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.portfolio-detail-page .case-tabs a {
+    width: 100%;
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 10px;
+
+    white-space: nowrap;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1;
+    font-weight: var(--fw-500);
+
+    border-radius: 10px;
+  }
+
+  body.portfolio-detail-page .case-tabs a.active {
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
+    border-color: transparent;
+  }
+
+  body.portfolio-detail-page .case-section,
+  body.portfolio-detail-page .case-info-card {
+    scroll-margin-top: 150px;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE CASE TAB SCROLL BREATHING SPACE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-section,
+  body.portfolio-detail-page .case-info-card {
+    scroll-margin-top: 180px;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE BACK BUTTON + TAB BAR NATURAL MOTION
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page {
+    --case-mobile-back-top: 18px;
+    --case-mobile-back-left: 16px;
+    --case-mobile-back-size: 40px;
+    --case-mobile-gap: 15px;
+
+    --case-mobile-tabs-top: 18px;
+    --case-mobile-tabs-down-top: calc(
+      var(--case-mobile-back-top) +
+      var(--case-mobile-back-size) +
+      var(--case-mobile-gap)
+    );
+  }
+
+  /* Back button default visible state */
+  body.portfolio-detail-page .case-back-btn {
+    position: fixed !important;
+    top: var(--case-mobile-back-top) !important;
+    left: var(--case-mobile-back-left) !important;
+
+    width: var(--case-mobile-back-size);
+    height: var(--case-mobile-back-size);
+
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+
+    z-index: 460;
+
+    transition:
+      opacity 0.38s ease,
+      transform 0.48s cubic-bezier(0.22, 1.25, 0.36, 1);
+  }
+
+  /* Tab menu normal sticky position */
+  body.portfolio-detail-page .case-tabs {
+    position: sticky !important;
+    top: var(--case-mobile-tabs-top) !important;
+
+    transition:
+      top 0.48s cubic-bezier(0.22, 1.25, 0.36, 1),
+      transform 0.48s cubic-bezier(0.22, 1.25, 0.36, 1);
+  }
+
+  /* Scroll down: tab bar sticks at top, back button moves up naturally */
+  body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-back-btn {
+    opacity: 0;
+    transform: translateY(-64px) scale(0.92);
+    pointer-events: none;
+  }
+
+  body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-tabs {
+    top: var(--case-mobile-tabs-top) !important;
+  }
+
+  /* Scroll up: back button moves down, tab bar moves down to make 15px space */
+  body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-back-btn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-tabs {
+    top: var(--case-mobile-tabs-down-top) !important;
+  }
+
+  /* Before tab menu becomes sticky, back button stays visible */
+  body.portfolio-detail-page:not(.case-mobile-tabs-stuck) .case-back-btn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+}

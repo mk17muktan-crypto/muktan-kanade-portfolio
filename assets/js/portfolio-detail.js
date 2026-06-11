@@ -307,39 +307,82 @@ const renderGalleries = function () {
       gallery.appendChild(galleryItem);
     });
 
-    if (items.length > 1) {
-      const dots = document.createElement("div");
-      dots.classList.add("case-mobile-gallery-dots");
+if (items.length > 1) {
+  const dots = document.createElement("div");
+  dots.classList.add("case-mobile-gallery-dots");
 
-      items.forEach(function (_, index) {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.classList.add("case-dot");
+  const getGalleryItems = function () {
+    return Array.from(gallery.querySelectorAll(".case-gallery-item"));
+  };
 
-        if (index === 0) dot.classList.add("active");
+  const updateGalleryDots = function () {
+    const galleryItems = getGalleryItems();
+    const dotButtons = dots.querySelectorAll(".case-dot");
 
-        dot.addEventListener("click", function () {
-          gallery.scrollTo({
-            left: gallery.clientWidth * index,
-            behavior: "smooth"
-          });
-        });
+    if (galleryItems.length === 0 || dotButtons.length === 0) return;
 
-        dots.appendChild(dot);
-      });
+    const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
 
-      gallery.after(dots);
+    let activeIndex = 0;
 
-      gallery.addEventListener("scroll", function () {
-        const activeIndex = Math.round(gallery.scrollLeft / gallery.clientWidth);
-        const dotButtons = dots.querySelectorAll(".case-dot");
+    /* Force last dot when user reaches the end */
+    if (gallery.scrollLeft >= maxScrollLeft - 3) {
+      activeIndex = galleryItems.length - 1;
+    } else {
+      const galleryCenter = gallery.scrollLeft + gallery.clientWidth / 2;
+      let closestDistance = Infinity;
 
-        dotButtons.forEach(function (dot, index) {
-          dot.classList.toggle("active", index === activeIndex);
-        });
+      galleryItems.forEach(function (item, index) {
+        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+        const distance = Math.abs(galleryCenter - itemCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          activeIndex = index;
+        }
       });
     }
+
+    dotButtons.forEach(function (dot, index) {
+      dot.classList.toggle("active", index === activeIndex);
+    });
+  };
+
+  items.forEach(function (_, index) {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.classList.add("case-dot");
+
+    if (index === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", function () {
+      const galleryItems = getGalleryItems();
+      const targetItem = galleryItems[index];
+
+      if (!targetItem) return;
+
+      const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+
+      gallery.scrollTo({
+        left: index === galleryItems.length - 1 ? maxScrollLeft : targetItem.offsetLeft,
+        behavior: "smooth"
+      });
+    });
+
+    dots.appendChild(dot);
   });
+
+  gallery.after(dots);
+
+  gallery.addEventListener("scroll", function () {
+    window.requestAnimationFrame(updateGalleryDots);
+  });
+
+  window.addEventListener("resize", updateGalleryDots);
+
+  updateGalleryDots();
+}
+});
 };
 const renderNextProjects = function () {
   const nextGrid = document.querySelector("[data-next-projects]");
@@ -368,8 +411,29 @@ const renderNextProjects = function () {
 };
 
 const initTabs = function () {
+  const tabsWrapper = document.querySelector("[data-case-tabs]");
   const tabs = document.querySelectorAll("[data-case-tabs] a");
-  let manualTabLock = false;
+
+  if (!tabsWrapper || tabs.length === 0) return;
+
+  let lockedTab = null;
+  let scrollSettleTimer = null;
+
+  const isMobile = function () {
+    return window.innerWidth <= 580;
+  };
+
+  const getScrollOffset = function () {
+    if (isMobile()) {
+      return tabsWrapper.offsetHeight + 78;
+    }
+
+    return tabsWrapper.offsetHeight + 72;
+  };
+
+  const getTargetTop = function (target) {
+    return target.getBoundingClientRect().top + window.scrollY;
+  };
 
   const setActiveTab = function (activeTab) {
     tabs.forEach(function (tab) {
@@ -385,29 +449,42 @@ const initTabs = function () {
 
       if (!target) return;
 
-      manualTabLock = true;
+      lockedTab = this;
       setActiveTab(this);
 
+      clearTimeout(scrollSettleTimer);
+
       window.scrollTo({
-        top: target.offsetTop - 98,
+        top: getTargetTop(target) - getScrollOffset(),
         behavior: "smooth"
       });
 
-      setTimeout(function () {
-        manualTabLock = false;
-      }, 900);
+      scrollSettleTimer = setTimeout(function () {
+        setActiveTab(lockedTab);
+        lockedTab = null;
+      }, 1200);
     });
   });
 
   window.addEventListener("scroll", function () {
-    if (manualTabLock) return;
+    if (lockedTab) {
+      clearTimeout(scrollSettleTimer);
+
+      scrollSettleTimer = setTimeout(function () {
+        setActiveTab(lockedTab);
+        lockedTab = null;
+      }, 180);
+
+      return;
+    }
 
     let activeTab = tabs[0];
+    const offset = getScrollOffset() + 24;
 
     tabs.forEach(function (tab) {
       const target = document.querySelector(tab.getAttribute("href"));
 
-      if (target && window.scrollY >= target.offsetTop - 150) {
+      if (target && window.scrollY >= getTargetTop(target) - offset) {
         activeTab = tab;
       }
     });
@@ -460,30 +537,86 @@ const initBackButtonStickyAlignment = function () {
   const tabs = document.querySelector("[data-case-tabs]");
   if (!tabs) return;
 
-  let stickyTrigger = 0;
+  let triggerY = 0;
+  let lastScrollY = window.scrollY;
 
-  const calculateStickyTrigger = function () {
-    const tabsTopValue = parseFloat(window.getComputedStyle(tabs).top) || 0;
-    stickyTrigger = tabs.offsetTop - tabsTopValue;
+  let tabsSpacer = document.querySelector(".case-tabs-mobile-spacer");
+
+  if (!tabsSpacer) {
+    tabsSpacer = document.createElement("div");
+    tabsSpacer.className = "case-tabs-mobile-spacer";
+    tabs.insertAdjacentElement("afterend", tabsSpacer);
+  }
+
+  const isMobile = function () {
+    return window.innerWidth <= 580;
   };
 
-  const updateBackButtonState = function () {
-    if (window.innerWidth <= 580) {
-      document.body.classList.remove("case-tabs-stuck");
+  const calculateStickyTrigger = function () {
+    if (isMobile()) {
+      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
+      tabsSpacer.style.display = "none";
+
+      const tabRect = tabs.getBoundingClientRect();
+      triggerY = window.scrollY + tabRect.top - 18;
+
+      tabsSpacer.style.height = tabs.offsetHeight + "px";
       return;
     }
 
-    if (window.scrollY >= stickyTrigger) {
-      document.body.classList.add("case-tabs-stuck");
-    } else {
-      document.body.classList.remove("case-tabs-stuck");
-    }
+    const tabsTopValue = parseFloat(window.getComputedStyle(tabs).top) || 0;
+    triggerY = window.scrollY + tabs.getBoundingClientRect().top - tabsTopValue;
   };
 
-  calculateStickyTrigger();
-  updateBackButtonState();
+  const updateBackButtonState = function () {
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < lastScrollY - 2;
+    const isScrollingDown = currentScrollY > lastScrollY + 2;
 
-  window.addEventListener("scroll", updateBackButtonState);
+    if (!isMobile()) {
+      tabsSpacer.style.display = "none";
+      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
+
+      if (currentScrollY >= triggerY) {
+        document.body.classList.add("case-tabs-stuck");
+      } else {
+        document.body.classList.remove("case-tabs-stuck");
+      }
+
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    document.body.classList.remove("case-tabs-stuck");
+
+    if (currentScrollY >= triggerY) {
+      document.body.classList.add("case-mobile-tabs-stuck");
+
+      tabsSpacer.style.display = "block";
+      tabsSpacer.style.height = tabs.offsetHeight + "px";
+
+      if (isScrollingUp) {
+        document.body.classList.add("case-mobile-back-visible");
+      }
+
+      if (isScrollingDown) {
+        document.body.classList.remove("case-mobile-back-visible");
+      }
+    } else {
+      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
+      tabsSpacer.style.display = "none";
+    }
+
+    lastScrollY = Math.max(currentScrollY, 0);
+  };
+
+  setTimeout(function () {
+    calculateStickyTrigger();
+    updateBackButtonState();
+  }, 100);
+
+  window.addEventListener("scroll", updateBackButtonState, { passive: true });
+
   window.addEventListener("resize", function () {
     calculateStickyTrigger();
     updateBackButtonState();
@@ -494,8 +627,6 @@ const initBackButtonStickyAlignment = function () {
     updateBackButtonState();
   });
 };
-
-fillTextContent();
 const renderList = function (selector, items) {
   const list = document.querySelector(selector);
 
@@ -510,6 +641,7 @@ const renderList = function (selector, items) {
   });
 };
 
+fillTextContent();
 renderHeroCarousel();
 renderClientStrip();
 renderList("[data-design-thinking]", project.designThinking);
