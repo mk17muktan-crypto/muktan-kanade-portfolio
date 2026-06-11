@@ -496,6 +496,20 @@ const initBackButtonStickyAlignment = function () {
 };
 
 fillTextContent();
+const renderList = function (selector, items) {
+  const list = document.querySelector(selector);
+
+  if (!list || !items) return;
+
+  list.innerHTML = "";
+
+  items.forEach(function (text) {
+    const li = document.createElement("li");
+    li.innerText = text;
+    list.appendChild(li);
+  });
+};
+
 renderHeroCarousel();
 renderClientStrip();
 renderList("[data-design-thinking]", project.designThinking);

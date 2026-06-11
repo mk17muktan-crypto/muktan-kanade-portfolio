@@ -4176,3 +4176,124 @@ body.portfolio-detail-page .case-breadcrumb span {
   color: hsla(45, 100%, 72%, 0.55);
   font-weight: var(--fw-400);
 }
+
+/*-----------------------------------*\
+  #MOBILE CASE DETAIL CARD + HERO CAROUSEL FIX
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Make the inner page feel like an article/card, like desktop */
+  body.portfolio-detail-page main.case-main {
+    width: calc(100% - 18px) !important;
+    margin: 10px auto 80px !important;
+    padding: 0 0 28px !important;
+
+    background: hsla(240, 2%, 12%, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    border-radius: 18px;
+    box-shadow: var(--shadow-5);
+
+    overflow: hidden;
+  }
+
+  /* Hero spacing inside the card */
+  body.portfolio-detail-page .case-hero {
+    padding: 52px 0 18px !important;
+  }
+
+  body.portfolio-detail-page .case-breadcrumb {
+    padding: 0 18px;
+    font-size: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  body.portfolio-detail-page .case-title {
+    font-size: 23px;
+    line-height: 1.12;
+    padding: 0 14px;
+    margin-bottom: 8px;
+  }
+
+  body.portfolio-detail-page .case-industry {
+    font-size: 12px;
+    padding: 0 18px;
+    margin-bottom: 26px;
+  }
+
+  /* Figma-like mobile hero carousel */
+  body.portfolio-detail-page .case-hero-carousel {
+    margin-bottom: 16px;
+  }
+
+  body.portfolio-detail-page .case-carousel-viewport {
+    width: 100%;
+    max-width: none;
+    height: 330px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  body.portfolio-detail-page .case-carousel-track {
+    height: 100%;
+  }
+
+  body.portfolio-detail-page .case-carousel-slide {
+    width: 64%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+  }
+
+  body.portfolio-detail-page .case-carousel-slide.is-active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  body.portfolio-detail-page .case-carousel-slide.is-prev {
+    transform: translate(-128%, -50%) scale(0.76);
+  }
+
+  body.portfolio-detail-page .case-carousel-slide.is-next {
+    transform: translate(28%, -50%) scale(0.76);
+  }
+
+  body.portfolio-detail-page .case-carousel-slide > * {
+    width: 100%;
+    height: 100% !important;
+    border-radius: 14px;
+  }
+
+  body.portfolio-detail-page .case-carousel-dots {
+    margin-top: 13px;
+  }
+
+  /* Back button should sit inside the card neatly */
+  body.portfolio-detail-page .case-back-btn {
+    position: fixed;
+    top: 18px;
+    left: 16px;
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    z-index: 100;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE CASE BACK BUTTON SIZE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-back-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+    top: 18px;
+    left: 16px;
+  }
+}
