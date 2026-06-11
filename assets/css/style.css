@@ -4366,95 +4366,6 @@ body.portfolio-detail-page .case-breadcrumb span {
   }
 }
 
-/*-----------------------------------*\
-  #MOBILE CASE TAB MENU GRID
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  body.portfolio-detail-page main.case-main {
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-tabs {
-    position: sticky !important;
-    top: 18px !important;
-    z-index: 420;
-
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 9px 10px;
-
-    width: calc(100% - 32px) !important;
-    max-width: 100% !important;
-
-    margin: 0 auto 30px !important;
-    padding: 10px !important;
-
-    left: auto !important;
-    transform: none !important;
-
-    overflow: visible !important;
-
-    background: hsla(240, 1%, 17%, 0.82);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
-    border: 1px solid hsla(0, 0%, 100%, 0.08);
-    border-radius: 16px;
-
-    box-shadow:
-      0 18px 42px hsla(0, 0%, 0%, 0.26),
-      0 1px 0 hsla(0, 0%, 100%, 0.04) inset;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  body.portfolio-detail-page .case-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  body.portfolio-detail-page .case-tabs a {
-    width: 100%;
-    min-height: 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 9px 10px;
-
-    white-space: nowrap;
-    text-align: center;
-
-    font-size: 12px;
-    line-height: 1;
-    font-weight: var(--fw-500);
-
-    border-radius: 10px;
-  }
-
-  body.portfolio-detail-page .case-tabs a.active {
-    background: var(--text-gradient-yellow);
-    color: var(--smoky-black);
-    border-color: transparent;
-  }
-
-  body.portfolio-detail-page .case-section,
-  body.portfolio-detail-page .case-info-card {
-    scroll-margin-top: 150px;
-  }
-  /* When tabs are sticky and back button is hidden */
-body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-tabs {
-  top: 18px !important;
-}
-
-/* When scrolling up: back button appears, tab bar moves down */
-body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-tabs {
-  top: 73px !important;
-}
-}
 
 
 /*-----------------------------------*\
@@ -4523,98 +4434,6 @@ body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case
     align-items: center;
     gap: 7px;
     margin-top: 12px;
-  }
-}
-
-
-/*-----------------------------------*\
-  #MOBILE CASE TAB SCROLL BREATHING SPACE
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-section,
-  body.portfolio-detail-page .case-info-card {
-    scroll-margin-top: 180px;
-  }
-}
-
-/*-----------------------------------*\
-  #MOBILE BACK BUTTON + TAB BAR NATURAL MOTION
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  body.portfolio-detail-page {
-    --case-mobile-back-top: 18px;
-    --case-mobile-back-left: 16px;
-    --case-mobile-back-size: 40px;
-    --case-mobile-gap: 15px;
-
-    --case-mobile-tabs-top: 18px;
-    --case-mobile-tabs-down-top: calc(
-      var(--case-mobile-back-top) +
-      var(--case-mobile-back-size) +
-      var(--case-mobile-gap)
-    );
-  }
-
-  /* Back button default visible state */
-  body.portfolio-detail-page .case-back-btn {
-    position: fixed !important;
-    top: var(--case-mobile-back-top) !important;
-    left: var(--case-mobile-back-left) !important;
-
-    width: var(--case-mobile-back-size);
-    height: var(--case-mobile-back-size);
-
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
-
-    z-index: 460;
-
-    transition:
-      opacity 0.38s ease,
-      transform 0.48s cubic-bezier(0.22, 1.25, 0.36, 1);
-  }
-
-  /* Tab menu normal sticky position */
-  body.portfolio-detail-page .case-tabs {
-    position: sticky !important;
-    top: var(--case-mobile-tabs-top) !important;
-
-    transition:
-      top 0.48s cubic-bezier(0.22, 1.25, 0.36, 1),
-      transform 0.48s cubic-bezier(0.22, 1.25, 0.36, 1);
-  }
-
-  /* Scroll down: tab bar sticks at top, back button moves up naturally */
-  body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-back-btn {
-    opacity: 0;
-    transform: translateY(-64px) scale(0.92);
-    pointer-events: none;
-  }
-
-  body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-tabs {
-    top: var(--case-mobile-tabs-top) !important;
-  }
-
-  /* Scroll up: back button moves down, tab bar moves down to make 15px space */
-  body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-back-btn {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
-  }
-
-  body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-tabs {
-    top: var(--case-mobile-tabs-down-top) !important;
-  }
-
-  /* Before tab menu becomes sticky, back button stays visible */
-  body.portfolio-detail-page:not(.case-mobile-tabs-stuck) .case-back-btn {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
   }
 }
 
@@ -4693,5 +4512,63 @@ body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case
   body.portfolio-detail-page .case-mobile-gallery-dots,
   body.portfolio-detail-page .client-mobile-carousel-dots {
     display: none !important;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE INNER PAGE WITHOUT TAB BAR
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Remove tab bar only on mobile */
+  body.portfolio-detail-page .case-tabs,
+  body.portfolio-detail-page .case-tabs-mobile-spacer {
+    display: none !important;
+  }
+
+  /* Keep the page clean and sticky-friendly */
+  body.portfolio-detail-page main.case-main {
+    overflow: visible !important;
+  }
+
+  /* Back button fixed position */
+  body.portfolio-detail-page .case-back-btn {
+    position: fixed !important;
+    top: 18px !important;
+    left: 16px !important;
+
+    width: 40px;
+    height: 40px;
+
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+
+    z-index: 460;
+
+    transition:
+      opacity 0.38s ease,
+      transform 0.48s cubic-bezier(0.22, 1.25, 0.36, 1);
+  }
+
+  /* Scroll down: back button exits naturally */
+  body.portfolio-detail-page.case-mobile-back-hidden .case-back-btn {
+    opacity: 0;
+    transform: translateY(-64px) scale(0.92);
+    pointer-events: none;
+  }
+
+  /* Scroll up/top: back button comes back naturally */
+  body.portfolio-detail-page:not(.case-mobile-back-hidden) .case-back-btn {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  /* Since tab bar is gone, sections need less scroll offset */
+  body.portfolio-detail-page .case-section,
+  body.portfolio-detail-page .case-info-card {
+    scroll-margin-top: 80px;
   }
 }

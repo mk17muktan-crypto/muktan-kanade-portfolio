@@ -493,18 +493,17 @@ const initTabs = function () {
 
   if (!tabsWrapper || tabs.length === 0) return;
 
-  let lockedTab = null;
-  let scrollSettleTimer = null;
-
   const isMobile = function () {
     return window.innerWidth <= 580;
   };
 
-  const getScrollOffset = function () {
-    if (isMobile()) {
-      return tabsWrapper.offsetHeight + 78;
-    }
+  /* No tab behaviour on mobile */
+  if (isMobile()) return;
 
+  let lockedTab = null;
+  let scrollSettleTimer = null;
+
+  const getScrollOffset = function () {
     return tabsWrapper.offsetHeight + 72;
   };
 
@@ -612,98 +611,70 @@ const initCaseBackgroundGlow = function () {
 
 const initBackButtonStickyAlignment = function () {
   const tabs = document.querySelector("[data-case-tabs]");
-  if (!tabs) return;
 
-  let triggerY = 0;
   let lastScrollY = window.scrollY;
-
-  let tabsSpacer = document.querySelector(".case-tabs-mobile-spacer");
-
-  if (!tabsSpacer) {
-    tabsSpacer = document.createElement("div");
-    tabsSpacer.className = "case-tabs-mobile-spacer";
-    tabs.insertAdjacentElement("afterend", tabsSpacer);
-  }
+  let desktopTriggerY = 0;
 
   const isMobile = function () {
     return window.innerWidth <= 580;
   };
 
-  const calculateStickyTrigger = function () {
-    if (isMobile()) {
-      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
-      tabsSpacer.style.display = "none";
-
-      const tabRect = tabs.getBoundingClientRect();
-      triggerY = window.scrollY + tabRect.top - 18;
-
-      tabsSpacer.style.height = tabs.offsetHeight + "px";
-      return;
-    }
+  const calculateDesktopTrigger = function () {
+    if (!tabs) return;
 
     const tabsTopValue = parseFloat(window.getComputedStyle(tabs).top) || 0;
-    triggerY = window.scrollY + tabs.getBoundingClientRect().top - tabsTopValue;
+    desktopTriggerY = window.scrollY + tabs.getBoundingClientRect().top - tabsTopValue;
   };
 
   const updateBackButtonState = function () {
     const currentScrollY = window.scrollY;
-    const isScrollingUp = currentScrollY < lastScrollY - 2;
-    const isScrollingDown = currentScrollY > lastScrollY + 2;
+    const scrollingDown = currentScrollY > lastScrollY + 2;
+    const scrollingUp = currentScrollY < lastScrollY - 2;
 
-    if (!isMobile()) {
-      tabsSpacer.style.display = "none";
-      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
+    if (isMobile()) {
+      document.body.classList.remove("case-tabs-stuck", "case-mobile-tabs-stuck", "case-mobile-back-visible");
 
-      if (currentScrollY >= triggerY) {
+      if (currentScrollY <= 40 || scrollingUp) {
+        document.body.classList.remove("case-mobile-back-hidden");
+      }
+
+      if (currentScrollY > 80 && scrollingDown) {
+        document.body.classList.add("case-mobile-back-hidden");
+      }
+
+      lastScrollY = Math.max(currentScrollY, 0);
+      return;
+    }
+
+    document.body.classList.remove("case-mobile-back-hidden", "case-mobile-tabs-stuck", "case-mobile-back-visible");
+
+    if (tabs) {
+      if (currentScrollY >= desktopTriggerY) {
         document.body.classList.add("case-tabs-stuck");
       } else {
         document.body.classList.remove("case-tabs-stuck");
       }
-
-      lastScrollY = currentScrollY;
-      return;
-    }
-
-    document.body.classList.remove("case-tabs-stuck");
-
-    if (currentScrollY >= triggerY) {
-      document.body.classList.add("case-mobile-tabs-stuck");
-
-      tabsSpacer.style.display = "block";
-      tabsSpacer.style.height = tabs.offsetHeight + "px";
-
-      if (isScrollingUp) {
-        document.body.classList.add("case-mobile-back-visible");
-      }
-
-      if (isScrollingDown) {
-        document.body.classList.remove("case-mobile-back-visible");
-      }
-    } else {
-      document.body.classList.remove("case-mobile-tabs-stuck", "case-mobile-back-visible");
-      tabsSpacer.style.display = "none";
     }
 
     lastScrollY = Math.max(currentScrollY, 0);
   };
 
-  setTimeout(function () {
-    calculateStickyTrigger();
-    updateBackButtonState();
-  }, 100);
+  calculateDesktopTrigger();
+  updateBackButtonState();
 
   window.addEventListener("scroll", updateBackButtonState, { passive: true });
 
   window.addEventListener("resize", function () {
-    calculateStickyTrigger();
+    calculateDesktopTrigger();
     updateBackButtonState();
   });
 
   window.addEventListener("load", function () {
-    calculateStickyTrigger();
+    calculateDesktopTrigger();
     updateBackButtonState();
   });
 };
+
 const renderList = function (selector, items) {
   const list = document.querySelector(selector);
 
