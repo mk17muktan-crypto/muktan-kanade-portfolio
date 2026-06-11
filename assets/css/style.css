@@ -4556,3 +4556,69 @@ body.portfolio-detail-page .case-breadcrumb span {
     pointer-events: auto;
   }
 }
+
+/*-----------------------------------*\
+  #MOBILE PORTFOLIO DETAIL PAGE SIDE PADDING
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Keep the outer article/card clean */
+  body.portfolio-detail-page main.case-main {
+    width: calc(100% - 18px) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Give all content sections proper mobile spacing */
+  body.portfolio-detail-page .case-section,
+  body.portfolio-detail-page .case-two-column,
+  body.portfolio-detail-page .case-next-projects {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Hero text should also align with the same grid */
+  body.portfolio-detail-page .case-breadcrumb,
+  body.portfolio-detail-page .case-title,
+  body.portfolio-detail-page .case-industry {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Keep carousel full-width, like your Figma layout */
+  body.portfolio-detail-page .case-hero-carousel {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Keep sticky tab menu aligned with the same visual margin */
+  body.portfolio-detail-page .case-tabs {
+    width: calc(100% - 32px) !important;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE REMOVE EXTRA SPACE AFTER RELATED PROJECTS
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page main.case-main {
+    margin-bottom: 15px !important;
+    padding-bottom: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-next-projects {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  body.portfolio-detail-page .case-next-grid {
+    margin-bottom: 0 !important;
+  }
+
+  body.portfolio-detail-page .case-next-card:last-child {
+    margin-bottom: 0 !important;
+  }
+}

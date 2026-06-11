@@ -132,10 +132,10 @@ const initCarousel = function (root, startIndex = 1) {
 
     const diff = currentX - startX;
 
-    if (Math.abs(diff) > 40) {
-      if (diff < 0) goToSlide(currentIndex + 1);
-      else goToSlide(currentIndex - 1);
-    }
+if (Math.abs(diff) > 28) {
+  if (diff < 0) goToSlide(currentIndex + 1);
+  else goToSlide(currentIndex - 1);
+}
 
     isDragging = false;
   });
