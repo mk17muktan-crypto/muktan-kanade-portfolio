@@ -4023,59 +4023,156 @@ body.portfolio-detail-page .case-gallery-item:active {
 }
 
 /*-----------------------------------*\
-  #CLEAN CASE STICKY BLUR MASK
+  #HERO CAROUSEL IMAGE HOVER EFFECT
 \*-----------------------------------*/
 
-@media (min-width: 581px) {
+body.portfolio-detail-page .case-carousel-slide {
+  pointer-events: auto;
+  cursor: zoom-in;
+}
 
-  body.portfolio-detail-page {
-    --case-sticky-top: 26px;
-    --case-mask-height: 112px;
-    --case-mask-blur: 14px;
-    --case-mask-top-opacity: 0.86;
-    --case-mask-mid-opacity: 0.42;
-  }
+body.portfolio-detail-page .case-carousel-slide > * {
+  transform-origin: center;
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1.15, 0.36, 1),
+    filter 0.65s ease,
+    box-shadow 0.65s ease;
+  will-change: transform;
+}
 
-  body.portfolio-detail-page .case-sticky-mask {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--case-mask-height);
+/* Active/hovered carousel image slowly grows from centre */
+body.portfolio-detail-page .case-carousel-slide:hover > * {
+  transform: scale(1.055);
+  filter: brightness(1.06);
+  box-shadow: 0 20px 46px hsla(0, 0%, 0%, 0.34);
+}
 
-    background: linear-gradient(
-      180deg,
-      hsla(0, 0%, 7%, var(--case-mask-top-opacity)) 0%,
-      hsla(240, 2%, 10%, var(--case-mask-mid-opacity)) 55%,
-      hsla(240, 2%, 10%, 0) 100%
-    );
+/* Piano-like handover: other carousel images gently settle */
+body.portfolio-detail-page .case-carousel-track:hover .case-carousel-slide:not(:hover) > * {
+  transform: scale(0.985);
+  filter: brightness(0.90);
+}
 
-    backdrop-filter: blur(var(--case-mask-blur));
-    -webkit-backdrop-filter: blur(var(--case-mask-blur));
+/* Keep the hidden slide from interfering */
+body.portfolio-detail-page .case-carousel-slide:not(.is-active):not(.is-prev):not(.is-next) {
+  pointer-events: none;
+}
 
-    opacity: 0;
-    transform: translateY(-14px);
-    pointer-events: none;
+/*-----------------------------------*\
+  #CASE TAB BAR DROP SHADOW
+\*-----------------------------------*/
 
-    z-index: 70;
+body.portfolio-detail-page .case-tabs {
+  box-shadow:
+    0 18px 42px hsla(0, 0%, 0%, 0.26),
+    0 1px 0 hsla(0, 0%, 100%, 0.04) inset;
+}
 
-    transition:
-      opacity 0.42s ease,
-      transform 0.42s cubic-bezier(0.22, 1.15, 0.36, 1);
-  }
+/*-----------------------------------*\
+  #CASE BREADCRUMB CURRENT LINK
+\*-----------------------------------*/
 
-  body.portfolio-detail-page.case-tabs-stuck .case-sticky-mask {
-    opacity: 1;
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link] {
+  color: var(--white-2);
+}
+
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link]:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+/*-----------------------------------*\
+  #CASE BREADCRUMB FINAL STYLE
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-breadcrumb {
+  gap: 7px;
+}
+
+/* All breadcrumb links by default */
+body.portfolio-detail-page .case-breadcrumb a {
+  color: var(--white-2) !important;
+  font-weight: var(--fw-400);
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    font-weight 0.25s ease,
+    transform 0.35s cubic-bezier(0.22, 1.25, 0.36, 1),
+    opacity 0.25s ease;
+}
+
+/* Current page */
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link] {
+  color: var(--orange-yellow-crayola) !important;
+  font-weight: var(--fw-600);
+}
+
+/* Separator */
+body.portfolio-detail-page .case-breadcrumb span {
+  color: hsla(45, 100%, 72%, 0.55);
+  font-weight: var(--fw-400);
+}
+
+/* Hover only on previous breadcrumb links, not current page */
+body.portfolio-detail-page .case-breadcrumb a:not([data-case-current-link]):hover {
+  color: var(--white-2) !important;
+  font-weight: var(--fw-600);
+  animation: breadcrumbFloatOnce 0.55s cubic-bezier(0.22, 1.25, 0.36, 1) 1;
+}
+
+@keyframes breadcrumbFloatOnce {
+  0% {
     transform: translateY(0);
   }
 
-  body.portfolio-detail-page .case-tabs {
-    position: sticky;
-    top: var(--case-sticky-top);
-    z-index: 90 !important;
+  100% {
+    transform: translateY(-4px);
   }
+}
 
-  body.portfolio-detail-page .case-back-btn {
-    z-index: 100 !important;
-  }
+/* Current page should stay stable */
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link]:hover {
+  color: var(--orange-yellow-crayola) !important;
+  font-weight: var(--fw-600);
+  transform: none;
+}
+
+/*-----------------------------------*\
+  #CASE BREADCRUMB SMOOTH HOVER FLOAT
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-breadcrumb a {
+  color: var(--white-2) !important;
+  font-weight: var(--fw-400);
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1.25, 0.36, 1),
+    font-weight 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Current page */
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link] {
+  color: var(--orange-yellow-crayola) !important;
+  font-weight: var(--fw-600);
+}
+
+/* Previous breadcrumb links hover */
+body.portfolio-detail-page .case-breadcrumb a:not([data-case-current-link]):hover {
+  color: var(--white-2) !important;
+  font-weight: var(--fw-600);
+  transform: translateY(-4px);
+}
+
+/* Current page hover */
+body.portfolio-detail-page .case-breadcrumb [data-case-current-link]:hover {
+  color: var(--orange-yellow-crayola) !important;
+  font-weight: var(--fw-600);
+  transform: translateY(-4px);
+}
+
+/* Separator */
+body.portfolio-detail-page .case-breadcrumb span {
+  color: hsla(45, 100%, 72%, 0.55);
+  font-weight: var(--fw-400);
 }

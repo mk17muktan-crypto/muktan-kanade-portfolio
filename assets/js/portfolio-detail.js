@@ -32,28 +32,25 @@ const fillTextContent = function () {
 
   document.querySelector("[data-case-title]").innerText = project.title;
   document.querySelector("[data-case-industry]").innerText = "Industry: " + project.industry;
-const breadcrumbCategoryLink = document.querySelector("[data-case-category-link]");
+  document.querySelector("[data-client-description]").innerText = project.description;
 
-if (breadcrumbCategoryLink) {
-  breadcrumbCategoryLink.innerText = project.category;
-  breadcrumbCategoryLink.href = "./index.html?section=portfolio&category=" + project.categorySlug;
-}  document.querySelector("[data-client-description]").innerText = project.description;
+  const breadcrumbCategoryLink = document.querySelector("[data-case-category-link]");
+  const breadcrumbCurrentLink = document.querySelector("[data-case-current-link]");
   const backButton = document.querySelector("[data-case-back]");
 
-if (backButton) {
-  backButton.href = "./index.html?section=portfolio&category=" + project.categorySlug;
-}
-};
+  if (breadcrumbCategoryLink) {
+    breadcrumbCategoryLink.innerText = project.category;
+    breadcrumbCategoryLink.href = "./index.html?section=portfolio&category=" + project.categorySlug;
+  }
 
-const renderList = function (selector, items) {
-  const list = document.querySelector(selector);
-  list.innerHTML = "";
+  if (breadcrumbCurrentLink) {
+    breadcrumbCurrentLink.innerText = project.title;
+    breadcrumbCurrentLink.href = "./portfolio-detail.html?project=" + projectId;
+  }
 
-  items.forEach(function (text) {
-    const li = document.createElement("li");
-    li.innerText = text;
-    list.appendChild(li);
-  });
+  if (backButton) {
+    backButton.href = "./index.html?section=portfolio&category=" + project.categorySlug;
+  }
 };
 
 const initCarousel = function (root, startIndex = 1) {
