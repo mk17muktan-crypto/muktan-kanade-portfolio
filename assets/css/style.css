@@ -4445,6 +4445,15 @@ body.portfolio-detail-page .case-breadcrumb span {
   body.portfolio-detail-page .case-info-card {
     scroll-margin-top: 150px;
   }
+  /* When tabs are sticky and back button is hidden */
+body.portfolio-detail-page.case-mobile-tabs-stuck:not(.case-mobile-back-visible) .case-tabs {
+  top: 18px !important;
+}
+
+/* When scrolling up: back button appears, tab bar moves down */
+body.portfolio-detail-page.case-mobile-tabs-stuck.case-mobile-back-visible .case-tabs {
+  top: 73px !important;
+}
 }
 
 
@@ -4675,3 +4684,14 @@ body.portfolio-detail-page .case-breadcrumb span {
   }
 }
 
+/*-----------------------------------*\
+  #HIDE CASE CAROUSEL DOTS ON DESKTOP
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-carousel-dots,
+  body.portfolio-detail-page .case-mobile-gallery-dots,
+  body.portfolio-detail-page .client-mobile-carousel-dots {
+    display: none !important;
+  }
+}
