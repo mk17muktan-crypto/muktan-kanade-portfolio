@@ -32,8 +32,12 @@ const fillTextContent = function () {
 
   document.querySelector("[data-case-title]").innerText = project.title;
   document.querySelector("[data-case-industry]").innerText = "Industry: " + project.industry;
-  document.querySelector("[data-case-breadcrumb]").innerText = project.breadcrumb;
-  document.querySelector("[data-client-description]").innerText = project.description;
+const breadcrumbCategoryLink = document.querySelector("[data-case-category-link]");
+
+if (breadcrumbCategoryLink) {
+  breadcrumbCategoryLink.innerText = project.category;
+  breadcrumbCategoryLink.href = "./index.html?section=portfolio&category=" + project.categorySlug;
+}  document.querySelector("[data-client-description]").innerText = project.description;
   const backButton = document.querySelector("[data-case-back]");
 
 if (backButton) {

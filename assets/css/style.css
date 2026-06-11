@@ -3929,3 +3929,153 @@ body.case-preview-open {
   }
 
 }
+
+/*-----------------------------------*\
+  #CASE BREADCRUMB LINKS
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange-yellow-crayola);
+  font-size: 12px;
+  font-weight: var(--fw-500);
+  margin-bottom: 8px;
+}
+
+body.portfolio-detail-page .case-breadcrumb a {
+  color: var(--orange-yellow-crayola);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+body.portfolio-detail-page .case-breadcrumb a:hover {
+  opacity: 0.72;
+  transform: translateY(-1px);
+}
+
+body.portfolio-detail-page .case-breadcrumb span {
+  color: hsla(45, 100%, 72%, 0.55);
+}
+
+/*-----------------------------------*\
+  #CASE GALLERY IMAGE HOVER EFFECT
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-gallery-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: zoom-in;
+  background: var(--onyx);
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.72s cubic-bezier(0.22, 1.15, 0.36, 1),
+    box-shadow 0.72s ease,
+    opacity 0.45s ease;
+}
+
+body.portfolio-detail-page .case-gallery-item > * {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  transform-origin: center;
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1.15, 0.36, 1),
+    filter 0.65s ease;
+  will-change: transform;
+}
+
+body.portfolio-detail-page .case-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.portfolio-detail-page .case-gallery-item:hover {
+  transform: translateY(-4px) scale(1.018);
+  box-shadow: 0 18px 42px hsla(0, 0%, 0%, 0.34);
+  z-index: 2;
+}
+
+body.portfolio-detail-page .case-gallery-item:hover > * {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* Piano-like handover: hovered image rises, surrounding images gently settle */
+body.portfolio-detail-page .case-gallery:hover .case-gallery-item:not(:hover) {
+  transform: scale(0.992);
+  opacity: 0.88;
+}
+
+body.portfolio-detail-page .case-gallery:hover .case-gallery-item:not(:hover) > * {
+  transform: scale(1.01);
+  filter: brightness(0.92);
+}
+
+body.portfolio-detail-page .case-gallery-item:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/*-----------------------------------*\
+  #CLEAN CASE STICKY BLUR MASK
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  body.portfolio-detail-page {
+    --case-sticky-top: 26px;
+    --case-mask-height: 112px;
+    --case-mask-blur: 14px;
+    --case-mask-top-opacity: 0.86;
+    --case-mask-mid-opacity: 0.42;
+  }
+
+  body.portfolio-detail-page .case-sticky-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--case-mask-height);
+
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 7%, var(--case-mask-top-opacity)) 0%,
+      hsla(240, 2%, 10%, var(--case-mask-mid-opacity)) 55%,
+      hsla(240, 2%, 10%, 0) 100%
+    );
+
+    backdrop-filter: blur(var(--case-mask-blur));
+    -webkit-backdrop-filter: blur(var(--case-mask-blur));
+
+    opacity: 0;
+    transform: translateY(-14px);
+    pointer-events: none;
+
+    z-index: 70;
+
+    transition:
+      opacity 0.42s ease,
+      transform 0.42s cubic-bezier(0.22, 1.15, 0.36, 1);
+  }
+
+  body.portfolio-detail-page.case-tabs-stuck .case-sticky-mask {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  body.portfolio-detail-page .case-tabs {
+    position: sticky;
+    top: var(--case-sticky-top);
+    z-index: 90 !important;
+  }
+
+  body.portfolio-detail-page .case-back-btn {
+    z-index: 100 !important;
+  }
+}

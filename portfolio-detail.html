@@ -18,9 +18,11 @@
 
 <body class="portfolio-detail-page">
 
-<a href="./index.html?section=portfolio" class="case-back-btn" aria-label="Back to portfolio">
+<a href="./index.html?section=portfolio" class="case-back-btn" data-case-back aria-label="Back to portfolio">
   <ion-icon name="chevron-back-outline"></ion-icon>
 </a>
+
+<div class="case-sticky-mask" aria-hidden="true"></div>
 
   
 
@@ -28,10 +30,12 @@
 
     <header class="case-hero">
 
-      <div class="case-breadcrumb" data-case-breadcrumb>
-        Portfolio &gt; Graphic Design
-      </div>
-
+<nav class="case-breadcrumb" data-case-breadcrumb aria-label="Breadcrumb">
+  <a href="./index.html?section=portfolio">Portfolio</a>
+  <span>&gt;</span>
+  <a href="./index.html?section=portfolio&category=graphic-design" data-case-category-link>Graphic Design</a>
+</nav>
+		
       <h1 class="case-title" data-case-title>Dagdushet Ganpati</h1>
 
       <p class="case-industry" data-case-industry>
