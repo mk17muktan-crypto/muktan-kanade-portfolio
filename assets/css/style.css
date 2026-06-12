@@ -5704,3 +5704,363 @@ body.portfolio-detail-page .case-top-nav-link:active {
     margin-top: 54px !important;
   }
 }
+
+/*-----------------------------------*\
+  #DESKTOP CASE CLIENT INFO BANNER
+\*-----------------------------------*/
+
+.case-client-info-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  align-items: start;
+  gap: 56px;
+
+  width: 100%;
+}
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-hero {
+    padding: 92px 52px 42px !important;
+    text-align: left;
+  }
+
+  body.portfolio-detail-page .case-client-info-banner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    align-items: start;
+    gap: 56px;
+
+    width: 100%;
+    margin-top: 28px;
+  }
+
+  body.portfolio-detail-page .case-banner-copy {
+    max-width: 690px;
+  }
+
+  body.portfolio-detail-page .case-banner-title {
+    color: var(--white-2);
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: var(--fw-600);
+    letter-spacing: -0.4px;
+    margin-bottom: 18px;
+  }
+
+  body.portfolio-detail-page .case-banner-title span:first-child {
+    display: inline;
+    color: var(--orange-yellow-crayola);
+  }
+
+  body.portfolio-detail-page .case-banner-title span:last-child {
+    display: inline;
+    color: var(--white-2);
+  }
+
+  body.portfolio-detail-page .case-banner-intro-row {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    align-items: start;
+    gap: 16px;
+
+    margin-bottom: 22px;
+  }
+
+  body.portfolio-detail-page .case-banner-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
+
+    font-size: 20px;
+    font-weight: var(--fw-600);
+
+    box-shadow: 0 12px 28px hsla(45, 100%, 72%, 0.22);
+  }
+
+  body.portfolio-detail-page .case-banner-copy p {
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  body.portfolio-detail-page .case-banner-intro-row p {
+    margin-bottom: 0;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card {
+    position: relative;
+
+    padding: 26px 28px;
+    border-radius: 20px;
+
+    background:
+      radial-gradient(circle at 18% 18%, hsla(45, 100%, 78%, 0.24), transparent 28%),
+      radial-gradient(circle at 82% 76%, hsla(35, 100%, 68%, 0.18), transparent 30%),
+      var(--text-gradient-yellow);
+
+    color: var(--smoky-black);
+
+    overflow: hidden;
+    box-shadow:
+      0 24px 58px hsla(0, 0%, 0%, 0.30),
+      0 10px 28px hsla(45, 100%, 72%, 0.18);
+  }
+
+  body.portfolio-detail-page .case-project-summary-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+      repeating-linear-gradient(
+        135deg,
+        hsla(0, 0%, 100%, 0.12) 0px,
+        hsla(0, 0%, 100%, 0.12) 2px,
+        transparent 2px,
+        transparent 14px
+      );
+
+    opacity: 0.22;
+    pointer-events: none;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card div {
+    position: relative;
+    z-index: 1;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card div:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card p {
+    color: hsla(0, 0%, 7%, 0.72);
+    font-size: 13px;
+    font-weight: var(--fw-400);
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card h3 {
+    color: var(--smoky-black);
+    font-size: 18px;
+    font-weight: var(--fw-600);
+    line-height: 1.25;
+  }
+}
+
+/* Center hero title and industry text on portfolio detail page */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-title,
+  body.portfolio-detail-page .case-industry {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Reduce gap between cover image and tab bar */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-cover-placeholder {
+    margin-bottom: 35px !important;
+  }
+
+  body.portfolio-detail-page .case-hero {
+    padding-bottom: 8px !important;
+  }
+}
+
+/* Reduce gap above portfolio detail breadcrumb */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-hero {
+    padding-top: 90px !important;
+  }
+
+  body.portfolio-detail-page .case-breadcrumb {
+    margin-top: 8px !important;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE CLIENT INFO ORDER FIX
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Hide inner section tab bar on mobile so the order stays clean */
+  body.portfolio-detail-page .case-tabs {
+    display: none !important;
+  }
+
+  /* Pull client info closer after the main image */
+  body.portfolio-detail-page #client-info {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    text-align: center;
+  }
+
+  body.portfolio-detail-page .case-client-info-banner {
+    display: flex !important;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+  }
+
+  /* 1st inside client info: yellow block */
+  body.portfolio-detail-page .case-project-summary-card {
+    order: 1;
+
+    width: 100%;
+    padding: 24px 22px;
+    border-radius: 18px;
+
+    background:
+      radial-gradient(circle at 18% 18%, hsla(45, 100%, 78%, 0.24), transparent 28%),
+      radial-gradient(circle at 82% 76%, hsla(35, 100%, 68%, 0.18), transparent 30%),
+      var(--text-gradient-yellow);
+
+    color: var(--smoky-black);
+    text-align: center;
+
+    box-shadow:
+      0 22px 50px hsla(0, 0%, 0%, 0.28),
+      0 10px 28px hsla(45, 100%, 72%, 0.16);
+
+    overflow: hidden;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card p {
+    color: hsla(0, 0%, 7%, 0.72);
+    font-size: 12px;
+    font-weight: var(--fw-400);
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card h3 {
+    color: var(--smoky-black);
+    font-size: 17px;
+    font-weight: var(--fw-600);
+    line-height: 1.25;
+  }
+
+  /* 2nd inside client info: text section */
+  body.portfolio-detail-page .case-banner-copy {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  body.portfolio-detail-page .case-banner-title {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  body.portfolio-detail-page .case-banner-title span:first-child {
+    display: block;
+    color: var(--orange-yellow-crayola);
+  }
+
+  body.portfolio-detail-page .case-banner-title span:last-child {
+    display: block;
+    color: var(--white-2);
+  }
+
+  body.portfolio-detail-page .case-banner-intro-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  body.portfolio-detail-page .case-banner-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
+
+    font-size: 18px;
+    font-weight: var(--fw-600);
+  }
+
+  body.portfolio-detail-page .case-banner-copy p {
+    text-align: center;
+    color: var(--light-gray);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-300);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+}
+
+/* Remove yellow D icon from mobile client info section */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-banner-icon {
+    display: none !important;
+  }
+
+  body.portfolio-detail-page .case-banner-intro-row {
+    gap: 0 !important;
+  }
+}
+
+/* Match mobile main banner width with yellow summary section */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-cover-placeholder {
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  body.portfolio-detail-page .case-cover-placeholder-box {
+    width: 100% !important;
+    max-width: none !important;
+    height: 450px !important;
+  }
+}
+
+/* Reduce mobile gap between cover image and yellow project summary */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-cover-placeholder {
+    margin-bottom: 25px !important;
+  }
+
+  body.portfolio-detail-page .case-hero {
+    padding-bottom: 4px !important;
+  }
+
+  body.portfolio-detail-page #client-info {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* Increase mobile gap between yellow block and client info heading */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-client-info-banner {
+    gap: 55px !important;
+  }
+}

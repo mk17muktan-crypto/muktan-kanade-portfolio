@@ -30,10 +30,19 @@ const createImageItem = function (item) {
 const fillTextContent = function () {
   document.title = project.title + " | Muktan Kanade Portfolio";
 
-  document.querySelector("[data-case-title]").innerText = project.title;
-  document.querySelector("[data-case-industry]").innerText = "Industry: " + project.industry;
-  document.querySelector("[data-client-description]").innerText = project.description;
+document.querySelectorAll("[data-case-title]").forEach(function (item) {
+  item.innerText = project.title;
+});
 
+document.querySelectorAll("[data-case-industry]").forEach(function (item) {
+  item.innerText = "Industry: " + project.industry;
+});
+
+const clientDescription = document.querySelector("[data-client-description]");
+
+if (clientDescription) {
+  clientDescription.innerText = project.description;
+}
   const breadcrumbCategoryLink = document.querySelector("[data-case-category-link]");
   const breadcrumbCurrentLink = document.querySelector("[data-case-current-link]");
   const backButton = document.querySelector("[data-case-back]");
