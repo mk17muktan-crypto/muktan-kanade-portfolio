@@ -293,8 +293,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
   filterBtn[i].addEventListener("click", function () {
 
-    const selectedValue = this.querySelector(".portfolio-category-text").innerText.toLowerCase();
-
+const selectedValue = this.dataset.filterValue || this.querySelector(".portfolio-category-text").innerText.toLowerCase();
     filterFunc(selectedValue);
 
     lastClickedBtn.classList.remove("active");
