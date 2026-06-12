@@ -288,159 +288,322 @@
 			
         </section>
 
-
-        <!--
+       <!-- 
           - testimonials
         -->
 
-       <!-- <section class="testimonials">
+<section class="testimonials">
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+  <h3 class="h3 testimonials-title">Testimonials</h3>
 
-          <ul class="testimonials-list has-scrollbar">
+  <div class="testimonial-carousel">
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+    <ul class="testimonials-list" data-testimonials-list>
+			  
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
 
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Aditi Sathe.jpg" alt="aditi-sathe" width="80" data-testimonials-avatar>
+          </figure>
 
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Aditi Sathe</h4>
 
-              </div>
-            </li>
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Creative Director</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
 
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+            <p class="testimonials-text" data-testimonials-text>
+              He brings a calm, practical and detail-oriented approach to design work. Whether it is social media creatives, campaign layouts, print material or digital assets, he is able to adapt quickly and maintain visual consistency.
+            </p>
 
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>-->
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
+            <button class="testimonial-read-more" type="button" data-testimonials-read-more>
+              Read More
             </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
+          </div>
 
         </div>
+      </li>
 
-      </article>
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Shrirang Godbole.jpg" alt="shrirang-godbole" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Shrirang Godbole</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Chairman, MD</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+              I am an old man, almost 66. But I am neugierig (German word for curious), nosy at times. I want to know how the younger generation looks at things- work, art, cinema, literature and more. How and what they think. When I interacted with Muktan, I found him a little different than many others of his age.  I found him quite tenacious and devoted to his work. He has his own ideas, why not ? But he is open to debate and deliberate. He’s not afraid of presenting his work, which he has done honestly, according to his conviction.  Luckily he is still “immature”.  That will work well for him because maturity is a trap that limits one’s creativity to fly. I wish him good luck at the beginning of his career and hope he keeps exploring instead of settling.
+            </p>
+
+            <button class="testimonial-read-more" type="button" data-testimonials-read-more>
+              Read More
+            </button>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Chintamani Vartak.jpg" alt="chintamani-vartak" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Chintamani Vartak</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Director</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+              He brings a calm, practical and detail-oriented approach to design work. Whether it is social media creatives, campaign layouts, print material or digital assets, he is able to adapt quickly and maintain visual consistency.
+            </p>
+
+            <button class="testimonial-read-more" type="button" data-testimonials-read-more>
+              Read More
+            </button>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Amit Patwardhan.jpg" alt="amit-patwardhan" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Amit Patwardhan</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Director</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+              He brings a calm, practical and detail-oriented approach to design work. Whether it is social media creatives, campaign layouts, print material or digital assets, he is able to adapt quickly and maintain visual consistency.
+            </p>
+
+            <button class="testimonial-read-more" type="button" data-testimonials-read-more>
+              Read More
+            </button>
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Hrishikesh Deshpande.jpg" alt="hrishikesh-deshpande" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Hrishikesh Deshpande</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Executive Director</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+				Muktan gives multiple innovative concepts instead of just one, which always makes choosing so much easier. Prompt, professional &amp; goal-focused - exactly what you want in a designer.</p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Ajinkya Mhadgut.jpg" alt="ajinkya-mhadgut" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Ajinkya Mhadgut</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Writer, Director</span>
+              <span>at</span>
+              <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                Indian Magic Eye
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+				I have had the opportunity to work closely with Muktan and have always been impressed by his professionalism and dedication. As a graphic designer, editor and website developer, he consistently delivers high-quality work with strong attention to detail and creativity.
+				One of his greatest strengths is his ability to communicate effectively and handle crucial situations calmly, even under pressure. He approaches challenges with a positive attitude and finds practical solutions when faced with tight deadlines or demanding requirements.
+				Muktan also has a strong sense of creativity and ideation. His innovative thinking helps bring fresh perspectives to projects, making his contributions valuable to the team. He is reliable, hardworking, and always committed to achieving the best possible outcome.
+				Overall, Muktan is a talented professional and a great team member who adds significant value to every project he works on..</p>
+          </div>
+
+            <button class="testimonial-read-more" type="button" data-testimonials-read-more>
+              Read More
+            </button>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Satish Deshmukh.jpg" alt="satish-deshmukh" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Satish Deshmukh</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Production Lead</span>
+              <span>at</span>
+              <a href="https://www.imeedusol.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                IME Edusol
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+              What I loved most is his speed + quality combo. Muktan delivers 2-3 different options quickly without compromising on design. He is dedicated to achieving the target, and it shows in his final work.
+            </p>
+
+
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Sarang Bhide.jpg" alt="sarang-bhide" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Sarang Bhide</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Project Head</span>
+              <span>at</span>
+              <a href="https://www.imeedusol.com/" target="_blank" rel="noopener noreferrer" data-testimonials-company>
+                IME Edusol
+              </a>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+              Working with Muktan is always smooth and creative. He is hardworking and always delivers on time. If you need someone who understands the brief and actually hits the target, he is the right guy.
+            </p>
+
+
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Parth Kulkarni.jpg" alt="parth-kulkarni" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Parth Kulkarni</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Accociate Director</span>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+				Muktan is one of the best creative people I have worked with. He is very good under pressure and knows how to deliver on time. He is someone who can allways put something interesting on the table.</p>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li class="testimonials-item" data-testimonials-item>
+        <div class="testimonial-card">
+
+          <figure class="testimonials-avatar-box">
+            <img src="./assets/images/Testimonials/Mayuresh Baware.jpg" alt="mayuresh-baware" width="80" data-testimonials-avatar>
+          </figure>
+
+          <div class="testimonial-content">
+            <h4 class="h4 testimonials-item-title" data-testimonials-title>Mayuresh Baware</h4>
+
+            <p class="testimonial-person-meta">
+              <span data-testimonials-occupation>Head Editor</span>
+            </p>
+
+            <p class="testimonials-text" data-testimonials-text>
+				Muktan gives multiple innovative concepts instead of just one, which always makes choosing so much easier. Prompt, professional &amp; goal-focused - exactly what you want in a designer.</p>
+
+          </div>
+
+        </div>
+      </li>
+		
+</ul>
+
+<button class="testimonial-carousel-arrow testimonial-carousel-arrow-prev is-hidden"
+        type="button"
+        data-testimonial-prev
+        aria-label="Previous testimonials">
+  <ion-icon name="chevron-back-outline"></ion-icon>
+</button>
+
+<button class="testimonial-carousel-arrow testimonial-carousel-arrow-next"
+        type="button"
+        data-testimonial-next
+        aria-label="Next testimonials">
+  <ion-icon name="chevron-forward-outline"></ion-icon>
+</button>
+
+<div class="testimonial-carousel-dots" data-testimonial-dots></div>
+
+  </div>
+
+</section>
 
 
 
-
+</article>
 
       <!--
         - #RESUME
@@ -1483,7 +1646,41 @@
 
   </main>
 
+<div class="modal-container testimonials-modal-container" data-modal-container>
 
+  <div class="overlay testimonials-overlay" data-overlay></div>
+
+  <section class="testimonials-modal">
+
+    <button class="modal-close-btn" data-modal-close-btn aria-label="Close testimonial">
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="modal-img-wrapper">
+      <figure class="modal-avatar-box">
+        <img src="./assets/images/avatar-1.png" alt="" width="150" data-modal-img>
+      </figure>
+    </div>
+
+    <div class="modal-content">
+
+      <h4 class="h3 modal-title" data-modal-title>Client Name</h4>
+
+      <p class="modal-person-meta">
+        <span data-modal-occupation>Creative Director</span>
+        <span>at</span>
+        <a href="https://imepl.com/" target="_blank" rel="noopener noreferrer" data-modal-company>
+          Indian Magic Eye
+        </a>
+      </p>
+
+      <div class="modal-text-scroll" data-modal-text></div>
+
+    </div>
+
+  </section>
+
+</div>
 
 <!--
   - portfolio image popup

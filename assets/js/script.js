@@ -16,45 +16,256 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 
 
-// testimonials variables
+// testimonials carousel + read more modal
+const testimonialsList = document.querySelector("[data-testimonials-list]");
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const testimonialDotsContainer = document.querySelector("[data-testimonial-dots]");
+const testimonialPrevBtn = document.querySelector("[data-testimonial-prev]");
+const testimonialNextBtn = document.querySelector("[data-testimonial-next]");
+
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// modal variable
 const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
+const modalOccupation = document.querySelector("[data-modal-occupation]");
+const modalCompany = document.querySelector("[data-modal-company]");
 
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+
+const openTestimonialModal = function (item) {
+  if (!modalContainer) return;
+
+  const avatar = item.querySelector("[data-testimonials-avatar]");
+  const title = item.querySelector("[data-testimonials-title]");
+  const text = item.querySelector("[data-testimonials-text]");
+  const occupation = item.querySelector("[data-testimonials-occupation]");
+  const company = item.querySelector("[data-testimonials-company]");
+
+  if (avatar && modalImg) {
+    modalImg.src = avatar.src;
+    modalImg.alt = avatar.alt;
+  }
+
+  if (title && modalTitle) {
+    modalTitle.innerText = title.innerText;
+  }
+
+  if (text && modalText) {
+    modalText.innerHTML = `<p>${text.innerText}</p>`;
+  }
+
+  if (occupation && modalOccupation) {
+    modalOccupation.innerText = occupation.innerText;
+  }
+
+  if (company && modalCompany) {
+    modalCompany.innerText = company.innerText;
+    modalCompany.href = company.href || "https://imepl.com/";
+  }
+
+
+  modalContainer.classList.remove("is-closing");
+  modalContainer.classList.add("active");
+
+  if (overlay) overlay.classList.add("active");
+
+  document.body.classList.add("testimonial-modal-open");
+};
+
+const closeTestimonialModal = function () {
+  if (!modalContainer || !modalContainer.classList.contains("active")) return;
+
+  modalContainer.classList.add("is-closing");
+
+  if (overlay) overlay.classList.remove("active");
+
+  setTimeout(function () {
+    modalContainer.classList.remove("active", "is-closing");
+    document.body.classList.remove("testimonial-modal-open");
+  }, 720);
+};
+
+// testimonial read more + modal close events
+for (let i = 0; i < testimonialsItem.length; i++) {
+  const readMoreButton = testimonialsItem[i].querySelector("[data-testimonials-read-more]");
+
+  if (readMoreButton) {
+    readMoreButton.addEventListener("click", function () {
+      openTestimonialModal(testimonialsItem[i]);
+    });
+  }
 }
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", closeTestimonialModal);
+}
 
-  testimonialsItem[i].addEventListener("click", function () {
+if (overlay) {
+  overlay.addEventListener("click", closeTestimonialModal);
+}
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && modalContainer && modalContainer.classList.contains("active")) {
+    closeTestimonialModal();
+  }
+});
 
-    testimonialsModalFunc();
+// testimonial carousel dots + desktop arrows
+let testimonialDots = [];
+let currentTestimonialPage = 0;
 
+const getTestimonialItems = function () {
+  return Array.from(document.querySelectorAll("[data-testimonials-item]"));
+};
+
+const getTestimonialsPerView = function () {
+  return window.innerWidth > 580 ? 2 : 1;
+};
+
+const getTestimonialPageCount = function () {
+  const items = getTestimonialItems();
+  return Math.ceil(items.length / getTestimonialsPerView());
+};
+
+const updateTestimonialArrows = function () {
+  const pageCount = getTestimonialPageCount();
+
+  if (testimonialPrevBtn) {
+    testimonialPrevBtn.classList.toggle("is-hidden", currentTestimonialPage <= 0);
+  }
+
+  if (testimonialNextBtn) {
+    testimonialNextBtn.classList.toggle("is-hidden", currentTestimonialPage >= pageCount - 1);
+  }
+};
+
+const setTestimonialActivePage = function (pageIndex) {
+  const pageCount = getTestimonialPageCount();
+
+  currentTestimonialPage = Math.max(0, Math.min(pageIndex, pageCount - 1));
+
+  testimonialDots.forEach(function (dot, index) {
+    dot.classList.toggle("active", index === currentTestimonialPage);
   });
 
+  updateTestimonialArrows();
+};
+
+const scrollToTestimonialPage = function (pageIndex) {
+  if (!testimonialsList) return;
+
+  const items = getTestimonialItems();
+  const perView = getTestimonialsPerView();
+  const pageCount = getTestimonialPageCount();
+
+  const safePageIndex = Math.max(0, Math.min(pageIndex, pageCount - 1));
+  const targetIndex = safePageIndex * perView;
+  const targetItem = items[targetIndex];
+
+  if (!targetItem) return;
+
+  const maxScrollLeft = testimonialsList.scrollWidth - testimonialsList.clientWidth;
+  const isLastPage = safePageIndex === pageCount - 1;
+
+  testimonialsList.scrollTo({
+    left: isLastPage ? maxScrollLeft : targetItem.offsetLeft,
+    behavior: "smooth"
+  });
+
+  setTestimonialActivePage(safePageIndex);
+};
+
+const updateTestimonialDots = function () {
+  if (!testimonialsList || testimonialDots.length === 0) return;
+
+  const items = getTestimonialItems();
+  const perView = getTestimonialsPerView();
+  const pageCount = getTestimonialPageCount();
+  const maxScrollLeft = testimonialsList.scrollWidth - testimonialsList.clientWidth;
+
+  let activeItemIndex = 0;
+
+  if (testimonialsList.scrollLeft >= maxScrollLeft - 3) {
+    activeItemIndex = items.length - 1;
+  } else {
+    const listCenter = testimonialsList.scrollLeft + testimonialsList.clientWidth / 2;
+    let closestDistance = Infinity;
+
+    items.forEach(function (item, index) {
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      const distance = Math.abs(listCenter - itemCenter);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        activeItemIndex = index;
+      }
+    });
+  }
+
+  const activePageIndex = Math.min(
+    pageCount - 1,
+    Math.floor(activeItemIndex / perView)
+  );
+
+  setTestimonialActivePage(activePageIndex);
+};
+
+const createTestimonialDots = function () {
+  if (!testimonialsList || !testimonialDotsContainer || testimonialsItem.length === 0) return;
+
+  testimonialDotsContainer.innerHTML = "";
+  testimonialDots = [];
+
+  const pageCount = getTestimonialPageCount();
+
+  for (let index = 0; index < pageCount; index++) {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.classList.add("testimonial-carousel-dot");
+
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", function () {
+      scrollToTestimonialPage(index);
+    });
+
+    testimonialDotsContainer.appendChild(dot);
+    testimonialDots.push(dot);
+  }
+
+  setTestimonialActivePage(0);
+};
+
+if (testimonialPrevBtn) {
+  testimonialPrevBtn.addEventListener("click", function () {
+    scrollToTestimonialPage(currentTestimonialPage - 1);
+  });
 }
 
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (testimonialNextBtn) {
+  testimonialNextBtn.addEventListener("click", function () {
+    scrollToTestimonialPage(currentTestimonialPage + 1);
+  });
+}
 
+if (testimonialsList && testimonialDotsContainer) {
+  createTestimonialDots();
 
+  testimonialsList.addEventListener("scroll", function () {
+    window.requestAnimationFrame(updateTestimonialDots);
+  });
 
+  window.addEventListener("resize", function () {
+    createTestimonialDots();
+    updateTestimonialDots();
+  });
+
+  updateTestimonialDots();
+}
 
 
 // portfolio filter variables
