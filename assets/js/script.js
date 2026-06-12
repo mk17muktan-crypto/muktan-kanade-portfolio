@@ -746,4 +746,38 @@ const openRequestedSectionAndCategory = function () {
   }
 };
 
+// mobile main navbar hide/show on scroll
+const initMobileMainNavHideOnScroll = function () {
+  const mainNavbar = document.querySelector(".navbar");
+
+  if (!mainNavbar) return;
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    const currentScrollY = window.scrollY;
+
+    if (window.innerWidth > 580) {
+      mainNavbar.classList.remove("is-hidden");
+      lastScrollY = Math.max(currentScrollY, 0);
+      return;
+    }
+
+    const scrollingDown = currentScrollY > lastScrollY + 4;
+    const scrollingUp = currentScrollY < lastScrollY - 4;
+
+    if (currentScrollY > 90 && scrollingDown) {
+      mainNavbar.classList.add("is-hidden");
+    }
+
+    if (scrollingUp || currentScrollY <= 40) {
+      mainNavbar.classList.remove("is-hidden");
+    }
+
+    lastScrollY = Math.max(currentScrollY, 0);
+  }, { passive: true });
+};
+
+initMobileMainNavHideOnScroll();
+
 openRequestedSectionAndCategory();

@@ -53,133 +53,20 @@ const fillTextContent = function () {
   }
 };
 
-const initCarousel = function (root, startIndex = 1) {
-  const track = root.querySelector("[data-carousel-track]");
-  const dotsContainer = root.querySelector("[data-carousel-dots]");
-  const slides = Array.from(track.children);
-
-  let currentIndex = startIndex;
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
-
-  dotsContainer.innerHTML = "";
-
-  slides.forEach(function (_, index) {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.classList.add("case-dot");
-
-    dot.addEventListener("click", function () {
-      goToSlide(index);
-    });
-
-    dotsContainer.appendChild(dot);
-  });
-
-  const dots = Array.from(dotsContainer.children);
-
-  const getPrevIndex = function () {
-    return currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-  };
-
-  const getNextIndex = function () {
-    return currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-  };
-
-  function updateCarousel() {
-    const prevIndex = getPrevIndex();
-    const nextIndex = getNextIndex();
-
-    slides.forEach(function (slide, index) {
-      slide.classList.remove("is-active", "is-prev", "is-next");
-
-      if (index === currentIndex) {
-        slide.classList.add("is-active");
-      } else if (index === prevIndex) {
-        slide.classList.add("is-prev");
-      } else if (index === nextIndex) {
-        slide.classList.add("is-next");
-      }
-    });
-
-    dots.forEach(function (dot, index) {
-      dot.classList.toggle("active", index === currentIndex);
-    });
-  }
-
-  function goToSlide(index) {
-    if (index < 0) index = slides.length - 1;
-    if (index >= slides.length) index = 0;
-
-    currentIndex = index;
-    updateCarousel();
-  }
-
-  root.addEventListener("touchstart", function (event) {
-    startX = event.touches[0].clientX;
-    currentX = startX;
-    isDragging = true;
-  });
-
-  root.addEventListener("touchmove", function (event) {
-    if (!isDragging) return;
-    currentX = event.touches[0].clientX;
-  });
-
-  root.addEventListener("touchend", function () {
-    if (!isDragging) return;
-
-    const diff = currentX - startX;
-
-if (Math.abs(diff) > 28) {
-  if (diff < 0) goToSlide(currentIndex + 1);
-  else goToSlide(currentIndex - 1);
-}
-
-    isDragging = false;
-  });
-
-  root.addEventListener("wheel", function (event) {
-    if (Math.abs(event.deltaX) < 8 && Math.abs(event.deltaY) < 20) return;
-
-    event.preventDefault();
-
-    if (event.deltaX > 0 || event.deltaY > 0) {
-      goToSlide(currentIndex + 1);
-    } else {
-      goToSlide(currentIndex - 1);
-    }
-  }, { passive: false });
-
-  updateCarousel();
-};
-const renderHeroCarousel = function () {
-  const root = document.querySelector("[data-hero-carousel]");
-  const track = root.querySelector("[data-carousel-track]");
-
-  track.innerHTML = "";
-
-  project.heroImages.slice(0, 3).forEach(function (item) {
-    const slide = document.createElement("div");
-    slide.classList.add("case-carousel-slide");
-    slide.appendChild(createImageItem(item));
-    track.appendChild(slide);
-  });
-
-  initCarousel(root, 1);
-};
-
 const renderClientStrip = function () {
   const strip = document.querySelector("[data-client-strip]");
+
   if (!strip) return;
 
   strip.innerHTML = "";
 
-  const oldDots = document.querySelector("[data-client-strip-dots]");
-  if (oldDots) oldDots.remove();
+  const oldDots = document.querySelector(".case-client-dots");
 
-  const images = project.clientImages.length ? project.clientImages : [
+  if (oldDots) {
+    oldDots.remove();
+  }
+
+  const images = project.clientImages && project.clientImages.length ? project.clientImages : [
     { type: "placeholder", label: "Client Image 01" },
     { type: "placeholder", label: "Client Image 02" },
     { type: "placeholder", label: "Client Image 03" },
@@ -196,8 +83,7 @@ const renderClientStrip = function () {
   if (images.length <= 1) return;
 
   const dots = document.createElement("div");
-  dots.classList.add("client-mobile-carousel-dots");
-  dots.setAttribute("data-client-strip-dots", "");
+  dots.classList.add("case-mobile-gallery-dots", "case-client-dots");
 
   const getClientItems = function () {
     return Array.from(strip.querySelectorAll(".client-strip-item"));
@@ -210,6 +96,7 @@ const renderClientStrip = function () {
     if (clientItems.length === 0 || dotButtons.length === 0) return;
 
     const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
+
     let activeIndex = 0;
 
     if (strip.scrollLeft >= maxScrollLeft - 3) {
@@ -268,7 +155,6 @@ const renderClientStrip = function () {
 
   updateClientDots();
 };
-
 let currentPreviewItems = [];
 let currentPreviewIndex = 0;
 
@@ -611,8 +497,10 @@ const initCaseBackgroundGlow = function () {
 
 const initBackButtonStickyAlignment = function () {
   const tabs = document.querySelector("[data-case-tabs]");
+  const backButton = document.querySelector("[data-case-back]");
 
-  let lastScrollY = window.scrollY;
+  if (!tabs || !backButton) return;
+
   let desktopTriggerY = 0;
 
   const isMobile = function () {
@@ -620,7 +508,7 @@ const initBackButtonStickyAlignment = function () {
   };
 
   const calculateDesktopTrigger = function () {
-    if (!tabs) return;
+    if (isMobile()) return;
 
     const tabsTopValue = parseFloat(window.getComputedStyle(tabs).top) || 0;
     desktopTriggerY = window.scrollY + tabs.getBoundingClientRect().top - tabsTopValue;
@@ -628,35 +516,19 @@ const initBackButtonStickyAlignment = function () {
 
   const updateBackButtonState = function () {
     const currentScrollY = window.scrollY;
-    const scrollingDown = currentScrollY > lastScrollY + 2;
-    const scrollingUp = currentScrollY < lastScrollY - 2;
 
+    /* Mobile: keep back button removed */
     if (isMobile()) {
-      document.body.classList.remove("case-tabs-stuck", "case-mobile-tabs-stuck", "case-mobile-back-visible");
-
-      if (currentScrollY <= 40 || scrollingUp) {
-        document.body.classList.remove("case-mobile-back-hidden");
-      }
-
-      if (currentScrollY > 80 && scrollingDown) {
-        document.body.classList.add("case-mobile-back-hidden");
-      }
-
-      lastScrollY = Math.max(currentScrollY, 0);
+      document.body.classList.remove("case-tabs-stuck");
       return;
     }
 
-    document.body.classList.remove("case-mobile-back-hidden", "case-mobile-tabs-stuck", "case-mobile-back-visible");
-
-    if (tabs) {
-      if (currentScrollY >= desktopTriggerY) {
-        document.body.classList.add("case-tabs-stuck");
-      } else {
-        document.body.classList.remove("case-tabs-stuck");
-      }
+    /* Desktop: restore back button alignment with tab bar */
+    if (currentScrollY >= desktopTriggerY) {
+      document.body.classList.add("case-tabs-stuck");
+    } else {
+      document.body.classList.remove("case-tabs-stuck");
     }
-
-    lastScrollY = Math.max(currentScrollY, 0);
   };
 
   calculateDesktopTrigger();
@@ -675,6 +547,36 @@ const initBackButtonStickyAlignment = function () {
   });
 };
 
+const initHideNavOnScroll = function () {
+  const mobileNav = document.querySelector("[data-case-mobile-nav]");
+
+  if (!mobileNav) return;
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+    const currentScrollY = window.scrollY;
+
+    if (window.innerWidth > 580) {
+      mobileNav.classList.remove("is-hidden");
+      lastScrollY = Math.max(currentScrollY, 0);
+      return;
+    }
+
+    const scrollingDown = currentScrollY > lastScrollY + 4;
+    const scrollingUp = currentScrollY < lastScrollY - 4;
+
+    if (currentScrollY > 90 && scrollingDown) {
+      mobileNav.classList.add("is-hidden");
+    }
+
+    if (scrollingUp || currentScrollY <= 40) {
+      mobileNav.classList.remove("is-hidden");
+    }
+
+    lastScrollY = Math.max(currentScrollY, 0);
+  }, { passive: true });
+};
 const renderList = function (selector, items) {
   const list = document.querySelector(selector);
 
@@ -690,7 +592,6 @@ const renderList = function (selector, items) {
 };
 
 fillTextContent();
-renderHeroCarousel();
 renderClientStrip();
 renderList("[data-design-thinking]", project.designThinking);
 renderList("[data-elements-used]", project.elementsUsed);
@@ -699,3 +600,4 @@ renderNextProjects();
 initTabs();
 initCaseBackgroundGlow();
 initBackButtonStickyAlignment();
+initHideNavOnScroll();
