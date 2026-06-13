@@ -1,202 +1,239 @@
-"use strict";
+const queryParams = new URLSearchParams(window.location.search);
+const projectId = queryParams.get("project") || "graphic-design-dagdushet-ganpati";
+const fallbackProjectId = "graphic-design-dagdushet-ganpati";
 
-const params = new URLSearchParams(window.location.search);
-const projectId = params.get("project") || "graphic-design-dagdushet-ganpati";
-const project = portfolioProjects[projectId];
+const project =
+  (typeof portfolioProjects !== "undefined" && portfolioProjects[projectId]) ||
+  (typeof portfolioProjects !== "undefined" && portfolioProjects[fallbackProjectId]);
 
 if (!project) {
-  document.body.innerHTML = "<main class='case-main'><h1 style='color:white;'>Project not found</h1></main>";
+  throw new Error("Portfolio project not found: " + projectId);
 }
 
-const createPlaceholder = function (label) {
-  const div = document.createElement("div");
-  div.classList.add("case-img-placeholder");
-  div.innerText = label || "Placeholder Image";
-  return div;
+const getSectionId = function (tabId) {
+  const sectionMap = {
+    "project-info": "client-info",
+    "client-info": "client-info",
+    "elements-used": "visual-system",
+    "visual-system": "visual-system"
+  };
+
+  return sectionMap[tabId] || tabId;
+};
+
+const getResponsiveText = function (item) {
+  if (!item) return "";
+
+  const isMobile = window.innerWidth <= 580;
+
+  if (isMobile && item.bodyMobile) return item.bodyMobile;
+  if (item.bodyDesktop) return item.bodyDesktop;
+  if (item.body) return item.body;
+
+  return "";
+};
+
+const getBestWorkItems = function () {
+  if (!project.bestWork) return [];
+
+  if (Array.isArray(project.bestWork)) {
+    return project.bestWork;
+  }
+
+  return project.bestWork.items || [];
 };
 
 const createImageItem = function (item) {
-  if (!item || item.type === "placeholder") {
-    return createPlaceholder(item ? item.label : "Placeholder Image");
+  const finalItem = item || { type: "placeholder", label: "Image" };
+  const imageSrc = finalItem.src || finalItem.image || finalItem.url || "";
+
+  if (finalItem.type === "placeholder" || !imageSrc) {
+    const placeholder = document.createElement("div");
+    placeholder.classList.add("case-img-placeholder");
+    placeholder.innerText = finalItem.label || "Image";
+    return placeholder;
   }
 
-  const img = document.createElement("img");
-  img.src = item.src;
-  img.alt = item.alt || "";
-  img.loading = "lazy";
-  return img;
+  const image = document.createElement("img");
+  image.src = imageSrc;
+  image.alt = finalItem.alt || finalItem.label || project.title || "Portfolio image";
+  image.loading = "lazy";
+  return image;
 };
 
 const fillTextContent = function () {
   document.title = project.title + " | Muktan Kanade Portfolio";
 
-document.querySelectorAll("[data-case-title]").forEach(function (item) {
-  item.innerText = project.title;
-});
+  document.querySelectorAll("[data-case-title]").forEach(function (item) {
+    item.innerText = project.title;
+  });
 
-document.querySelectorAll("[data-case-industry]").forEach(function (item) {
-  item.innerText = "Industry: " + project.industry;
-});
+  document.querySelectorAll("[data-case-industry]").forEach(function (item) {
+    item.innerText = "Industry: " + project.industry;
+  });
 
-document.querySelectorAll("[data-case-subtitle]").forEach(function (item) {
-  item.innerText = project.subtitle || "Visual communication system for brand and campaign design";
-});
-	
-const clientDescription = document.querySelector("[data-client-description]");
-
-if (clientDescription) {
-  clientDescription.innerText = project.description;
-}
+  const breadcrumb = project.breadcrumb || {};
+  const rootLink = document.querySelector("[data-case-root-link]");
   const breadcrumbCategoryLink = document.querySelector("[data-case-category-link]");
   const breadcrumbCurrentLink = document.querySelector("[data-case-current-link]");
   const backButton = document.querySelector("[data-case-back]");
 
+  if (rootLink) {
+    rootLink.innerText = breadcrumb.rootLabel || "Portfolio";
+    rootLink.href = breadcrumb.rootUrl || "./index.html?section=portfolio";
+  }
+
   if (breadcrumbCategoryLink) {
-    breadcrumbCategoryLink.innerText = project.category;
-    breadcrumbCategoryLink.href = "./index.html?section=portfolio&category=" + project.categorySlug;
+    breadcrumbCategoryLink.innerText = breadcrumb.categoryLabel || project.category;
+    breadcrumbCategoryLink.href =
+      breadcrumb.categoryUrl || "./index.html?section=portfolio&category=" + project.categorySlug;
   }
 
   if (breadcrumbCurrentLink) {
-    breadcrumbCurrentLink.innerText = project.title;
+    breadcrumbCurrentLink.innerText = breadcrumb.currentLabel || project.title;
     breadcrumbCurrentLink.href = "./portfolio-detail.html?project=" + projectId;
   }
 
   if (backButton) {
     backButton.href = "./index.html?section=portfolio&category=" + project.categorySlug;
   }
-	
-  const projectRole = document.querySelector("[data-project-role]");
-const projectDeliverables = document.querySelector("[data-project-deliverables]");
-const projectTools = document.querySelector("[data-project-tools]");
-
-if (projectRole) {
-  projectRole.innerText = project.role || "Graphic Designer";
-}
-
-if (projectDeliverables) {
-  projectDeliverables.innerText = project.deliverables || "Brand creatives, campaign layouts and social media assets";
-}
-
-if (projectTools) {
-  projectTools.innerHTML = "";
-
-  const tools = project.tools || [];
-
-  tools.forEach(function (tool) {
-    const toolItem = document.createElement("div");
-    toolItem.classList.add("case-tool-item");
-
-toolItem.innerHTML = `
-  <img src="${tool.icon}" alt="${tool.name}" title="${tool.name}">
-`;
-
-    projectTools.appendChild(toolItem);
-  });
-}
 };
 
-const renderClientStrip = function () {
-  const strip = document.querySelector("[data-client-strip]");
+const renderTabs = function () {
+  const tabsWrapper = document.querySelector("[data-case-tabs]");
 
-  if (!strip) return;
+  if (!tabsWrapper) return;
 
-  strip.innerHTML = "";
-
-  const oldDots = document.querySelector(".case-client-dots");
-
-  if (oldDots) {
-    oldDots.remove();
-  }
-
-  const images = project.clientImages && project.clientImages.length ? project.clientImages : [
-    { type: "placeholder", label: "Client Image 01" },
-    { type: "placeholder", label: "Client Image 02" },
-    { type: "placeholder", label: "Client Image 03" },
-    { type: "placeholder", label: "Client Image 04" }
+  const tabs = project.tabs || [
+    { id: "client-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "campaign", label: "Campaign" },
+    { id: "social-posts", label: "Social Media Posts" }
   ];
 
-  images.forEach(function (item) {
-    const wrap = document.createElement("div");
-    wrap.classList.add("client-strip-item");
-    wrap.appendChild(createImageItem(item));
-    strip.appendChild(wrap);
-  });
+  tabsWrapper.innerHTML = "";
 
-  if (images.length <= 1) return;
+  tabs.forEach(function (tab, index) {
+    const link = document.createElement("a");
+    const sectionId = getSectionId(tab.id);
 
-  const dots = document.createElement("div");
-  dots.classList.add("case-mobile-gallery-dots", "case-client-dots");
+    link.href = "#" + sectionId;
+    link.innerText = tab.label;
 
-  const getClientItems = function () {
-    return Array.from(strip.querySelectorAll(".client-strip-item"));
-  };
-
-  const updateClientDots = function () {
-    const clientItems = getClientItems();
-    const dotButtons = dots.querySelectorAll(".case-dot");
-
-    if (clientItems.length === 0 || dotButtons.length === 0) return;
-
-    const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
-
-    let activeIndex = 0;
-
-    if (strip.scrollLeft >= maxScrollLeft - 3) {
-      activeIndex = clientItems.length - 1;
-    } else {
-      const stripCenter = strip.scrollLeft + strip.clientWidth / 2;
-      let closestDistance = Infinity;
-
-      clientItems.forEach(function (item, index) {
-        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-        const distance = Math.abs(stripCenter - itemCenter);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          activeIndex = index;
-        }
-      });
+    if (index === 0) {
+      link.classList.add("active");
     }
 
-    dotButtons.forEach(function (dot, index) {
-      dot.classList.toggle("active", index === activeIndex);
-    });
-  };
-
-  images.forEach(function (_, index) {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.classList.add("case-dot");
-
-    if (index === 0) dot.classList.add("active");
-
-    dot.addEventListener("click", function () {
-      const clientItems = getClientItems();
-      const targetItem = clientItems[index];
-
-      if (!targetItem) return;
-
-      const maxScrollLeft = strip.scrollWidth - strip.clientWidth;
-
-      strip.scrollTo({
-        left: index === clientItems.length - 1 ? maxScrollLeft : targetItem.offsetLeft,
-        behavior: "smooth"
-      });
-    });
-
-    dots.appendChild(dot);
+    tabsWrapper.appendChild(link);
   });
-
-  strip.after(dots);
-
-  strip.addEventListener("scroll", function () {
-    window.requestAnimationFrame(updateClientDots);
-  });
-
-  window.addEventListener("resize", updateClientDots);
-
-  updateClientDots();
 };
+
+const renderCoverImage = function () {
+  const coverBox = document.querySelector("[data-case-cover]");
+
+  if (!coverBox) return;
+
+  const isMobile = window.innerWidth <= 580;
+
+  let coverItem = null;
+
+  if (project.hero) {
+    coverItem = isMobile ? project.hero.mobile : project.hero.desktop;
+  }
+
+  if (!coverItem && project.heroImages && project.heroImages.length > 0) {
+    coverItem = project.heroImages[0];
+  }
+
+  if (!coverItem) {
+    coverItem = { type: "placeholder", label: "Cover Image" };
+  }
+
+  coverBox.innerHTML = "";
+  coverBox.appendChild(createImageItem(coverItem));
+};
+
+const renderProjectOverview = function () {
+  const overviewTitle = document.querySelector("[data-project-overview-title]");
+  const overviewBlocks = document.querySelector("[data-project-overview-blocks]");
+
+  if (!overviewBlocks) return;
+
+  const overview = project.projectOverview || {};
+
+  if (overviewTitle) {
+    overviewTitle.innerText = overview.title || project.fullTitle || project.title;
+  }
+
+  overviewBlocks.innerHTML = "";
+
+  const sections = overview.sections || [];
+
+  sections.forEach(function (section) {
+    const block = document.createElement("div");
+    block.classList.add("case-overview-block");
+
+    block.innerHTML = `
+      <h2>${section.heading || ""}</h2>
+      <p>${getResponsiveText(section)}</p>
+    `;
+
+    overviewBlocks.appendChild(block);
+  });
+};
+
+const renderProjectSummary = function () {
+  const summary = project.summaryBlock || {};
+
+  const roleHeading = document.querySelector("[data-summary-role-heading]");
+  const deliverablesHeading = document.querySelector("[data-summary-deliverables-heading]");
+  const toolsHeading = document.querySelector("[data-summary-tools-heading]");
+
+  const projectRole = document.querySelector("[data-project-role]");
+  const projectDeliverables = document.querySelector("[data-project-deliverables]");
+  const projectTools = document.querySelector("[data-project-tools]");
+
+  if (roleHeading) {
+    roleHeading.innerText = summary.roleHeading || "My Role";
+  }
+
+  if (deliverablesHeading) {
+    deliverablesHeading.innerText = summary.deliverablesHeading || "Deliverables";
+  }
+
+  if (toolsHeading) {
+    toolsHeading.innerText = summary.toolsHeading || "Tools Used";
+  }
+
+  if (projectRole) {
+    projectRole.innerText = project.role || "Graphic Designer";
+  }
+
+  if (projectDeliverables) {
+    projectDeliverables.innerText =
+      project.deliverables || "Branding, Campaign, Social Media Creatives";
+  }
+
+  if (projectTools) {
+    projectTools.innerHTML = "";
+
+    const tools = project.tools || [];
+
+    tools.forEach(function (tool) {
+      const toolItem = document.createElement("div");
+      toolItem.classList.add("case-tool-item");
+
+      toolItem.innerHTML = `
+        <img src="${tool.icon}" alt="${tool.name}" title="${tool.name}">
+      `;
+
+      projectTools.appendChild(toolItem);
+    });
+  }
+};
+
 let currentPreviewItems = [];
 let currentPreviewIndex = 0;
 
@@ -239,8 +276,16 @@ const renderPreviewImage = function () {
     casePreviewThumbs.appendChild(thumb);
   });
 
-  casePreviewPrev.classList.toggle("is-hidden", currentPreviewIndex === 0);
-  casePreviewNext.classList.toggle("is-hidden", currentPreviewIndex === currentPreviewItems.length - 1);
+  if (casePreviewPrev) {
+    casePreviewPrev.classList.toggle("is-hidden", currentPreviewIndex === 0);
+  }
+
+  if (casePreviewNext) {
+    casePreviewNext.classList.toggle(
+      "is-hidden",
+      currentPreviewIndex === currentPreviewItems.length - 1
+    );
+  }
 };
 
 const openCasePreview = function (items, index) {
@@ -290,29 +335,71 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-const renderGalleries = function () {
-  const galleries = document.querySelectorAll("[data-gallery]");
+const renderBestWork = function () {
+  const bestWorkGrid = document.querySelector("[data-best-work]");
 
-  galleries.forEach(function (gallery) {
-    const key = gallery.dataset.gallery;
-    const items = project.galleries[key] || [];
+  if (!bestWorkGrid) return;
 
-    gallery.innerHTML = "";
+  const items = getBestWorkItems();
 
-    items.forEach(function (item, index) {
-      const galleryItem = document.createElement("button");
-      galleryItem.type = "button";
-      galleryItem.classList.add("case-gallery-item");
-      galleryItem.appendChild(createImageItem(item));
+  bestWorkGrid.innerHTML = "";
 
-      galleryItem.addEventListener("click", function () {
-        openCasePreview(items, index);
-      });
+  items.slice(0, 4).forEach(function (item, index) {
+    const bestWorkItem = document.createElement("button");
+    bestWorkItem.type = "button";
+    bestWorkItem.classList.add("case-best-work-item");
 
-      gallery.appendChild(galleryItem);
+    bestWorkItem.appendChild(createImageItem(item));
+
+    bestWorkItem.addEventListener("click", function () {
+      openCasePreview(items.slice(0, 4), index);
     });
 
-if (items.length > 1) {
+    bestWorkGrid.appendChild(bestWorkItem);
+  });
+};
+
+const renderList = function (selector, items) {
+  const list = document.querySelector(selector);
+
+  if (!list || !items) return;
+
+  const finalItems = Array.isArray(items) ? items : items.points || [];
+
+  list.innerHTML = "";
+
+  finalItems.forEach(function (text) {
+    const li = document.createElement("li");
+    li.innerText = text;
+    list.appendChild(li);
+  });
+};
+
+const renderThinkingSections = function () {
+  const designThinkingTitle = document.querySelector("[data-design-thinking-title]");
+  const visualSystemTitle = document.querySelector("[data-visual-system-title]");
+
+  if (designThinkingTitle) {
+    designThinkingTitle.innerText =
+      project.designThinking && project.designThinking.heading
+        ? project.designThinking.heading
+        : "Design Thinking";
+  }
+
+  if (visualSystemTitle) {
+    visualSystemTitle.innerText =
+      project.visualSystem && project.visualSystem.heading
+        ? project.visualSystem.heading
+        : "Visual System";
+  }
+
+  renderList("[data-design-thinking]", project.designThinking);
+  renderList("[data-visual-system]", project.visualSystem || project.elementsUsed);
+};
+
+const createMobileGalleryDots = function (gallery, items) {
+  if (!gallery || !items || items.length <= 1) return;
+
   const dots = document.createElement("div");
   dots.classList.add("case-mobile-gallery-dots");
 
@@ -330,7 +417,6 @@ if (items.length > 1) {
 
     let activeIndex = 0;
 
-    /* Force last dot when user reaches the end */
     if (gallery.scrollLeft >= maxScrollLeft - 3) {
       activeIndex = galleryItems.length - 1;
     } else {
@@ -358,7 +444,9 @@ if (items.length > 1) {
     dot.type = "button";
     dot.classList.add("case-dot");
 
-    if (index === 0) dot.classList.add("active");
+    if (index === 0) {
+      dot.classList.add("active");
+    }
 
     dot.addEventListener("click", function () {
       const galleryItems = getGalleryItems();
@@ -386,37 +474,97 @@ if (items.length > 1) {
   window.addEventListener("resize", updateGalleryDots);
 
   updateGalleryDots();
-}
-});
 };
 
-const renderBestWork = function () {
-  const bestWorkGrid = document.querySelector("[data-best-work]");
+const renderGallerySections = function () {
+  const galleryRoot = document.querySelector("[data-gallery-sections]");
 
-  if (!bestWorkGrid) return;
+  if (!galleryRoot) return;
 
-  const items = project.bestWork || [];
+  galleryRoot.innerHTML = "";
 
-  bestWorkGrid.innerHTML = "";
+  const sections = project.gallerySections || [];
 
-  items.slice(0, 4).forEach(function (item, index) {
-    const bestWorkItem = document.createElement("button");
-    bestWorkItem.type = "button";
-    bestWorkItem.classList.add("case-best-work-item");
+  const mobileCarouselKeys = [
+    "atirudraMahayadnya2025",
+    "shahaleMohotsav2025",
+    "dailyPostingRugnaseva",
+    "dailyPostingTopical"
+  ];
 
-    bestWorkItem.appendChild(createImageItem(item));
+  sections.forEach(function (section) {
+    const sectionElement = document.createElement("section");
 
-    bestWorkItem.addEventListener("click", function () {
-      openCasePreview(items.slice(0, 4), index);
+    sectionElement.classList.add(
+      "case-section",
+      "case-gallery-section",
+      "case-gallery-section-" + section.id
+    );
+
+    sectionElement.id = section.id;
+
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.innerText = section.title;
+
+    sectionElement.appendChild(sectionTitle);
+
+    const groups = section.groups || [];
+
+    groups.forEach(function (group) {
+      const subsection = document.createElement("div");
+
+      subsection.classList.add(
+        "case-subsection",
+        "case-subsection-" + group.key
+      );
+
+      const subsectionTitle = document.createElement("h3");
+      subsectionTitle.innerText = group.title;
+
+      const gallery = document.createElement("div");
+
+      gallery.classList.add(
+        "case-gallery",
+        "case-gallery-" + section.id,
+        "case-gallery-" + group.key
+      );
+
+      const items = group.items || [];
+
+      items.forEach(function (item, index) {
+        const galleryItem = document.createElement("button");
+
+        galleryItem.type = "button";
+        galleryItem.classList.add("case-gallery-item");
+
+        galleryItem.appendChild(createImageItem(item));
+
+        galleryItem.addEventListener("click", function () {
+          openCasePreview(items, index);
+        });
+
+        gallery.appendChild(galleryItem);
+      });
+
+      subsection.appendChild(subsectionTitle);
+      subsection.appendChild(gallery);
+
+      sectionElement.appendChild(subsection);
+
+      if (mobileCarouselKeys.includes(group.key)) {
+        createMobileGalleryDots(gallery, items);
+      }
     });
 
-    bestWorkGrid.appendChild(bestWorkItem);
+    galleryRoot.appendChild(sectionElement);
   });
 };
 
 const renderNextProjects = function () {
   const nextGrid = document.querySelector("[data-next-projects]");
   const nextTitle = document.querySelector("[data-next-title]");
+
+  if (!nextGrid || !nextTitle) return;
 
   nextTitle.innerText = project.relatedProjectsTitle || "View Other Projects";
   nextGrid.innerHTML = "";
@@ -644,26 +792,15 @@ const initHideNavOnScroll = function () {
     lastScrollY = Math.max(currentScrollY, 0);
   }, { passive: true });
 };
-const renderList = function (selector, items) {
-  const list = document.querySelector(selector);
-
-  if (!list || !items) return;
-
-  list.innerHTML = "";
-
-  items.forEach(function (text) {
-    const li = document.createElement("li");
-    li.innerText = text;
-    list.appendChild(li);
-  });
-};
 
 fillTextContent();
-renderClientStrip();
-renderList("[data-design-thinking]", project.designThinking);
-renderList("[data-elements-used]", project.elementsUsed);
-renderGalleries();
+renderTabs();
+renderCoverImage();
+renderProjectOverview();
+renderProjectSummary();
 renderBestWork();
+renderThinkingSections();
+renderGallerySections();
 renderNextProjects();
 initTabs();
 initCaseBackgroundGlow();

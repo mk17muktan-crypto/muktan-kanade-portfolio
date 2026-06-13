@@ -24,208 +24,93 @@
 
 <main class="case-main">
 
-  <nav class="case-top-nav" data-case-top-nav aria-label="Portfolio detail navigation">
-    <ul class="case-top-nav-list">
-
-      <li>
-        <a href="./index.html?section=about" class="case-top-nav-link">About</a>
-      </li>
-
-      <li>
-        <a href="./index.html?section=resume" class="case-top-nav-link">Resume</a>
-      </li>
-
-      <li>
-        <a href="./index.html?section=portfolio" class="case-top-nav-link active">Portfolio</a>
-      </li>
-
-      <li>
-        <a href="./index.html?section=contact" class="case-top-nav-link">Contact</a>
-      </li>
-
-    </ul>
-  </nav>
-	
-    <header class="case-hero">
-
-<nav class="case-breadcrumb" data-case-breadcrumb aria-label="Breadcrumb">
-  <a href="./index.html?section=portfolio">Portfolio</a>
-  <span>&gt;</span>
-  <a href="./index.html?section=portfolio&category=graphic-design" data-case-category-link>Graphic Design</a>
-  <span>&gt;</span>
-  <a href="./portfolio-detail.html?project=graphic-design-dagdushet-ganpati" data-case-current-link>Dagdushet Ganpati</a>
-</nav>
-
-<h1 class="case-title" data-case-title>Dagdushet Ganpati</h1>
-
-<p class="case-industry" data-case-industry>
-  Industry: Religious / Devotional Organisation
-</p>
-
-<section class="case-cover-placeholder">
-  <div class="case-cover-placeholder-box">
-    <span>Cover Image</span>
-  </div>
-</section>
-
-    </header>
-
-    <nav class="case-tabs" data-case-tabs>
-      <a href="#client-info" class="active">Client Info</a>
-      <a href="#design-thinking">Design Thinking</a>
-      <a href="#elements-used">Visual System</a>
-      <a href="#branding">Branding</a>
-      <a href="#campaign">Campaign</a>
-      <a href="#social-posts">Social Media Posts</a>
-    </nav>
-
-<section class="case-section" id="client-info">
-
-  <div class="case-client-info-banner">
-    <div class="case-banner-copy">
-
-<h2 class="case-banner-title">
-  <span data-case-title>Dagdushet Ganpati</span>
-  <span>Design Solution</span>
-</h2>
-
-<div class="case-overview-blocks">
-
-  <div class="case-overview-block">
-    <h2>Who is the client?</h2>
-    <p>
-      Dagdushet Ganpati is a religious and devotional organisation with a strong emotional connection among devotees, visitors and the wider community.
-    </p>
-  </div>
-
-  <div class="case-overview-block">
-    <h2>What was the design need?</h2>
-    <p>
-      The project needed a clear and consistent visual communication system that could support festival campaigns, social media creatives and devotional brand communication.
-    </p>
-  </div>
-
-  <div class="case-overview-block">
-    <h2>What kind of audience was this for?</h2>
-    <p>
-      The audience included devotees, families, festival visitors, social media followers and people who connect with the brand through cultural and spiritual content.
-    </p>
-  </div>
-
-  <div class="case-overview-block">
-    <h2>What emotion should the design create?</h2>
-    <p>
-      The design needed to feel devotional, warm, trustworthy and celebratory while maintaining visual clarity across different digital and campaign formats.
-    </p>
-  </div>
-
-</div>
-
+  <section class="case-hero">
+    <div class="case-breadcrumb">
+      <a href="./index.html?section=portfolio" data-case-root-link>Portfolio</a>
+      <span>›</span>
+      <a href="./index.html?section=portfolio&category=graphic-design" data-case-category-link>Graphic Design</a>
+      <span>›</span>
+      <a href="./portfolio-detail.html" data-case-current-link>Project</a>
     </div>
 
-<aside class="case-project-summary-card">
+    <h1 class="case-title" data-case-title>Project Title</h1>
+    <p class="case-industry" data-case-industry>Industry</p>
 
- 	
-  <div>
-    <p>My Role</p>
-    <h3 data-project-role>Graphic Designer</h3>
+    <div class="case-cover-placeholder">
+      <div class="case-cover-placeholder-box" data-case-cover>
+        <div class="case-img-placeholder">Cover Image</div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="case-tabs" data-case-tabs aria-label="Project sections"></nav>
+
+  <section class="case-section" id="client-info">
+    <div class="case-client-info-banner">
+
+      <div class="case-banner-copy">
+        <h2 class="case-banner-title">
+          <span data-project-overview-title>Project Overview</span>
+        </h2>
+
+        <div class="case-overview-blocks" data-project-overview-blocks></div>
+      </div>
+
+      <div class="case-project-summary-card">
+        <div>
+          <p data-summary-role-heading>My Role</p>
+          <h3 data-project-role>Graphic Designer</h3>
+        </div>
+
+        <div>
+          <p data-summary-deliverables-heading>Deliverables</p>
+          <h3 data-project-deliverables>Branding, Campaign, Social Media Creatives</h3>
+        </div>
+
+        <div>
+          <p data-summary-tools-heading>Tools Used</p>
+          <div class="case-tools-list" data-project-tools></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="case-section case-best-work-section" id="best-work">
+    <h2>Best Work</h2>
+    <div class="case-best-work-grid" data-best-work></div>
+  </section>
+
+  <div class="case-two-column">
+    <section class="case-info-card" id="design-thinking">
+      <h2 data-design-thinking-title>Design Thinking</h2>
+      <ol data-design-thinking></ol>
+    </section>
+
+    <section class="case-info-card" id="visual-system">
+      <h2 data-visual-system-title>Visual System</h2>
+      <ol data-visual-system></ol>
+    </section>
   </div>
 
-  <div>
-    <p>Deliverables</p>
-    <h3 data-project-deliverables>Brand creatives, campaign layouts &amp; social media assets</h3>
-  </div>
+  <div data-gallery-sections></div>
 
-  <div>
-    <p>Tools Used</p>
-    <div class="case-tools-list" data-project-tools></div>
-  </div>
+  <section class="case-section case-next-projects">
+    <h2 data-next-title>View Other Projects</h2>
+    <div class="case-next-grid" data-next-projects></div>
+  </section>
 
-</aside>
-	  
-  </div>
+</main>
 
-</section>
-
-<section class="case-section case-best-work-section" id="best-work">
-  <div class="case-best-work-grid" data-best-work></div>
-</section>
-
-    <section class="case-two-column">
-      <div class="case-info-card" id="design-thinking">
-        <h2>Design Thinking</h2>
-        <ol data-design-thinking></ol>
-      </div>
-
-      <div class="case-info-card" id="elements-used">
-        <h2>Visual System</h2>
-        <ol data-elements-used></ol>
-      </div>
-
-    </section>
-
-    <section class="case-section" id="branding">
-      <h2>Branding</h2>
-
-      <div class="case-subsection">
-        <h3>Festival Logos</h3>
-        <div class="case-gallery" data-gallery="brandingLogos"></div>
-      </div>
-
-      <div class="case-subsection">
-        <h3>Wallpapers</h3>
-        <div class="case-gallery" data-gallery="wallpapers"></div>
-      </div>
-    </section>
-
-    <section class="case-section" id="campaign">
-      <h2>Campaign</h2>
-
-      <div class="case-subsection">
-        <h3>Campaign Creatives</h3>
-        <div class="case-gallery" data-gallery="campaign"></div>
-      </div>
-    </section>
-
-    <section class="case-section" id="social-posts">
-      <h2>Social Media Posts</h2>
-
-      <div class="case-subsection">
-        <h3>Daily Posting</h3>
-        <div class="case-gallery" data-gallery="socialPosts"></div>
-      </div>
-    </section>
-
-    <section class="case-section case-next-projects">
-      <h2 data-next-title>View Other Projects</h2>
-
-      <div class="case-next-grid" data-next-projects></div>
-    </section>
-
-  </main>
-	
 <nav class="case-mobile-navbar" data-case-mobile-nav aria-label="Mobile portfolio navigation">
-	<ul class="case-mobile-navbar-list">
-
-    <li>
-      <a href="./index.html?section=about" class="case-mobile-navbar-link">About</a>
-    </li>
-
-    <li>
-      <a href="./index.html?section=resume" class="case-mobile-navbar-link">Resume</a>
-    </li>
-
-    <li>
-      <a href="./index.html?section=portfolio" class="case-mobile-navbar-link active">Portfolio</a>
-    </li>
-
-    <li>
-      <a href="./index.html?section=contact" class="case-mobile-navbar-link">Contact</a>
-    </li>
-
+  <ul class="case-mobile-navbar-list">
+    <li><a href="./index.html?section=about" class="case-mobile-navbar-link">About</a></li>
+    <li><a href="./index.html?section=resume" class="case-mobile-navbar-link">Resume</a></li>
+    <li><a href="./index.html?section=portfolio" class="case-mobile-navbar-link active">Portfolio</a></li>
+    <li><a href="./index.html?section=contact" class="case-mobile-navbar-link">Contact</a></li>
   </ul>
 </nav>
-	
+
 <div class="case-image-preview" data-case-preview>
   <div class="case-preview-overlay" data-case-preview-close></div>
 
@@ -247,12 +132,12 @@
     <div class="case-preview-thumbs" data-case-preview-thumbs></div>
   </div>
 </div>
-	
-  <script src="./assets/js/portfolio-data.js"></script>
-  <script src="./assets/js/portfolio-detail.js"></script>
 
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./assets/js/portfolio-data.js"></script>
+<script src="./assets/js/portfolio-detail.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
