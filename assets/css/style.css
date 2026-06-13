@@ -3878,6 +3878,7 @@ body.portfolio-detail-page .case-gallery-item img {
 
 .case-preview-arrow.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -6076,34 +6077,540 @@ body.portfolio-detail-page .case-top-nav-link:active {
   margin-top: 10px;
 }
 
-.case-tool-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 8px 10px;
-  border-radius: 999px;
-
-  background: hsla(0, 0%, 100%, 0.22);
-  color: var(--smoky-black);
-
-  font-size: 12px;
-  font-weight: var(--fw-500);
-  line-height: 1;
-}
-
-.case-tool-item img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
 
 @media (max-width: 580px) {
   .case-tools-list {
     justify-content: center;
   }
 
-  .case-tool-item {
-    font-size: 11px;
+}
+
+/*-----------------------------------*\
+  #YELLOW SUMMARY CARD CONTROL PANEL
+\*-----------------------------------*/
+
+body.portfolio-detail-page {
+  /* Card size control */
+  --summary-card-padding-y: 25px;
+  --summary-card-padding-x: 25px;
+  --summary-card-radius: 20px;
+
+  /* Gap between My Role / Deliverables / Tools Used */
+  --summary-section-gap: 20px;
+
+  /* Section heading: My Role, Deliverables, Tools Used */
+  --summary-label-size: 13px;
+  --summary-label-weight: var(--fw-400);
+  --summary-label-line-height: 1.25;
+  --summary-label-gap: 5px;
+
+  /* Body text: Graphic Designer, deliverables copy */
+  --summary-body-size: 16px;
+  --summary-body-weight: var(--fw-600);
+  --summary-body-line-height: 1.28;
+
+  /* Tool pills */
+  --tool-list-column-gap: 10px;
+  --tool-list-row-gap: 10px;
+  --tool-pill-height: 38px;
+  --tool-pill-padding-x: 12px;
+  --tool-pill-radius: 999px;
+  --tool-pill-font-size: 12px;
+  --tool-pill-font-weight: var(--fw-500);
+  --tool-pill-icon-size: 20px;
+  --tool-pill-gap: 8px;
+}
+
+/* Actual yellow card */
+body.portfolio-detail-page .case-project-summary-card {
+  padding: var(--summary-card-padding-y) var(--summary-card-padding-x) !important;
+  border-radius: var(--summary-card-radius) !important;
+}
+
+/* Important: only target the main sections, not every inner div */
+body.portfolio-detail-page .case-project-summary-card > div:not(:last-child) {
+  margin-bottom: var(--summary-section-gap) !important;
+}
+
+body.portfolio-detail-page .case-project-summary-card p {
+  font-size: var(--summary-label-size) !important;
+  font-weight: var(--summary-label-weight) !important;
+  line-height: var(--summary-label-line-height) !important;
+  margin-bottom: var(--summary-label-gap) !important;
+}
+
+body.portfolio-detail-page .case-project-summary-card h3 {
+  font-size: var(--summary-body-size) !important;
+  font-weight: var(--summary-body-weight) !important;
+  line-height: var(--summary-body-line-height) !important;
+}
+
+/*-----------------------------------*\
+  #TOOLS USED ICON GRID
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-tools-list {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 10px !important;
+  margin-top: 14px !important;
+  align-items: left !important;
+  justify-items: left !important;
+}
+
+body.portfolio-detail-page .case-tool-item {
+  width: 100% !important;
+  display: flex !important;
+  align-items: left !important;
+  justify-content: left !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body.portfolio-detail-page .case-tool-item img {
+  width: 35px !important;
+  height: 35px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+body.portfolio-detail-page .case-tool-item span {
+  display: none !important;
+}
+
+/* Mobile-specific control */
+@media (max-width: 580px) {
+  body.portfolio-detail-page {
+    --summary-card-padding-y: 20px;
+    --summary-card-padding-x: 20px;
+    --summary-card-radius: 18px;
+
+    --summary-section-gap: 20px;
+
+    --summary-label-size: 12px;
+    --summary-label-gap: 2px;
+
+    --summary-body-size: 18px;
+    --summary-body-line-height: 1.25;
+
+    --tool-list-column-gap: 8px;
+    --tool-list-row-gap: 8px;
+    --tool-pill-height: 34px;
+    --tool-pill-padding-x: 10px;
+    --tool-pill-font-size: 11px;
+    --tool-pill-icon-size: 18px;
+    --tool-pill-gap: 7px;
   }
+
+  body.portfolio-detail-page .case-tools-list {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-tools-list {
+    grid-template-columns: repeat(4, max-content) !important;
+    justify-content: center !important;
+    justify-items: center !important;
+
+    column-gap: 16px !important;
+    row-gap: 14px !important;
+  }
+
+  body.portfolio-detail-page .case-tool-item img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+
+/* Remove case banner icon spacing completely */
+body.portfolio-detail-page .case-banner-intro-row {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+
+body.portfolio-detail-page .case-banner-icon {
+  display: none !important;
+}
+
+/*-----------------------------------*\
+  #CASE CLIENT INFO TEXT CONTROL PANEL
+\*-----------------------------------*/
+
+body.portfolio-detail-page {
+  /* Whole text section */
+  --case-info-copy-max-width: 720px;
+  --case-info-copy-gap: 22px;
+
+  /* Main title */
+  --case-info-title-size: 32px;
+  --case-info-title-weight: var(--fw-600);
+  --case-info-title-line-height: 1.18;
+  --case-info-title-margin-bottom: 14px;
+
+  /* Yellow project title part */
+  --case-info-title-highlight-color: var(--orange-yellow-crayola);
+
+  /* White subtitle */
+  --case-info-subtitle-size: 20px;
+  --case-info-subtitle-weight: var(--fw-500);
+  --case-info-subtitle-line-height: 1.45;
+  --case-info-subtitle-margin-bottom: 28px;
+  --case-info-subtitle-color: var(--white-2);
+
+  /* Body paragraphs */
+  --case-info-body-size: 15px;
+  --case-info-body-weight: var(--fw-300);
+  --case-info-body-line-height: 1.75;
+  --case-info-body-margin-bottom: 22px;
+  --case-info-body-color: var(--light-gray);
+}
+
+/* Desktop: left aligned */
+body.portfolio-detail-page .case-banner-copy {
+  max-width: var(--case-info-copy-max-width);
+  text-align: left;
+}
+
+body.portfolio-detail-page .case-banner-title {
+  color: var(--white-2);
+  font-size: var(--case-info-title-size) !important;
+  font-weight: var(--case-info-title-weight);
+  line-height: var(--case-info-title-line-height);
+  margin-bottom: var(--case-info-title-margin-bottom);
+}
+
+body.portfolio-detail-page .case-banner-title span:first-child {
+  display: inline;
+  color: var(--case-info-title-highlight-color);
+}
+
+body.portfolio-detail-page .case-banner-title span:last-child {
+  display: inline;
+  color: var(--white-2);
+}
+
+body.portfolio-detail-page .case-banner-subtitle {
+  color: var(--case-info-subtitle-color);
+  font-size: var(--case-info-subtitle-size);
+  font-weight: var(--case-info-subtitle-weight);
+  line-height: var(--case-info-subtitle-line-height);
+  margin-bottom: var(--case-info-subtitle-margin-bottom);
+}
+
+body.portfolio-detail-page .case-banner-copy p:not(.case-banner-subtitle) {
+  color: var(--case-info-body-color);
+  font-size: var(--case-info-body-size);
+  font-weight: var(--case-info-body-weight);
+  line-height: var(--case-info-body-line-height);
+  margin-bottom: var(--case-info-body-margin-bottom);
+}
+
+/* Mobile: center aligned */
+@media (max-width: 580px) {
+  body.portfolio-detail-page {
+    --case-info-copy-max-width: 100%;
+
+    --case-info-title-size: 26px;
+    --case-info-title-line-height: 1.18;
+    --case-info-title-margin-bottom: 12px;
+
+    --case-info-subtitle-size: 17px;
+    --case-info-subtitle-line-height: 1.45;
+    --case-info-subtitle-margin-bottom: 24px;
+
+    --case-info-body-size: 14px;
+    --case-info-body-line-height: 1.7;
+    --case-info-body-margin-bottom: 18px;
+  }
+
+  body.portfolio-detail-page .case-banner-copy {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.portfolio-detail-page .case-banner-title,
+  body.portfolio-detail-page .case-banner-subtitle,
+  body.portfolio-detail-page .case-banner-copy p {
+    text-align: center !important;
+  }
+
+  body.portfolio-detail-page .case-banner-title span:first-child,
+  body.portfolio-detail-page .case-banner-title span:last-child {
+    display: block;
+  }
+}
+
+/*-----------------------------------*\
+  #CASE OVERVIEW QUESTION BLOCKS
+\*-----------------------------------*/
+
+body.portfolio-detail-page {
+  /* Whole overview block spacing */
+  --overview-blocks-gap: 10px;
+  --overview-block-margin-top: 15px;
+
+  /* H2 question controls */
+  --overview-question-size: 18px;
+  --overview-question-weight: var(--fw-600);
+  --overview-question-line-height: 1.35;
+  --overview-question-color: var(--white-2);
+  --overview-question-margin-bottom: 8px;
+
+  /* Body paragraph controls */
+  --overview-body-size: 15px;
+  --overview-body-weight: var(--fw-300);
+  --overview-body-line-height: 1.7;
+  --overview-body-color: var(--light-gray);
+}
+
+body.portfolio-detail-page .case-overview-blocks {
+  display: grid;
+  gap: var(--overview-blocks-gap);
+  margin-top: var(--overview-block-margin-top);
+}
+
+body.portfolio-detail-page .case-overview-block h2 {
+  color: var(--overview-question-color);
+  font-size: var(--overview-question-size);
+  font-weight: var(--overview-question-weight);
+  line-height: var(--overview-question-line-height);
+  margin-bottom: var(--overview-question-margin-bottom);
+}
+
+body.portfolio-detail-page .case-overview-block p {
+  color: var(--overview-body-color);
+  font-size: var(--overview-body-size);
+  font-weight: var(--overview-body-weight);
+  line-height: var(--overview-body-line-height);
+  margin-bottom: 0;
+}
+
+/* Mobile: centre aligned */
+@media (max-width: 580px) {
+  body.portfolio-detail-page {
+    --overview-blocks-gap: 26px;
+    --overview-block-margin-top: 26px;
+
+    --overview-question-size: 17px;
+    --overview-question-margin-bottom: 8px;
+
+    --overview-body-size: 14px;
+    --overview-body-line-height: 1.7;
+  }
+
+  body.portfolio-detail-page .case-overview-blocks,
+  body.portfolio-detail-page .case-overview-block,
+  body.portfolio-detail-page .case-overview-block h2,
+  body.portfolio-detail-page .case-overview-block p {
+    text-align: center !important;
+  }
+}
+
+/*-----------------------------------*\
+  #OVERVIEW BLOCKS FULL WIDTH AFTER CARD
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-client-info-banner {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 360px !important;
+    column-gap: 56px !important;
+    row-gap: 34px !important;
+    align-items: start !important;
+  }
+
+  body.portfolio-detail-page .case-banner-copy {
+    display: contents !important;
+  }
+
+  body.portfolio-detail-page .case-overview-blocks {
+    display: contents !important;
+  }
+
+  body.portfolio-detail-page .case-banner-title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0 !important;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+  }
+
+  body.portfolio-detail-page .case-overview-block:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  body.portfolio-detail-page .case-overview-block:nth-child(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  body.portfolio-detail-page .case-overview-block:nth-child(n + 3) {
+    grid-column: 1 / -1;
+  }
+
+  body.portfolio-detail-page .case-overview-block:nth-child(n + 3) p {
+    max-width: 100%;
+  }
+}
+
+/* Reduce gap between overview body copy and next H2 */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-client-info-banner {
+    row-gap: 20px !important;
+  }
+
+  body.portfolio-detail-page .case-overview-block p {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Reduce mobile gap between overview body copy and next H2 */
+@media (max-width: 580px) {
+  body.portfolio-detail-page {
+    --overview-blocks-gap: 10px;
+  }
+
+  body.portfolio-detail-page .case-overview-blocks {
+    gap: 20px !important;
+  }
+
+  body.portfolio-detail-page .case-overview-block p {
+    margin-bottom: 0 !important;
+  }
+}
+
+/*-----------------------------------*\
+  #CASE BEST WORK GRID
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-best-work-section {
+  margin-bottom: 54px;
+}
+
+body.portfolio-detail-page .case-best-work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+body.portfolio-detail-page .case-best-work-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  position: relative;
+  display: block;
+
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--onyx);
+
+  cursor: zoom-in;
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    transform 0.72s cubic-bezier(0.22, 1.15, 0.36, 1),
+    box-shadow 0.72s ease,
+    opacity 0.45s ease;
+}
+
+body.portfolio-detail-page .case-best-work-item > * {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+
+  transform-origin: center;
+
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1.15, 0.36, 1),
+    filter 0.65s ease;
+}
+
+body.portfolio-detail-page .case-best-work-item img,
+body.portfolio-detail-page .case-best-work-item .case-img-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Same smooth piano-key hover effect */
+body.portfolio-detail-page .case-best-work-item:hover {
+  transform: translateY(-4px) scale(1.018);
+  box-shadow: 0 18px 42px hsla(0, 0%, 0%, 0.34);
+  z-index: 2;
+}
+
+body.portfolio-detail-page .case-best-work-item:hover > * {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+body.portfolio-detail-page .case-best-work-grid:hover .case-best-work-item:not(:hover) {
+  transform: scale(0.992);
+  opacity: 0.88;
+}
+
+body.portfolio-detail-page .case-best-work-grid:hover .case-best-work-item:not(:hover) > * {
+  transform: scale(1.01);
+  filter: brightness(0.92);
+}
+
+body.portfolio-detail-page .case-best-work-item:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* Mobile: one image per row, full width inside article padding */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-best-work-section {
+    margin-bottom: 42px;
+  }
+
+  body.portfolio-detail-page .case-best-work-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  body.portfolio-detail-page .case-best-work-item {
+    border-radius: 14px;
+  }
+}
+
+/*-----------------------------------*\
+  #CASE PREVIEW MOBILE ARROW LAYER FIX
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-preview-stage {
+  position: relative;
+  z-index: 1;
+}
+
+body.portfolio-detail-page .case-preview-frame {
+  position: relative;
+  z-index: 1;
+}
+
+body.portfolio-detail-page .case-preview-arrow {
+  z-index: 8 !important;
+}
+
+body.portfolio-detail-page .case-preview-close {
+  z-index: 10 !important;
+}
+
+body.portfolio-detail-page .case-preview-thumbs {
+  position: relative;
+  z-index: 6;
 }

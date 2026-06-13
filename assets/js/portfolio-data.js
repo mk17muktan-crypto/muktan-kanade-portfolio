@@ -4,6 +4,7 @@ const portfolioProjects = {
     category: "Graphic Design",
     categorySlug: "graphic-design",
     industry: "Religious / Devotional Organisation",
+	subtitle: "Visual communication system for devotional digital campaigns",
 
     role: "Graphic Designer",
 
@@ -66,6 +67,13 @@ relatedProjects: [
       { type: "placeholder", label: "Client Image 04" }
     ],
 
+	bestWork: [
+  { type: "placeholder", label: "Best Work 01" },
+  { type: "placeholder", label: "Best Work 02" },
+  { type: "placeholder", label: "Best Work 03" },
+  { type: "placeholder", label: "Best Work 04" }
+],
+	  
     designThinking: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Integer sit amet lorem sed turpis facilisis posuere.",

@@ -38,6 +38,10 @@ document.querySelectorAll("[data-case-industry]").forEach(function (item) {
   item.innerText = "Industry: " + project.industry;
 });
 
+document.querySelectorAll("[data-case-subtitle]").forEach(function (item) {
+  item.innerText = project.subtitle || "Visual communication system for brand and campaign design";
+});
+	
 const clientDescription = document.querySelector("[data-client-description]");
 
 if (clientDescription) {
@@ -82,10 +86,9 @@ if (projectTools) {
     const toolItem = document.createElement("div");
     toolItem.classList.add("case-tool-item");
 
-    toolItem.innerHTML = `
-      <img src="${tool.icon}" alt="${tool.name}">
-      <span>${tool.name}</span>
-    `;
+toolItem.innerHTML = `
+  <img src="${tool.icon}" alt="${tool.name}" title="${tool.name}">
+`;
 
     projectTools.appendChild(toolItem);
   });
@@ -386,6 +389,31 @@ if (items.length > 1) {
 }
 });
 };
+
+const renderBestWork = function () {
+  const bestWorkGrid = document.querySelector("[data-best-work]");
+
+  if (!bestWorkGrid) return;
+
+  const items = project.bestWork || [];
+
+  bestWorkGrid.innerHTML = "";
+
+  items.slice(0, 4).forEach(function (item, index) {
+    const bestWorkItem = document.createElement("button");
+    bestWorkItem.type = "button";
+    bestWorkItem.classList.add("case-best-work-item");
+
+    bestWorkItem.appendChild(createImageItem(item));
+
+    bestWorkItem.addEventListener("click", function () {
+      openCasePreview(items.slice(0, 4), index);
+    });
+
+    bestWorkGrid.appendChild(bestWorkItem);
+  });
+};
+
 const renderNextProjects = function () {
   const nextGrid = document.querySelector("[data-next-projects]");
   const nextTitle = document.querySelector("[data-next-title]");
@@ -635,6 +663,7 @@ renderClientStrip();
 renderList("[data-design-thinking]", project.designThinking);
 renderList("[data-elements-used]", project.elementsUsed);
 renderGalleries();
+renderBestWork();
 renderNextProjects();
 initTabs();
 initCaseBackgroundGlow();
