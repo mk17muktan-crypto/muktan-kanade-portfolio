@@ -7227,3 +7227,324 @@ body.portfolio-detail-page .case-preview-frame > .case-img-placeholder {
     height: calc(100vw - 48px) !important;
   }
 }
+
+/*-----------------------------------*\
+  #PREVIEW POPUP IMAGE VERTICAL CENTER FIX
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-preview-panel {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.portfolio-detail-page .case-preview-stage {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body.portfolio-detail-page .case-preview-frame {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+body.portfolio-detail-page .case-preview-thumbs {
+  flex: 0 0 auto !important;
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-preview-panel {
+    padding-top: 58px !important;
+    padding-bottom: 18px !important;
+  }
+
+  body.portfolio-detail-page .case-preview-stage {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  body.portfolio-detail-page .case-preview-frame {
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+}
+
+/*-----------------------------------*\
+  #PREVIEW POPUP NARROW IMAGE CENTER FIX
+\*-----------------------------------*/
+
+body.portfolio-detail-page .case-preview-panel {
+  align-items: center !important;
+}
+
+body.portfolio-detail-page .case-preview-stage {
+  align-self: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.portfolio-detail-page .case-preview-frame {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.portfolio-detail-page .case-preview-frame img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.portfolio-detail-page .case-preview-thumbs {
+  align-self: center !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-preview-panel {
+    align-items: center !important;
+  }
+
+  body.portfolio-detail-page .case-preview-stage,
+  body.portfolio-detail-page .case-preview-frame,
+  body.portfolio-detail-page .case-preview-frame img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/*-----------------------------------*\
+  #CAMPAIGN DESKTOP IMAGE HEIGHT CONTROL
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page {
+    --campaign-image-card-height: 300px;
+  }
+
+  body.portfolio-detail-page .case-gallery-campaign .case-gallery-item {
+    height: var(--campaign-image-card-height) !important;
+    aspect-ratio: auto !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-campaign .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/*-----------------------------------*\
+  #PROJECT INFO TEXT WRAP AROUND CARD
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-client-info-banner {
+    display: block !important;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card {
+    float: right !important;
+    width: 360px !important;
+    margin: 0 0 28px 56px !important;
+  }
+
+  body.portfolio-detail-page .case-banner-copy,
+  body.portfolio-detail-page .case-overview-blocks {
+    display: block !important;
+    max-width: none !important;
+  }
+
+  body.portfolio-detail-page .case-overview-block {
+    display: block !important;
+    margin-bottom: 28px !important;
+  }
+
+  body.portfolio-detail-page .case-overview-block p {
+    max-width: none !important;
+  }
+
+  body.portfolio-detail-page #client-info::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-client-info-banner {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  body.portfolio-detail-page .case-project-summary-card {
+    order: 1;
+  }
+
+  body.portfolio-detail-page .case-banner-copy {
+    order: 2;
+  }
+}
+
+/*-----------------------------------*\
+  #INNER PAGE TOP NAV RESTORE
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-top-nav {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+
+    display: block !important;
+    z-index: 80 !important;
+
+    background: hsla(240, 1%, 17%, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid hsla(0, 0%, 100%, 0.08);
+    border-radius: 0 20px;
+    box-shadow: var(--shadow-2);
+  }
+
+  body.portfolio-detail-page .case-top-nav-list {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-top-nav-link {
+    min-height: 44px;
+    padding: 0 18px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: var(--fw-500);
+    border-radius: 14px;
+
+    transition:
+      background 0.32s ease,
+      color 0.32s ease,
+      transform 0.22s ease,
+      box-shadow 0.32s ease;
+  }
+
+  body.portfolio-detail-page .case-top-nav-link.active {
+    background: var(--text-gradient-yellow);
+    color: var(--smoky-black);
+    box-shadow: 0 10px 24px hsla(45, 100%, 72%, 0.18);
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-top-nav {
+    display: none !important;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE BEST WORK WIDTH FIX
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Stop the yellow summary card float from affecting mobile sections */
+  body.portfolio-detail-page .case-project-summary-card {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 0 28px 0 !important;
+  }
+
+  /* Force Best Work to start below everything */
+  body.portfolio-detail-page .case-best-work-section {
+    clear: both !important;
+    width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Full-width single-column Best Work layout */
+  body.portfolio-detail-page .case-best-work-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 16px !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-best-work-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    flex: none !important;
+  }
+
+  body.portfolio-detail-page .case-best-work-item > *,
+  body.portfolio-detail-page .case-best-work-item .case-img-placeholder,
+  body.portfolio-detail-page .case-best-work-item img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/*-----------------------------------*\
+  #DESKTOP MAIN WEB BANNER HEIGHT
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-cover-placeholder-box {
+    height: 560px !important;
+  }
+
+  body.portfolio-detail-page .case-cover-placeholder-box img,
+  body.portfolio-detail-page .case-cover-placeholder-box .case-img-placeholder {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/*-----------------------------------*\
+  #MOBILE PROJECT INFO TO BEST WORK SPACING FIX
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Reduce gap after Project Info text */
+  body.portfolio-detail-page #client-info {
+    margin-bottom: 10px !important;
+  }
+
+  /* Remove unnecessary top/bottom breathing space around Best Work */
+  body.portfolio-detail-page .case-best-work-section {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Keep Best Work tight and clean */
+  body.portfolio-detail-page .case-best-work-grid {
+    gap: 14px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Reduce gap before Design Thinking section */
+  body.portfolio-detail-page .case-two-column {
+    margin-top: 0 !important;
+  }
+}

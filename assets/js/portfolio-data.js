@@ -55,12 +55,18 @@ const portfolioProjects = {
   ],
 
   hero: {
-    desktop: { type: "placeholder", label: "Cover Image" },
-    mobile: { type: "placeholder", label: "Cover Image" }
+    desktop: {
+    src: "./assets/images/Thumbnails/Graphic Design/Desktop/DG.jpg",
+    alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
+  },
+    mobile: {
+    src: "./assets/images/Portfolio/Graphic Design/Mobile/DG.jpg",
+    alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
+  },
   },
 
   projectOverview: {
-    title: "About Shrimant Dagdusheth Halwai Ganpati",
+    title: "Shrimant Dagdusheth Halwai Ganpati",
     sections: [
       {
         heading: "Who is the client?",
@@ -134,112 +140,259 @@ const portfolioProjects = {
   ]
 },
 
-  gallerySections: [
-    {
-      id: "branding",
-      title: "Branding",
-      groups: [
-        {
-          key: "festivalLogos",
-          title: "Festival Logos",
-          previewGroupName: "Festival Logos",
-          items: makePlaceholders(9, "Festival Logo")
-        },
-        {
-          key: "wallpapers",
-          title: "Wallpapers",
-          previewGroupName: "Wallpapers",
-          items: makePlaceholders(4, "Wallpaper")
-        }
-      ]
-    },
+gallerySections: [
+  {
+    id: "branding",
+    title: "Branding",
+    groups: [
+      {
+        key: "festivalLogos",
+        title: "Festival Logos",
+        previewGroupName: "Festival Logos",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-1.jpg",
+            alt: "Logos 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-2.jpg",
+            alt: "Logos 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-3.jpg",
+            alt: "Logos 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-4.jpg",
+            alt: "Logos 04"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-5.jpg",
+            alt: "Logos 05"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-6.jpg",
+            alt: "Logos 06"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-7.jpg",
+            alt: "Logos 07"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-8.jpg",
+            alt: "Logos 08"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-9.jpg",
+            alt: "Logos 09"
+          }
+        ]
+      },
 
-    {
-      id: "campaign",
-      title: "Campaign",
-      groups: [
+      {
+        key: "wallpapers",
+        title: "Wallpapers",
+        previewGroupName: "Wallpapers",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Wallpaper-1.jpg",
+            alt: "Wallpapers 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Wallpaper-2.jpg",
+            alt: "Wallpapers 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Wallpaper-3.jpg",
+            alt: "Wallpapers 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Wallpaper-4.jpg",
+            alt: "Wallpapers 04"
+          }
+        ]
+      }
+    ]
+  },
+
   {
-  key: "ganeshUtsav2024",
-  title: "Ganesh Utsav 2024",
-  previewGroupName: "Ganesh Utsav 2024",
-  items: [
-    {
-      src: "./assets/images/Portfolio/Graphic Design/DG/GU 2024 Image 1.jpg",
-      alt: "Ganesh Utsav 2024 creative 01"
-    },
-    { type: "placeholder", label: "Ganesh Utsav 2024 02" },
-    { type: "placeholder", label: "Ganesh Utsav 2024 03" },
-    { type: "placeholder", label: "Ganesh Utsav 2024 04" }
-  ]
-},
+    id: "campaign",
+    title: "Campaign",
+    groups: [
+      {
+        key: "ganeshUtsav2024",
+        title: "Ganesh Utsav 2024",
+        previewGroupName: "Ganesh Utsav 2024",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU 2024 Image 1.jpg",
+            alt: "Ganesh Utsav 2024 creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-2.jpg",
+            alt: "Ganesh Utsav 2024 creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-3.jpg",
+            alt: "Ganesh Utsav 2024 creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-4.jpg",
+            alt: "Ganesh Utsav 2024 creative 04"
+          }
+        ]
+      },
+
+      {
+        key: "ganeshUtsav2025",
+        title: "Ganesh Utsav 2025",
+        previewGroupName: "Ganesh Utsav 2025",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-1.jpg",
+            alt: "Ganesh Utsav 2025 creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-2.jpg",
+            alt: "Ganesh Utsav 2025 creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-3.jpg",
+            alt: "Ganesh Utsav 2025 creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-4.jpg",
+            alt: "Ganesh Utsav 2025 creative 04"
+          }
+        ]
+      },
+
+      {
+        key: "ganeshJanmaSohola2025",
+        title: "Ganesh Janma Sohola 2025",
+        previewGroupName: "Ganesh Janma Sohola 2025",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-1.jpg",
+            alt: "Ganesh Janma Sohola 2025 creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-2.jpg",
+            alt: "Ganesh Janma Sohola 2025 creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-3.jpg",
+            alt: "Ganesh Janma Sohola 2025 creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-4.jpg",
+            alt: "Ganesh Janma Sohola 2025 creative 04"
+          }
+        ]
+      },
+
+      {
+        key: "atirudraMahayadnya2025",
+        title: "Atirudra Mahayadnya 2025",
+        previewGroupName: "Atirudra Mahayadnya 2025",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-1.jpg",
+            alt: "Atirudra Mahayadnya 2025 creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-2.jpg",
+            alt: "Atirudra Mahayadnya 2025 creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-3.jpg",
+            alt: "Atirudra Mahayadnya 2025 creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-4.jpg",
+            alt: "Atirudra Mahayadnya 2025 creative 04"
+          }
+        ]
+      },
+
+      {
+        key: "shahaleMohotsav2025",
+        title: "Shahale Mohotsav 2025",
+        previewGroupName: "Shahale Mohotsav 2025",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-1.jpg",
+            alt: "Shahale Mohotsav 2025 creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-2.jpg",
+            alt: "Shahale Mohotsav 2025 creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-3.jpg",
+            alt: "Shahale Mohotsav 2025 creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-4.jpg",
+            alt: "Shahale Mohotsav 2025 creative 04"
+          }
+        ]
+      }
+    ]
+  },
+
   {
-    key: "ganeshUtsav2025",
-    title: "Ganesh Utsav 2025",
-    previewGroupName: "Ganesh Utsav 2025",
-    items: makePlaceholders(4, "Ganesh Utsav 2025")
+    id: "social-posts",
+    title: "Social Media Posts",
+    groups: [
+      {
+        key: "dailyPostingRugnaseva",
+        title: "Daily Posting: Rugnaseva, Shikshan Sanstha, Shradhanjali post Style",
+        previewGroupName: "Daily Posting",
+        items: [
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Daily-1.jpg",
+            alt: "Daily Posting creative 01"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Daily-2.jpg",
+            alt: "Daily Posting creative 02"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Daily-3.jpg",
+            alt: "Daily Posting creative 03"
+          },
+          {
+            src: "./assets/images/Portfolio/Graphic Design/DG/Daily-4.jpg",
+            alt: "Daily Posting creative 04"
+          }
+        ]
+      },
+    ]
+  }
+],
+
+relatedProjectsTitle: "View Other Projects",
+
+relatedProjects: [
+  {
+    title: "Samartha Seva Mandal Sajjangad",
+    industry: "Religious / Spiritual Organisation",
+    url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+    imageLabel: "Samartha Seva Mandal Sajjangad"
   },
   {
-    key: "ganeshJanmaSohola2025",
-    title: "Ganesh Janma Sohola 2025",
-    previewGroupName: "Ganesh Janma Sohola 2025",
-    items: makePlaceholders(4, "Ganesh Janma Sohola 2025")
+    title: "Kesariya@100",
+    industry: "Heritage / Commemorative Design",
+    url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
+    imageLabel: "Kesariya@100"
   },
   {
-    key: "atirudraMahayadnya2025",
-    title: "Atirudra Mahayadnya 2025",
-    previewGroupName: "Atirudra Mahayadnya 2025",
-    items: makePlaceholders(4, "Atirudra Mahayadnya 2025")
-  },
-  {
-    key: "shahaleMohotsav2025",
-    title: "Shahale Mohotsav 2025",
-    previewGroupName: "Shahale Mohotsav 2025",
-    items: makePlaceholders(4, "Shahale Mohotsav 2025")
+    title: "Autobiography Book Cover",
+    industry: "Publishing / Print Design",
+    url: "./portfolio-detail.html?project=graphic-design-autobiography-book-cover",
+    imageLabel: "Autobiography Book Cover"
   }
 ]
-    },
-
-    {
-      id: "social-posts",
-      title: "Social Media Posts",
-      groups: [
-        {
-          key: "dailyPostingRugnaseva",
-          title: "Daily Posting: Rugnaseva, Shikshan Sanstha, Shradhanjali post Style",
-          previewGroupName: "Daily Posting",
-          items: makePlaceholders(4, "Daily Posting")
-        },
-       {
-  key: "dailyPostingTopical",
-  title: "Daily Posting: Topical post Style",
-  previewGroupName: "Topical Post Style",
-  items: makePlaceholders(4, "Topical Post")
-}
-      ]
-    }
-  ],
-
-  relatedProjectsTitle: "View Other Projects",
-
-  relatedProjects: [
-    {
-      title: "Samartha Seva Mandal Sajjangad",
-      industry: "Religious / Spiritual Organisation",
-      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
-      imageLabel: "Samartha Seva Mandal Sajjangad"
-    },
-    {
-      title: "Kesariya@100",
-      industry: "Heritage / Commemorative Design",
-      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
-      imageLabel: "Kesariya@100"
-    },
-    {
-      title: "Autobiography Book Cover",
-      industry: "Publishing / Print Design",
-      url: "./portfolio-detail.html?project=graphic-design-autobiography-book-cover",
-      imageLabel: "Autobiography Book Cover"
-    }
-  ]
 }
 };
