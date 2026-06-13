@@ -6064,3 +6064,46 @@ body.portfolio-detail-page .case-top-nav-link:active {
     gap: 55px !important;
   }
 }
+
+/*-----------------------------------*\
+  #CASE PROJECT TOOLS LOGOS
+\*-----------------------------------*/
+
+.case-tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.case-tool-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  background: hsla(0, 0%, 100%, 0.22);
+  color: var(--smoky-black);
+
+  font-size: 12px;
+  font-weight: var(--fw-500);
+  line-height: 1;
+}
+
+.case-tool-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+@media (max-width: 580px) {
+  .case-tools-list {
+    justify-content: center;
+  }
+
+  .case-tool-item {
+    font-size: 11px;
+  }
+}

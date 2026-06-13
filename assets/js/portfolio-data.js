@@ -4,7 +4,28 @@ const portfolioProjects = {
     category: "Graphic Design",
     categorySlug: "graphic-design",
     industry: "Religious / Devotional Organisation",
-	relatedProjectsTitle: "View Other Projects",
+
+    role: "Graphic Designer",
+
+    deliverables: "Brand creatives, campaign layouts and social media assets",
+
+    tools: [
+      {
+        name: "Adobe Illustrator",
+        icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+      },
+      {
+        name: "Adobe Photoshop",
+        icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+      },
+      {
+        name: "Canva",
+        icon: "./assets/images/software Icons/canva-icon.svg"
+      }
+    ],
+
+    relatedProjectsTitle: "View Other Projects",
+
 
 relatedProjects: [
   {

@@ -60,6 +60,36 @@ if (clientDescription) {
   if (backButton) {
     backButton.href = "./index.html?section=portfolio&category=" + project.categorySlug;
   }
+	
+  const projectRole = document.querySelector("[data-project-role]");
+const projectDeliverables = document.querySelector("[data-project-deliverables]");
+const projectTools = document.querySelector("[data-project-tools]");
+
+if (projectRole) {
+  projectRole.innerText = project.role || "Graphic Designer";
+}
+
+if (projectDeliverables) {
+  projectDeliverables.innerText = project.deliverables || "Brand creatives, campaign layouts and social media assets";
+}
+
+if (projectTools) {
+  projectTools.innerHTML = "";
+
+  const tools = project.tools || [];
+
+  tools.forEach(function (tool) {
+    const toolItem = document.createElement("div");
+    toolItem.classList.add("case-tool-item");
+
+    toolItem.innerHTML = `
+      <img src="${tool.icon}" alt="${tool.name}">
+      <span>${tool.name}</span>
+    `;
+
+    projectTools.appendChild(toolItem);
+  });
+}
 };
 
 const renderClientStrip = function () {
