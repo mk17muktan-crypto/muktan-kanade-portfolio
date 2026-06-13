@@ -344,7 +344,7 @@ const renderBestWork = function () {
 
   bestWorkGrid.innerHTML = "";
 
-  items.slice(0, 4).forEach(function (item, index) {
+  items.slice(0, 2).forEach(function (item, index) {
     const bestWorkItem = document.createElement("button");
     bestWorkItem.type = "button";
     bestWorkItem.classList.add("case-best-work-item");
@@ -352,7 +352,7 @@ const renderBestWork = function () {
     bestWorkItem.appendChild(createImageItem(item));
 
     bestWorkItem.addEventListener("click", function () {
-      openCasePreview(items.slice(0, 4), index);
+      openCasePreview(items.slice(0, 2), index);
     });
 
     bestWorkGrid.appendChild(bestWorkItem);
@@ -364,7 +364,17 @@ const renderList = function (selector, items) {
 
   if (!list || !items) return;
 
-  const finalItems = Array.isArray(items) ? items : items.points || [];
+  const isMobile = window.innerWidth <= 580;
+
+  let finalItems = [];
+
+  if (Array.isArray(items)) {
+    finalItems = items;
+  } else if (isMobile && items.pointsMobile) {
+    finalItems = items.pointsMobile;
+  } else {
+    finalItems = items.points || [];
+  }
 
   list.innerHTML = "";
 
@@ -374,7 +384,6 @@ const renderList = function (selector, items) {
     list.appendChild(li);
   });
 };
-
 const renderThinkingSections = function () {
   const designThinkingTitle = document.querySelector("[data-design-thinking-title]");
   const visualSystemTitle = document.querySelector("[data-visual-system-title]");

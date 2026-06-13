@@ -70,7 +70,7 @@ const portfolioProjects = {
       {
         heading: "What was the design need?",
         bodyDesktop: "The design need was to create communication that felt devotional, respectful and visually strong, while still being suitable for modern digital platforms. The work had to maintain the sacred identity of Shrimant Dagdusheth Halwai Ganpati, but also make the campaign and social media creatives feel clear, engaging and easy to connect with for today’s audience.",
-        bodyMobile: "The design needed to feel devotional, respectful and visually strong, while working well on modern digital platforms. It had to keep the sacred identity of Shrimant Dagdusheth Halwai Ganpati intact and still feel clear, engaging and campaign-ready."
+        bodyMobile: "The design needed to feel devotional, respectful and visually strong, while working well on modern digital platforms.<br>It had to keep the sacred identity of Shrimant Dagdusheth Halwai Ganpati intact and still feel clear, engaging and campaign-ready."
       },
       {
         heading: "What kind of audience was this for?",
@@ -92,36 +92,47 @@ const portfolioProjects = {
   },
 
   bestWork: {
-    title: "",
-    items: [
-      { type: "placeholder", label: "Best Work 01" },
-      { type: "placeholder", label: "Best Work 02" },
-      { type: "placeholder", label: "Best Work 03" },
-      { type: "placeholder", label: "Best Work 04" }
-    ]
-  },
+  title: "",
+  items: [
+    { type: "placeholder", label: "Best Work 01" },
+    { type: "placeholder", label: "Best Work 02" }
+  ]
+},
 
   designThinking: {
     heading: "Design Thinking",
-    points: [
-      "This client was a unique case because their needs work across various formats, occasions & daily requirements.",
-      "With a very high volume of social media posts going out every day, the biggest challenge was to bring structure to the chaos.",
-      "The demand was not only about designing individual posts, but about creating a system that could manage speed, variety & consistency at the same time.",
-      "The goal was to make every post feel different enough to stay engaging, but still connected enough to look like it belonged to one larger visual family.",
-      "Overall, we focused on creating a visual system that could handle scale, repetition & daily updates without losing clarity."
-    ]
-  },
+      points: [
+    "This client was a unique case because their needs work across various formats, occasions & daily requirements.",
+    "With a very high volume of social media posts going out every day, the biggest challenge was to bring structure to the chaos.",
+    "The demand was not only about designing individual posts, but about creating a system that could manage speed, variety & consistency at the same time.",
+    "The goal was to make every post feel different enough to stay engaging, but still connected enough to look like it belonged to one larger visual family.",
+    "Overall, we focused on creating a visual system that could handle scale, repetition & daily updates without losing clarity."
+  ],
+
+  pointsMobile: [
+    "This client needed designs across daily posts, special occasions and multiple content formats.",
+    "Since many posts had to go out every day, the main challenge was to bring structure, speed and consistency to a high-volume design process.",
+    "The goal was not just to design individual posts, but to create a visual system where every post felt fresh while still belonging to one larger Dagdusheth visual family."
+  ]
+},
 
   visualSystem: {
-    heading: "Visual System",
-    points: [
-      "The design language was challenging because the brand needed to publish multiple posts every day while still maintaining a consistent visual identity.",
-      "Each post had to feel fresh, but also connected to the larger Dagdusheth communication style.",
-      "Colours were kept more flexible instead of fixed brand colors. A palette inspired by the Paithani saree was chosen because it was, in context perfect of the brand.",
-      "For major occasions, a separate design language was created to make those festivals feel more grand, special & emotionally elevated.",
-      "The final system balanced daily consistency with festive distinction, making the brand feel organized, devotional & visually rich."
-    ]
-  },
+  heading: "Visual System",
+
+  points: [
+    "The design language was challenging because the brand needed to publish multiple posts every day while still maintaining a consistent visual identity.",
+    "Each post had to feel fresh, but also connected to the larger Dagdusheth communication style.",
+    "Colours were kept more flexible instead of fixed brand colors. A palette inspired by the Paithani saree was chosen because it was, in context perfect of the brand.",
+    "For major occasions, a separate design language was created to make those festivals feel more grand, special & emotionally elevated.",
+    "The final system balanced daily consistency with festive distinction, making the brand feel organized, devotional & visually rich."
+  ],
+
+  pointsMobile: [
+    "Instead of using fixed colours repeatedly, the colour direction was kept more rich and flexible. A palette inspired by the Paithani saree was chosen because it felt traditional, premium and culturally right for Dagdusheth.",
+    "For major occasions, a separate design language was created to make the festivals feel more grand, special and emotionally elevated.",
+    "The final system balanced daily consistency with festive distinction."
+  ]
+},
 
   gallerySections: [
     {
@@ -147,31 +158,45 @@ const portfolioProjects = {
       id: "campaign",
       title: "Campaign",
       groups: [
-        {
-          key: "ganeshUtsav2025",
-          title: "Ganesh Utsav 2025",
-          previewGroupName: "Ganesh Utsav 2025",
-          items: makePlaceholders(5, "Ganesh Utsav 2025")
-        },
-        {
-          key: "ganeshJanmaSohola2025",
-          title: "Ganesh Janma Sohola 2025",
-          previewGroupName: "Ganesh Janma Sohola 2025",
-          items: makePlaceholders(5, "Ganesh Janma Sohola 2025")
-        },
-        {
-          key: "atirudraMahayadnya2025",
-          title: "Atirudra Mahayadnya 2025",
-          previewGroupName: "Atirudra Mahayadnya 2025",
-          items: makePlaceholders(5, "Atirudra Mahayadnya 2025")
-        },
-        {
-          key: "shahaleMohotsav2025",
-          title: "Shahale Mohotsav 2025",
-          previewGroupName: "Shahale Mohotsav 2025",
-          items: makePlaceholders(4, "Shahale Mohotsav 2025")
-        }
-      ]
+  {
+  key: "ganeshUtsav2024",
+  title: "Ganesh Utsav 2024",
+  previewGroupName: "Ganesh Utsav 2024",
+  items: [
+    {
+      src: "./assets/images/Portfolio/Graphic Design/DG/GU 2024 Image 1.jpg",
+      alt: "Ganesh Utsav 2024 creative 01"
+    },
+    { type: "placeholder", label: "Ganesh Utsav 2024 02" },
+    { type: "placeholder", label: "Ganesh Utsav 2024 03" },
+    { type: "placeholder", label: "Ganesh Utsav 2024 04" }
+  ]
+},
+  {
+    key: "ganeshUtsav2025",
+    title: "Ganesh Utsav 2025",
+    previewGroupName: "Ganesh Utsav 2025",
+    items: makePlaceholders(4, "Ganesh Utsav 2025")
+  },
+  {
+    key: "ganeshJanmaSohola2025",
+    title: "Ganesh Janma Sohola 2025",
+    previewGroupName: "Ganesh Janma Sohola 2025",
+    items: makePlaceholders(4, "Ganesh Janma Sohola 2025")
+  },
+  {
+    key: "atirudraMahayadnya2025",
+    title: "Atirudra Mahayadnya 2025",
+    previewGroupName: "Atirudra Mahayadnya 2025",
+    items: makePlaceholders(4, "Atirudra Mahayadnya 2025")
+  },
+  {
+    key: "shahaleMohotsav2025",
+    title: "Shahale Mohotsav 2025",
+    previewGroupName: "Shahale Mohotsav 2025",
+    items: makePlaceholders(4, "Shahale Mohotsav 2025")
+  }
+]
     },
 
     {
@@ -184,12 +209,12 @@ const portfolioProjects = {
           previewGroupName: "Daily Posting",
           items: makePlaceholders(4, "Daily Posting")
         },
-        {
-          key: "dailyPostingTopical",
-          title: "Daily Posting: Topical post Style",
-          previewGroupName: "Topical Post Style",
-          items: makePlaceholders(2, "Topical Post")
-        }
+       {
+  key: "dailyPostingTopical",
+  title: "Daily Posting: Topical post Style",
+  previewGroupName: "Topical Post Style",
+  items: makePlaceholders(4, "Topical Post")
+}
       ]
     }
   ],
