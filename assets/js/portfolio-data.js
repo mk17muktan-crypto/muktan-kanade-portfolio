@@ -56,7 +56,7 @@ const portfolioProjects = {
 
   hero: {
     desktop: {
-    src: "./assets/images/Thumbnails/Graphic Design/Desktop/DG.jpg",
+    src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
     alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
   },
     mobile: {

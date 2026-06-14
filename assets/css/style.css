@@ -3471,12 +3471,13 @@ body.page-contact .contact-info .contact-link:focus {
   
 
   .case-two-column {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 26px;
+}
 
   .case-section {
-    margin-bottom: 42px;
+    margin-bottom: 26px;
     scroll-margin-top: 120px;
   }
 
@@ -3562,8 +3563,9 @@ body.portfolio-detail-page .case-mobile-gallery-dots {
 
   body.portfolio-detail-page .case-two-column {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
+  gap: 14px;
+  margin-bottom: 26px;
+}
 
   body.portfolio-detail-page .case-mobile-gallery-dots {
     display: flex;
@@ -4257,7 +4259,7 @@ body.portfolio-detail-page .case-breadcrumb span {
 
   /* Make the inner page feel like an article/card, like desktop */
   body.portfolio-detail-page main.case-main {
-    width: calc(100% - 18px) !important;
+    width: calc(100% - 10px) !important;
     margin: 10px auto 80px !important;
     padding: 0 0 28px !important;
 
@@ -4543,19 +4545,19 @@ body.portfolio-detail-page .case-breadcrumb span {
 
   /* Give all content sections proper mobile spacing */
   body.portfolio-detail-page .case-section,
-  body.portfolio-detail-page .case-two-column,
-  body.portfolio-detail-page .case-next-projects {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
+body.portfolio-detail-page .case-two-column,
+body.portfolio-detail-page .case-next-projects {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
 
   /* Hero text should also align with the same grid */
-  body.portfolio-detail-page .case-breadcrumb,
-  body.portfolio-detail-page .case-title,
-  body.portfolio-detail-page .case-industry {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
+  bbody.portfolio-detail-page .case-breadcrumb,
+body.portfolio-detail-page .case-title,
+body.portfolio-detail-page .case-industry {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
 
   /* Keep carousel full-width, like your Figma layout */
   body.portfolio-detail-page .case-hero-carousel {
@@ -4565,8 +4567,8 @@ body.portfolio-detail-page .case-breadcrumb span {
 
   /* Keep sticky tab menu aligned with the same visual margin */
   body.portfolio-detail-page .case-tabs {
-    width: calc(100% - 32px) !important;
-  }
+  width: calc(100% - 20px) !important;
+}
 }
 
 /*-----------------------------------*\
@@ -5013,7 +5015,6 @@ body.testimonial-modal-open {
   }
 }
 
-</div>
 
 /*-----------------------------------*\
   #TESTIMONIAL CARD DISPLAY FIX
@@ -6032,8 +6033,8 @@ body.portfolio-detail-page .case-top-nav-link:active {
 @media (max-width: 580px) {
   body.portfolio-detail-page .case-cover-placeholder {
     width: 100%;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   body.portfolio-detail-page .case-cover-placeholder-box {
@@ -6062,7 +6063,7 @@ body.portfolio-detail-page .case-top-nav-link:active {
 /* Increase mobile gap between yellow block and client info heading */
 @media (max-width: 580px) {
   body.portfolio-detail-page .case-client-info-banner {
-    gap: 55px !important;
+    gap: 30px !important;
   }
 }
 
@@ -6482,7 +6483,7 @@ body.portfolio-detail-page .case-overview-block p {
   }
 
   body.portfolio-detail-page .case-overview-blocks {
-    gap: 20px !important;
+    gap: 12px !important;
   }
 
   body.portfolio-detail-page .case-overview-block p {
@@ -6661,7 +6662,7 @@ body.portfolio-detail-page .case-banner-title {
 }
 
 body.portfolio-detail-page .case-overview-block {
-  margin-bottom: 22px;
+  margin-bottom: 0px;
 }
 
 body.portfolio-detail-page .case-overview-block h2 {
@@ -6917,7 +6918,7 @@ body.portfolio-detail-page .case-best-work-item img {
   }
 
   body.portfolio-detail-page .case-best-work-section {
-    margin-bottom: 42px !important;
+    margin-bottom: 20px !important;
   }
 
   body.portfolio-detail-page .case-best-work-grid {
@@ -7470,8 +7471,8 @@ body.portfolio-detail-page .case-preview-thumbs {
   body.portfolio-detail-page .case-best-work-section {
     clear: both !important;
     width: 100% !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   /* Full-width single-column Best Work layout */
@@ -7525,16 +7526,16 @@ body.portfolio-detail-page .case-preview-thumbs {
 
   /* Reduce gap after Project Info text */
   body.portfolio-detail-page #client-info {
-    margin-bottom: 10px !important;
+    margin-bottom: 0px !important;
   }
 
   /* Remove unnecessary top/bottom breathing space around Best Work */
-  body.portfolio-detail-page .case-best-work-section {
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
+body.portfolio-detail-page .case-best-work-section {
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
   /* Keep Best Work tight and clean */
   body.portfolio-detail-page .case-best-work-grid {
