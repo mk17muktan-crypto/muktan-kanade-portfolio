@@ -3398,7 +3398,7 @@ body.page-contact .contact-info .contact-link:focus {
   width: 100%;
 }
 
-..case-next-card {
+.case-next-card {
   display: block;
   min-width: 0;
 
@@ -3412,10 +3412,12 @@ body.page-contact .contact-info .contact-link:focus {
   color: var(--white-2);
 
   transform: translateY(0) scale(1);
+  will-change: transform, box-shadow;
+
   transition:
-    transform 0.58s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.58s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.35s ease;
+    transform 0.72s cubic-bezier(0.22, 1.15, 0.36, 1),
+    box-shadow 0.72s ease,
+    border-color 0.42s ease;
 }
 
 .case-next-thumb {
@@ -3573,11 +3575,17 @@ body.page-contact .contact-info .contact-link:focus {
 
   .case-next-card:hover .case-next-thumb img {
     transform: scale(1.045);
+    filter: brightness(1.04);
   }
 }
 
 .case-next-thumb img {
-  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1);
+  will-change: transform;
+
+  transition:
+    transform 0.82s cubic-bezier(0.22, 1.15, 0.36, 1),
+    filter 0.65s ease;
 }
 
 /*-----------------------------------*\
@@ -7635,3 +7643,248 @@ body.portfolio-detail-page .case-best-work-section {
     margin-top: 0 !important;
   }
 }
+
+/*-----------------------------------*\
+  #VICTORY POLYCHEM SOCIAL POST GRID
+\*-----------------------------------*/
+
+/* Desktop: normal 3-column layout */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-victoryPostStyle1,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle2,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle3,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle4 {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-victoryPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle4 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+
+/* Mobile: attached 3-image layout */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-victoryPostStyle1,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle2,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle3,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle4 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-victoryPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-victoryPostStyle4 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+
+    flex: none !important;
+    scroll-snap-align: unset !important;
+
+    border-radius: 9px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-victoryPostStyle1 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-victoryPostStyle2 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-victoryPostStyle3 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-victoryPostStyle4 .case-gallery-item:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+/*-----------------------------------*\
+  #GRAPHIC DESIGN INNER PAGE GRID TYPES
+\*-----------------------------------*/
+
+/* 2-column sections */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle1,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle2,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle3,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3,
+  body.portfolio-detail-page .case-gallery-coepPostStyle2,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: min(100%, 820px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-raptechPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* 3-column sections */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3,
+  body.portfolio-detail-page .case-gallery-celestialFeatures,
+  body.portfolio-detail-page .case-gallery-coepPostStyle1,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* 1-column web banner sections */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 1 !important;
+    border-radius: 12px !important;
+  }
+}
+
+/* Mobile layouts */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle1,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle2,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle3,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3,
+  body.portfolio-detail-page .case-gallery-coepPostStyle2,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3,
+  body.portfolio-detail-page .case-gallery-celestialFeatures,
+  body.portfolio-detail-page .case-gallery-coepPostStyle1,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-raptechPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-raptechPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 1 !important;
+    border-radius: 9px !important;
+  }
+}
+
+/* Raptech Post Style 4 mobile: same Victory layout */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1.55 / 1 !important;
+  }
+}
+
