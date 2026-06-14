@@ -379,20 +379,32 @@ relatedProjects: [
     title: "Samartha Seva Mandal Sajjangad",
     industry: "Religious / Spiritual Organisation",
     url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+    image: {
+      src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+      alt: "Samartha Seva Mandal Sajjangad thumbnail"
+    },
     imageLabel: "Samartha Seva Mandal Sajjangad"
   },
   {
     title: "Kesariya@100",
     industry: "Heritage / Commemorative Design",
     url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
+    image: {
+      src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+      alt: "Kesariya@100 thumbnail"
+    },
     imageLabel: "Kesariya@100"
   },
   {
     title: "Autobiography Book Cover",
     industry: "Publishing / Print Design",
     url: "./portfolio-detail.html?project=graphic-design-autobiography-book-cover",
+    image: {
+      src: "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
+      alt: "Autobiography Book Cover thumbnail"
+    },
     imageLabel: "Autobiography Book Cover"
-  }
+  },
 ]
 }
 };

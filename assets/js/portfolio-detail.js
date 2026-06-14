@@ -585,13 +585,22 @@ const renderNextProjects = function () {
     card.classList.add("case-next-card");
     card.href = item.url;
 
-    card.innerHTML = `
-      <div class="case-next-thumb">
-        <div class="case-img-placeholder">${item.imageLabel || item.title}</div>
-      </div>
-      <h3>${item.title}</h3>
-      <p>${item.industry}</p>
-    `;
+    const thumb = document.createElement("div");
+thumb.classList.add("case-next-thumb");
+
+thumb.appendChild(
+  createImageItem(item.image || { type: "placeholder", label: item.imageLabel || item.title })
+);
+
+const title = document.createElement("h3");
+title.innerText = item.title;
+
+const industry = document.createElement("p");
+industry.innerText = item.industry;
+
+card.appendChild(thumb);
+card.appendChild(title);
+card.appendChild(industry);
 
     nextGrid.appendChild(card);
   });
