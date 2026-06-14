@@ -3394,22 +3394,36 @@ body.page-contact .contact-info .contact-link:focus {
 .case-next-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
   width: 100%;
 }
 
-.case-next-card {
+..case-next-card {
   display: block;
-  color: var(--white-2);
   min-width: 0;
+
+  padding: 14px 14px 20px;
+  border-radius: 22px;
+
+  background: hsla(240, 2%, 12%, 0.82);
+  border: 1px solid hsla(0, 0%, 100%, 0.08);
+  box-shadow: var(--shadow-2);
+
+  color: var(--white-2);
+
+  transform: translateY(0) scale(1);
+  transition:
+    transform 0.58s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.58s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease;
 }
 
-..case-next-thumb {
+.case-next-thumb {
   width: 100%;
-  height: 140px;
-  border-radius: 16px;
+  height: 190px;
+  border-radius: 18px;
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   background: var(--onyx);
 }
 
@@ -3424,13 +3438,17 @@ body.page-contact .contact-info .contact-link:focus {
 
 .case-next-card h3 {
   color: var(--white-2);
-  font-size: var(--fs-6);
-  margin-bottom: 4px;
+  font-size: 17px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 6px;
 }
 
 .case-next-card p {
   color: var(--light-gray-70);
-  font-size: var(--fs-7);
+  font-size: 15px;
+  font-weight: var(--fw-300);
+  line-height: 1.35;
 }
 
 /* Mobile */
@@ -3518,13 +3536,48 @@ body.page-contact .contact-info .contact-link:focus {
     display: flex;
   }
 
-  .case-next-grid {
-    grid-template-columns: 1fr;
+.case-next-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.case-next-card {
+  padding: 14px 14px 22px;
+  border-radius: 22px;
+}
+
+.case-next-thumb {
+  height: 220px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+.case-next-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.case-next-card p {
+  font-size: 17px;
+}
+}
+
+@media (hover: hover) {
+  .case-next-card:hover {
+    transform: translateY(-8px) scale(1.018);
+    border-color: hsla(45, 100%, 72%, 0.18);
+    box-shadow:
+      0 24px 45px hsla(0, 0%, 0%, 0.34),
+      0 8px 18px hsla(45, 100%, 72%, 0.08);
   }
 
-  .case-next-thumb {
-    height: 180px;
+  .case-next-card:hover .case-next-thumb img {
+    transform: scale(1.045);
   }
+}
+
+.case-next-thumb img {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /*-----------------------------------*\
