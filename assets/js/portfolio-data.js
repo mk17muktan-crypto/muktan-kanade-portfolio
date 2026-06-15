@@ -693,11 +693,11 @@ relatedProjects: [
 
   hero: {
     desktop: {
-      src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
+      src: "./assets/images/Thumbnails/Graphic Design/Raptech Engineering.jpg",
       alt: "Raptech Engineering portfolio cover image"
     },
     mobile: {
-      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Raptech.jpg",
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Raptech Engineering.jpg",
       alt: "Raptech Engineering mobile portfolio cover image"
     }
   },
@@ -781,14 +781,8 @@ relatedProjects: [
           title: "Post Style 1: Image Based Hiring Posts",
           previewGroupName: "Raptech Post Style 1",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-1-A.jpg",
-              alt: "Raptech image based hiring post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-1-B.jpg",
-              alt: "Raptech image based hiring post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-1-A.jpg", alt: "Raptech image based hiring post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-1-B.jpg", alt: "Raptech image based hiring post 02" }
           ]
         },
         {
@@ -796,14 +790,8 @@ relatedProjects: [
           title: "Post Style 2: Image & Product Based",
           previewGroupName: "Raptech Post Style 2",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-A.jpg",
-              alt: "Raptech image and product based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-B.jpg",
-              alt: "Raptech image and product based post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-A.jpg", alt: "Raptech image and product based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-B.jpg", alt: "Raptech image and product based post 02" }
           ]
         },
         {
@@ -811,14 +799,8 @@ relatedProjects: [
           title: "Post Style 3: Product Based",
           previewGroupName: "Raptech Post Style 3",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-A.jpg",
-              alt: "Raptech product based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-B.jpg",
-              alt: "Raptech product based post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-A.jpg", alt: "Raptech product based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-B.jpg", alt: "Raptech product based post 02" }
           ]
         },
         {
@@ -826,18 +808,9 @@ relatedProjects: [
           title: "Post Style 4: Text & Product Based",
           previewGroupName: "Raptech Post Style 4",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-A.jpg",
-              alt: "Raptech text and product based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-B.jpg",
-              alt: "Raptech text and product based post 02"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-C.jpg",
-              alt: "Raptech text and product based post 03"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-A.jpg", alt: "Raptech text and product based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-B.jpg", alt: "Raptech text and product based post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-C.jpg", alt: "Raptech text and product based post 03" }
           ]
         }
       ]
@@ -851,35 +824,27 @@ relatedProjects: [
       title: "Trelawny",
       industry: "Industrial Tools / Engineering",
       url: "./portfolio-detail.html?project=graphic-design-trelawny",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg",
-        alt: "Trelawny thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg", alt: "Trelawny thumbnail" },
       imageLabel: "Trelawny"
     },
     {
       title: "COEPian's Academy",
       industry: "Education / Coaching",
       url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg",
-        alt: "COEPian's Academy thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg", alt: "COEPian's Academy thumbnail" },
       imageLabel: "COEPian's Academy"
     },
     {
       title: "Sundar Sanskar",
       industry: "Education / Child Development",
       url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
-        alt: "Sundar Sanskar thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg", alt: "Sundar Sanskar thumbnail" },
       imageLabel: "Sundar Sanskar"
     }
   ]
 },
-	"graphic-design-trelawny": {
+
+"graphic-design-trelawny": {
   title: "Trelawny",
   fullTitle: "Trelawny",
   category: "Graphic Design",
@@ -890,14 +855,8 @@ relatedProjects: [
   deliverables: "Social Media Creatives",
 
   tools: [
-    {
-      name: "Adobe Illustrator",
-      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
-    },
-    {
-      name: "Adobe Photoshop",
-      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
-    }
+    { name: "Adobe Illustrator", icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg" },
+    { name: "Adobe Photoshop", icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg" }
   ],
 
   breadcrumb: {
@@ -916,14 +875,8 @@ relatedProjects: [
   ],
 
   hero: {
-    desktop: {
-      src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg",
-      alt: "Trelawny portfolio cover image"
-    },
-    mobile: {
-      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Trelawny.jpg",
-      alt: "Trelawny mobile portfolio cover image"
-    }
+    desktop: { src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg", alt: "Trelawny portfolio cover image" },
+    mobile: { src: "./assets/images/Thumbnails/Graphic Design/Mobile/Trelawny.jpg", alt: "Trelawny mobile portfolio cover image" }
   },
 
   projectOverview: {
@@ -958,10 +911,7 @@ relatedProjects: [
     toolsHeading: "Tools Used"
   },
 
-  bestWork: {
-    title: "",
-    items: []
-  },
+  bestWork: { title: "", items: [] },
 
   designThinking: {
     heading: "Design Thinking",
@@ -1005,14 +955,8 @@ relatedProjects: [
           title: "Post Style 1: Product and Content Based",
           previewGroupName: "Trelawny Post Style 1",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-A.jpg",
-              alt: "Trelawny product and content based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-B.jpg",
-              alt: "Trelawny product and content based post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-A.jpg", alt: "Trelawny product and content based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-B.jpg", alt: "Trelawny product and content based post 02" }
           ]
         },
         {
@@ -1020,14 +964,8 @@ relatedProjects: [
           title: "Post Style 2: Audience Based",
           previewGroupName: "Trelawny Post Style 2",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-A.jpg",
-              alt: "Trelawny audience based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-B.jpg",
-              alt: "Trelawny audience based post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-A.jpg", alt: "Trelawny audience based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-B.jpg", alt: "Trelawny audience based post 02" }
           ]
         },
         {
@@ -1035,14 +973,8 @@ relatedProjects: [
           title: "Post Style 3: Text Based",
           previewGroupName: "Trelawny Post Style 3",
           items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-A.jpg",
-              alt: "Trelawny text based post 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-B.jpg",
-              alt: "Trelawny text based post 02"
-            }
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-A.jpg", alt: "Trelawny text based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-B.jpg", alt: "Trelawny text based post 02" }
           ]
         }
       ]
@@ -1056,35 +988,26 @@ relatedProjects: [
       title: "La Mom & Miiracle",
       industry: "Healthcare / Fertility Clinic",
       url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
-        alt: "La Mom & Miiracle thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg", alt: "La Mom & Miiracle thumbnail" },
       imageLabel: "La Mom & Miiracle"
     },
     {
       title: "Yogalaya",
       industry: "Wellness / Yoga",
       url: "./portfolio-detail.html?project=graphic-design-yogalaya",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
-        alt: "Yogalaya thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg", alt: "Yogalaya thumbnail" },
       imageLabel: "Yogalaya"
     },
     {
       title: "BNI Champs",
       industry: "Business Networking",
       url: "./portfolio-detail.html?project=graphic-design-bni-champs",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-        alt: "BNI Champs thumbnail"
-      },
+      image: { src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg", alt: "BNI Champs thumbnail" },
       imageLabel: "BNI Champs"
     }
   ]
 },
-	"graphic-design-celestial": {
+  "graphic-design-celestial": {
   title: "Celestial Institute of Technology",
   fullTitle: "Celestial Institute of Technology",
   category: "Graphic Design",
@@ -1137,7 +1060,7 @@ relatedProjects: [
     sections: [
       {
         heading: "Who is the client?",
-        bodyDesktop: "Celestial Institute of Technology is an institute focused on enabling thoughtful workforce and innovative leaders in the new era of digital intelligence. The institute offers courses, professional training, and job opportunities to students and professionals who seek growth in Intelligent Automation and next-generation industrial automation.",
+        bodyDesktop: "Celestial Institute of Technology is an institute focused on enabling Thoughtful Workforce and Innovative Leaders in the new era of digital intelligence. The institute offers courses, professional training, and job opportunities to students and professionals who seek growth in Intelligent Automation and next-generation industrial automation.",
         bodyMobile: "Celestial Institute of Technology focuses on enabling thoughtful workforce and innovative leaders in the new era of digital intelligence, offering courses and training in Intelligent Automation."
       },
       {
@@ -1276,26 +1199,36 @@ relatedProjects: [
       title: "Preeti Garments",
       industry: "Fashion / Apparel",
       url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg", alt: "Preeti Garments thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+        alt: "Preeti Garments thumbnail"
+      },
       imageLabel: "Preeti Garments"
     },
     {
       title: "Aai Foods",
       industry: "Food / FMCG",
       url: "./portfolio-detail.html?project=graphic-design-aai-foods",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg", alt: "Aai Foods thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
+        alt: "Aai Foods thumbnail"
+      },
       imageLabel: "Aai Foods"
     },
     {
       title: "Serene Veda",
       industry: "Ayurveda / Wellness",
       url: "./portfolio-detail.html?project=graphic-design-serene-veda",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg", alt: "Serene Veda thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Serene Veda thumbnail"
+      },
       imageLabel: "Serene Veda"
     }
   ]
 },
-	"graphic-design-coepians-academy": {
+
+"graphic-design-coepians-academy": {
   title: "COEPian's Academy",
   fullTitle: "COEPian's Academy",
   category: "Graphic Design",
@@ -1474,23 +1407,32 @@ relatedProjects: [
       title: "Rainbow Umbrella",
       industry: "Social / CSR",
       url: "./portfolio-detail.html?project=graphic-design-rainbow-umbrella",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/RU.jpg", alt: "Rainbow Umbrella thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/RU.jpg",
+        alt: "Rainbow Umbrella thumbnail"
+      },
       imageLabel: "Rainbow Umbrella"
     },
     {
       title: "Nupur Kathak Dance School",
       industry: "Dance / Performing Arts",
       url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg", alt: "Nupur Kathak Dance School thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
+        alt: "Nupur Kathak Dance School thumbnail"
+      },
       imageLabel: "Nupur Kathak Dance School"
     },
     {
       title: "Beyond Bandish",
       industry: "Music / Performing Arts",
       url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg", alt: "Beyond Bandish thumbnail" },
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Beyond Bandish thumbnail"
+      },
       imageLabel: "Beyond Bandish"
-        }
-      ]
-    }
+     }
+   ]
+ }
 }

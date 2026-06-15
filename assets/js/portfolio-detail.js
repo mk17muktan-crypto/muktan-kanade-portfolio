@@ -494,12 +494,16 @@ const renderGallerySections = function () {
 
   const sections = project.gallerySections || [];
 
-  const mobileCarouselKeys = [
-    "atirudraMahayadnya2025",
-    "shahaleMohotsav2025",
-    "dailyPostingRugnaseva",
-    "dailyPostingTopical"
-  ];
+const mobileCarouselKeys = [
+  "atirudraMahayadnya2025",
+  "shahaleMohotsav2025",
+  "dailyPostingRugnaseva",
+  "dailyPostingTopical",
+
+  "celestialFeatures",
+  "coepPostStyle4",
+  "lmmPostStyle3"
+];
 
   sections.forEach(function (section) {
     const sectionElement = document.createElement("section");
