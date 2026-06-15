@@ -1434,5 +1434,643 @@ relatedProjects: [
       imageLabel: "Beyond Bandish"
      }
    ]
+ },
+	
+"graphic-design-la-mom-miiracle": {
+  title: "La Mom & Miiracle",
+  fullTitle: "La Mom & Miiracle",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Healthcare / Fertility Clinic",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Campaign, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "La Mom & Miiracle"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+      alt: "La Mom & Miiracle portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/LMM.jpg",
+      alt: "La Mom & Miiracle mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "La Mom & Miiracle",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "At La Mom & Miiracle, the clinic is committed to empowering women and couples on their fertility journey. Led by Dr. Asmita Potdar, a renowned IVF specialist in Pune, the clinic provides world-class fertility treatments tailored to individual needs. With over 18 years of experience, Dr. Potdar has helped thousands of patients navigate IVF, high-risk pregnancy and other reproductive challenges with compassionate and holistic care.",
+        bodyMobile: "La Mom & Miiracle is a fertility clinic led by Dr. Asmita Potdar, an IVF specialist in Pune with over 18 years of experience. The clinic supports women and couples through fertility treatments, pregnancy care and reproductive health guidance."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present La Mom & Miiracle as a warm, caring and trustworthy brand connected to motherhood, babies & early parenting. The communication had to feel soft, emotional & reassuring, while still looking clean, modern & suitable for digital platforms.",
+        bodyMobile: "The design needed to present La Mom & Miiracle as a warm, caring and trustworthy brand connected to motherhood, fertility care and early parenting."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included mothers, expecting parents, young families and caregivers who look for products, services or guidance that feel safe, gentle and reliable.",
+        bodyMobile: "The audience included mothers, expecting parents, young families and caregivers looking for care, safety and reassurance."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of love, care, comfort & trust. It needed to feel nurturing & gentle, making the audience feel that the brand understands the emotional side of motherhood & family care.",
+        bodyMobile: "The design had to create a feeling of love, care, comfort and trust while feeling soft, nurturing and gentle."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "Since the subject was sensitive & deeply personal, the visuals had to feel comforting, respectful & clear.",
+      "The aim was to create posts that made people feel informed without making the subject feel intimidating or uncomfortable.",
+      "As this was her first step into social media, the content had to gently introduce who she is, what she does & the kind of care patients can expect from her.",
+      "The posts included a mix of doctor introduction, clinic interiors, patient-friendly information & awareness-led campaigns.",
+      "Topics such as cervical cancer awareness were handled with a balance of seriousness and reassurance.",
+      "Overall, the strategy was to build trust, approachability & confidence around the doctor and her practice."
+    ],
+    pointsMobile: [
+      "Since the subject was sensitive and deeply personal, the visuals had to feel comforting, respectful and clear.",
+      "The content gently introduced the doctor, her work and the kind of care patients could expect.",
+      "Overall, the strategy was to build trust, approachability and confidence around the doctor and her practice."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The visual language was designed to feel soft, open & emotionally reassuring.",
+      "Sharp corners and harsh elements were consciously avoided to keep the brand identity gentle and patient-friendly.",
+      "The layouts used spacious compositions, rounded forms & soft bubbly elements to create a sense of comfort.",
+      "The colour scheme supported a warm, positive & caring tone.",
+      "Every element was chosen to make the communication feel less clinical and more human.",
+      "The final look helped the brand feel welcoming, calm, happy & easy to trust."
+    ],
+    pointsMobile: [
+      "The visual language was designed to feel soft, open and emotionally reassuring.",
+      "Rounded forms, spacious layouts and soft elements were used to create comfort.",
+      "The final look helped the brand feel welcoming, calm, happy and easy to trust."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "lmmPostStyle1",
+          title: "Post Style 1",
+          previewGroupName: "La Mom & Miiracle Post Style 1",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-A.jpg", alt: "La Mom & Miiracle post style 1 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-B.jpg", alt: "La Mom & Miiracle post style 1 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-C.jpg", alt: "La Mom & Miiracle post style 1 creative 03" }
+          ]
+        },
+        {
+          key: "lmmPostStyle2",
+          title: "Post Style 2",
+          previewGroupName: "La Mom & Miiracle Post Style 2",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-A.jpg", alt: "La Mom & Miiracle post style 2 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-B.jpg", alt: "La Mom & Miiracle post style 2 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-C.jpg", alt: "La Mom & Miiracle post style 2 creative 03" }
+          ]
+        },
+        {
+          key: "lmmPostStyle3",
+          title: "Post Style 3",
+          previewGroupName: "La Mom & Miiracle Post Style 3",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-A.jpg", alt: "La Mom & Miiracle post style 3 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-B.jpg", alt: "La Mom & Miiracle post style 3 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-C.jpg", alt: "La Mom & Miiracle post style 3 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-D.jpg", alt: "La Mom & Miiracle post style 3 creative 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-E.jpg", alt: "La Mom & Miiracle post style 3 creative 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-F.jpg", alt: "La Mom & Miiracle post style 3 creative 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Sundar Sanskar",
+      industry: "Education / Child Development",
+      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
+        alt: "Sundar Sanskar thumbnail"
+      },
+      imageLabel: "Sundar Sanskar"
+    },
+    {
+      title: "Yogalaya",
+      industry: "Wellness / Yoga",
+      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
+        alt: "Yogalaya thumbnail"
+      },
+      imageLabel: "Yogalaya"
+    },
+    {
+      title: "BNI Champs",
+      industry: "Business Networking",
+      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
+        alt: "BNI Champs thumbnail"
+      },
+      imageLabel: "BNI Champs"
+    }
+  ]
+},
+
+"graphic-design-wilo": {
+  title: "Wilo",
+  fullTitle: "Wilo",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Pumps / Water Technology",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Campaign, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Wilo"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+      alt: "Wilo portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Wilo.jpg",
+      alt: "Wilo mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Wilo",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Wilo India plays a vital role in providing water supply solutions for the building services, water management, and industrial sectors. The company employs over 1,250 people and has a strong nationwide presence, with 5 regional offices, 23 branch offices, and a network of 300+ dealers, distributors, and service partners.",
+        bodyMobile: "Wilo India provides water supply solutions for building services, water management and industrial sectors, with a strong nationwide presence across India."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "Since Wilo is an established brand working with important infrastructure and engineering products, the visuals had to feel clean, precise and professional, while making the information easy to understand.",
+        bodyMobile: "The visuals had to feel clean, precise and professional while making Wilo’s product information easy to understand."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included engineers, contractors, consultants, dealers and business owners who look for dependable water and pumping solutions. The design needed to communicate clearly to people who value performance, efficiency, durability and trust.",
+        bodyMobile: "The audience included engineers, contractors, consultants, dealers and business owners looking for dependable water and pumping solutions."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of confidence, trust and technical assurance. It needed to make Wilo feel dependable, advanced and capable of supporting serious water management and engineering needs.",
+        bodyMobile: "The design had to create confidence, trust and technical assurance, making Wilo feel dependable and advanced."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The goal for Wilo was to support the brand’s entry into the Amazon e-commerce market with visuals that felt sharp, product-led & conversion-focused.",
+      "The e-commerce ads were designed with a clear purpose: to highlight the right product benefits and visual cues that could help drive better clicks and customer interest.",
+      "Alongside this, separate social media posts were created with a more simple, structured & informative format.",
+      "These posts focused on presenting the product, its applications & its USPs in a way that was easy to understand.",
+      "The overall strategy was to balance two needs: performance-driven e-commerce communication and brand-consistent social media content."
+    ],
+    pointsMobile: [
+      "The goal was to support Wilo’s entry into the Amazon e-commerce market with sharp, product-led visuals.",
+      "The posts focused on presenting the product, applications and USPs in a clear way.",
+      "The overall strategy balanced performance-driven e-commerce communication with brand-consistent social media content."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design language was built using Wilo’s existing visual asset library, which included product images, backgrounds, logos & supporting brand elements.",
+      "Since the brand already had a vast collection of material, the challenge was not to create everything from scratch.",
+      "The real task was to choose the right visual elements that would create the strongest impact for each communication piece.",
+      "Product visuals were used with purpose, making sure they supported the message instead of simply filling space.",
+      "Each design was structured to feel clean, professional, technical & easy to read.",
+      "The design approach helped the communication feel brand-aligned, product-focused & visually effective across both e-commerce and social media."
+    ],
+    pointsMobile: [
+      "The design language was built using Wilo’s existing visual asset library.",
+      "The task was to choose the right visual elements for the strongest impact.",
+      "The final communication felt brand-aligned, product-focused and visually effective."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "wiloPostStyle1",
+          title: "Post Style 1: Amazon Posts",
+          previewGroupName: "Wilo Amazon Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-A.jpg", alt: "Wilo Amazon post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-B.jpg", alt: "Wilo Amazon post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-C.jpg", alt: "Wilo Amazon post 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-D.jpg", alt: "Wilo Amazon post 04" }
+          ]
+        },
+        {
+          key: "wiloPostStyle2",
+          title: "Post Style 2: Event Invites",
+          previewGroupName: "Wilo Event Invites",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-A.jpg", alt: "Wilo event invite 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-B.jpg", alt: "Wilo event invite 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-C.jpg", alt: "Wilo event invite 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-D.jpg", alt: "Wilo event invite 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-E.jpg", alt: "Wilo event invite 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-F.jpg", alt: "Wilo event invite 06" }
+          ]
+        },
+        {
+          key: "wiloPostStyle3",
+          title: "Post Style 3: Hiring Posts",
+          previewGroupName: "Wilo Hiring Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-3-A.jpg", alt: "Wilo hiring post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-3-B.jpg", alt: "Wilo hiring post 02" }
+          ]
+        },
+        {
+          key: "wiloPostStyle4",
+          title: "Post Style 4: Image Based Posts",
+          previewGroupName: "Wilo Image Based Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-A.jpg", alt: "Wilo image based post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-B.jpg", alt: "Wilo image based post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-C.jpg", alt: "Wilo image based post 03" }
+          ]
+        },
+        {
+          key: "wiloPostStyle5",
+          title: "Post Style 5: Image & Content Based Posts",
+          previewGroupName: "Wilo Image and Content Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-A.jpg", alt: "Wilo image and content post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-B.jpg", alt: "Wilo image and content post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-C.jpg", alt: "Wilo image and content post 03" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Sundar Sanskar",
+      industry: "Education / Child Development",
+      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
+        alt: "Sundar Sanskar thumbnail"
+      },
+      imageLabel: "Sundar Sanskar"
+    },
+    {
+      title: "Yogalaya",
+      industry: "Wellness / Yoga",
+      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
+        alt: "Yogalaya thumbnail"
+      },
+      imageLabel: "Yogalaya"
+    },
+    {
+      title: "BNI Champs",
+      industry: "Business Networking",
+      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
+        alt: "BNI Champs thumbnail"
+      },
+      imageLabel: "BNI Champs"
+    }
+  ]
+},
+	
+"graphic-design-samartha-seva-mandal": {
+  title: "Samartha Seva Mandal",
+  fullTitle: "Samartha Seva Mandal",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Religious / Spiritual Organisation",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Campaign, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Samartha Seva Mandal"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding Logos" },
+    { id: "symbols", label: "Symbols" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+      alt: "Samartha Seva Mandal portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/SSMS.jpg",
+      alt: "Samartha Seva Mandal mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Samartha Seva Mandal",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Samartha Seva Mandal is a religious and spiritual organisation with a long-standing legacy rooted in devotion, tradition and community connection. The communication needed to respect this heritage while helping the Mandal appear more organised, refined and relevant for a modern audience.",
+        bodyMobile: "Samartha Seva Mandal is a religious and spiritual organisation with a long-standing legacy rooted in devotion, tradition and community connection."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The existing branding felt traditional and dated, so the design needed to create a fresh, modern and more organised visual language without erasing the Mandal’s identity. The aim was to bring the brand forward into a newer visual world while keeping its cultural tone intact.",
+        bodyMobile: "The design needed to create a fresh, modern and organised visual language while keeping the Mandal’s cultural and devotional identity intact."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included devotees, followers, families, community members and younger digital audiences who connect with the Mandal through cultural, spiritual and social content.",
+        bodyMobile: "The audience included devotees, families, community members and younger digital audiences connected to cultural and spiritual content."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of devotion, heritage, warmth and trust. It needed to feel rooted in legacy while also appearing refined, modern and future-ready.",
+        bodyMobile: "The design had to create a feeling of devotion, heritage, warmth and trust while feeling refined and future-ready."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "This mandal has a long-standing legacy built over many decades, so the design approach had to respect its roots while making it more relevant for today.",
+      "The existing branding felt traditional & dated, so the aim was to create a fresh, modern & more organized visual language.",
+      "The strategy was not to erase the Mandal's identity, but to bring it forward into a newer visual world.",
+      "A key focus was to develop a design system and iconography that felt clear, current & easier to use across different platforms.",
+      "The overall direction balanced heritage, devotion & modern communication, making the mandal’s presence feel more refined and future-ready."
+    ],
+    pointsMobile: [
+      "The design approach had to respect the Mandal’s roots while making it more relevant for today.",
+      "The strategy was not to erase the identity, but to bring it forward into a newer visual world.",
+      "The overall direction balanced heritage, devotion and modern communication."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The overall look and feel was reshaped & modernized while still keeping the tone aligned with the Mandal's preference & cultural identity.",
+      "A new set of visual elements & iconography was created to make the communication feel more structured, recognizable & contemporary.",
+      "The execution included both 3D-style visuals & clean 2D illustrations, giving the brand more flexibility across different types of content.",
+      "The color palette combined bright tones with earthy shades, creating a balance of energy, tradition & warmth.",
+      "The final design language helped the Mandal feel rooted in its legacy, yet ready for a more modern audience."
+    ],
+    pointsMobile: [
+      "The overall look and feel was reshaped and modernised while keeping the cultural tone intact.",
+      "A new set of visual elements and iconography made the communication feel structured and contemporary.",
+      "The final design language helped the Mandal feel rooted in its legacy, yet ready for a modern audience."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding Logos",
+      groups: [
+        {
+          key: "ssmsLogos",
+          title: "Logos",
+          previewGroupName: "Samartha Seva Mandal Logos",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-1.jpg", alt: "Samartha Seva Mandal logo 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-2.jpg", alt: "Samartha Seva Mandal logo 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-3.jpg", alt: "Samartha Seva Mandal logo 03" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "symbols",
+      title: "Symbols",
+      groups: [
+        {
+          key: "ssmsSymbols",
+          title: "Symbols",
+          previewGroupName: "Samartha Seva Mandal Symbols",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-A.jpg", alt: "Samartha Seva Mandal symbol A" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.jpg", alt: "Samartha Seva Mandal symbol B" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-C.jpg", alt: "Samartha Seva Mandal symbol C" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-D.jpg", alt: "Samartha Seva Mandal symbol D" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-E.jpg", alt: "Samartha Seva Mandal symbol E" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.jpg", alt: "Samartha Seva Mandal symbol F" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-G.jpg", alt: "Samartha Seva Mandal symbol G" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-H.jpg", alt: "Samartha Seva Mandal symbol H" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-I.jpg", alt: "Samartha Seva Mandal symbol I" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-J.jpg", alt: "Samartha Seva Mandal symbol J" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "ssmsSocialPosts",
+          title: "Social Media Posts",
+          previewGroupName: "Samartha Seva Mandal Social Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-A.jpg", alt: "Samartha Seva Mandal social post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-B.jpg", alt: "Samartha Seva Mandal social post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-C.jpg", alt: "Samartha Seva Mandal social post 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-D.jpg", alt: "Samartha Seva Mandal social post 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-E.jpg", alt: "Samartha Seva Mandal social post 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-F.jpg", alt: "Samartha Seva Mandal social post 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Preeti Garments",
+      industry: "Fashion / Apparel",
+      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+        alt: "Preeti Garments thumbnail"
+      },
+      imageLabel: "Preeti Garments"
+    },
+    {
+      title: "Aai Foods",
+      industry: "Food / FMCG",
+      url: "./portfolio-detail.html?project=graphic-design-aai-foods",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
+        alt: "Aai Foods thumbnail"
+      },
+      imageLabel: "Aai Foods"
+    },
+    {
+      title: "Serene Veda",
+      industry: "Ayurveda / Wellness",
+      url: "./portfolio-detail.html?project=graphic-design-serene-veda",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Serene Veda thumbnail"
+      },
+      imageLabel: "Serene Veda"
+    }
+  ]
  }
 }

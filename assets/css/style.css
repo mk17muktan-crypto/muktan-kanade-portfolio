@@ -7716,7 +7716,7 @@ body.portfolio-detail-page .case-best-work-section {
   #GRAPHIC DESIGN INNER PAGE GRID TYPES
 \*-----------------------------------*/
 
-/* 2-column sections */
+/* Desktop: 2-column square grids */
 @media (min-width: 581px) {
   body.portfolio-detail-page .case-gallery-raptechPostStyle1,
   body.portfolio-detail-page .case-gallery-raptechPostStyle2,
@@ -7725,7 +7725,8 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle2,
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle3,
   body.portfolio-detail-page .case-gallery-coepPostStyle2,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+  body.portfolio-detail-page .case-gallery-coepPostStyle3,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle3 {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 18px !important;
@@ -7741,7 +7742,8 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle2 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle3 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle3 .case-gallery-item {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
@@ -7749,7 +7751,7 @@ body.portfolio-detail-page .case-best-work-section {
   }
 }
 
-/* 3-column sections */
+/* Desktop: 3-column square grids */
 @media (min-width: 581px) {
   body.portfolio-detail-page .case-gallery-raptechPostStyle4,
   body.portfolio-detail-page .case-gallery-celestialPostStyle1,
@@ -7757,7 +7759,15 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-celestialPostStyle3,
   body.portfolio-detail-page .case-gallery-celestialFeatures,
   body.portfolio-detail-page .case-gallery-coepPostStyle1,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4 {
+  body.portfolio-detail-page .case-gallery-coepPostStyle4,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5,
+  body.portfolio-detail-page .case-gallery-ssmsLogos,
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 18px !important;
@@ -7770,7 +7780,15 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
   body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
@@ -7778,24 +7796,57 @@ body.portfolio-detail-page .case-best-work-section {
   }
 }
 
-/* 1-column web banner sections */
+/* Desktop: Wilo Amazon 4-column grid */
 @media (min-width: 581px) {
-  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 {
     display: grid !important;
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     gap: 18px !important;
     width: 100% !important;
   }
 
-  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item {
     width: 100% !important;
     height: auto !important;
-    aspect-ratio: 3 / 1 !important;
-    border-radius: 12px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
   }
 }
 
-/* Mobile layouts */
+/* Desktop: Samartha symbols 5-column grid */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-ssmsSymbols {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSymbols .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop + Mobile: 1-column web banner sections */
+body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 1 !important;
+  border-radius: 12px !important;
+}
+
+/* Mobile: 2-column square grids */
 @media (max-width: 580px) {
   body.portfolio-detail-page .case-gallery-raptechPostStyle1,
   body.portfolio-detail-page .case-gallery-raptechPostStyle2,
@@ -7804,23 +7855,13 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle2,
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle3,
   body.portfolio-detail-page .case-gallery-coepPostStyle2,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+  body.portfolio-detail-page .case-gallery-coepPostStyle3,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle3,
+  body.portfolio-detail-page .case-gallery-ssmsSymbols {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 10px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-celestialPostStyle1,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle2,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle3,
-  body.portfolio-detail-page .case-gallery-celestialFeatures,
-  body.portfolio-detail-page .case-gallery-coepPostStyle1,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4 {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 8px !important;
     overflow: visible !important;
     width: 100% !important;
   }
@@ -7831,14 +7872,11 @@ body.portfolio-detail-page .case-best-work-section {
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle1 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle2 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-trelawnyPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
   body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-ssmsSymbols .case-gallery-item {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
@@ -7846,8 +7884,31 @@ body.portfolio-detail-page .case-best-work-section {
     flex: none !important;
     scroll-snap-align: unset !important;
   }
+}
 
-  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
+/* Mobile: 3-column square grids */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+/* Mobile: Samartha logos 1-column grid */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-ssmsLogos {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 12px !important;
@@ -7855,17 +7916,26 @@ body.portfolio-detail-page .case-best-work-section {
     width: 100% !important;
   }
 
-  body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item {
     width: 100% !important;
     height: auto !important;
-    aspect-ratio: 3 / 1 !important;
+    aspect-ratio: 1 / 1 !important;
     border-radius: 9px !important;
   }
 }
 
-/* Raptech Post Style 4 mobile: same Victory layout */
+/* Mobile: Victory-style layout */
 @media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4 {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5,
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 10px !important;
@@ -7873,7 +7943,16 @@ body.portfolio-detail-page .case-best-work-section {
     width: 100% !important;
   }
 
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 1 / 1 !important;
@@ -7882,9 +7961,42 @@ body.portfolio-detail-page .case-best-work-section {
     scroll-snap-align: unset !important;
   }
 
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item:nth-child(3) {
+  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item:nth-child(3) {
     grid-column: 1 / -1 !important;
     aspect-ratio: 1.55 / 1 !important;
   }
 }
 
+/* Mobile: carousel sections */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-celestialFeatures,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 {
+    display: flex !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item {
+    flex: 0 0 76% !important;
+    width: 76% !important;
+    aspect-ratio: 1 / 1 !important;
+    scroll-snap-align: start !important;
+    border-radius: 12px !important;
+  }
+}
