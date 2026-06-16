@@ -2072,5 +2072,1186 @@ relatedProjects: [
       imageLabel: "Serene Veda"
     }
   ]
+ },
+
+"graphic-design-sundar-sanskar": {
+  title: "Sundar Sanskar",
+  fullTitle: "Sundar Sanskar",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Education / Child Development",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Sundar Sanskar"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
+      alt: "Sundar Sanskar portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Sundar Sanskar.jpg",
+      alt: "Sundar Sanskar mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Sundar Sanskar",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Spirituality is the basis of a prosperous life. According to the founder, Prampujya Sadguru Shri Nana, spirituality has the power to bring mental and physical changes in a human being. Sundar Sanskar and Swadhyay focus on good teachings, values and self-development through study, practice and cultural grounding.",
+        bodyMobile: "Sundar Sanskar focuses on values, spirituality and self-development through good teachings and Swadhyay. It is built around cultural grounding, discipline and positive development."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Sundar Sanskar as a warm, value-driven and culturally rooted brand. Since the work was connected to learning, values and positive development, the communication had to feel simple, trustworthy and emotionally meaningful, while still looking clean and engaging for modern audiences.",
+        bodyMobile: "The design needed to present Sundar Sanskar as a warm, value-driven and culturally rooted brand while still feeling clean and engaging for modern audiences."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included parents, children, families and people who value culture, discipline and good upbringing. The design needed to connect with parents through trust, while also feeling friendly and approachable for younger audiences.",
+        bodyMobile: "The audience included parents, children, families and people who value culture, discipline and good upbringing."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of trust, warmth, positivity and cultural connection. It needed to make the audience feel that Sundar Sanskar is not just about learning, but about building values, confidence and character in a gentle and meaningful way.",
+        bodyMobile: "The design had to create trust, warmth, positivity and cultural connection while making the brand feel gentle and meaningful."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The strategy was to create a visual style that felt old-school in its values, but modern in its presentation.",
+      "The tone of the words and the design language had to work together, so the brand felt trustworthy, rooted and still relevant to today’s students and parents.",
+      "The aim was to make the organization feel familiar and dependable, without making it look outdated.",
+      "Every piece of communication was planned to create curiosity, confidence and emotional interest.",
+      "The overall direction was to make parents and students feel that this is an organization worth understanding, trusting and engaging with further."
+    ],
+    pointsMobile: [
+      "The strategy was to create a visual style that felt old-school in its values, but modern in its presentation.",
+      "The aim was to make the organization feel familiar and dependable without making it look outdated.",
+      "Every piece of communication was planned to create curiosity, confidence and emotional interest."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design elements followed the same idea of being old-school yet modern.",
+      "The visuals were treated in a way that felt personal, layered and expressive rather than flat or overly digital.",
+      "Photographs were used like collected memories, almost as if they had been printed, cut and thoughtfully placed together.",
+      "At the same time, the layout and execution kept the design looking clean, structured and contemporary.",
+      "The final visual language created a balance of warmth, credibility, creativity and modern appeal."
+    ],
+    pointsMobile: [
+      "The design elements followed the idea of being old-school yet modern.",
+      "Photographs were treated like collected memories, giving the visuals a personal and expressive feel.",
+      "The final visual language created a balance of warmth, credibility and modern appeal."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "sundarPostStyle1",
+          title: "Post Style 1",
+          previewGroupName: "Sundar Sanskar Post Style 1",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-A.jpg", alt: "Sundar Sanskar post style 1 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-B.jpg", alt: "Sundar Sanskar post style 1 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-C.jpg", alt: "Sundar Sanskar post style 1 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-D.jpg", alt: "Sundar Sanskar post style 1 creative 04" }
+          ]
+        },
+        {
+          key: "sundarPostStyle2",
+          title: "Post Style 2: Post Templates",
+          previewGroupName: "Sundar Sanskar Post Templates",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-A.jpg", alt: "Sundar Sanskar post template 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-B.jpg", alt: "Sundar Sanskar post template 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-C.jpg", alt: "Sundar Sanskar post template 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-D.jpg", alt: "Sundar Sanskar post template 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-E.jpg", alt: "Sundar Sanskar post template 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-F.jpg", alt: "Sundar Sanskar post template 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Kesariya@100",
+      industry: "Cultural / Community Event",
+      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+        alt: "Kesariya@100 thumbnail"
+      },
+      imageLabel: "Kesariya@100"
+    },
+    {
+      title: "Beyond Bandish",
+      industry: "Music / Performing Arts",
+      url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/BB.jpg",
+        alt: "Beyond Bandish thumbnail"
+      },
+      imageLabel: "Beyond Bandish"
+    },
+    {
+      title: "Nupur Kathak Dance School",
+      industry: "Dance / Performing Arts",
+      url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
+        alt: "Nupur Kathak Dance School thumbnail"
+      },
+      imageLabel: "Nupur Kathak Dance School"
+    }
+  ]
+},
+
+"graphic-design-yogalaya": {
+  title: "Yogalaya Pune",
+  fullTitle: "Yogalaya Pune",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Wellness / Yoga",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Campaign, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Yogalaya Pune"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
+      alt: "Yogalaya Pune portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Yogalaya.jpg",
+      alt: "Yogalaya Pune mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Yogalaya Pune",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Rupa Kanade is an educated yoga professional and a Certified Yoga Alliance Teacher. With more than 20 years of experience in practicing Yoga, she has mastered the art of Yoga and finds happiness in making others positive and solving their problems through meditation and yoga. Her holistic approach focuses on the balance of mind and body throughout the process of healing.",
+        bodyMobile: "Rupa Kanade is a Certified Yoga Alliance Teacher with more than 20 years of experience in yoga. Her approach focuses on healing, balance, meditation and positivity."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Yogalaya Pune as a peaceful, trustworthy and wellness-focused brand. Since yoga is connected to health, balance and inner calm, the communication had to feel clean, soothing and grounded, while still looking professional and easy to connect with.",
+        bodyMobile: "The design needed to present Yogalaya Pune as a peaceful, trustworthy and wellness-focused brand connected to health, balance and inner calm."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included yoga learners, working professionals, health-conscious individuals, beginners, regular practitioners and people looking for physical and mental well-being.",
+        bodyMobile: "The audience included yoga learners, working professionals, beginners, regular practitioners and people looking for physical and mental well-being."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of calm, trust, balance and positivity. It needed to make people feel that Yogalaya Pune is a space where they can slow down, reconnect with themselves and work towards better health in a supportive environment.",
+        bodyMobile: "The design had to create calm, trust, balance and positivity, making Yogalaya Pune feel supportive and grounding."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The information architecture had to be clear, structured and easy to follow, especially because the communication was speaking to two different audiences.",
+      "The posts were not only meant to attract potential yoga students, but also aspiring yoga teachers who wanted to become certified under Rupa Kanade’s guidance.",
+      "This made the communication more layered, as it had to promote both yoga learning and teacher training within the same brand language.",
+      "The strategy was to create a one message, two audiences approach, where each post could inform, inspire and guide both groups.",
+      "The content was organized in a way that made the offerings feel trustworthy, approachable and purposeful."
+    ],
+    pointsMobile: [
+      "The information architecture had to be clear and easy to follow because the communication was speaking to two audiences.",
+      "The posts promoted both yoga learning and teacher training within the same brand language.",
+      "The content was organised to make the offerings feel trustworthy, approachable and purposeful."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design elements continued the same tone established in the logo — calm, caring, health-focused and grounded.",
+      "Soft visual elements were used to make the posts feel peaceful, warm and easy to connect with.",
+      "The visual language was kept simple and consistent, which made it easier to extend across multiple posts.",
+      "This consistency helped the brand feel more recognisable and emotionally aligned across the campaign.",
+      "Overall, the design system was easy to replicate while still maintaining a sense of care, balance and wellness."
+    ],
+    pointsMobile: [
+      "The design elements continued the calm, caring and health-focused tone established in the logo.",
+      "Soft visual elements made the posts feel peaceful, warm and easy to connect with.",
+      "The design system was easy to replicate while maintaining care, balance and wellness."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "yogalayaPostStyle1",
+          title: "Post Style 1",
+          previewGroupName: "Yogalaya Post Style 1",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-A.jpg", alt: "Yogalaya post style 1 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-B.jpg", alt: "Yogalaya post style 1 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-C.jpg", alt: "Yogalaya post style 1 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-D.jpg", alt: "Yogalaya post style 1 creative 04" }
+          ]
+        },
+        {
+          key: "yogalayaPostStyle2",
+          title: "Post Style 2: Post Templates",
+          previewGroupName: "Yogalaya Post Templates",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-A.jpg", alt: "Yogalaya post template 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-B.jpg", alt: "Yogalaya post template 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-C.jpg", alt: "Yogalaya post template 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-D.jpg", alt: "Yogalaya post template 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-E.jpg", alt: "Yogalaya post template 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-F.jpg", alt: "Yogalaya post template 06" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-G.jpg", alt: "Yogalaya post template 07" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-H.jpg", alt: "Yogalaya post template 08" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-I.jpg", alt: "Yogalaya post template 09" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-J.jpg", alt: "Yogalaya post template 10" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-K.jpg", alt: "Yogalaya post template 11" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-L.jpg", alt: "Yogalaya post template 12" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-M.jpg", alt: "Yogalaya post template 13" },
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-N.jpg", alt: "Yogalaya post template 14" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Trelawny",
+      industry: "Industrial Tools / Engineering",
+      url: "./portfolio-detail.html?project=graphic-design-trelawny",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg",
+        alt: "Trelawny thumbnail"
+      },
+      imageLabel: "Trelawny"
+    },
+    {
+      title: "Celestial",
+      industry: "Education / E-learning",
+      url: "./portfolio-detail.html?project=graphic-design-celestial",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
+        alt: "Celestial thumbnail"
+      },
+      imageLabel: "Celestial"
+    },
+    {
+      title: "COEPian's Academy",
+      industry: "Education / Coaching",
+      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg",
+        alt: "COEPian's Academy thumbnail"
+      },
+      imageLabel: "COEPian's Academy"
+    }
+  ]
+},
+
+"graphic-design-bni-champs": {
+  title: "BNI Champs",
+  fullTitle: "BNI Champs",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Business Networking",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "BNI Champs"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
+      alt: "BNI Champs portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/BNI.jpg",
+      alt: "BNI Champs mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "BNI Champs",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Founded by Dr. Ivan Misner in 1985, BNI is now the world’s largest networking organization with decades of continuous growth. A BNI Membership provides the environment, training and support to build trusted relationships. Members attend weekly chapter meetings that follow a structured agenda designed to maximise referrals and long-term business collaboration.",
+        bodyMobile: "BNI is one of the world’s largest business networking organizations, helping members build trusted relationships, exchange referrals and grow through structured networking."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present BNI as a professional, high-trust and opportunity-driven business networking platform. Since the communication was meant for entrepreneurs and professionals, it had to feel sharp, credible and well-structured, while clearly highlighting the value of referrals, networking and business growth.",
+        bodyMobile: "The design needed to present BNI as a professional, high-trust and opportunity-driven business networking platform."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included business owners, entrepreneurs, professionals, consultants, service providers and decision-makers who are looking to grow through meaningful business connections. The design needed to speak to people who value trust, credibility, referrals and long-term professional relationships.",
+        bodyMobile: "The audience included business owners, entrepreneurs, professionals, consultants and decision-makers looking to grow through meaningful business connections."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of confidence, ambition and professional trust. It needed to make BNI feel like a serious growth platform where people can build strong relationships, find opportunities and move their business forward.",
+        bodyMobile: "The design had to create confidence, ambition and professional trust, making BNI feel like a serious growth platform."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "Since the client operated in a corporate and networking-driven environment, the design approach had to feel professional, structured and dynamic.",
+      "The communication was centered around people and their stories, so the portraits and member images needed to have a strong visual presence.",
+      "The layout had to give enough importance to each individual while still keeping the overall communication clean and business-like.",
+      "The information hierarchy was planned in a simple, repeatable format, making it easy to create multiple posts in bulk.",
+      "The overall strategy was to build a system that could present each story with clarity, consistency and impact."
+    ],
+    pointsMobile: [
+      "The design approach had to feel professional, structured and dynamic.",
+      "The communication was centered around people and their stories, so portraits needed strong visual presence.",
+      "The strategy was to build a system that could present each story with clarity, consistency and impact."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "BNI already had a clear and established brand language, so the focus was not on reinventing the identity.",
+      "The design system worked within the existing brand colours, structure and visual expectations.",
+      "Modular elements were used so that the layouts could be replicated easily across different posts and member stories.",
+      "Consistency was a key focus, especially because the communication had to work at scale.",
+      "The final design language felt corporate, organized, people-focused and easy to extend across the campaign."
+    ],
+    pointsMobile: [
+      "BNI already had a clear and established brand language, so the focus was not on reinventing the identity.",
+      "Modular elements were used so the layouts could be replicated easily across posts.",
+      "The final design language felt corporate, organised, people-focused and easy to extend."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "bniSocialPosts",
+          title: "Social Media Posts",
+          previewGroupName: "BNI Champs Social Media Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-A.jpg", alt: "BNI Champs social post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-B.jpg", alt: "BNI Champs social post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-C.jpg", alt: "BNI Champs social post 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-D.jpg", alt: "BNI Champs social post 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-E.jpg", alt: "BNI Champs social post 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-F.jpg", alt: "BNI Champs social post 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
+      },
+      imageLabel: "La Mom & Miiracle"
+    },
+    {
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
+      },
+      imageLabel: "Wilo"
+    },
+    {
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
+      },
+      imageLabel: "Samartha Seva Mandal"
+    }
+  ]
+},
+	
+"graphic-design-preeti-garments": {
+  title: "Preeti Garments",
+  fullTitle: "Preeti Garments",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Fashion / Apparel",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Branding, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Preeti Garments"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+      alt: "Preeti Garments portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Preeti Garments.jpg",
+      alt: "Preeti Garments mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Preeti Garments",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Preeti Garments is a family-owned and family-run women’s clothing brand built with a strong understanding of everyday comfort, care and practical style. The brand offers a wide range of women’s garments with a focus on clothing that feels comfortable, modest and easy to wear. What makes the business special is its personal journey, first managed by the client’s mother and now carried forward by the next generation.",
+        bodyMobile: "Preeti Garments is a family-owned women’s clothing brand focused on everyday comfort, modest style and practical fashion. The brand carries a sense of trust, warmth and continuity."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Preeti Garments as a stylish, reliable and approachable garment brand. Since the work was connected to fashion and clothing, the communication had to feel fresh, clean and visually appealing, while still making the products look practical, comfortable and easy to choose.",
+        bodyMobile: "The design needed to present Preeti Garments as a stylish, reliable and approachable garment brand with a fresh and comfortable visual presence."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The main audience were women who look for garments that feel comfortable, good-looking and dependable. The design needed to connect with people who value style, quality, affordability and trust.",
+        bodyMobile: "The audience included women looking for garments that feel comfortable, good-looking, affordable and dependable."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of comfort, confidence and freshness. It needed to make the brand feel friendly and dependable, while also giving the garments a clean, attractive and modern presence.",
+        bodyMobile: "The design had to create comfort, confidence and freshness while making the brand feel friendly, dependable and modern."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The task was to create a fresh brand identity for Preeti Garments, while giving the brand a more structured, polished and elegant presence.",
+      "Since the market has many similar businesses, the identity had to help the brand feel more refined and memorable.",
+      "The main direction was to position the new Preeti Garments as a brand that offers premium-looking products at an accessible price point.",
+      "The communication had to balance two things carefully - affordability and aspiration.",
+      "The goal was to make the brand feel more confident, organized and appealing without making it look distant from its existing customer base."
+    ],
+    pointsMobile: [
+      "The task was to create a fresh brand identity while giving Preeti Garments a structured, polished and elegant presence.",
+      "The identity had to help the brand feel more refined and memorable in a crowded market.",
+      "The communication had to balance affordability and aspiration."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "Three different logo styles were explored, each with its own visual direction and personality.",
+      "Each style used a separate family of design elements to present the brand from a different creative angle.",
+      "The approach was not limited to textbook graphic design rules alone; it was also guided by the client’s comfort, emotion and personal connection with the brand.",
+      "The objective was to create an identity that felt professional and elegant, but also something the client genuinely loved and felt proud to use.",
+      "Overall, the design process balanced strategic thinking, visual appeal, and client preference to arrive at a brand identity that felt right for Preeti Garments."
+    ],
+    pointsMobile: [
+      "Three different logo styles were explored, each with its own visual direction and personality.",
+      "The process balanced strategic thinking, visual appeal and client preference.",
+      "The final identity needed to feel professional, elegant and personally meaningful to the client."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding",
+      groups: [
+        {
+          key: "preetiBrandingOption1",
+          title: "Option 1",
+          previewGroupName: "Preeti Garments Branding Option 1",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-1-A.jpg", alt: "Preeti Garments branding option 1 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-1-B.jpg", alt: "Preeti Garments branding option 1 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-1-C.jpg", alt: "Preeti Garments branding option 1 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-1-D.jpg", alt: "Preeti Garments branding option 1 creative 04" }
+          ]
+        },
+        {
+          key: "preetiBrandingOption2",
+          title: "Option 2",
+          previewGroupName: "Preeti Garments Branding Option 2",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-2-A.jpg", alt: "Preeti Garments branding option 2 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-2-B.jpg", alt: "Preeti Garments branding option 2 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-2-C.jpg", alt: "Preeti Garments branding option 2 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-2-D.jpg", alt: "Preeti Garments branding option 2 creative 04" }
+          ]
+        },
+        {
+          key: "preetiBrandingOption3",
+          title: "Option 3",
+          previewGroupName: "Preeti Garments Branding Option 3",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-3-A.jpg", alt: "Preeti Garments branding option 3 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-3-B.jpg", alt: "Preeti Garments branding option 3 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-3-C.jpg", alt: "Preeti Garments branding option 3 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Branding-3-D.jpg", alt: "Preeti Garments branding option 3 creative 04" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "preetiPostStyle1",
+          title: "Post Style 1",
+          previewGroupName: "Preeti Garments Post Style 1",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-1-A.jpg", alt: "Preeti Garments post style 1 creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-1-B.jpg", alt: "Preeti Garments post style 1 creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-1-C.jpg", alt: "Preeti Garments post style 1 creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-1-D.jpg", alt: "Preeti Garments post style 1 creative 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-1-E.jpg", alt: "Preeti Garments post style 1 creative 05" }
+          ]
+        },
+        {
+          key: "preetiPostStyle2",
+          title: "Post Style 2: Post Templates",
+          previewGroupName: "Preeti Garments Post Templates",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-A.jpg", alt: "Preeti Garments post template 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-B.jpg", alt: "Preeti Garments post template 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-C.jpg", alt: "Preeti Garments post template 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-D.jpg", alt: "Preeti Garments post template 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-E.jpg", alt: "Preeti Garments post template 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-F.jpg", alt: "Preeti Garments post template 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Dagdushet Ganpati",
+      industry: "Religious / Devotional Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-dagdushet-ganpati",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
+        alt: "Dagdushet Ganpati thumbnail"
+      },
+      imageLabel: "Dagdushet Ganpati"
+    },
+    {
+      title: "Victory Polychem",
+      industry: "Industrial Chemicals",
+      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
+        alt: "Victory Polychem thumbnail"
+      },
+      imageLabel: "Victory Polychem"
+    },
+    {
+      title: "Raptech Engineering",
+      industry: "Engineering / Manufacturing",
+      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Raptech Engineering.jpg",
+        alt: "Raptech Engineering thumbnail"
+      },
+      imageLabel: "Raptech Engineering"
+    }
+  ]
+},
+
+"graphic-design-aai-foods": {
+  title: "Aai Foods",
+  fullTitle: "Aai Foods",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Food / FMCG",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Branding, Packaging",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Aai Foods"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "packaging", label: "Packaging" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
+      alt: "Aai Foods portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Aai Foods.jpg",
+      alt: "Aai Foods mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Aai Foods",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Aai Foods is a husband-and-wife-led food brand built around the idea of making everyday cooking simpler, quicker and more approachable. The journey began from their experience in running a cloud kitchen, where they saw that many people wanted to enjoy home-style food but struggled with the time, confidence or know-how needed to cook it well. This led them to create ready-to-use masala premixes that help people prepare flavourful food with less effort.",
+        bodyMobile: "Aai Foods is a husband-and-wife-led food brand created to make everyday cooking simpler and more approachable through ready-to-use masala premixes."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Aai Foods as a warm, trustworthy and homely food brand. Since food is deeply connected to taste, comfort and memory, the communication had to feel fresh, appetising and emotionally familiar, while still looking clean and professional for digital and marketing use.",
+        bodyMobile: "The design needed to present Aai Foods as a warm, trustworthy and homely food brand with a fresh, appetising and professional look."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included families, homemakers, food lovers, everyday buyers and people looking for tasty, reliable food products. The design needed to connect with people who value quality, hygiene, tradition, flavour and trust.",
+        bodyMobile: "The audience included families, homemakers, food lovers and everyday buyers who value quality, hygiene, tradition, flavour and trust."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of warmth, hunger, trust and homely comfort. It needed to make the audience feel that Aai Foods offers food that is not just tasty, but also familiar, caring and made with sincerity.",
+        bodyMobile: "The design had to create warmth, hunger, trust and homely comfort, making the brand feel familiar and sincere."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The main objective was not to create a completely new identity, but to refine and correct the existing logo so it could work better on packaging.",
+      "The logo had to be made more print-friendly, clear and adaptable, especially for smaller packaging formats.",
+      "The packaging communication was built around the key points provided by the client, making sure nothing important was lost.",
+      "The layout was structured carefully so that each element had a clear role and the information felt organized, readable and easy to follow.",
+      "Since the format was a sticker rather than full packaging, the design had to work within tight space limitations while still looking complete and effective."
+    ],
+    pointsMobile: [
+      "The objective was to refine and correct the existing logo so it could work better on packaging.",
+      "The packaging communication was built around the client’s key points while keeping the layout readable.",
+      "The design had to work within tight sticker format limitations while still feeling complete."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "Black was used as the main background to give the logo stronger contrast and help it stand out, even at a smaller size.",
+      "The visual hierarchy was kept simple and direct, with the final dish as the main visual focus.",
+      "The name of the masala was given the next level of importance, so the product could be identified quickly.",
+      "The design avoided unnecessary clutter and focused only on what mattered most.",
+      "Despite the limitations of the sticker format, the final look felt homely, clear, practical and to the point."
+    ],
+    pointsMobile: [
+      "Black was used as the main background to give the logo stronger contrast.",
+      "The visual hierarchy was kept simple, with the final dish as the main focus.",
+      "The final look felt homely, clear, practical and to the point."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding",
+      groups: [
+        {
+          key: "aaiBranding",
+          title: "Branding",
+          previewGroupName: "Aai Foods Branding",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Branding-1-A.jpg", alt: "Aai Foods branding creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Branding-1-B.jpg", alt: "Aai Foods branding creative 02" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "packaging",
+      title: "Packaging",
+      groups: [
+        {
+          key: "aaiPackaging",
+          title: "Packaging",
+          previewGroupName: "Aai Foods Packaging",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-A.jpg", alt: "Aai Foods packaging creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-B.jpg", alt: "Aai Foods packaging creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-C.jpg", alt: "Aai Foods packaging creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-D.jpg", alt: "Aai Foods packaging creative 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-E.jpg", alt: "Aai Foods packaging creative 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-2-F.jpg", alt: "Aai Foods packaging creative 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
+      },
+      imageLabel: "La Mom & Miiracle"
+    },
+    {
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
+      },
+      imageLabel: "Wilo"
+    },
+    {
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
+      },
+      imageLabel: "Samartha Seva Mandal"
+    }
+  ]
+},
+
+"graphic-design-serene-veda": {
+  title: "Serene Veda",
+  fullTitle: "Serene Veda",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Ayurveda / Wellness",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Branding, Packaging",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Serene Veda"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "packaging", label: "Packaging" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+      alt: "Serene Veda portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Serene Veda.jpg",
+      alt: "Serene Veda mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Serene Veda",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "Serene Veda is a homegrown wellness brand that creates super seed mixes and refreshing detox tea blends for people looking to support their health through simple, mindful nutrition. The brand is guided by the experience of a yoga teacher with over 20 years of understanding people’s health, lifestyle and everyday wellness needs. Each product is made in a home-based setup, bringing a sense of purity, trust and handcrafted care to the brand.",
+        bodyMobile: "Serene Veda is a homegrown wellness brand that creates super seed mixes and detox tea blends for people looking to support their health through mindful nutrition."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Serene Veda as a calm, natural and trustworthy wellness brand. Since the products are connected to nutrition, balance and mindful living, the communication had to feel soft, pure and emotionally reassuring, while still looking polished enough for packaging and brand use.",
+        bodyMobile: "The design needed to present Serene Veda as a calm, natural and trustworthy wellness brand connected to nutrition, balance and mindful living."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included health-conscious individuals, yoga practitioners, wellness-focused buyers, families and people who look for natural products that feel pure, gentle and easy to include in everyday life.",
+        bodyMobile: "The audience included health-conscious individuals, yoga practitioners, wellness-focused buyers and families looking for natural, gentle products."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of calmness, care, purity and relaxation. It needed to make the brand feel natural, personal and thoughtfully prepared, rather than loud or mass-produced.",
+        bodyMobile: "The design had to create calmness, care, purity and relaxation while making the brand feel natural and personal."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The design language was intentionally created to feel different from the usual wellness and food packaging style.",
+      "Most brands in this space rely heavily on ingredient photographs on the front of the packet.",
+      "While this is sometimes necessary because of food regulations, many brands still follow the same visual formula even when they have room to explore something more meaningful.",
+      "Instead of making the packaging look purely ingredient-led, the focus was shifted towards the feeling the brand wants to create.",
+      "The idea was to build a design that reflected calmness, care, wellness and relaxation, rather than only showing what the product contains.",
+      "This helped the packaging connect more with the brand’s purpose and emotional promise, not just the product category."
+    ],
+    pointsMobile: [
+      "The design language was intentionally created to feel different from usual wellness and food packaging.",
+      "The focus shifted from only showing ingredients to expressing the feeling the brand wanted to create.",
+      "The packaging connected with the brand’s purpose and emotional promise, not just the product category."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design used flowers, leaves, and soft natural forms to create a gentle and wellness-driven look.",
+      "The colour palette was chosen to feel calming, fresh and soothing.",
+      "The overall visual tone avoided anything that felt too loud, harsh, or aggressive.",
+      "Sharp shapes, heavy shadows and strong visual clutter were consciously avoided.",
+      "The elements were kept soft and balanced, so the packaging felt peaceful, approachable and easy on the eyes.",
+      "Overall, the design created a sense of relaxation and natural wellness, which aligned closely with what Serene Veda stands for."
+    ],
+    pointsMobile: [
+      "Flowers, leaves and soft natural forms created a gentle wellness-driven look.",
+      "The colour palette was chosen to feel calming, fresh and soothing.",
+      "The final design created relaxation and natural wellness, matching what Serene Veda stands for."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding",
+      groups: [
+        {
+          key: "sereneBranding",
+          title: "Branding",
+          previewGroupName: "Serene Veda Branding",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Branding-1-A.jpg", alt: "Serene Veda branding creative 01" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "packaging",
+      title: "Packaging",
+      groups: [
+        {
+          key: "serenePackaging",
+          title: "Packaging",
+          previewGroupName: "Serene Veda Packaging",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-A.jpg", alt: "Serene Veda packaging creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-B.jpg", alt: "Serene Veda packaging creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-C.jpg", alt: "Serene Veda packaging creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-D.jpg", alt: "Serene Veda packaging creative 04" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Sundar Sanskar",
+      industry: "Education / Child Development",
+      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
+        alt: "Sundar Sanskar thumbnail"
+      },
+      imageLabel: "Sundar Sanskar"
+    },
+    {
+      title: "Yogalaya",
+      industry: "Wellness / Yoga",
+      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
+        alt: "Yogalaya thumbnail"
+      },
+      imageLabel: "Yogalaya"
+    },
+    {
+      title: "BNI Champs",
+      industry: "Business Networking",
+      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
+        alt: "BNI Champs thumbnail"
+      },
+      imageLabel: "BNI Champs"
+    }
+  ]
  }
 }

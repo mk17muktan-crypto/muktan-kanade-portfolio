@@ -502,7 +502,9 @@ const mobileCarouselKeys = [
 
   "celestialFeatures",
   "coepPostStyle4",
-  "lmmPostStyle3"
+  "lmmPostStyle3",
+  "preetiPostStyle1"
+
 ];
 
   sections.forEach(function (section) {

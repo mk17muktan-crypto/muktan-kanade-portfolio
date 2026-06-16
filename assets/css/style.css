@@ -8000,3 +8000,316 @@ body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery
     border-radius: 12px !important;
   }
 }
+
+/*-----------------------------------*\
+  #GRAPHIC DESIGN INNER PAGE GRID TYPES - BATCH 2
+\*-----------------------------------*/
+
+/* Desktop: 2-column 1:1 grids */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-sundarPostStyle1,
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: min(100%, 820px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-sundarPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop: 2-column 3:4 grid */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: min(100%, 820px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop: 2-column 16:9 branding grids */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption1,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption2,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption3,
+  body.portfolio-detail-page .case-gallery-aaiBranding {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-aaiBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+  }
+}
+
+/* Desktop: 3-column 1:1 grids */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-sundarPostStyle2,
+  body.portfolio-detail-page .case-gallery-bniSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-sundarPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-bniSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop: 3-column 3:4 grids */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-preetiPostStyle2,
+  body.portfolio-detail-page .case-gallery-aaiPackaging {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-aaiPackaging .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop: Preeti 5-column post grid */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-preetiPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Desktop + Mobile: Serene branding 1-column 1:1 */
+body.portfolio-detail-page .case-gallery-sereneBranding {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  width: min(100%, 520px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow: visible !important;
+}
+
+body.portfolio-detail-page .case-gallery-sereneBranding .case-gallery-item {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 12px !important;
+}
+
+/* Desktop + Mobile: Serene packaging 4-column 3:4 */
+body.portfolio-detail-page .case-gallery-serenePackaging {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 4 !important;
+  border-radius: 10px !important;
+}
+
+/* Mobile: 2-column 1:1 grids */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-sundarPostStyle1,
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-sundarPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+/* Mobile: 2-column 3:4 grid */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+/* Mobile: single-column 16:9 branding grids */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption1,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption2,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption3,
+  body.portfolio-detail-page .case-gallery-aaiBranding {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-preetiBrandingOption3 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-aaiBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+/* Mobile: repeated Victory-style 1:1 layout */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-sundarPostStyle2,
+  body.portfolio-detail-page .case-gallery-bniSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-sundarPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-bniSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-sundarPostStyle2 .case-gallery-item:nth-child(3n),
+  body.portfolio-detail-page .case-gallery-bniSocialPosts .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+/* Mobile: repeated Victory-style 3:4 layout */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-preetiPostStyle2,
+  body.portfolio-detail-page .case-gallery-aaiPackaging {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-aaiPackaging .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiPostStyle2 .case-gallery-item:nth-child(3n),
+  body.portfolio-detail-page .case-gallery-aaiPackaging .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+}
+
+/* Mobile: Preeti Post Style 1 carousel */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-preetiPostStyle1 {
+    display: flex !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-preetiPostStyle1 .case-gallery-item {
+    flex: 0 0 76% !important;
+    width: 76% !important;
+    aspect-ratio: 1 / 1 !important;
+    scroll-snap-align: start !important;
+    border-radius: 12px !important;
+  }
+}
+
+/* Mobile: Serene packaging remains 4-column */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-serenePackaging {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
+    border-radius: 8px !important;
+  }
+}
