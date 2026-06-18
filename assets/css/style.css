@@ -8488,3 +8488,175 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
     aspect-ratio: 3 / 4 !important;
   }
 }
+
+/*-----------------------------------*\
+  #COEP INNER PAGE TWEAKS
+\*-----------------------------------*/
+
+/* COEP Post Style 1
+   Desktop: 3-column grid
+   Mobile: repeated Victory-style layout
+   Aspect ratio: 3:4
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+}
+
+
+/* COEP Post Style 2 and Post Style 3
+   Desktop + Mobile: 2-column grid
+   Aspect ratio: 3:4
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-coepPostStyle2,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: min(100%, 820px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-coepPostStyle2,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+/*-----------------------------------*\
+  #LA MOM & MIIRACLE INNER PAGE TWEAKS
+\*-----------------------------------*/
+
+/* Post Style 1 and 2
+   Mobile: Victory-style layout
+   First 2 images: 1:1
+   3rd image: full-width but still 1:1
+*/
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item,
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+
+/* Post Style 3 carousel
+   Mobile carousel images: 1:1
+*/
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 {
+    display: flex !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item {
+    flex: 0 0 76% !important;
+    width: 76% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    scroll-snap-align: start !important;
+    border-radius: 12px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}

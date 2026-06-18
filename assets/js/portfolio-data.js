@@ -693,11 +693,11 @@ relatedProjects: [
 
   hero: {
     desktop: {
-      src: "./assets/images/Thumbnails/Graphic Design/Raptech Engineering.jpg",
+      src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
       alt: "Raptech Engineering portfolio cover image"
     },
     mobile: {
-      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Raptech Engineering.jpg",
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Raptech.jpg",
       alt: "Raptech Engineering mobile portfolio cover image"
     }
   },
