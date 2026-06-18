@@ -3833,6 +3833,8 @@ body.portfolio-detail-page .case-gallery-item img {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.45s ease, visibility 0.45s ease;
+  overflow-y: auto;
+  padding: 12px 0;
 }
 
 .case-image-preview.active {
@@ -3852,47 +3854,83 @@ body.portfolio-detail-page .case-gallery-item img {
 .case-preview-panel {
   position: relative;
   z-index: 2;
-  width: min(100% - 40px, 1050px);
-  height: calc(100vh - 70px);
-  margin: 35px auto;
-  padding: 26px 72px 28px;
+
+  width: fit-content;
+  height: auto;
+  min-height: 0;
+  max-width: calc(100vw - 40px);
+  max-height: none;
+
+  margin: 0 auto;
+  padding: 58px 72px 24px;
+
   border-radius: 24px;
   background: hsla(240, 2%, 12%, 0.92);
   border: 1px solid hsla(0, 0%, 100%, 0.08);
   box-shadow: var(--shadow-5);
+
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow: visible;
 }
 
 .case-preview-stage {
-  flex: 1;
+  flex: 0 0 auto;
+  width: fit-content;
+  height: auto;
   min-height: 0;
+  max-width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
+  overflow: visible;
 }
 
 .case-preview-frame {
-  width: 100%;
-  height: 100%;
-  max-height: calc(100vh - 210px);
+  width: fit-content;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+
   border-radius: 20px;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
   animation: casePreviewSlideIn 0.55s cubic-bezier(0.22, 1.2, 0.36, 1);
 }
 
 .case-preview-frame > * {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
   border-radius: inherit;
 }
 
 .case-preview-frame img {
-  width: 100%;
-  height: 100%;
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: min(calc(100vw - 184px), 1050px);
+  max-height: calc(100dvh - 190px);
+
   object-fit: contain;
-  background: var(--smoky-black);
+  background: transparent;
+}
+
+.case-preview-frame > .case-img-placeholder {
+  width: min(720px, calc(100vw - 180px));
+  height: min(720px, calc(100dvh - 210px));
 }
 
 @keyframes casePreviewSlideIn {
@@ -3937,7 +3975,7 @@ body.portfolio-detail-page .case-gallery-item img {
   font-size: 24px;
   transform: translateY(-50%);
   box-shadow: 0 10px 24px hsla(45, 100%, 72%, 0.20);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .case-preview-arrow:hover {
@@ -3959,12 +3997,18 @@ body.portfolio-detail-page .case-gallery-item img {
 }
 
 .case-preview-thumbs {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   gap: 10px;
+
+  width: 100%;
+  max-width: 100%;
+
   margin-top: 18px;
   overflow-x: auto;
   padding-bottom: 4px;
+
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -4010,17 +4054,48 @@ body.case-preview-open {
 }
 
 @media (max-width: 580px) {
+  .case-image-preview {
+    padding: 9px 0;
+  }
+
   .case-preview-panel {
-    width: calc(100% - 20px);
-    height: calc(100vh - 40px);
-    margin: 20px auto;
-    padding: 64px 14px 20px;
+    width: fit-content;
+    max-width: calc(100vw - 20px);
+    height: auto;
+    min-height: 0;
+
+    margin: 0 auto;
+    padding: 58px 14px 18px;
+
     border-radius: 18px;
   }
 
+  .case-preview-stage {
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
+  }
+
   .case-preview-frame {
-    max-height: calc(100vh - 210px);
+    width: fit-content;
+    max-width: 100%;
+    height: auto;
     border-radius: 16px;
+  }
+
+  .case-preview-frame img {
+    width: auto;
+    height: auto;
+
+    max-width: calc(100vw - 48px);
+    max-height: calc(100dvh - 190px);
+
+    object-fit: contain;
+  }
+
+  .case-preview-frame > .case-img-placeholder {
+    width: calc(100vw - 48px);
+    height: calc(100vw - 48px);
   }
 
   .case-preview-arrow {
@@ -4036,13 +4111,16 @@ body.case-preview-open {
     right: 12px;
   }
 
+  .case-preview-thumbs {
+    margin-top: 14px;
+  }
+
   .case-preview-thumb {
     width: 62px;
     height: 48px;
     flex-basis: 62px;
   }
 }
-
 /*-----------------------------------*\
   #CASE BACK BUTTON POSITION REFINEMENT
 \*-----------------------------------*/
@@ -7237,179 +7315,6 @@ body.portfolio-detail-page .case-gallery-ganeshJanmaSohola2025 .case-gallery-ite
 @media (max-width: 580px) {
   body.portfolio-detail-page .case-best-work-grid {
     grid-template-columns: 1fr !important;
-  }
-}
-
-/*-----------------------------------*\
-  #PREVIEW POPUP HUG IMAGE WIDTH
-\*-----------------------------------*/
-
-body.portfolio-detail-page .case-preview-panel {
-  width: fit-content !important;
-  max-width: calc(100vw - 40px) !important;
-}
-
-body.portfolio-detail-page .case-preview-stage {
-  width: fit-content !important;
-  max-width: 100% !important;
-}
-
-body.portfolio-detail-page .case-preview-frame {
-  width: fit-content !important;
-  height: auto !important;
-  max-width: 100% !important;
-  max-height: calc(100vh - 210px) !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  background: transparent !important;
-}
-
-body.portfolio-detail-page .case-preview-frame img {
-  width: auto !important;
-  height: auto !important;
-
-  max-width: 100% !important;
-  max-height: calc(100vh - 210px) !important;
-
-  object-fit: contain !important;
-  background: transparent !important;
-}
-
-body.portfolio-detail-page .case-preview-frame > .case-img-placeholder {
-  width: min(720px, calc(100vw - 180px)) !important;
-  height: min(720px, calc(100vh - 210px)) !important;
-}
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-preview-panel {
-    width: calc(100vw - 20px) !important;
-    max-width: calc(100vw - 20px) !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-
-  body.portfolio-detail-page .case-preview-stage {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-preview-frame {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: calc(100vh - 210px) !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  body.portfolio-detail-page .case-preview-frame img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: calc(100vh - 210px) !important;
-
-    object-fit: contain !important;
-    display: block !important;
-  }
-
-  body.portfolio-detail-page .case-preview-frame > .case-img-placeholder {
-    width: 100% !important;
-    height: calc(100vw - 48px) !important;
-  }
-}
-
-/*-----------------------------------*\
-  #PREVIEW POPUP IMAGE VERTICAL CENTER FIX
-\*-----------------------------------*/
-
-body.portfolio-detail-page .case-preview-panel {
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-body.portfolio-detail-page .case-preview-stage {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-body.portfolio-detail-page .case-preview-frame {
-  margin-top: auto !important;
-  margin-bottom: auto !important;
-}
-
-body.portfolio-detail-page .case-preview-thumbs {
-  flex: 0 0 auto !important;
-}
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-preview-panel {
-    padding-top: 58px !important;
-    padding-bottom: 18px !important;
-  }
-
-  body.portfolio-detail-page .case-preview-stage {
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  body.portfolio-detail-page .case-preview-frame {
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-  }
-}
-
-/*-----------------------------------*\
-  #PREVIEW POPUP NARROW IMAGE CENTER FIX
-\*-----------------------------------*/
-
-body.portfolio-detail-page .case-preview-panel {
-  align-items: center !important;
-}
-
-body.portfolio-detail-page .case-preview-stage {
-  align-self: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-body.portfolio-detail-page .case-preview-frame {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-body.portfolio-detail-page .case-preview-frame img {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-body.portfolio-detail-page .case-preview-thumbs {
-  align-self: center !important;
-  max-width: 100% !important;
-}
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-preview-panel {
-    align-items: center !important;
-  }
-
-  body.portfolio-detail-page .case-preview-stage,
-  body.portfolio-detail-page .case-preview-frame,
-  body.portfolio-detail-page .case-preview-frame img {
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
 }
 
