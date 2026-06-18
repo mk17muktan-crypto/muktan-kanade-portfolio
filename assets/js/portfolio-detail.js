@@ -250,6 +250,13 @@ const renderPreviewImage = function () {
   casePreviewStage.appendChild(frame);
 
   casePreviewThumbs.innerHTML = "";
+  const oldThumbSlider = document.querySelector("[data-case-preview-thumb-slider]");
+
+if (oldThumbSlider) {
+  oldThumbSlider.remove();
+}
+
+casePreviewThumbs.onscroll = null;
 
   currentPreviewItems.forEach(function (item, index) {
     const thumb = document.createElement("button");
@@ -270,6 +277,53 @@ const renderPreviewImage = function () {
     casePreviewThumbs.appendChild(thumb);
   });
 
+	if (currentPreviewItems.length > 5) {
+  const thumbSlider = document.createElement("div");
+  thumbSlider.classList.add("case-preview-thumb-scrollbar");
+  thumbSlider.setAttribute("data-case-preview-thumb-slider", "");
+
+  const thumbSliderFill = document.createElement("span");
+  thumbSlider.appendChild(thumbSliderFill);
+
+  casePreviewThumbs.after(thumbSlider);
+
+  const updateThumbSlider = function () {
+    const maxScroll = casePreviewThumbs.scrollWidth - casePreviewThumbs.clientWidth;
+
+    if (maxScroll <= 0) {
+      thumbSliderFill.style.width = "100%";
+      thumbSliderFill.style.transform = "translateX(0)";
+      return;
+    }
+
+    const visibleRatio = casePreviewThumbs.clientWidth / casePreviewThumbs.scrollWidth;
+    const fillWidth = Math.max(22, thumbSlider.clientWidth * visibleRatio);
+    const progress = casePreviewThumbs.scrollLeft / maxScroll;
+    const maxTravel = thumbSlider.clientWidth - fillWidth;
+
+    thumbSliderFill.style.width = fillWidth + "px";
+    thumbSliderFill.style.transform = "translateX(" + progress * maxTravel + "px)";
+  };
+
+  casePreviewThumbs.onscroll = function () {
+    window.requestAnimationFrame(updateThumbSlider);
+  };
+
+  thumbSlider.addEventListener("click", function (event) {
+    const rect = thumbSlider.getBoundingClientRect();
+    const clickPosition = event.clientX - rect.left;
+    const clickRatio = clickPosition / rect.width;
+    const maxScroll = casePreviewThumbs.scrollWidth - casePreviewThumbs.clientWidth;
+
+    casePreviewThumbs.scrollTo({
+      left: maxScroll * clickRatio,
+      behavior: "smooth"
+    });
+  });
+
+  window.requestAnimationFrame(updateThumbSlider);
+}
+	
   if (casePreviewPrev) {
     casePreviewPrev.classList.toggle("is-hidden", currentPreviewIndex === 0);
   }
