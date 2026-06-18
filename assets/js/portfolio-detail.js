@@ -1,3 +1,5 @@
+/* global portfolioProjects */
+
 const queryParams = new URLSearchParams(window.location.search);
 const projectId = queryParams.get("project") || "graphic-design-dagdushet-ganpati";
 const fallbackProjectId = "graphic-design-dagdushet-ganpati";
@@ -33,15 +35,7 @@ const getResponsiveText = function (item) {
   return "";
 };
 
-const getBestWorkItems = function () {
-  if (!project.bestWork) return [];
 
-  if (Array.isArray(project.bestWork)) {
-    return project.bestWork;
-  }
-
-  return project.bestWork.items || [];
-};
 
 const createImageItem = function (item) {
   const finalItem = item || { type: "placeholder", label: "Image" };
@@ -335,29 +329,7 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-const renderBestWork = function () {
-  const bestWorkGrid = document.querySelector("[data-best-work]");
 
-  if (!bestWorkGrid) return;
-
-  const items = getBestWorkItems();
-
-  bestWorkGrid.innerHTML = "";
-
-  items.slice(0, 2).forEach(function (item, index) {
-    const bestWorkItem = document.createElement("button");
-    bestWorkItem.type = "button";
-    bestWorkItem.classList.add("case-best-work-item");
-
-    bestWorkItem.appendChild(createImageItem(item));
-
-    bestWorkItem.addEventListener("click", function () {
-      openCasePreview(items.slice(0, 2), index);
-    });
-
-    bestWorkGrid.appendChild(bestWorkItem);
-  });
-};
 
 const renderList = function (selector, items) {
   const list = document.querySelector(selector);
@@ -822,7 +794,6 @@ renderTabs();
 renderCoverImage();
 renderProjectOverview();
 renderProjectSummary();
-renderBestWork();
 renderThinkingSections();
 renderGallerySections();
 renderNextProjects();

@@ -8660,3 +8660,248 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
     object-fit: cover !important;
   }
 }
+
+/*-----------------------------------*\
+  #WILO INNER PAGE TWEAKS
+\*-----------------------------------*/
+
+/* Wilo Post Style 1: Amazon Posts
+   Desktop: 4-column grid
+   Mobile: 2-column grid
+   Aspect ratio: 3:4
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+}
+
+
+/* Wilo Post Style 2: Event Invites
+   Desktop: 3-column grid
+   Mobile: repeated Victory-style layout
+   Aspect ratio: 3:4
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+}
+
+
+/* Wilo Post Style 4 and 5
+   Mobile: 3rd image should be full-width and 1:1
+*/
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item:nth-child(3),
+  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item:nth-child(3) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+}
+
+/*-----------------------------------*\
+  #SSMS INNER PAGE TWEAKS
+\*-----------------------------------*/
+
+/* Branding Logos
+   Desktop: 3-column grid
+   Mobile: 1-column grid
+   Aspect ratio: 16:9
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-ssmsLogos {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 10px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-ssmsLogos {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+
+/* Social Media Posts
+   Desktop: 3-column grid
+   Mobile: repeated Victory-style layout
+   Aspect ratio: 3:4
+*/
+
+/* Desktop */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Mobile: Serene packaging remains 4-column */
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-serenePackaging {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
+    border-radius: 8px !important;
+  }
+}

@@ -3019,7 +3019,7 @@ relatedProjects: [
             { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-C.jpg", alt: "Aai Foods packaging creative 03" },
             { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-D.jpg", alt: "Aai Foods packaging creative 04" },
             { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-E.jpg", alt: "Aai Foods packaging creative 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-2-F.jpg", alt: "Aai Foods packaging creative 06" }
+            { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-F.jpg", alt: "Aai Foods packaging creative 06" }
           ]
         }
       ]
