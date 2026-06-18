@@ -4051,14 +4051,14 @@ body.portfolio-detail-page .case-gallery-item img {
 .case-preview-thumb.active {
   opacity: 1;
   border-color: var(--orange-yellow-crayola);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px hsla(45, 100%, 72%, 0.18);
+  transform: none;
+  box-shadow: none;
 }
 
 .case-preview-thumb > * {
   width: 100%;
   height: 100%;
-  border-radius: inherit;
+  border-radius: 10px;
 }
 
 .case-preview-thumb img {
