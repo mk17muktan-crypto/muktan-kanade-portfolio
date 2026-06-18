@@ -8313,3 +8313,178 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
     border-radius: 8px !important;
   }
 }
+
+/*-----------------------------------*\
+  #GRAPHIC DESIGN INNER PAGE GRID TYPES - BATCH 3
+\*-----------------------------------*/
+
+/* Kesariya: first 3 images = 3:4, next 2 images = 16:9 */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-kesariyaBranding {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(1),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(2),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(3) {
+    grid-column: span 2 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(4),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(5) {
+    grid-column: span 3 !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-kesariyaBranding {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(1),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(2),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(3) {
+    aspect-ratio: 3 / 4 !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(4),
+  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(5) {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* Beyond Bandish branding: desktop 2-column, mobile single-column, 16:9 */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-beyondBranding {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-beyondBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-beyondBranding {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-beyondBranding .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+  }
+}
+
+/* Beyond Bandish stage backdrops: desktop 3-column, mobile 1-column, 16:9 */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-beyondBackdrops {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-beyondBackdrops .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 10px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-beyondBackdrops {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-beyondBackdrops .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+  }
+}
+
+/* Rainbow Umbrella: desktop 3-column 3:4, mobile repeated Victory-style 3:4 */
+@media (min-width: 581px) {
+  body.portfolio-detail-page .case-gallery-rainbowSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-rainbowSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  body.portfolio-detail-page .case-gallery-rainbowSocialPosts {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-rainbowSocialPosts .case-gallery-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-rainbowSocialPosts .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 3 / 4 !important;
+  }
+}

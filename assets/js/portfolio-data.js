@@ -3253,5 +3253,531 @@ relatedProjects: [
       imageLabel: "BNI Champs"
     }
   ]
+ },
+
+"graphic-design-kesariya-100": {
+  title: "Kesariya@100",
+  fullTitle: "Kesariya@100",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "OTT Series / Cultural",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Branding",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Kesariya@100"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+      alt: "Kesariya@100 portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Kesariya.jpg",
+      alt: "Kesariya@100 mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Kesariya@100",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "This project was developed in association with the ZEE5 OTT platform as a special commemorative initiative marking 100 years of the RSS organization. Conceived as an anniversary tribute, the web series was created to present the journey of the RSS from its early beginnings to its present-day stature. The narrative focused on the organization's history, its evolving vision, and the many layers of effort, discipline, and sacrifice that shaped its growth over the decades.",
+        bodyMobile: "Kesariya@100 was developed in association with ZEE5 as a commemorative web series marking 100 years of the RSS organization."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Kesariya@100 as meaningful, proud and culturally rooted. Since the project was connected to a milestone, the communication had to feel special, respectful and memorable, while still looking clean and strong for modern platforms.",
+        bodyMobile: "The design needed to present Kesariya@100 as meaningful, proud and culturally rooted, while still looking clean and strong for modern platforms."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included families, cultural followers, local communities, supporters and individuals emotionally connected to RSS. The design needed to speak to people who value tradition, pride, legacy and shared celebration.",
+        bodyMobile: "The audience included families, cultural followers, local communities, supporters and individuals emotionally connected to RSS."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of pride, warmth, nostalgia and celebration. It needed to make the audience feel connected to the journey, the milestone and the cultural emotion behind RSS.",
+        bodyMobile: "The design had to create pride, warmth, nostalgia and celebration around the journey and milestone."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The logo unit was designed with the RSS trademark flag as the central visual anchor.",
+      "The aim was to give the identity a modern yet vintage character, so it could feel rooted in history but still relevant for a contemporary web series.",
+      "The overall direction brought together modern execution techniques, a fresher colour palette and the original Kesari tone associated with the RSS identity.",
+      "The challenge was to respect the seriousness and legacy of the subject while making the logo feel cinematic, refined and visually memorable.",
+      "The strategy was to create a mark that carried both heritage and screen presence."
+    ],
+    pointsMobile: [
+      "The logo unit was designed with the RSS trademark flag as the central visual anchor.",
+      "The aim was to give the identity a modern yet vintage character.",
+      "The strategy was to create a mark that carried both heritage and screen presence."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The flag was brought forward with importance, making it the emotional and symbolic centre of the identity.",
+      "The typography was explored in a way that could either support the flag or become a strong visual element on its own.",
+      "Two clear creative routes were developed: one where the typography carried the main weight and another where the flag became the dominant visual focus.",
+      "In some options, the flag was carefully integrated into the typography to create a stronger connection between symbol and title.",
+      "The colour palette stayed close to the original RSS identity, while being refined enough to work for a modern OTT presentation."
+    ],
+    pointsMobile: [
+      "The flag became the emotional and symbolic centre of the identity.",
+      "The typography was explored as both a supporting and dominant visual element.",
+      "The colour palette stayed close to the original RSS identity while feeling refined for OTT presentation."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding",
+      groups: [
+        {
+          key: "kesariyaBranding",
+          title: "Branding",
+          previewGroupName: "Kesariya@100 Branding",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-A.jpg", alt: "Kesariya@100 branding creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-B.jpg", alt: "Kesariya@100 branding creative 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-C.jpg", alt: "Kesariya@100 branding creative 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-D.jpg", alt: "Kesariya@100 branding creative 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-E.jpg", alt: "Kesariya@100 branding creative 05" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Preeti Garments",
+      industry: "Fashion / Apparel",
+      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+        alt: "Preeti Garments thumbnail"
+      },
+      imageLabel: "Preeti Garments"
+    },
+    {
+      title: "Aai Foods",
+      industry: "Food / FMCG",
+      url: "./portfolio-detail.html?project=graphic-design-aai-foods",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
+        alt: "Aai Foods thumbnail"
+      },
+      imageLabel: "Aai Foods"
+    },
+    {
+      title: "Serene Veda",
+      industry: "Ayurveda / Wellness",
+      url: "./portfolio-detail.html?project=graphic-design-serene-veda",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Serene Veda thumbnail"
+      },
+      imageLabel: "Serene Veda"
+    }
+  ]
+},
+
+"graphic-design-beyond-bandish": {
+  title: "Beyond Bandish",
+  fullTitle: "Beyond Bandish",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Music / Performing Arts",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Branding, Stage Backdrops",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Beyond Bandish"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "stage-backdrops", label: "Stage Backdrops" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/BB.jpg",
+      alt: "Beyond Bandish portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/BB.jpg",
+      alt: "Beyond Bandish mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Beyond Bandish",
+    sections: [
+      {
+        heading: "Who is the client?",
+        bodyDesktop: "This concert marked the launch event of Viraj Joshi, grandson of the legendary Pandit Bhimsen Joshi. The idea behind the event was to introduce him not just as the next generation of a celebrated musical legacy, but as an artist with his own contemporary voice. The concert moved beyond the boundaries of traditional bandish presentation and explored a fresh fusion of Indian classical music with pop, hip-hop, jazz and other modern genres.",
+        bodyMobile: "Beyond Bandish marked the launch event of Viraj Joshi, grandson of Pandit Bhimsen Joshi, blending Indian classical music with contemporary genres."
+      },
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Beyond Bandish as a rich, artistic and culturally refined music-focused brand. Since the name itself suggests going beyond traditional boundaries, the communication had to feel rooted in classical music, but also fresh, expressive and engaging for a modern audience.",
+        bodyMobile: "The design needed to present Beyond Bandish as rich, artistic and culturally refined while still feeling fresh and expressive."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included music lovers, classical music listeners, artists, students, cultural audiences and people who appreciate Indian performing arts. The design needed to connect with those who respect tradition, while also appealing to people who enjoy fresh and contemporary cultural experiences.",
+        bodyMobile: "The audience included music lovers, classical music listeners, artists, students and cultural audiences."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of depth, elegance, curiosity and cultural pride. It needed to make Beyond Bandish feel soulful and artistic, while also suggesting that classical music can be experienced in a more open, expressive and contemporary way.",
+        bodyMobile: "The design had to create depth, elegance, curiosity and cultural pride while making the event feel soulful and contemporary."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The design strategy was built around a blend of royalty, legacy and artistic expression.",
+      "Since Pandit Bhimsen Joshi is often regarded as one of the greatest voices in Indian classical music, the communication had to carry a sense of grandeur and respect.",
+      "At the same time, the design needed to introduce Virat Joshi as a young artist with his own identity, while still acknowledging the powerful legacy he comes from.",
+      "The visual direction focused on showing this balance: a legendary musical heritage meeting a fresh, contemporary performer.",
+      "The overall strategy was to make the event feel premium, rooted, expressive and emotionally significant."
+    ],
+    pointsMobile: [
+      "The design strategy was built around royalty, legacy and artistic expression.",
+      "The design introduced Virat Joshi as a young artist while acknowledging his musical legacy.",
+      "The overall strategy was to make the event feel premium, rooted and expressive."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design elements were chosen to reflect Virat Joshi’s personality, musical style and inherited connection with his grandfather’s legacy.",
+      "Visual cues were used to suggest classical music, performance, lineage and artistic depth without making the design feel overly traditional.",
+      "The graphics carried a sense of royalty and stage presence, helping the concert feel important and memorable.",
+      "Elements connected to singing and musical expression were used to bring out the emotional side of the event.",
+      "The final design language created a balance of heritage, youth, artistry and modern appeal."
+    ],
+    pointsMobile: [
+      "The design elements reflected Virat Joshi’s personality, musical style and legacy.",
+      "The graphics carried a sense of royalty and stage presence.",
+      "The final design language balanced heritage, youth, artistry and modern appeal."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "branding",
+      title: "Branding",
+      groups: [
+        {
+          key: "beyondBranding",
+          title: "Branding",
+          previewGroupName: "Beyond Bandish Branding",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Branding-1-A.jpg", alt: "Beyond Bandish branding creative 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Branding-1-B.jpg", alt: "Beyond Bandish branding creative 02" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "stage-backdrops",
+      title: "Stage Backdrops",
+      groups: [
+        {
+          key: "beyondBackdrops",
+          title: "Stage Backdrops",
+          previewGroupName: "Beyond Bandish Stage Backdrops",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-A.jpg", alt: "Beyond Bandish stage backdrop 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-B.jpg", alt: "Beyond Bandish stage backdrop 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-C.jpg", alt: "Beyond Bandish stage backdrop 03" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "Kesariya@100",
+      industry: "Cultural / Community Event",
+      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+        alt: "Kesariya@100 thumbnail"
+      },
+      imageLabel: "Kesariya@100"
+    },
+    {
+      title: "Nupur Kathak Dance School",
+      industry: "Dance / Performing Arts",
+      url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
+        alt: "Nupur Kathak Dance School thumbnail"
+      },
+      imageLabel: "Nupur Kathak Dance School"
+    },
+    {
+      title: "Rainbow Umbrella",
+      industry: "Social / CSR",
+      url: "./portfolio-detail.html?project=graphic-design-rainbow-umbrella",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/RU.jpg",
+        alt: "Rainbow Umbrella thumbnail"
+      },
+      imageLabel: "Rainbow Umbrella"
+    }
+  ]
+},
+
+"graphic-design-rainbow-umbrella": {
+  title: "Rainbow Umbrella",
+  fullTitle: "Rainbow Umbrella",
+  category: "Graphic Design",
+  categorySlug: "graphic-design",
+  industry: "Social / CSR",
+  projectType: "",
+  role: "Graphic Designer",
+  deliverables: "Social Media Posts",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "Graphic Design",
+    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
+    currentLabel: "Rainbow Umbrella"
+  },
+
+  tabs: [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Graphic Design/RU.jpg",
+      alt: "Rainbow Umbrella portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Graphic Design/Mobile/RU.jpg",
+      alt: "Rainbow Umbrella mobile portfolio cover image"
+    }
+  },
+
+  projectOverview: {
+    title: "Rainbow Umbrella",
+    sections: [
+      {
+        heading: "What was the design need?",
+        bodyDesktop: "The design needed to present Rainbow Umbrella as a bright, friendly and memorable brand. Since the name itself has a colourful and positive feel, the communication had to look fresh, playful and easy to connect with, while still staying clear and professional.",
+        bodyMobile: "The design needed to present Rainbow Umbrella as a bright, friendly and memorable brand with a fresh, playful and colourful feel."
+      },
+      {
+        heading: "What kind of audience was this for?",
+        bodyDesktop: "The audience included families, children, parents, young buyers and everyday consumers who are drawn to brands that feel cheerful, useful and approachable. The design needed to speak to people who value trust, simplicity, colour and positivity.",
+        bodyMobile: "The audience included families, children, parents, young buyers and everyday consumers who value trust, simplicity, colour and positivity."
+      },
+      {
+        heading: "What emotion should the design create?",
+        bodyDesktop: "The design had to create a feeling of joy, freshness, safety and trust. It needed to make Rainbow Umbrella feel warm and approachable, while giving the brand a colourful and optimistic personality.",
+        bodyMobile: "The design had to create joy, freshness, safety and trust while giving the brand a colourful and optimistic personality."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  designThinking: {
+    heading: "Design Thinking",
+    points: [
+      "The strategy was to create communication that felt playful, inviting and instantly appealing to children.",
+      "Child-like elements and cartoon characters were used to catch the attention of both children and parents.",
+      "The main goal was to make the place feel like a space specially created for children: fun, safe, colorful and worth visiting.",
+      "The communication had to work on two levels: it needed to excite children visually and reassure parents through clear information.",
+      "Overall, the approach was to make the final output feel joyful, approachable and emotionally engaging for families."
+    ],
+    pointsMobile: [
+      "The strategy was to create communication that felt playful, inviting and appealing to children.",
+      "Cartoon characters and child-like elements helped catch attention.",
+      "The output needed to feel joyful, approachable and emotionally engaging for families."
+    ]
+  },
+
+  visualSystem: {
+    heading: "Visual System",
+    points: [
+      "The design used cute, friendly illustrations that children could easily connect with.",
+      "Cartoon-style characters helped make the communication feel more fun, warm and memorable.",
+      "The color palette was kept bright and cheerful to match the energy of a child-focused space.",
+      "The layouts were planned so that parents could easily read the information, while children could enjoy the colors, characters and artwork.",
+      "Every visual element was chosen to create a sense of wonder, comfort and excitement.",
+      "The final design language felt child-friendly, parent-friendly, colorful and inviting."
+    ],
+    pointsMobile: [
+      "Cute, friendly illustrations helped children connect with the communication.",
+      "The colour palette was bright and cheerful.",
+      "The final design language felt child-friendly, parent-friendly, colourful and inviting."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id: "social-posts",
+      title: "Social Media Posts",
+      groups: [
+        {
+          key: "rainbowSocialPosts",
+          title: "Social Media Posts",
+          previewGroupName: "Rainbow Umbrella Social Media Posts",
+          items: [
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-A.jpg", alt: "Rainbow Umbrella social media post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-B.jpg", alt: "Rainbow Umbrella social media post 02" },
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-C.jpg", alt: "Rainbow Umbrella social media post 03" },
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-D.jpg", alt: "Rainbow Umbrella social media post 04" },
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-E.jpg", alt: "Rainbow Umbrella social media post 05" },
+            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-F.jpg", alt: "Rainbow Umbrella social media post 06" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
+      },
+      imageLabel: "La Mom & Miiracle"
+    },
+    {
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
+      },
+      imageLabel: "Wilo"
+    },
+    {
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
+      },
+      imageLabel: "Samartha Seva Mandal"
+    }
+  ]
  }
 }
