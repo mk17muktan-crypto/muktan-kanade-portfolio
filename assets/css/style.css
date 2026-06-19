@@ -3654,8 +3654,8 @@ body.portfolio-detail-page .case-mobile-gallery-dots {
 
   body.portfolio-detail-page main.case-main {
     display: block !important;
-    width: min(100% - 48px, 1050px) !important;
-    max-width: 1050px !important;
+    width: min(100% - 48px, 1300px) !important;
+    max-width: 1300px !important;
     min-width: 0 !important;
     margin: 32px auto 90px !important;
     padding: 0 !important;
@@ -3741,29 +3741,81 @@ body.portfolio-detail-page {
   }
 }
 
-/* yellow button glow */
-body.portfolio-detail-page .case-back-btn,
-body.portfolio-detail-page .case-tabs a.active,
-body.portfolio-detail-page .case-dot.active {
-  box-shadow: 0 10px 24px hsla(45, 100%, 72%, 0.20);
-}
+/*-----------------------------------*\
+  #UNIFIED STICKY CONTROLS SHADOW
+\*-----------------------------------*/
 
-body.portfolio-detail-page .case-tabs a.active,
-body.portfolio-detail-page .case-back-btn {
-  animation: caseActiveGlow 3.2s ease-in-out infinite;
-}
+@media (min-width: 581px) {
 
-@keyframes caseActiveGlow {
-  0% {
-    box-shadow: 0 8px 20px hsla(45, 100%, 72%, 0.14);
+  /* Tab bar creates the shared background layer */
+  body.portfolio-detail-page .case-tabs {
+    position: sticky;
+    z-index: 450 !important;
+    isolation: isolate;
+    overflow: visible !important;
   }
 
-  50% {
-    box-shadow: 0 12px 30px hsla(45, 100%, 72%, 0.28);
+  body.portfolio-detail-page .case-tabs::before {
+    content: "";
+    position: fixed;
+
+    top: calc(var(--case-sticky-top) - 8px);
+
+    left: max(14px, calc((100vw - 1200px) / 2 + 14px));
+    right: max(14px, calc((100vw - 1200px) / 2 + 14px));
+
+    height: 72px;
+
+    border-radius: 20px;
+
+    background: hsla(240, 2%, 12%, 0.72);
+    border: 1px solid hsla(0, 0%, 100%, 0.05);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 18px 42px hsla(0, 0%, 0%, 0.42),
+      0 6px 16px hsla(0, 0%, 0%, 0.28);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    pointer-events: none;
+
+    /* Keeps the layer behind the tab buttons */
+    z-index: -1;
+
+    transition:
+      opacity 0.32s ease,
+      visibility 0.32s ease,
+      transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  100% {
-    box-shadow: 0 8px 20px hsla(45, 100%, 72%, 0.14);
+  body.portfolio-detail-page.case-tabs-stuck .case-tabs::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Keep all tab content above the shared layer */
+  body.portfolio-detail-page .case-tabs a {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Keep back button above the shared layer */
+  body.portfolio-detail-page .case-back-btn {
+    z-index: 460 !important;
+  }
+
+  /* Remove separate shadows from the controls */
+  body.portfolio-detail-page .case-tabs,
+  body.portfolio-detail-page .case-back-btn,
+  body.portfolio-detail-page .case-tabs a.active {
+    box-shadow: none;
+    animation: none;
   }
 }
 
@@ -4189,16 +4241,7 @@ body.case-preview-open {
   cursor: pointer;
 }}
 
-/*-----------------------------------*\
-  #CASE BACK BUTTON POSITION REFINEMENT
-\*-----------------------------------*/
 
-@media (min-width: 581px) {
-  body.portfolio-detail-page .case-back-btn {
-    left: max(15px, calc((100vw - 1050px) / 2 + 10px)) !important;
-	top: 50px;
-  }
-}
 
 /*-----------------------------------*\
   #CASE BACK BUTTON TWO-STATE POSITION
@@ -4206,22 +4249,22 @@ body.case-preview-open {
 
 @media (min-width: 581px) {
 
-  /* Normal position near top-left of the case box */
+  /* Align with the left inner corner of the 1200px main block */
   body.portfolio-detail-page .case-back-btn {
     top: 50px !important;
-    left: max(15px, calc((100vw - 1050px) / 2 + 10px)) !important;
+    left: max(14px, calc((100vw - 1200px) / 2 + 14px)) !important;
+
     transition:
       left 0.45s cubic-bezier(0.22, 1.25, 0.36, 1),
       top 0.45s cubic-bezier(0.22, 1.25, 0.36, 1),
       transform 0.35s ease;
   }
 
-  /* When tab bar becomes sticky, move the button into tab-bar alignment */
+  /* Keep the same left alignment when the tab bar becomes sticky */
   body.portfolio-detail-page.case-tabs-stuck .case-back-btn {
     top: calc(var(--case-sticky-top) + 9px) !important;
-    left: max(28px, calc((100vw - 1050px) / 2 + 28px)) !important;
+    left: max(14px, calc((100vw - 1200px) / 2 + 14px)) !important;
   }
-
 }
 
 /*-----------------------------------*\
@@ -8275,17 +8318,7 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
   }
 }
 
-/* Mobile: Serene packaging remains 4-column */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-serenePackaging {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 8px !important;
-  }
 
-  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
-    border-radius: 8px !important;
-  }
-}
 
 /*-----------------------------------*\
   #GRAPHIC DESIGN INNER PAGE GRID TYPES - BATCH 3
@@ -8867,14 +8900,28 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
   }
 }
 
-/* Mobile: Serene packaging remains 4-column */
+/* Mobile: Serene Veda packaging 2-column grid */
 @media (max-width: 580px) {
   body.portfolio-detail-page .case-gallery-serenePackaging {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-    gap: 8px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    overflow: visible !important;
   }
 
   body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
-    border-radius: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+    flex: none !important;
+    scroll-snap-align: unset !important;
+  }
+
+  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 }
