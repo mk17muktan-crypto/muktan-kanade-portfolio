@@ -1414,14 +1414,14 @@ relatedProjects: [
       imageLabel: "Rainbow Umbrella"
     },
     {
-      title: "Nupur Kathak Dance School",
-      industry: "Dance / Performing Arts",
-      url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
+      title: "Preeti Garments",
+      industry: "Fashion / Apparel",
+      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
-        alt: "Nupur Kathak Dance School thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+        alt: "Preeti Garments thumbnail"
       },
-      imageLabel: "Nupur Kathak Dance School"
+      imageLabel: "Preeti Garments"
     },
     {
       title: "Beyond Bandish",
@@ -1980,7 +1980,7 @@ relatedProjects: [
   gallerySections: [
     {
       id: "branding",
-      title: "Branding Logos",
+      title: "Branding",
       groups: [
         {
           key: "ssmsLogos",
@@ -2000,7 +2000,7 @@ relatedProjects: [
       groups: [
         {
           key: "ssmsSymbols",
-          title: "Symbols",
+          title: "Iconic Elements",
           previewGroupName: "Samartha Seva Mandal Symbols",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-A.png", alt: "Samartha Seva Mandal symbol A" },
@@ -2023,7 +2023,7 @@ relatedProjects: [
       groups: [
         {
           key: "ssmsSocialPosts",
-          title: "Social Media Posts",
+          title: "Post Templates for Various Workshops/Activities",
           previewGroupName: "Samartha Seva Mandal Social Posts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/SSMS/Post-Style-1-A.jpg", alt: "Samartha Seva Mandal social post 01" },
@@ -2212,7 +2212,7 @@ relatedProjects: [
         },
         {
           key: "sundarPostStyle2",
-          title: "Post Style 2: Post Templates",
+          title: "Post Template Options",
           previewGroupName: "Sundar Sanskar Post Templates",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-A.jpg", alt: "Sundar Sanskar post template 01" },
@@ -2251,14 +2251,14 @@ relatedProjects: [
       imageLabel: "Beyond Bandish"
     },
     {
-      title: "Nupur Kathak Dance School",
-      industry: "Dance / Performing Arts",
-      url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
+      title: "BNI Champs",
+      industry: "Business Networking",
+      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
-        alt: "Nupur Kathak Dance School thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
+        alt: "BNI Champs thumbnail"
       },
-      imageLabel: "Nupur Kathak Dance School"
+      imageLabel: "BNI Champs"
     }
   ]
 },
@@ -2401,7 +2401,7 @@ relatedProjects: [
         },
         {
           key: "yogalayaPostStyle2",
-          title: "Post Style 2: Post Templates",
+          title: "Chakra Info Posts",
           previewGroupName: "Yogalaya Post Templates",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-A.jpg", alt: "Yogalaya post template 01" },
@@ -2587,7 +2587,7 @@ relatedProjects: [
       groups: [
         {
           key: "bniSocialPosts",
-          title: "Social Media Posts",
+          title: "FInal Post Template",
           previewGroupName: "BNI Champs Social Media Posts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-A.jpg", alt: "BNI Champs social post 01" },
@@ -2996,7 +2996,7 @@ relatedProjects: [
       groups: [
         {
           key: "aaiBranding",
-          title: "Branding",
+          title: "Logo",
           previewGroupName: "Aai Foods Branding",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Branding-1-A.jpg", alt: "Aai Foods branding creative 01" },
@@ -3011,7 +3011,7 @@ relatedProjects: [
       groups: [
         {
           key: "aaiPackaging",
-          title: "Packaging",
+          title: "Layout Options",
           previewGroupName: "Aai Foods Packaging",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Aai Foods/Packaging-1-A.jpg", alt: "Aai Foods packaging creative 01" },
@@ -3192,7 +3192,7 @@ relatedProjects: [
       groups: [
         {
           key: "sereneBranding",
-          title: "Branding",
+          title: "Logo",
           previewGroupName: "Serene Veda Branding",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Branding-1-A.jpg", alt: "Serene Veda branding creative 01" }
@@ -3206,7 +3206,7 @@ relatedProjects: [
       groups: [
         {
           key: "serenePackaging",
-          title: "Packaging",
+          title: "Labels",
           previewGroupName: "Serene Veda Packaging",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-A.jpg", alt: "Serene Veda packaging creative 01" },
@@ -3374,7 +3374,7 @@ relatedProjects: [
       groups: [
         {
           key: "kesariyaBranding",
-          title: "Branding",
+          title: "Logo",
           previewGroupName: "Kesariya@100 Branding",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-A.jpg", alt: "Kesariya@100 branding creative 01" },
@@ -3548,7 +3548,7 @@ relatedProjects: [
       groups: [
         {
           key: "beyondBranding",
-          title: "Branding",
+          title: "Logo",
           previewGroupName: "Beyond Bandish Branding",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/BB/Branding-1-A.jpg", alt: "Beyond Bandish branding creative 01" },
@@ -3563,7 +3563,7 @@ relatedProjects: [
       groups: [
         {
           key: "beyondBackdrops",
-          title: "Stage Backdrops",
+          title: "Backdrop Styles",
           previewGroupName: "Beyond Bandish Stage Backdrops",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-A.jpg", alt: "Beyond Bandish stage backdrop 01" },
@@ -3589,14 +3589,14 @@ relatedProjects: [
       imageLabel: "Kesariya@100"
     },
     {
-      title: "Nupur Kathak Dance School",
-      industry: "Dance / Performing Arts",
-      url: "./portfolio-detail.html?project=graphic-design-nupur-kathak",
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Nupur.jpg",
-        alt: "Nupur Kathak Dance School thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
       },
-      imageLabel: "Nupur Kathak Dance School"
+      imageLabel: "Wilo"
     },
     {
       title: "Rainbow Umbrella",
@@ -3730,7 +3730,7 @@ relatedProjects: [
       groups: [
         {
           key: "rainbowSocialPosts",
-          title: "Social Media Posts",
+          title: "Post Styles",
           previewGroupName: "Rainbow Umbrella Social Media Posts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-A.jpg", alt: "Rainbow Umbrella social media post 01" },
