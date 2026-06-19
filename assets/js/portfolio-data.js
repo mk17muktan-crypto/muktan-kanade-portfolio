@@ -60,7 +60,7 @@ const portfolioProjects = {
     alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
   },
     mobile: {
-    src: "./assets/images/Portfolio/Graphic Design/Mobile/DG.jpg",
+    src: "./assets/images/Thumbnails/Graphic Design/Mobile/DG.jpg",
     alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
   },
   },
@@ -2003,16 +2003,16 @@ relatedProjects: [
           title: "Symbols",
           previewGroupName: "Samartha Seva Mandal Symbols",
           items: [
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-A.jpg", alt: "Samartha Seva Mandal symbol A" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.jpg", alt: "Samartha Seva Mandal symbol B" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-C.jpg", alt: "Samartha Seva Mandal symbol C" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-D.jpg", alt: "Samartha Seva Mandal symbol D" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-E.jpg", alt: "Samartha Seva Mandal symbol E" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.jpg", alt: "Samartha Seva Mandal symbol F" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-G.jpg", alt: "Samartha Seva Mandal symbol G" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-H.jpg", alt: "Samartha Seva Mandal symbol H" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-I.jpg", alt: "Samartha Seva Mandal symbol I" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-J.jpg", alt: "Samartha Seva Mandal symbol J" }
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-A.png", alt: "Samartha Seva Mandal symbol A" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.png", alt: "Samartha Seva Mandal symbol B" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-C.png", alt: "Samartha Seva Mandal symbol C" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-D.png", alt: "Samartha Seva Mandal symbol D" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-E.png", alt: "Samartha Seva Mandal symbol E" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.png", alt: "Samartha Seva Mandal symbol F" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-G.png", alt: "Samartha Seva Mandal symbol G" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-H.png", alt: "Samartha Seva Mandal symbol H" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-I.png", alt: "Samartha Seva Mandal symbol I" },
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-J.png", alt: "Samartha Seva Mandal symbol J" }
           ]
         }
       ]
