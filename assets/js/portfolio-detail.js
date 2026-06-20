@@ -812,6 +812,187 @@ const initBackButtonStickyAlignment = function () {
   });
 };
 
+const initMobileTabsMenu = function () {
+  const mobileTabsUI = document.querySelector("[data-mobile-tabs-ui]");
+  const mobileTabsToggle = document.querySelector("[data-mobile-tabs-toggle]");
+  const mobileTabsMenu = document.querySelector("[data-mobile-tabs-menu]");
+  const mobileTabsList = document.querySelector("[data-mobile-tabs-list]");
+  const mobileTabsCloseElements = document.querySelectorAll("[data-mobile-tabs-close]");
+
+  if (
+    !mobileTabsUI ||
+    !mobileTabsToggle ||
+    !mobileTabsMenu ||
+    !mobileTabsList
+  ) {
+    return;
+  }
+
+  const tabs = project.tabs || [
+    { id: "project-info", label: "Project Info" },
+    { id: "design-thinking", label: "Design Thinking" },
+    { id: "visual-system", label: "Visual System" },
+    { id: "branding", label: "Branding" },
+    { id: "campaign", label: "Campaign" },
+    { id: "social-posts", label: "Social Media Posts" }
+  ];
+
+  const mobileTabButtons = [];
+  let isMenuOpen = false;
+  let scrollAnimationFrame = null;
+
+  const setMenuOpen = function (shouldOpen) {
+    isMenuOpen = shouldOpen;
+
+    mobileTabsUI.classList.toggle("is-open", shouldOpen);
+    document.body.classList.toggle("case-mobile-tabs-open", shouldOpen);
+
+    mobileTabsToggle.setAttribute(
+      "aria-expanded",
+      shouldOpen ? "true" : "false"
+    );
+
+    mobileTabsToggle.setAttribute(
+      "aria-label",
+      shouldOpen ? "Close project tabs" : "Open project tabs"
+    );
+
+    if (shouldOpen) {
+      const activeButton = mobileTabsList.querySelector(
+        ".case-mobile-tab-option.active"
+      );
+
+      window.setTimeout(function () {
+        if (activeButton) {
+          activeButton.focus();
+        }
+      }, 280);
+    }
+  };
+
+  const setActiveMobileTab = function (activeButton) {
+    mobileTabButtons.forEach(function (button) {
+      const isActive = button === activeButton;
+
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  };
+
+  mobileTabsList.innerHTML = "";
+
+  tabs.forEach(function (tab, index) {
+    const sectionId = getSectionId(tab.id);
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.classList.add("case-mobile-tab-option");
+    button.dataset.mobileTabTarget = sectionId;
+    button.innerText = tab.label;
+
+    if (index === 0) {
+      button.classList.add("active");
+      button.setAttribute("aria-current", "true");
+    } else {
+      button.setAttribute("aria-current", "false");
+    }
+
+    button.addEventListener("click", function () {
+      const targetSection = document.getElementById(sectionId);
+
+      if (!targetSection) return;
+
+      setActiveMobileTab(button);
+      setMenuOpen(false);
+
+      window.setTimeout(function () {
+        const targetTop =
+          targetSection.getBoundingClientRect().top +
+          window.scrollY -
+          24;
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: "smooth"
+        });
+      }, 160);
+    });
+
+    mobileTabsList.appendChild(button);
+    mobileTabButtons.push(button);
+  });
+
+  const updateActiveMobileTab = function () {
+    if (window.innerWidth > 580 || mobileTabButtons.length === 0) return;
+
+    let activeButton = mobileTabButtons[0];
+    const activationLine = 150;
+
+    mobileTabButtons.forEach(function (button) {
+      const sectionId = button.dataset.mobileTabTarget;
+      const targetSection = document.getElementById(sectionId);
+
+      if (
+        targetSection &&
+        targetSection.getBoundingClientRect().top <= activationLine
+      ) {
+        activeButton = button;
+      }
+    });
+
+    const pageBottomReached =
+      window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 8;
+
+    if (pageBottomReached) {
+      activeButton = mobileTabButtons[mobileTabButtons.length - 1];
+    }
+
+    setActiveMobileTab(activeButton);
+  };
+
+  mobileTabsToggle.addEventListener("click", function () {
+    setMenuOpen(!isMenuOpen);
+  });
+
+  mobileTabsCloseElements.forEach(function (element) {
+    element.addEventListener("click", function () {
+      setMenuOpen(false);
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && isMenuOpen) {
+      setMenuOpen(false);
+      mobileTabsToggle.focus();
+    }
+  });
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (scrollAnimationFrame) {
+        window.cancelAnimationFrame(scrollAnimationFrame);
+      }
+
+      scrollAnimationFrame = window.requestAnimationFrame(
+        updateActiveMobileTab
+      );
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 580) {
+      setMenuOpen(false);
+    }
+
+    updateActiveMobileTab();
+  });
+
+  updateActiveMobileTab();
+};
+
 const initHideNavOnScroll = function () {
   const mobileNav = document.querySelector("[data-case-mobile-nav]");
 
@@ -819,28 +1000,49 @@ const initHideNavOnScroll = function () {
 
   let lastScrollY = window.scrollY;
 
-  window.addEventListener("scroll", function () {
-    const currentScrollY = window.scrollY;
+  const setMobileNavHidden = function (shouldHide) {
+    mobileNav.classList.toggle("is-hidden", shouldHide);
 
-    if (window.innerWidth > 580) {
-      mobileNav.classList.remove("is-hidden");
+    document.body.classList.toggle(
+      "case-mobile-nav-hidden",
+      shouldHide
+    );
+  };
+
+  setMobileNavHidden(false);
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      const currentScrollY = window.scrollY;
+
+      if (window.innerWidth > 580) {
+        setMobileNavHidden(false);
+        lastScrollY = Math.max(currentScrollY, 0);
+        return;
+      }
+
+      const scrollingDown = currentScrollY > lastScrollY + 4;
+      const scrollingUp = currentScrollY < lastScrollY - 4;
+
+      if (currentScrollY > 90 && scrollingDown) {
+        setMobileNavHidden(true);
+      }
+
+      if (scrollingUp || currentScrollY <= 40) {
+        setMobileNavHidden(false);
+      }
+
       lastScrollY = Math.max(currentScrollY, 0);
-      return;
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 580) {
+      setMobileNavHidden(false);
     }
-
-    const scrollingDown = currentScrollY > lastScrollY + 4;
-    const scrollingUp = currentScrollY < lastScrollY - 4;
-
-    if (currentScrollY > 90 && scrollingDown) {
-      mobileNav.classList.add("is-hidden");
-    }
-
-    if (scrollingUp || currentScrollY <= 40) {
-      mobileNav.classList.remove("is-hidden");
-    }
-
-    lastScrollY = Math.max(currentScrollY, 0);
-  }, { passive: true });
+  });
 };
 
 fillTextContent();
@@ -852,6 +1054,7 @@ renderThinkingSections();
 renderGallerySections();
 renderNextProjects();
 initTabs();
+initMobileTabsMenu();
 initCaseBackgroundGlow();
 initBackButtonStickyAlignment();
 initHideNavOnScroll();
