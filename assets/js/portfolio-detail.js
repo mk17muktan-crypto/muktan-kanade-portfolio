@@ -246,6 +246,14 @@ const renderUXCaseStudy = function () {
     Boolean(isUXCaseStudy)
   );
 
+document.body.classList.toggle(
+  "ux-dagdusheth-page",
+  Boolean(
+    isUXCaseStudy &&
+    projectId === "ui-ux-dagdusheth-website"
+  )
+);	
+	
   if (!uxRoot) return;
 
   if (!isUXCaseStudy) {
@@ -430,8 +438,35 @@ const renderTypographyRows = function () {
     .join("");
 };	
 	
+const renderSimpleButtons = function () {
+  const buttons =
+    uxData.designSystem &&
+    Array.isArray(uxData.designSystem.buttons)
+      ? uxData.designSystem.buttons
+      : [];
+
+  return buttons
+    .map(function (button) {
+      return `
+        <div
+          class="ux-simple-demo-button"
+          style="--ux-simple-button-color: ${button.color};">
+
+          ${button.label}
+
+        </div>
+      `;
+    })
+    .join("");
+};	
+	
 const renderFinalScreenGroups = function () {
-  return (uxData.finalUIScreens.groups || [])
+  const finalUI = uxData.finalUIScreens || {};
+  const groups = Array.isArray(finalUI.groups)
+    ? finalUI.groups
+    : [];
+
+  return groups
     .map(function (group, groupIndex) {
       const screenItems = (group.items || [])
         .map(function (item, screenIndex) {
@@ -477,7 +512,82 @@ const renderFinalScreenGroups = function () {
       `;
     })
     .join("");
-};	
+};
+	
+const renderFinalUISection = function () {
+  const finalUI = uxData.finalUIScreens;
+
+  if (!finalUI) return "";
+
+  if (finalUI.variant === "live-website") {
+    const previewImage = finalUI.image || {};
+
+    return `
+      <section
+        class="ux-section ux-final-ui-section ux-live-final-ui-section ux-tab-section"
+        id="final-ui-screens">
+
+        <h2>${finalUI.heading || "Final UI Screens"}</h2>
+
+        <div class="ux-live-final-copy">
+
+          <p>
+            ${finalUI.introduction || ""}
+          </p>
+
+          <a
+            class="ux-live-final-link"
+            href="${finalUI.liveUrl}"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            ${finalUI.liveLabel || finalUI.liveUrl}
+
+          </a>
+
+        </div>
+
+        <button
+          class="ux-live-final-preview"
+          type="button"
+          data-ux-live-final-screen
+          aria-label="Open the Dagdusheth Ganpati website preview">
+
+${previewImage.src ? `
+  <img
+    src="${previewImage.src}"
+    alt="${previewImage.alt || "Final website interface"}"
+    loading="lazy">
+` : `
+  <div class="ux-live-final-placeholder">
+    ${previewImage.label || "Final UI Website Preview"}
+  </div>
+`}
+
+        </button>
+
+      </section>
+    `;
+  }
+
+  return `
+    <section
+      class="ux-section ux-final-ui-section ux-tab-section"
+      id="final-ui-screens">
+
+      <h2>${finalUI.heading}</h2>
+
+      <p class="ux-final-ui-intro">
+        ${finalUI.introduction}
+      </p>
+
+      <div class="ux-final-groups">
+        ${renderFinalScreenGroups()}
+      </div>
+
+    </section>
+  `;
+};
 	
   uxRoot.hidden = false;
 
@@ -730,10 +840,14 @@ const renderFinalScreenGroups = function () {
 
     <div class="ux-design-system-right">
 
-      <div class="ux-system-block ux-buttons-block">
-        <h3>Buttons</h3>
+<div class="ux-system-block ux-buttons-block">
+  <h3>Buttons</h3>
 
-        <div class="ux-button-showcase">
+  <div class="ux-simple-button-showcase">
+    ${renderSimpleButtons()}
+  </div>
+
+  <div class="ux-button-showcase">
 
           <div class="ux-button-panel">
 
@@ -866,21 +980,7 @@ const renderFinalScreenGroups = function () {
 
 </section>
 
-<section
-  class="ux-section ux-final-ui-section ux-tab-section"
-  id="final-ui-screens">
-
-  <h2>${uxData.finalUIScreens.heading}</h2>
-
-  <p class="ux-final-ui-intro">
-    ${uxData.finalUIScreens.introduction}
-  </p>
-
-  <div class="ux-final-groups">
-    ${renderFinalScreenGroups()}
-  </div>
-
-</section>
+${renderFinalUISection()}
 
   `;
 
@@ -901,6 +1001,24 @@ finalScreenButtons.forEach(function (button) {
     openCasePreview(screenGroup.items, screenIndex);
   });
 });	
+
+const liveFinalScreenButton = uxRoot.querySelector(
+  "[data-ux-live-final-screen]"
+);
+
+if (
+  liveFinalScreenButton &&
+  uxData.finalUIScreens &&
+  uxData.finalUIScreens.image &&
+  uxData.finalUIScreens.image.src
+) {
+  liveFinalScreenButton.addEventListener("click", function () {
+    openCasePreview(
+      [uxData.finalUIScreens.image],
+      0
+    );
+  });
+}	
 	
 };
 

@@ -3874,6 +3874,7 @@ tabs: [
     label: "Final UI Screens",
     desktopLabel: "Final<br>UI Screens"
   }
+  
 ],
 	
   hero: {
@@ -4347,37 +4348,584 @@ finalUIScreens: {
 },
 
 relatedProjectsTitle: "View Other Projects",
-  relatedProjects: [
+
+relatedProjects: [
+  {
+    title: "Dagdusheth Ganpati",
+    industry: "Religious / Devotional Organisation",
+
+    url:
+      "./portfolio/ui-ux-ux-dagdushet-ganpati.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/DG.jpg",
+
+      alt:
+        "Dagdusheth Ganpati UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "Dagdusheth Ganpati UI UX"
+  },
+
+  {
+    title: "La Mom & Miiracle",
+    industry: "Healthcare / Fertility Clinic",
+
+    url:
+      "./portfolio/ui-ux-ux-la-mom-and-miiracle.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/LMM.jpg",
+
+      alt:
+        "La Mom and Miiracle UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "La Mom & Miiracle UI UX"
+  },
+
+  {
+    title: "Samartha Seva Mandal Sajjangad",
+    industry: "Religious / Spiritual Organisation",
+
+    url:
+      "./portfolio/ui-ux-ux-samartha-seva-mandal.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+
+      alt:
+        "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "Samartha Seva Mandal Sajjangad UI UX"
+   }
+  ]
+ },
+	
+"ui-ux-dagdusheth-website": {
+  title: "UX - Dagdusheth Ganpati Website",
+  fullTitle: "Shrimant Dagdusheth Halwai Ganpati Website Redesign",
+
+  category: "UI/UX",
+  categorySlug: "ui%2Fux",
+
+  industry: "Religious / Devotional Organisation",
+  projectType: "UI/UX Website Case Study",
+
+  layout: "ux-case-study",
+
+  role: "UI/UX Designer",
+
+  deliverables:
+    "User Research, Website Interface Design, Website Style Guide",
+
+  tools: [
     {
-      title: "La Mom & Miiracle",
-      industry: "Healthcare / Fertility Clinic",
-      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
-        alt: "La Mom & Miiracle thumbnail"
-      },
-      imageLabel: "La Mom & Miiracle"
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
     },
     {
-      title: "Wilo",
-      industry: "Pumps / Water Technology",
-      url: "./portfolio-detail.html?project=graphic-design-wilo",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
-        alt: "Wilo thumbnail"
-      },
-      imageLabel: "Wilo"
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
     },
     {
-      title: "Samartha Seva Mandal",
-      industry: "Religious / Spiritual Organisation",
-      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
-        alt: "Samartha Seva Mandal thumbnail"
-      },
-      imageLabel: "Samartha Seva Mandal"
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon: "./assets/images/software Icons/corel-draw.png"
     }
-   ]
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+
+    categoryLabel: "UI/UX",
+    categoryUrl:
+      "./index.html?section=portfolio&category=ui%2Fux",
+
+    currentLabel: "UX - Dagdusheth Ganpati Website"
+  },
+
+  tabs: [
+    {
+      id: "about-project",
+      label: "About the Project",
+      desktopLabel: "About the<br>Project"
+    },
+    {
+      id: "unique-selling-proposition",
+      label: "Unique Selling Proposition",
+      desktopLabel: "Unique Selling<br>Proposition"
+    },
+    {
+      id: "target-audience",
+      label: "Target Audience",
+      desktopLabel: "Target<br>Audience"
+    },
+    {
+      id: "user-problems-identified",
+      label: "User Problems Identified",
+      desktopLabel: "User Problems<br>Identified"
+    },
+    {
+      id: "user-personas",
+      label: "User Personas",
+      desktopLabel: "User<br>Personas"
+    },
+    {
+      id: "key-user-needs",
+      label: "Key User Needs",
+      desktopLabel: "Key<br>User Needs"
+    },
+    {
+      id: "feature-prioritization",
+      label: "Feature Prioritization",
+      desktopLabel: "Feature<br>Prioritization"
+    },
+{
+  id: "design-system",
+  label: "Design System",
+  desktopLabel: "Design<br>System"
+},
+{
+  id: "final-ui-screens",
+  label: "Final UI Screens",
+  desktopLabel: "Final<br>UI Screens"
+}
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Uiux/DG.jpg",
+      alt: "Shrimant Dagdusheth Halwai Ganpati website redesign cover"
+    },
+
+    mobile: {
+      src: "./assets/images/Thumbnails/Uiux/DG.jpg",
+      alt: "Shrimant Dagdusheth Halwai Ganpati mobile website redesign cover"
+    }
+  },
+
+  uxCaseStudy: {
+    about: {
+      heading: "About the Project",
+
+      primaryText: [
+        "This was a <strong>website redesign project</strong> of the official Shrimant Dagdusheth Halwai Ganpati website. The platform serves devotees who visit the temple physically, participate remotely, book religious services, explore festivals, donate to social causes and learn about the Trust’s cultural legacy.",
+
+        "The goal was to <strong>organize</strong> these different experiences into a <strong>clear, trustworthy and task-focused digital journey.</strong> The redesign prioritizes <strong>temple timings, festival information, Live Darshan, E-Seva, donations and practical visitor guidance</strong> while preserving the temple’s <strong>devotional identity and emotional significance.</strong>"
+      ],
+
+      goalText: [],
+
+      contextHighlight:
+        "A key context I considered was that most visitors arrive with a specific intention—to plan a visit, seek darshan, perform a seva or support a cause—rather than casually browse the website."
+    },
+
+    research: {
+      heading: "Research & Context",
+
+      contextText: [
+        "The primary context was simple: users visit the website with <strong>time-sensitive and emotionally important tasks.</strong>",
+
+        "They need to check an <strong>aarti time before leaving home, plan a festival visit, watch Darshan Live, book a ritual remotely or donate towards a cause online.</strong>"
+      ],
+
+      purposeLabel:
+        "This gave the website a clear purpose:",
+
+      purposeStatement:
+        "The website should work as a trusted digital extension of the temple—helping devotees plan, participate, connect and contribute from anywhere.",
+
+      pointsHeading: "Key Research Points",
+
+      points: [
+        "Devotees need <strong>today’s timings and aarti schedule</strong> before planning their temple visit.",
+
+        "Festival visitors require <strong>event dates, programs and practical planning information</strong> in one place.",
+
+        "Remote devotees depend on <strong>Live Darshan</strong> to maintain an <strong>emotional connection with Bappa.</strong>",
+
+        "E-Seva must clearly explain the <strong>ritual, price, duration and remote fulfilment process.</strong>",
+
+        "Visitors need fast access to <strong>directions, restrictions, contact details and darshan information.</strong>",
+
+        "Donors want to understand the Trust’s <strong>social initiatives and their impact</strong> before contributing."
+      ],
+
+      remoteControlPoint:
+        "Separate informational and transactional platforms can make the experience feel all over the place and less consistent.",
+
+      takeaway:
+        "The website needed to transform a large collection of temple information and services into a simple, intention-led devotional experience."
+    },
+
+    usp: {
+      heading: "USP",
+
+      statement:
+        "One trusted digital gateway to experience Dagdusheth Ganpati—plan darshan, participate remotely, book authentic sevas and support meaningful social causes."
+    },
+
+    targetAudience: {
+      heading: "Target Audience",
+
+      description:
+        "The website serves devotees with different levels of familiarity, proximity and intent, from regular Pune visitors to remote worshippers and social-impact donors.",
+
+      groups: [
+        {
+          title: "Primary Audience",
+
+          description:
+            "<strong>Local and recurring devotees</strong> who need quick access to <strong>temple timings, aarti schedules, special-day updates and Tatkal Darshan options.</strong>"
+        },
+        {
+          title: "Secondary Audience",
+
+          description:
+            "<strong>First-time and remote devotees</strong> who need festival information, visit-planning support, Live Darshan and the ability to book rituals online."
+        },
+        {
+          title: "Tertiary Audience",
+
+          description:
+            "<strong>Cause-led donors and cultural visitors</strong> interested in the temple’s <strong>history, festivals, galleries and social initiatives.</strong>"
+        }
+      ]
+    },
+
+    userProblems: {
+      heading: "User Problems Identified",
+
+      description:
+        "Devotees need <strong>reliable and quickly accessible information</strong> while planning visits, participating remotely or completing religious and donation-related tasks.",
+
+      items: [
+        "Critical Information Is Thrown Across Multiple Sections",
+        "Information Can Feel Outdated Or Inconsistent",
+        "Visitor Planning Details Not Presented In One Journey",
+        "E-Seva & Donations Redirect Users To A New Website",
+        "Generic CTAs Do Not Clearly Explain The Next Step"
+      ],
+
+      takeaway:
+        "The main UX challenge was to bring devotion, information and transactions together without making the website feel overwhelming or commercial."
+    },
+
+    personas: {
+      heading: "User Personas",
+
+      introduction:
+        "Four personas were created to understand how different devotees interact with the temple digitally. Each persona represents a distinct journey: planning a regular visit, attending a major festival, participating remotely or contributing to social impact.",
+
+      items: [
+        {
+          name: "Vilas Kulkarni",
+          type: "Local Regular Devotee",
+
+          image:
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Vilas-Kulkarni.jpg",
+
+          background:
+            "Lives near Pune and regularly plans visits around aarti timings, Sankashti Chaturthi and other important temple days.",
+
+          mainNeed:
+            "Know the correct time and reach the temple without uncertainty."
+        },
+        {
+          name: "Pallavi Kumbhar",
+          type: "First-Time Festival Pilgrim",
+
+          image:
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Pallavi-Kumbhar.jpg",
+
+          background:
+            "Knows Dagdusheth Ganpati by reputation but needs help choosing an event, date and practical travel plan.",
+
+          mainNeed:
+            "Plan a crowded festival visit confidently and quickly."
+        },
+        {
+          name: "Nikhil Deshpande",
+          type: "Remote Devotee",
+
+          image:
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Nikhil-Deshpande.jpg",
+
+          background:
+            "Lives outside Pune and uses Live Darshan and E-Seva to remain spiritually connected to Bappa.",
+
+          mainNeed:
+            "Experience darshan and perform rituals without travelling."
+        },
+        {
+          name: "Sanjay Shah",
+          type: "Cause-Led Donor",
+
+          image:
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Sanjay-Shah.jpg",
+
+          background:
+            "Wants his religious contribution to support a credible social initiative.",
+
+          mainNeed:
+            "Understand the cause and donate through an official channel."
+        }
+      ]
+    },
+
+    keyUserNeeds: {
+      heading: "Key User Needs",
+
+      description:
+        "The key needs were based on the practical, emotional and transactional expectations of temple website users.",
+
+      items: [
+        {
+          title: "Visit Confidence",
+
+          description:
+            "Clear access to <strong>today’s timings, aarti windows and special-day updates.</strong>"
+        },
+        {
+          title: "Remote Participation",
+
+          description:
+            "Access to <strong>Live Darshan and rituals performed on the devotee’s behalf.</strong>"
+        },
+        {
+          title: "Seva Transparency",
+
+          description:
+            "Simple explanations of the <strong>ritual process, eligibility, price and duration.</strong>"
+        },
+        {
+          title: "Donation Trust",
+
+          description:
+            "Information showing how their <strong>initiatives create real social impact.</strong>"
+        },
+        {
+          title: "Practical Assistance",
+
+          description:
+            "Quick access to <strong>directions, restrictions, contact details and darshan rules.</strong>"
+        }
+      ]
+    },
+
+    featurePrioritization: {
+      heading: "Feature Prioritization",
+
+      description:
+        "Features were prioritized according to task urgency, devotional importance, frequency of use and potential user confusion.",
+
+      groups: [
+        {
+          level: "high",
+          title: "High Priority",
+
+          items: [
+            "Today’s Temple Schedule And Aarti Timings",
+            "Live Darshan",
+            "E-Seva Booking",
+            "Festival And Event Information",
+            "Visit Planning And Tatkal Darshan"
+          ]
+        },
+        {
+          level: "medium",
+          title: "Medium Priority",
+
+          items: [
+            "Cause-Based Donations",
+            "Social-Initiative Types",
+            "Multilingual Content",
+            "Contact & Directions"
+          ]
+        },
+        {
+          level: "low",
+          title: "Low Priority",
+
+          items: [
+            "Photo, Video And Audio Galleries",
+            "Wallpapers And Downloadable Media",
+            "Historical And Archival Content"
+          ]
+        }
+      ],
+
+      takeaway:
+        "The main priority was to make high-intent devotional tasks easy to find before users encountered secondary institutional and media content."
+    },
+
+    designSystem: {
+      variant: "simple",
+
+      heading: "UI Visual System",
+
+      description:
+        "The visual system should feel devotional, dignified and contemporary rather than decorative or commercially promotional. The design should use clear typography, culturally appropriate colors, authentic temple imagery, consistent cards, recognizable icons and strong visual hierarchy to guide users through information and transactions.",
+
+      colors: [
+        {
+          title: "Main",
+          values: [
+            "#26006F",
+            "#FFFFFF"
+          ]
+        },
+        {
+          title: "Text",
+          values: [
+            "#050505",
+            "#C7C7CC"
+          ]
+        },
+        {
+          title: "Background",
+          values: [
+            "#FFFFFF"
+          ]
+        },
+        {
+          title: "Other",
+          values: [
+            "#B90008",
+            "#27A944",
+            "#F99A17",
+            "#D74400",
+            "#506FF4",
+            "#B5B5B5",
+            "#5A5A5A"
+          ]
+        }
+      ],
+
+      buttons: [
+        {
+          label: "Button Static",
+          color: "#F99A17"
+        },
+        {
+          label: "Button Hover",
+          color: "#D74400"
+        }
+      ],
+
+      typography: [
+        {
+          label: "H1",
+          sample: "Poppins 33px Bold",
+          className: "h1"
+        },
+        {
+          label: "H2",
+          sample: "Poppins 18px Bold",
+          className: "h2"
+        },
+        {
+          label: "Body Copy",
+          sample: "Poppins 18px Bold",
+          className: "body"
+        }
+      ]
+    },
+finalUIScreens: {
+  variant: "live-website",
+
+  heading: "Final UI Screens",
+
+  introduction:
+    "This is a Live Project. To see the full Live Website, visit:",
+
+  liveUrl:
+    "https://www.dagdushethganpati.com/",
+
+  liveLabel:
+    "https://www.dagdushethganpati.com/",
+
+  image: {
+    type: "placeholder",
+    label: "Final UI Website Preview",
+    alt:
+      "Shrimant Dagdusheth Halwai Ganpati live website homepage design"
+  }
+}
+
+},
+
+relatedProjectsTitle: "View Other Projects",
+
+relatedProjects: [
+  {
+    title: "Dagdusheth Ganpati",
+    industry: "Religious / Devotional Organisation",
+
+    url:
+      "./portfolio/ui-ux-ux-dagdushet-ganpati.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/DG.jpg",
+
+      alt:
+        "Dagdusheth Ganpati UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "Dagdusheth Ganpati UI UX"
+  },
+
+  {
+    title: "La Mom & Miiracle",
+    industry: "Healthcare / Fertility Clinic",
+
+    url:
+      "./portfolio/ui-ux-ux-la-mom-and-miiracle.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/LMM.jpg",
+
+      alt:
+        "La Mom and Miiracle UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "La Mom & Miiracle UI UX"
+  },
+
+  {
+    title: "Samartha Seva Mandal Sajjangad",
+    industry: "Religious / Spiritual Organisation",
+
+    url:
+      "./portfolio/ui-ux-ux-samartha-seva-mandal.html",
+
+    image: {
+      src:
+        "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+
+      alt:
+        "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
+    },
+
+    imageLabel:
+      "Samartha Seva Mandal Sajjangad UI UX"
+   }
+  ]
  }
 };
