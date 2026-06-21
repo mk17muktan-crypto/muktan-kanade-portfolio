@@ -3755,8 +3755,8 @@ body.portfolio-detail-page {
     overflow: visible !important;
   }
 
-  body.portfolio-detail-page .case-tabs::before {
-    content: "";
+body.portfolio-detail-page:not(.ux-case-study-page) .case-tabs::before {
+	content: "";
     position: fixed;
 
     top: calc(var(--case-sticky-top) - 8px);
@@ -3769,7 +3769,7 @@ body.portfolio-detail-page {
     border-radius: 20px;
 
     background: hsla(240, 2%, 12%, 0.72);
-    border: 1px solid hsla(0, 0%, 100%, 0.05);
+    border: 0px
 
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -3793,12 +3793,12 @@ body.portfolio-detail-page {
       transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  body.portfolio-detail-page.case-tabs-stuck .case-tabs::before {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
+body.portfolio-detail-page:not(.ux-case-study-page).case-tabs-stuck .case-tabs::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+	
   /* Keep all tab content above the shared layer */
   body.portfolio-detail-page .case-tabs a {
     position: relative;
@@ -4249,10 +4249,14 @@ body.case-preview-open {
 
 @media (min-width: 581px) {
 
-  /* Align with the left inner corner of the 1200px main block */
-  body.portfolio-detail-page .case-back-btn {
+  /* All non-UI/UX portfolio pages */
+  body.portfolio-detail-page:not(.ux-case-study-page) .case-back-btn {
     top: 50px !important;
-    left: max(14px, calc((100vw - 1200px) / 2 + 14px)) !important;
+
+    left: max(
+      14px,
+      calc((100vw - 1300px) / 2 + 14px)
+    ) !important;
 
     transition:
       left 0.45s cubic-bezier(0.22, 1.25, 0.36, 1),
@@ -4260,10 +4264,40 @@ body.case-preview-open {
       transform 0.35s ease;
   }
 
-  /* Keep the same left alignment when the tab bar becomes sticky */
-  body.portfolio-detail-page.case-tabs-stuck .case-back-btn {
+  body.portfolio-detail-page:not(.ux-case-study-page).case-tabs-stuck
+  .case-back-btn {
     top: calc(var(--case-sticky-top) + 9px) !important;
-    left: max(14px, calc((100vw - 1200px) / 2 + 14px)) !important;
+
+    left: max(
+      14px,
+      calc((100vw - 1300px) / 2 + 14px)
+    ) !important;
+  }
+
+
+  /* UI/UX portfolio pages only */
+  body.portfolio-detail-page.ux-case-study-page .case-back-btn {
+    top: 50px !important;
+
+    left: max(
+      14px,
+      calc((100vw - 1300px) / 2 + 14px)
+    ) !important;
+
+    transition:
+      left 0.45s cubic-bezier(0.22, 1.25, 0.36, 1),
+      top 0.45s cubic-bezier(0.22, 1.25, 0.36, 1),
+      transform 0.35s ease;
+  }
+
+  body.portfolio-detail-page.ux-case-study-page.case-tabs-stuck
+  .case-back-btn {
+    top: calc(var(--case-sticky-top) + 17px) !important;
+
+    left: max(
+      14px,
+      calc((100vw - 1300px) / 2 + 14px)
+    ) !important;
   }
 }
 
@@ -9173,5 +9207,1605 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+  }
+}
+
+/*-----------------------------------*\
+  #UI UX CASE STUDY — OLA
+\*-----------------------------------*/
+
+body.ux-case-study-page #client-info,
+body.ux-case-study-page .case-two-column,
+body.ux-case-study-page [data-gallery-sections],
+body.ux-case-study-page .case-next-projects {
+  display: none !important;
+}
+
+body.ux-case-study-page .ux-case-study {
+  width: 100%;
+  padding: 0 38px 70px;
+}
+
+body.ux-case-study-page .ux-section {
+  width: 100%;
+  margin-bottom: 52px;
+  scroll-margin-top: 125px;
+}
+
+body.ux-case-study-page .ux-section > h2,
+body.ux-case-study-page .ux-research-context > h2,
+body.ux-case-study-page .ux-research-points-area > h2 {
+  color: var(--white-2);
+  font-size: 20px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+
+/* About the Project */
+
+body.ux-case-study-page .ux-about-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 1.05fr)
+    minmax(240px, 0.8fr);
+
+  align-items: start;
+  gap: 30px;
+}
+
+body.ux-case-study-page .ux-about-copy p {
+  color: var(--light-gray);
+  font-size: 14px;
+  font-weight: var(--fw-300);
+  line-height: 1.55;
+}
+
+body.ux-case-study-page .ux-about-copy p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+body.ux-case-study-page .ux-about-highlight {
+  color: var(--white-2) !important;
+  font-size: 17px !important;
+  font-weight: var(--fw-600) !important;
+  line-height: 1.25 !important;
+  text-transform: capitalize;
+}
+
+
+/* Yellow summary card */
+
+body.ux-case-study-page .ux-summary-card {
+  padding: 24px 22px;
+
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      hsla(45, 100%, 80%, 0.30),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 82% 78%,
+      hsla(35, 100%, 66%, 0.18),
+      transparent 34%
+    ),
+    var(--text-gradient-yellow);
+
+  color: var(--smoky-black);
+
+  box-shadow:
+    0 22px 50px hsla(0, 0%, 0%, 0.30),
+    0 8px 24px hsla(45, 100%, 72%, 0.14);
+}
+
+body.ux-case-study-page
+.ux-summary-section:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+body.ux-case-study-page .ux-summary-section > p {
+  color: hsla(0, 0%, 7%, 0.68);
+  font-size: 12px;
+  font-weight: var(--fw-400);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+body.ux-case-study-page .ux-summary-section > h3 {
+  color: var(--smoky-black);
+  font-size: 16px;
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+}
+
+body.ux-case-study-page .ux-summary-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 11px;
+}
+
+body.ux-case-study-page .ux-summary-tool {
+  width: 32px;
+  height: 32px;
+}
+
+body.ux-case-study-page .ux-summary-tool img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* Research */
+
+body.ux-case-study-page .ux-research-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 0.82fr)
+    minmax(0, 1.58fr);
+
+  align-items: start;
+  gap: 38px;
+}
+
+body.ux-case-study-page .ux-research-context > p {
+  color: var(--light-gray);
+  font-size: 14px;
+  font-weight: var(--fw-300);
+  line-height: 1.55;
+}
+
+body.ux-case-study-page
+.ux-research-context > p:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+body.ux-case-study-page .ux-purpose-card {
+  margin-top: 24px;
+  padding: 23px 21px;
+
+  border-radius: 13px;
+
+  background: hsla(240, 2%, 16%, 0.94);
+  border: 1px solid hsla(0, 0%, 100%, 0.07);
+}
+
+body.ux-case-study-page .ux-purpose-card p {
+  color: var(--light-gray);
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+body.ux-case-study-page .ux-purpose-card strong {
+  display: block;
+
+  color: var(--orange-yellow-crayola);
+  font-size: 16px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+body.ux-case-study-page .ux-research-points-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+body.ux-case-study-page .ux-research-point {
+  min-height: 76px;
+  padding: 16px 17px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 11px;
+
+  background: hsla(240, 2%, 14%, 0.82);
+  border: 1px solid hsla(45, 100%, 72%, 0.28);
+}
+
+body.ux-case-study-page .ux-research-point p {
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.45;
+}
+
+body.ux-case-study-page .ux-research-footer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+body.ux-case-study-page .ux-research-takeaway {
+  padding: 12px 4px;
+
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+
+/* USP */
+
+body.ux-case-study-page .ux-usp-card {
+  width: 100%;
+  padding: 27px 28px;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      hsl(45, 100%, 76%),
+      hsl(36, 100%, 67%)
+    );
+
+  color: var(--smoky-black);
+
+  box-shadow:
+    0 20px 44px hsla(0, 0%, 0%, 0.25),
+    0 7px 20px hsla(45, 100%, 72%, 0.12);
+}
+
+body.ux-case-study-page .ux-usp-card h2 {
+  color: var(--smoky-black);
+  font-size: 22px;
+  font-weight: var(--fw-600);
+  margin-bottom: 14px;
+}
+
+body.ux-case-study-page .ux-usp-card p {
+  color: var(--smoky-black);
+  font-size: 16px;
+  font-weight: var(--fw-600);
+  line-height: 1.45;
+  text-transform: capitalize;
+}
+
+@media (min-width: 581px) and (max-width: 900px) {
+  body.ux-case-study-page .ux-personas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*-----------------------------------*\
+  #OLA TARGET AUDIENCE + PROBLEMS
+\*-----------------------------------*/
+
+body.ux-case-study-page .ux-tab-section {
+  scroll-margin-top: 125px;
+}
+
+body.ux-case-study-page .ux-audience-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 40px;
+}
+
+body.ux-case-study-page .ux-target-audience > h2,
+body.ux-case-study-page .ux-user-problems > h2,
+body.ux-case-study-page .ux-personas-section > h2 {
+  color: var(--white-2);
+  font-size: 20px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 17px;
+  text-align: left;
+}
+
+body.ux-case-study-page .ux-section-intro,
+body.ux-case-study-page .ux-personas-intro {
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.55;
+}
+
+body.ux-case-study-page .ux-section-intro {
+  margin-bottom: 18px;
+}
+
+
+/* Target audience cards */
+
+body.ux-case-study-page .ux-audience-list {
+  display: grid;
+  gap: 14px;
+}
+
+body.ux-case-study-page .ux-audience-card {
+  padding: 20px 21px;
+
+  border-radius: 11px;
+
+  background: hsla(240, 2%, 15%, 0.9);
+  border: 1px solid hsla(0, 0%, 100%, 0.07);
+
+  box-shadow: 0 12px 28px hsla(0, 0%, 0%, 0.12);
+}
+
+body.ux-case-study-page .ux-audience-card h3 {
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.72);
+}
+
+body.ux-case-study-page .ux-audience-card p {
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.45;
+}
+
+
+/* User problem cards */
+
+body.ux-case-study-page .ux-problems-list {
+  display: grid;
+  gap: 10px;
+}
+
+body.ux-case-study-page .ux-problem-item {
+  min-height: 55px;
+
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      hsla(0, 56%, 25%, 0.78),
+      hsla(0, 49%, 20%, 0.78)
+    );
+
+  border: 1px solid hsla(0, 77%, 49%, 0.55);
+}
+
+body.ux-case-study-page .ux-problem-item p {
+  color: var(--white-2);
+  font-size: 14px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+body.ux-case-study-page .ux-problems-takeaway {
+  margin-top: 14px;
+
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+
+/*-----------------------------------*\
+  #OLA USER PERSONAS
+\*-----------------------------------*/
+
+body.ux-case-study-page .ux-personas-section {
+  margin-top: 8px;
+}
+
+body.ux-case-study-page .ux-personas-intro {
+  margin-bottom: 18px;
+}
+
+body.ux-case-study-page .ux-personas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+body.ux-case-study-page .ux-persona-card {
+  min-width: 0;
+
+  padding: 23px 18px 21px;
+
+  border-radius: 10px;
+
+  background: hsla(240, 2%, 14%, 0.94);
+  border: 1px solid hsla(0, 0%, 100%, 0.07);
+
+  box-shadow: 0 15px 34px hsla(0, 0%, 0%, 0.14);
+}
+
+body.ux-case-study-page .ux-persona-image {
+  width: min(145px, 82%);
+  aspect-ratio: 1 / 1;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: var(--onyx);
+}
+
+body.ux-case-study-page .ux-persona-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+  object-fit: cover;
+}
+
+body.ux-case-study-page .ux-persona-heading {
+  text-align: center;
+}
+
+body.ux-case-study-page .ux-persona-heading h3 {
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+body.ux-case-study-page .ux-persona-heading p {
+  min-height: 34px;
+
+  color: var(--light-gray-70);
+  font-size: 12px;
+  font-weight: var(--fw-300);
+  line-height: 1.3;
+}
+
+body.ux-case-study-page .ux-persona-divider {
+  width: 100%;
+  height: 2px;
+
+  margin: 13px 0 16px;
+
+  border-radius: 999px;
+  background: var(--orange-yellow-crayola);
+}
+
+body.ux-case-study-page .ux-persona-details {
+  display: grid;
+  gap: 13px;
+}
+
+body.ux-case-study-page .ux-persona-details strong {
+  display: block;
+
+  color: var(--white-2);
+  font-size: 12px;
+  font-weight: var(--fw-500);
+  line-height: 1.3;
+  margin-bottom: 3px;
+}
+
+body.ux-case-study-page .ux-persona-details p {
+  color: var(--light-gray);
+  font-size: 12px;
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+}
+
+/*-----------------------------------*\
+  #OLA KEY NEEDS + PRIORITIZATION
+\*-----------------------------------*/
+
+body.ux-case-study-page .ux-needs-priority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 40px;
+}
+
+body.ux-case-study-page .ux-key-needs > h2,
+body.ux-case-study-page .ux-feature-priority > h2,
+body.ux-case-study-page .ux-design-system-section > h2 {
+  color: var(--white-2);
+  font-size: 20px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 17px;
+  text-align: left;
+}
+
+body.ux-case-study-page .ux-needs-list,
+body.ux-case-study-page .ux-priority-list {
+  display: grid;
+  gap: 12px;
+}
+
+body.ux-case-study-page .ux-need-card {
+  padding: 18px 20px;
+
+  border-radius: 10px;
+
+  background: hsla(240, 2%, 15%, 0.92);
+  border: 1px solid hsla(0, 0%, 100%, 0.07);
+
+  box-shadow: 0 12px 28px hsla(0, 0%, 0%, 0.12);
+}
+
+body.ux-case-study-page .ux-need-card h3 {
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+
+  padding-bottom: 11px;
+  margin-bottom: 11px;
+
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.75);
+}
+
+body.ux-case-study-page .ux-need-card p {
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.45;
+}
+
+
+/* Priority cards */
+
+body.ux-case-study-page .ux-priority-card {
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+body.ux-case-study-page .ux-priority-card h3 {
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+
+  padding-bottom: 11px;
+  margin-bottom: 10px;
+
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.75);
+}
+
+body.ux-case-study-page .ux-priority-card ul {
+  display: grid;
+  gap: 7px;
+}
+
+body.ux-case-study-page .ux-priority-card li {
+  position: relative;
+
+  padding-left: 13px;
+
+  color: var(--light-gray);
+  font-size: 12px;
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+}
+
+body.ux-case-study-page .ux-priority-card li::before {
+  content: "•";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+body.ux-case-study-page .ux-priority-high {
+  background: hsla(0, 54%, 25%, 0.82);
+  border-color: hsla(0, 74%, 48%, 0.55);
+}
+
+body.ux-case-study-page .ux-priority-medium {
+  background: hsla(43, 100%, 21%, 0.92);
+  border-color: hsla(45, 100%, 43%, 0.52);
+}
+
+body.ux-case-study-page .ux-priority-low {
+  background: hsla(124, 57%, 22%, 0.9);
+  border-color: hsla(121, 76%, 47%, 0.48);
+}
+
+body.ux-case-study-page .ux-priority-takeaway {
+  margin-top: 14px;
+
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+
+/*-----------------------------------*\
+  #OLA UI VISUAL SYSTEM
+\*-----------------------------------*/
+
+body.ux-case-study-page .ux-design-system-intro {
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+body.ux-case-study-page .ux-design-system-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  align-items: start;
+  gap: 40px;
+}
+
+body.ux-case-study-page .ux-design-system-left,
+body.ux-case-study-page .ux-design-system-right {
+  display: grid;
+  gap: 28px;
+}
+
+body.ux-case-study-page .ux-system-block > h3 {
+  color: var(--white-2);
+  font-size: 18px;
+  font-weight: var(--fw-500);
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+
+/* Colours */
+
+body.ux-case-study-page .ux-color-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px 22px;
+}
+
+body.ux-case-study-page .ux-color-group:last-child {
+  grid-column: 1 / -1;
+}
+
+body.ux-case-study-page .ux-color-group > p {
+  color: var(--light-gray);
+  font-size: 11px;
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+body.ux-case-study-page .ux-color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+body.ux-case-study-page .ux-color-swatch {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 4px;
+
+  background: var(--ux-swatch-color);
+  border: 1px solid hsla(0, 0%, 100%, 0.22);
+
+  box-shadow: 0 5px 12px hsla(0, 0%, 0%, 0.15);
+}
+
+
+/* Typography */
+
+body.ux-case-study-page .ux-typography-list {
+  display: grid;
+  gap: 9px;
+}
+
+body.ux-case-study-page .ux-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+body.ux-case-study-page .ux-type-row > span {
+  width: 38px;
+  flex: 0 0 38px;
+
+  color: var(--white-2);
+  font-size: 14px;
+  font-weight: var(--fw-400);
+}
+
+body.ux-case-study-page .ux-type-row > strong {
+  color: var(--white-2);
+  font-weight: var(--fw-500);
+  line-height: 1.2;
+}
+
+body.ux-case-study-page .ux-type-h1 > strong {
+  font-size: 27px;
+  font-weight: var(--fw-600);
+}
+
+body.ux-case-study-page .ux-type-h2 > strong {
+  font-size: 21px;
+  font-weight: var(--fw-600);
+}
+
+body.ux-case-study-page .ux-type-h3 > strong {
+  font-size: 15px;
+  font-weight: var(--fw-600);
+}
+
+body.ux-case-study-page .ux-type-body > strong {
+  font-size: 10px;
+  font-weight: var(--fw-400);
+}
+
+
+/* Buttons */
+
+body.ux-case-study-page .ux-button-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+body.ux-case-study-page .ux-button-panel {
+  padding: 10px;
+
+  display: grid;
+  align-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  border: 1px dashed hsla(270, 58%, 69%, 0.48);
+}
+
+body.ux-case-study-page .ux-demo-button {
+  min-height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 3px;
+
+  color: var(--white-1);
+  font-size: 10px;
+  font-weight: var(--fw-500);
+  text-align: center;
+}
+
+body.ux-case-study-page .ux-demo-button-green {
+  background: #7ddc00;
+}
+
+body.ux-case-study-page .ux-demo-button-orange {
+  background: #ff9500;
+}
+
+body.ux-case-study-page .ux-demo-button-pink {
+  background: #ff0b55;
+}
+
+body.ux-case-study-page .ux-segmented-button {
+  min-height: 31px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+body.ux-case-study-page .ux-segmented-button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white-1);
+  font-size: 10px;
+  font-weight: var(--fw-500);
+}
+
+body.ux-case-study-page .ux-segmented-button span:first-child {
+  background: #000000;
+}
+
+body.ux-case-study-page .ux-segmented-button span:last-child {
+  background: #7ddc00;
+}
+
+body.ux-case-study-page .ux-button-utility-row {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+  border: 1px dashed hsla(270, 58%, 69%, 0.48);
+}
+
+body.ux-case-study-page .ux-small-action,
+body.ux-case-study-page .ux-round-action,
+body.ux-case-study-page .ux-square-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.ux-case-study-page .ux-small-action {
+  min-height: 34px;
+  padding: 5px 9px;
+  gap: 5px;
+  border-radius: 4px;
+}
+
+body.ux-case-study-page .ux-small-action ion-icon {
+  font-size: 14px;
+}
+
+body.ux-case-study-page .ux-small-action span {
+  font-size: 8px;
+  font-weight: var(--fw-500);
+}
+
+body.ux-case-study-page .ux-small-action-service {
+  background: var(--white-1);
+  color: var(--smoky-black);
+}
+
+body.ux-case-study-page .ux-small-action-power {
+  background: #ff9500;
+  color: var(--white-1);
+}
+
+body.ux-case-study-page .ux-round-action,
+body.ux-case-study-page .ux-square-action {
+  width: 34px;
+  height: 34px;
+
+  background: #7ddc00;
+  color: var(--white-1);
+}
+
+body.ux-case-study-page .ux-round-action {
+  border-radius: 50%;
+}
+
+body.ux-case-study-page .ux-square-action {
+  border-radius: 4px;
+}
+
+body.ux-case-study-page .ux-round-action ion-icon,
+body.ux-case-study-page .ux-square-action ion-icon {
+  font-size: 18px;
+}
+
+
+/* Tab bar and icons */
+
+body.ux-case-study-page .ux-system-lower-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 26px;
+}
+
+body.ux-case-study-page .ux-tab-state-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+
+  color: var(--light-gray-70);
+  font-size: 8px;
+  margin-bottom: 4px;
+}
+
+body.ux-case-study-page .ux-demo-tabbar {
+  min-height: 45px;
+
+  padding: 5px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0 0 13px 13px;
+
+  background: #f2f2f2;
+  color: #171717;
+}
+
+body.ux-case-study-page .ux-demo-tabbar > ion-icon {
+  font-size: 15px;
+}
+
+body.ux-case-study-page .ux-demo-tabbar-main {
+  width: 42px;
+  height: 42px;
+
+  margin-top: -19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #c9c9cf;
+  border: 5px solid #f2f2f2;
+}
+
+body.ux-case-study-page .ux-demo-tabbar-main ion-icon {
+  font-size: 20px;
+}
+
+body.ux-case-study-page .ux-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 9px;
+}
+
+body.ux-case-study-page .ux-icons-grid ion-icon {
+  color: var(--white-2);
+  font-size: 16px;
+}
+
+/*-----------------------------------*\
+  #OLA UI UX — MOBILE LAYOUT
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /* Main case-study spacing */
+
+  body.ux-case-study-page .ux-case-study {
+    width: 100%;
+    padding: 0 10px 46px;
+  }
+
+  body.ux-case-study-page .ux-section {
+    width: 100%;
+    margin-bottom: 44px;
+    scroll-margin-top: 26px;
+  }
+
+  body.ux-case-study-page .ux-tab-section {
+    scroll-margin-top: 26px;
+  }
+
+
+  /* About + research */
+
+  body.ux-case-study-page .ux-about-grid,
+  body.ux-case-study-page .ux-research-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  body.ux-case-study-page .ux-about-copy p,
+  body.ux-case-study-page .ux-research-context > p {
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  body.ux-case-study-page .ux-about-highlight {
+    font-size: 16px !important;
+  }
+
+  body.ux-case-study-page .ux-summary-card {
+    width: 100%;
+    padding: 23px 21px;
+    text-align: center;
+  }
+
+  body.ux-case-study-page .ux-summary-tools {
+    justify-content: center;
+  }
+
+  body.ux-case-study-page .ux-about-research {
+    margin-top: 34px;
+    margin-bottom: 42px;
+  }
+
+  body.ux-case-study-page .ux-research-points-grid,
+  body.ux-case-study-page .ux-research-footer {
+    grid-template-columns: 1fr;
+  }
+
+  body.ux-case-study-page .ux-research-takeaway {
+    padding: 8px 2px;
+    text-align: left;
+  }
+
+
+  /* USP */
+
+  body.ux-case-study-page .ux-usp-card {
+    padding: 24px 21px;
+  }
+
+  body.ux-case-study-page .ux-usp-card h2 {
+    font-size: 20px;
+  }
+
+  body.ux-case-study-page .ux-usp-card p {
+    font-size: 15px;
+  }
+
+
+  /* Target Audience followed by User Problems */
+
+  body.ux-case-study-page .ux-audience-problems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  body.ux-case-study-page .ux-target-audience,
+  body.ux-case-study-page .ux-user-problems {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body.ux-case-study-page .ux-target-audience > h2,
+  body.ux-case-study-page .ux-user-problems > h2,
+  body.ux-case-study-page .ux-personas-section > h2,
+  body.ux-case-study-page .ux-key-needs > h2,
+  body.ux-case-study-page .ux-feature-priority > h2,
+  body.ux-case-study-page .ux-design-system-section > h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: left;
+  }
+
+  body.ux-case-study-page .ux-section-intro,
+  body.ux-case-study-page .ux-personas-intro,
+  body.ux-case-study-page .ux-design-system-intro {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  body.ux-case-study-page .ux-audience-card {
+    width: 100%;
+    padding: 19px 18px;
+  }
+
+  body.ux-case-study-page .ux-problem-item {
+    width: 100%;
+    min-height: 58px;
+    padding: 15px 17px;
+  }
+
+
+  /* User Personas — one card after another */
+
+  body.ux-case-study-page .ux-personas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  body.ux-case-study-page .ux-persona-card {
+    width: 100%;
+    min-width: 0;
+    padding: 24px 21px;
+  }
+
+  body.ux-case-study-page .ux-persona-image {
+    width: 145px;
+    max-width: 46%;
+  }
+
+  body.ux-case-study-page .ux-persona-heading p {
+    min-height: 0;
+  }
+
+  body.ux-case-study-page .ux-persona-details p {
+    font-size: 13px;
+  }
+
+
+  /* Key User Needs followed by Feature Prioritization */
+
+  body.ux-case-study-page .ux-needs-priority-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  body.ux-case-study-page .ux-key-needs,
+  body.ux-case-study-page .ux-feature-priority {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body.ux-case-study-page .ux-need-card,
+  body.ux-case-study-page .ux-priority-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+
+  /* UI Visual System — Figma order:
+     Colors
+     Typography
+     Buttons
+     Tab Bar
+     Icons
+  */
+
+  body.ux-case-study-page .ux-design-system-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+
+  body.ux-case-study-page .ux-design-system-left,
+  body.ux-case-study-page .ux-design-system-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  body.ux-case-study-page .ux-system-block {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body.ux-case-study-page .ux-system-block > h3 {
+    color: var(--orange-yellow-crayola);
+    font-size: 20px;
+    font-weight: var(--fw-600);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+
+  /* Colors: Main / Background / Text / Other */
+
+  body.ux-case-study-page .ux-color-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  body.ux-case-study-page .ux-color-group,
+  body.ux-case-study-page .ux-color-group:last-child {
+    grid-column: auto;
+    min-width: 0;
+  }
+
+  body.ux-case-study-page .ux-color-group > p {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+
+  body.ux-case-study-page .ux-color-swatches {
+    gap: 7px;
+  }
+
+  body.ux-case-study-page .ux-color-swatch {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  /* Typography */
+
+  body.ux-case-study-page .ux-typography-list {
+    gap: 14px;
+  }
+
+  body.ux-case-study-page .ux-type-row {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  body.ux-case-study-page .ux-type-row > span {
+    width: auto;
+    flex: none;
+  }
+
+  body.ux-case-study-page .ux-type-h1 > strong {
+    font-size: 27px;
+  }
+
+  body.ux-case-study-page .ux-type-h2 > strong {
+    font-size: 20px;
+  }
+
+  body.ux-case-study-page .ux-type-h3 > strong {
+    font-size: 14px;
+  }
+
+
+  /* Buttons */
+
+  body.ux-case-study-page .ux-button-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  body.ux-case-study-page .ux-button-panel {
+    width: 100%;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  body.ux-case-study-page .ux-demo-button,
+  body.ux-case-study-page .ux-segmented-button {
+    min-height: 38px;
+  }
+
+  body.ux-case-study-page .ux-button-utility-row {
+    grid-column: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 14px;
+
+    padding: 8px 0;
+    border: 0;
+  }
+
+  body.ux-case-study-page .ux-small-action {
+    width: 100%;
+    min-height: 54px;
+
+    border: 1px dashed hsla(270, 58%, 69%, 0.48);
+    border-radius: 8px;
+  }
+
+  body.ux-case-study-page
+  .ux-button-utility-row
+  .ux-small-action:nth-child(1),
+  body.ux-case-study-page
+  .ux-button-utility-row
+  .ux-small-action:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  body.ux-case-study-page .ux-round-action,
+  body.ux-case-study-page .ux-square-action {
+    width: 42px;
+    height: 42px;
+
+    justify-self: center;
+
+    outline: 1px dashed hsla(270, 58%, 69%, 0.48);
+    outline-offset: 7px;
+  }
+
+
+  /* Tab Bar then Icons */
+
+  body.ux-case-study-page .ux-system-lower-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  body.ux-case-study-page .ux-demo-tabbar {
+    width: 100%;
+    min-height: 56px;
+    padding: 7px 16px;
+  }
+
+  body.ux-case-study-page .ux-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px 12px;
+  }
+
+  body.ux-case-study-page .ux-icons-grid ion-icon {
+    justify-self: center;
+    font-size: 19px;
+  }
+}
+
+/*-----------------------------------*\
+  #OLA FINAL UI SCREENS
+\*-----------------------------------*/
+
+body.ux-case-study-page .ux-final-ui-section > h2 {
+  color: var(--white-2);
+  font-size: 20px;
+  font-weight: var(--fw-600);
+  line-height: 1.25;
+  margin-bottom: 17px;
+  text-align: left;
+}
+
+body.ux-case-study-page .ux-final-ui-intro {
+  max-width: 1000px;
+
+  color: var(--light-gray);
+  font-size: 13px;
+  font-weight: var(--fw-300);
+  line-height: 1.55;
+
+  margin-bottom: 22px;
+}
+
+body.ux-case-study-page .ux-final-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 42px 36px;
+}
+
+body.ux-case-study-page .ux-final-group {
+  min-width: 0;
+}
+
+body.ux-case-study-page .ux-final-group-full {
+  grid-column: 1 / -1;
+}
+
+body.ux-case-study-page .ux-final-group-heading {
+  width: 100%;
+
+  padding-bottom: 9px;
+  margin-bottom: 8px;
+
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.72);
+}
+
+body.ux-case-study-page .ux-final-group-heading h3 {
+  color: var(--orange-yellow-crayola);
+  font-size: 15px;
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+}
+
+body.ux-case-study-page .ux-final-group-heading h3 span {
+  color: var(--orange-yellow-crayola);
+}
+
+body.ux-case-study-page .ux-final-group-subtitle {
+  color: var(--light-gray);
+  font-size: 12px;
+  font-weight: var(--fw-300);
+  line-height: 1.4;
+
+  margin-bottom: 18px;
+}
+
+
+/* First two groups contain three screens each */
+
+body.ux-case-study-page
+.ux-final-group-half
+.ux-final-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 10px;
+}
+
+
+/* Full-width groups maintain six equal screen positions */
+
+body.ux-case-study-page
+.ux-final-group-full
+.ux-final-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 12px;
+}
+
+
+/* Individual phone-screen button */
+
+body.ux-case-study-page .ux-final-screen {
+  width: 100%;
+  min-width: 0;
+
+  padding: 0;
+  margin: 0;
+
+  display: block;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: transparent;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.35s ease;
+}
+
+body.ux-case-study-page .ux-final-screen img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 19.5;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: inherit;
+
+  background: transparent;
+}
+
+@media (hover: hover) {
+  body.ux-case-study-page .ux-final-screen:hover {
+    transform: translateY(-7px) scale(1.025);
+    filter: brightness(1.04);
+  }
+}
+
+body.ux-case-study-page .ux-final-screen:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 580px) {
+
+  body.ux-case-study-page .ux-final-ui-section > h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  body.ux-case-study-page .ux-final-ui-intro {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  body.ux-case-study-page .ux-final-groups {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  body.ux-case-study-page .ux-final-group-full {
+    grid-column: auto;
+  }
+
+  body.ux-case-study-page .ux-final-group-heading h3 {
+    font-size: 15px;
+  }
+
+  body.ux-case-study-page .ux-final-group-subtitle {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+/* Final UI screens: fixed 2-column mobile grid */
+
+body.ux-case-study-page
+.ux-final-group-half
+.ux-final-screens-grid,
+body.ux-case-study-page
+.ux-final-group-full
+.ux-final-screens-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px 12px;
+
+  width: 100%;
+
+  overflow: visible;
+  padding-bottom: 0;
+}
+
+body.ux-case-study-page .ux-final-screen {
+  width: 100%;
+  min-width: 0;
+  flex: none;
+
+  scroll-snap-align: unset;
+
+  border-radius: 10px;
+}
+}
+
+/*-----------------------------------*\
+  #UI UX DESKTOP TWO-LINE TAB BAR
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  body.ux-case-study-page .case-tabs {
+    /*
+     * Normal position before the tabs become sticky.
+     * Keeps the original 28px spacing on both sides.
+     */
+    width: calc(100% - 56px) !important;
+    max-width: none !important;
+
+    margin-left: 28px !important;
+    margin-right: 28px !important;
+    margin-bottom: 42px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
+
+    gap: 7px !important;
+    padding: 8px !important;
+
+    transition:
+      width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      margin-left 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /*
+   * When the back button moves into its sticky position,
+   * shrink the tab bar and move it towards the right.
+   */
+  body.ux-case-study-page.case-tabs-stuck .case-tabs {
+    width: calc(100% - 100px) !important;
+    margin-left: 75px !important;
+    margin-right: 28px !important;
+  }
+
+  body.ux-case-study-page .case-tabs a {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 56px;
+
+    padding: 8px 5px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: normal !important;
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.25;
+  }
+}
+
+body.ux-case-study-page .ux-about-research {
+	width: 100%;
+	margin-top: 42px;
+	margin-bottom: 52px; }
+
+@media (max-width: 580px) {
+  body.ux-case-study-page .ux-about-research {
+    margin-top: 34px;
+    margin-bottom: 42px;
   }
 }

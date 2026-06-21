@@ -113,9 +113,13 @@ const renderTabs = function () {
     const link = document.createElement("a");
     const sectionId = getSectionId(tab.id);
 
-    link.href = "#" + sectionId;
-    link.innerText = tab.label;
+link.href = "#" + sectionId;
 
+if (project.layout === "ux-case-study" && tab.desktopLabel) {
+  link.innerHTML = tab.desktopLabel;
+} else {
+  link.innerText = tab.label;
+}
     if (index === 0) {
       link.classList.add("active");
     }
@@ -227,6 +231,679 @@ const renderProjectSummary = function () {
     });
   }
 };
+
+const renderUXCaseStudy = function () {
+  const uxRoot = document.querySelector("[data-ux-case-study]");
+  const uxData = project.uxCaseStudy;
+
+  const isUXCaseStudy =
+    project.layout === "ux-case-study" &&
+    uxRoot &&
+    uxData;
+
+  document.body.classList.toggle(
+    "ux-case-study-page",
+    Boolean(isUXCaseStudy)
+  );
+
+  if (!uxRoot) return;
+
+  if (!isUXCaseStudy) {
+    uxRoot.hidden = true;
+    uxRoot.innerHTML = "";
+    return;
+  }
+
+  const renderParagraphs = function (paragraphs) {
+    return (paragraphs || [])
+      .map(function (paragraph) {
+        return `<p>${paragraph}</p>`;
+      })
+      .join("");
+  };
+
+  const renderTools = function () {
+    return (project.tools || [])
+      .map(function (tool) {
+        return `
+          <div class="ux-summary-tool">
+            <img
+              src="${tool.icon}"
+              alt="${tool.name}"
+              title="${tool.name}">
+          </div>
+        `;
+      })
+      .join("");
+  };
+
+  const renderResearchPoints = function () {
+    return (uxData.research.points || [])
+      .map(function (point) {
+        return `
+          <div class="ux-research-point">
+            <p>${point}</p>
+          </div>
+        `;
+      })
+      .join("");
+  };	
+	
+const renderAudienceGroups = function () {
+  return (uxData.targetAudience.groups || [])
+    .map(function (group) {
+      return `
+        <div class="ux-audience-card">
+          <h3>${group.title}</h3>
+          <p>${group.description}</p>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderUserProblems = function () {
+  return (uxData.userProblems.items || [])
+    .map(function (problem) {
+      return `
+        <div class="ux-problem-item">
+          <p>${problem}</p>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderPersonas = function () {
+  return (uxData.personas.items || [])
+    .map(function (persona) {
+      return `
+        <div class="ux-persona-card">
+
+          <div class="ux-persona-image">
+            <img
+              src="${persona.image}"
+              alt="${persona.name}"
+              loading="lazy">
+          </div>
+
+          <div class="ux-persona-heading">
+            <h3>${persona.name}</h3>
+            <p>${persona.type}</p>
+          </div>
+
+          <div class="ux-persona-divider"></div>
+
+          <div class="ux-persona-details">
+
+            <div>
+              <strong>Background:</strong>
+              <p>${persona.background}</p>
+            </div>
+
+            <div>
+              <strong>Main Need:</strong>
+              <p>${persona.mainNeed}</p>
+            </div>
+
+          </div>
+
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderUserNeeds = function () {
+  return (uxData.keyUserNeeds.items || [])
+    .map(function (item) {
+      return `
+        <div class="ux-need-card">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderPriorityGroups = function () {
+  return (uxData.featurePrioritization.groups || [])
+    .map(function (group) {
+      const listItems = (group.items || [])
+        .map(function (item) {
+          return `<li>${item}</li>`;
+        })
+        .join("");
+
+      return `
+        <div class="ux-priority-card ux-priority-${group.level}">
+          <h3>${group.title}</h3>
+
+          <ul>
+            ${listItems}
+          </ul>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderColorGroups = function () {
+  return (uxData.designSystem.colors || [])
+    .map(function (group) {
+      const swatches = (group.values || [])
+        .map(function (color) {
+          return `
+            <span
+              class="ux-color-swatch"
+              style="--ux-swatch-color: ${color};"
+              title="${color}">
+            </span>
+          `;
+        })
+        .join("");
+
+      return `
+        <div class="ux-color-group">
+          <p>${group.title}</p>
+
+          <div class="ux-color-swatches">
+            ${swatches}
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+};
+
+const renderTypographyRows = function () {
+  return (uxData.designSystem.typography || [])
+    .map(function (item) {
+      return `
+        <div class="ux-type-row ux-type-${item.className}">
+          <span>${item.label}</span>
+          <strong>${item.sample}</strong>
+        </div>
+      `;
+    })
+    .join("");
+};	
+	
+const renderFinalScreenGroups = function () {
+  return (uxData.finalUIScreens.groups || [])
+    .map(function (group, groupIndex) {
+      const screenItems = (group.items || [])
+        .map(function (item, screenIndex) {
+          return `
+            <button
+              class="ux-final-screen"
+              type="button"
+              data-ux-final-screen
+              data-ux-final-group="${groupIndex}"
+              data-ux-final-index="${screenIndex}"
+              aria-label="Open ${item.alt}">
+
+              <img
+                src="${item.src}"
+                alt="${item.alt}"
+                loading="lazy">
+
+            </button>
+          `;
+        })
+        .join("");
+
+      return `
+        <div
+          class="ux-final-group ux-final-group-${group.layout || "full"}">
+
+          <div class="ux-final-group-heading">
+            <h3>
+              <span>${group.number}.</span>
+              ${group.title}
+            </h3>
+          </div>
+
+          <p class="ux-final-group-subtitle">
+            ${group.subtitle}
+          </p>
+
+          <div class="ux-final-screens-grid">
+            ${screenItems}
+          </div>
+
+        </div>
+      `;
+    })
+    .join("");
+};	
+	
+  uxRoot.hidden = false;
+
+  uxRoot.innerHTML = `
+    <section
+      class="ux-section ux-about-section"
+      id="about-project">
+
+      <h2>${uxData.about.heading}</h2>
+
+      <div class="ux-about-grid">
+
+        <div class="ux-about-copy">
+          ${renderParagraphs(uxData.about.primaryText)}
+        </div>
+
+        <div class="ux-about-copy ux-about-goal">
+          ${renderParagraphs(uxData.about.goalText)}
+
+          <p class="ux-about-highlight">
+            ${uxData.about.contextHighlight}
+          </p>
+        </div>
+
+        <aside class="ux-summary-card">
+
+          <div class="ux-summary-section">
+            <p>My Role</p>
+            <h3>${project.role}</h3>
+          </div>
+
+          <div class="ux-summary-section">
+            <p>Deliverables</p>
+            <h3>${project.deliverables}</h3>
+          </div>
+
+          <div class="ux-summary-section">
+            <p>Tools Used</p>
+
+            <div class="ux-summary-tools">
+              ${renderTools()}
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </section>
+
+
+<section class="ux-research-section ux-about-research">
+
+      <div class="ux-research-grid">
+
+        <div class="ux-research-context">
+
+          <h2>${uxData.research.heading}</h2>
+
+          ${renderParagraphs(uxData.research.contextText)}
+
+          <div class="ux-purpose-card">
+            <p>${uxData.research.purposeLabel}</p>
+
+            <strong>
+              ${uxData.research.purposeStatement}
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="ux-research-points-area">
+
+          <h2>${uxData.research.pointsHeading}</h2>
+
+          <div class="ux-research-points-grid">
+            ${renderResearchPoints()}
+          </div>
+
+          <div class="ux-research-footer">
+
+            <div class="ux-research-point ux-remote-control-point">
+              <p>${uxData.research.remoteControlPoint}</p>
+            </div>
+
+            <p class="ux-research-takeaway">
+              ${uxData.research.takeaway}
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section
+      class="ux-section ux-usp-section"
+      id="unique-selling-proposition">
+
+      <div class="ux-usp-card">
+        <h2>${uxData.usp.heading}</h2>
+        <p>${uxData.usp.statement}</p>
+      </div>
+    </section>
+<section class="ux-section ux-audience-problems-section">
+
+  <div class="ux-audience-problems-grid">
+
+    <div
+      class="ux-target-audience ux-tab-section"
+      id="target-audience">
+
+      <h2>${uxData.targetAudience.heading}</h2>
+
+      <p class="ux-section-intro">
+        ${uxData.targetAudience.description}
+      </p>
+
+      <div class="ux-audience-list">
+        ${renderAudienceGroups()}
+      </div>
+
+    </div>
+
+
+    <div
+      class="ux-user-problems ux-tab-section"
+      id="user-problems-identified">
+
+      <h2>${uxData.userProblems.heading}</h2>
+
+      <p class="ux-section-intro">
+        ${uxData.userProblems.description}
+      </p>
+
+      <div class="ux-problems-list">
+        ${renderUserProblems()}
+      </div>
+
+      <p class="ux-problems-takeaway">
+        ${uxData.userProblems.takeaway}
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section
+  class="ux-section ux-personas-section ux-tab-section"
+  id="user-personas">
+
+  <h2>${uxData.personas.heading}</h2>
+
+  <p class="ux-personas-intro">
+    ${uxData.personas.introduction}
+  </p>
+
+  <div class="ux-personas-grid">
+    ${renderPersonas()}
+  </div>
+
+</section>
+
+<section class="ux-section ux-needs-priority-section">
+
+  <div class="ux-needs-priority-grid">
+
+    <div
+      class="ux-key-needs ux-tab-section"
+      id="key-user-needs">
+
+      <h2>${uxData.keyUserNeeds.heading}</h2>
+
+      <p class="ux-section-intro">
+        ${uxData.keyUserNeeds.description}
+      </p>
+
+      <div class="ux-needs-list">
+        ${renderUserNeeds()}
+      </div>
+
+    </div>
+
+
+    <div
+      class="ux-feature-priority ux-tab-section"
+      id="feature-prioritization">
+
+      <h2>${uxData.featurePrioritization.heading}</h2>
+
+      <p class="ux-section-intro">
+        ${uxData.featurePrioritization.description}
+      </p>
+
+      <div class="ux-priority-list">
+        ${renderPriorityGroups()}
+      </div>
+
+      <p class="ux-priority-takeaway">
+        ${uxData.featurePrioritization.takeaway}
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section
+  class="ux-section ux-design-system-section ux-tab-section"
+  id="design-system">
+
+  <h2>${uxData.designSystem.heading}</h2>
+
+  <p class="ux-design-system-intro">
+    ${uxData.designSystem.description}
+  </p>
+
+  <div class="ux-design-system-grid">
+
+    <div class="ux-design-system-left">
+
+      <div class="ux-system-block ux-colors-block">
+        <h3>Colors</h3>
+
+        <div class="ux-color-groups">
+          ${renderColorGroups()}
+        </div>
+      </div>
+
+
+      <div class="ux-system-block ux-typography-block">
+        <h3>Typography</h3>
+
+        <div class="ux-typography-list">
+          ${renderTypographyRows()}
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="ux-design-system-right">
+
+      <div class="ux-system-block ux-buttons-block">
+        <h3>Buttons</h3>
+
+        <div class="ux-button-showcase">
+
+          <div class="ux-button-panel">
+
+            <div class="ux-demo-button ux-demo-button-green">
+              Log in
+            </div>
+
+            <div class="ux-segmented-button">
+              <span>Log in</span>
+              <span>Register</span>
+            </div>
+
+          </div>
+
+
+          <div class="ux-button-panel">
+
+            <div class="ux-demo-button ux-demo-button-green">
+              Book An Appointment
+            </div>
+
+            <div class="ux-demo-button ux-demo-button-orange">
+              Remind Me Later
+            </div>
+
+            <div class="ux-demo-button ux-demo-button-pink">
+              Ignore
+            </div>
+
+          </div>
+
+
+          <div class="ux-button-utility-row">
+
+            <div class="ux-small-action ux-small-action-service">
+              <ion-icon name="construct-outline"></ion-icon>
+              <span>Appointment</span>
+            </div>
+
+            <div class="ux-small-action ux-small-action-power">
+              <ion-icon name="flash-outline"></ion-icon>
+              <span>Power Mode</span>
+            </div>
+
+            <div class="ux-round-action">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+
+            <div class="ux-round-action">
+              <ion-icon name="locate-outline"></ion-icon>
+            </div>
+
+            <div class="ux-square-action">
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+
+            <div class="ux-square-action">
+              <ion-icon name="home-outline"></ion-icon>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="ux-system-lower-grid">
+
+        <div class="ux-system-block ux-tabbar-block">
+          <h3>Tab Bar</h3>
+
+          <div class="ux-tab-state-labels">
+            <span>State: On-click</span>
+            <span>State: Default</span>
+          </div>
+
+          <div class="ux-demo-tabbar">
+
+            <ion-icon name="home-outline"></ion-icon>
+
+            <ion-icon name="location-outline"></ion-icon>
+
+            <span class="ux-demo-tabbar-main">
+              <ion-icon name="ellipse-outline"></ion-icon>
+            </span>
+
+            <ion-icon name="flash-outline"></ion-icon>
+
+            <ion-icon name="settings-outline"></ion-icon>
+
+          </div>
+
+        </div>
+
+
+        <div class="ux-system-block ux-icons-block">
+          <h3>Icons</h3>
+
+          <div class="ux-icons-grid">
+
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-icon name="locate-outline"></ion-icon>
+            <ion-icon name="flash-outline"></ion-icon>
+            <ion-icon name="notifications-outline"></ion-icon>
+            <ion-icon name="bluetooth-outline"></ion-icon>
+            <ion-icon name="calendar-outline"></ion-icon>
+
+            <ion-icon name="home-outline"></ion-icon>
+            <ion-icon name="location-outline"></ion-icon>
+            <ion-icon name="navigate-outline"></ion-icon>
+            <ion-icon name="settings-outline"></ion-icon>
+            <ion-icon name="speedometer-outline"></ion-icon>
+            <ion-icon name="thermometer-outline"></ion-icon>
+
+            <ion-icon name="construct-outline"></ion-icon>
+            <ion-icon name="time-outline"></ion-icon>
+            <ion-icon name="documents-outline"></ion-icon>
+            <ion-icon name="trash-outline"></ion-icon>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section
+  class="ux-section ux-final-ui-section ux-tab-section"
+  id="final-ui-screens">
+
+  <h2>${uxData.finalUIScreens.heading}</h2>
+
+  <p class="ux-final-ui-intro">
+    ${uxData.finalUIScreens.introduction}
+  </p>
+
+  <div class="ux-final-groups">
+    ${renderFinalScreenGroups()}
+  </div>
+
+</section>
+
+  `;
+
+const finalScreenButtons = uxRoot.querySelectorAll(
+  "[data-ux-final-screen]"
+);
+
+finalScreenButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    const groupIndex = Number(button.dataset.uxFinalGroup);
+    const screenIndex = Number(button.dataset.uxFinalIndex);
+
+    const screenGroup =
+      uxData.finalUIScreens.groups[groupIndex];
+
+    if (!screenGroup || !screenGroup.items) return;
+
+    openCasePreview(screenGroup.items, screenIndex);
+  });
+});	
+	
+};
+
 
 let currentPreviewItems = [];
 let currentPreviewIndex = 0;
@@ -1050,6 +1727,7 @@ renderTabs();
 renderCoverImage();
 renderProjectOverview();
 renderProjectSummary();
+renderUXCaseStudy();
 renderThinkingSections();
 renderGallerySections();
 renderNextProjects();

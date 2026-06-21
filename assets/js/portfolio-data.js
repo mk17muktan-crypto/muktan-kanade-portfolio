@@ -3779,5 +3779,605 @@ relatedProjects: [
       imageLabel: "Samartha Seva Mandal"
     }
   ]
+ },
+	
+"ui-ux-ola-scooty-app": {
+  title: "UX - OLA Scooty App",
+  fullTitle: "UX - OLA Scooty App",
+
+  category: "UI/UX",
+  categorySlug: "ui%2Fux",
+
+  industry: "Mobility / Electric Vehicles",
+  projectType: "UI/UX Case Study",
+
+  layout: "ux-case-study",
+
+  role: "UI/UX Designer",
+
+  deliverables:
+    "User Research, App Interface Design, App Style Guide",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon: "./assets/images/software Icons/corel-draw.png"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+
+    categoryLabel: "UI/UX",
+    categoryUrl:
+      "./index.html?section=portfolio&category=ui%2Fux",
+
+    currentLabel: "UX - OLA Scooty App"
+  },
+
+tabs: [
+  {
+    id: "about-project",
+    label: "About the Project",
+    desktopLabel: "About the<br>Project"
+  },
+  {
+    id: "unique-selling-proposition",
+    label: "Unique Selling Proposition",
+    desktopLabel: "Unique Selling<br>Proposition"
+  },
+  {
+    id: "target-audience",
+    label: "Target Audience",
+    desktopLabel: "Target<br>Audience"
+  },
+  {
+    id: "user-problems-identified",
+    label: "User Problems Identified",
+    desktopLabel: "User Problems<br>Identified"
+  },
+  {
+    id: "user-personas",
+    label: "User Personas",
+    desktopLabel: "User<br>Personas"
+  },
+  {
+    id: "key-user-needs",
+    label: "Key User Needs",
+    desktopLabel: "Key<br>User Needs"
+  },
+  {
+    id: "feature-prioritization",
+    label: "Feature Prioritization",
+    desktopLabel: "Feature<br>Prioritization"
+  },
+  {
+    id: "design-system",
+    label: "Design System",
+    desktopLabel: "Design<br>System"
+  },
+  {
+    id: "final-ui-screens",
+    label: "Final UI Screens",
+    desktopLabel: "Final<br>UI Screens"
+  }
+],
+	
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Uiux/OLA.jpg",
+      alt: "UX OLA Scooty App portfolio cover"
+    },
+
+    mobile: {
+      src: "./assets/images/Thumbnails/Uiux/OLA.jpg",
+      alt: "UX OLA Scooty App mobile portfolio cover"
+    }
+  },
+
+  uxCaseStudy: {
+    about: {
+      heading: "About the Project",
+
+      primaryText: [
+        "This was a hypothetical UI/UX college project based on the launch of the OLA electric scooter. The app was designed as a mobile dashboard for users when they are not actively riding — for example, when they are at home, in the office, planning a ride, checking vehicle status or managing service tasks.",
+
+        "Since the scooter already has its own display while riding, the app focuses on off-scooter use cases like checking battery, range, vehicle health, charging points, service reminders and remote controls."
+      ],
+
+      goalText: [
+        "The goal was to help OLA scooter users manage their vehicle better through a simple and clear interface."
+      ],
+
+      contextHighlight:
+        "A key context I considered was that the app would be used mainly before or after riding, not during the ride, because the scooter’s own display already supports the rider while driving."
+    },
+
+    research: {
+      heading: "Research & Context",
+
+      contextText: [
+        "The main context was simple: the app would be used mostly when the user is not actively riding the scooter.",
+
+        "While riding, the scooter’s own display is already in front of the user. So the mobile app is more useful at home, in the office, before leaving for a ride, after parking, or while managing service and charging tasks."
+      ],
+
+      purposeLabel:
+        "This gave the app a clear purpose:",
+
+      purposeStatement:
+        "It works as a remote scooter dashboard for checking battery, range, vehicle health, charging points, service updates and controls.",
+
+      pointsHeading: "Key Research Points",
+
+      points: [
+        "The app is mainly useful when the user is away from the scooter or preparing for a ride.",
+
+        "While riding, the scooter display already handles immediate ride information.",
+
+        "Users need to check battery percentage and distance left before starting a trip.",
+
+        "Battery temperature and tyre pressure help users understand vehicle health before use.",
+
+        "Nearby charging points help users plan routes and avoid range anxiety.",
+
+        "Service reminders and appointment booking help users maintain the scooter on time."
+      ],
+
+      remoteControlPoint:
+        "A remote kill switch gives users control when the scooter is parked, stolen or accidentally left on.",
+
+      takeaway:
+        "The app was planned as an off-scooter control dashboard — useful before a ride, after parking, or when the user needs to check and manage the scooter remotely."
+    },
+
+    usp: {
+  heading: "USP",
+
+  statement:
+    "A remote EV dashboard for OLA scooter users to check battery, range, vehicle health, charging, service and remote controls when they are not actively riding."
+},
+
+targetAudience: {
+  heading: "Target Audience",
+
+  description:
+    "The app is designed for OLA electric scooter users who want to manage their scooter easily through their phone.",
+
+  groups: [
+    {
+      title: "Primary Audience",
+
+      description:
+        "Existing OLA scooter owners who need quick access to battery, range, vehicle health, charging, service updates and remote controls."
+    },
+    {
+      title: "Secondary Audience",
+
+      description:
+        "First-time EV users and urban commuters who need simple information about battery usage, charging, service and vehicle readiness."
+    },
+    {
+      title: "Tertiary Audience",
+
+      description:
+        "Brand-conscious and environmentally conscious users who value smart mobility, cleaner travel and a polished ownership experience."
+    }
+  ]
+},
+
+userProblems: {
+  heading: "User Problems Identified",
+
+  description:
+    "EV users need quick and clear information while managing their scooter. The main challenge was to fit important features without making the app feel crowded.",
+
+  items: [
+    "Unclear Battery & Range Information",
+    "Limited Visibility of Battery Temperature & Tyre Pressure",
+    "Difficulty Finding Nearby Charging Points Quickly",
+    "Missed Service Schedules & Delayed Maintenance",
+    "Too Many Features Without Clear Grouping",
+    "Need for Quick Access to Important Vehicle Controls"
+  ],
+
+  takeaway:
+    "The main UX challenge was to turn EV-related features into a simple, useful and easy-to-understand dashboard."
+},
+
+personas: {
+  heading: "User Personas",
+
+  introduction:
+    "I created four personas to understand how different OLA scooter users may use the app when they are not riding. The app is mainly useful at home, in the office, before a ride, after parking, or while managing charging, service and vehicle status. Each persona helped define a different off-scooter use case: checking readiness, planning a ride, understanding EV information, booking service or using remote controls.",
+
+  items: [
+    {
+      name: "Rohan Mehta",
+      type: "Urban Commuter",
+
+      image:
+        "./assets/images/Portfolio/Uiux/OLA/Persona-Rohan-Mehta.jpg",
+
+      background:
+        "Uses the scooter daily for work and needs to check battery, range and route before leaving.",
+
+      mainNeed:
+        "Know if the scooter is ready for the next trip."
+    },
+    {
+      name: "Neha Patil",
+      type: "First-Time EV User",
+
+      image:
+        "./assets/images/Portfolio/Uiux/OLA/Persona-Neha-Patil.jpg",
+
+      background:
+        "Recently shifted from a petrol scooter to an EV and needs simple updates about battery, charging and vehicle health.",
+
+      mainNeed:
+        "Understand the scooter clearly without feeling confused."
+    },
+    {
+      name: "Priya Sharma",
+      type: "Brand-Conscious Urban User",
+
+      image:
+        "./assets/images/Portfolio/Uiux/OLA/Persona-Priya-Sharma.jpg",
+
+      background:
+        "Values smart technology, convenience and a polished ownership experience.",
+
+      mainNeed:
+        "A clean app that makes scooter ownership feel smart and effortless."
+    },
+    {
+      name: "Akhil Deshmukh",
+      type: "Environmentally Conscious User",
+
+      image:
+        "./assets/images/Portfolio/Uiux/OLA/Persona-Akhil-Deshmukh.jpg",
+
+      background:
+        "Uses the scooter as a practical and eco-friendly travel choice.",
+
+      mainNeed:
+        "Simple information that helps him manage the scooter confidently every day."
+    }
+  ]
+},
+
+keyUserNeeds: {
+  heading: "Key User Needs",
+
+  description:
+    "The main user needs were based on everyday EV ownership problems.",
+
+  items: [
+    {
+      title: "Battery Confidence",
+      description:
+        "Clear view of battery percentage and distance left."
+    },
+    {
+      title: "Vehicle Health",
+      description:
+        "Simple status for battery temperature and tyre pressure."
+    },
+    {
+      title: "Charging Support",
+      description:
+        "Quick access to nearby charging points."
+    },
+    {
+      title: "Service Clarity",
+      description:
+        "Timely service reminders and easy appointment booking."
+    },
+    {
+      title: "Vehicle Control",
+      description:
+        "Easy access to power mode and remote kill switch."
+    }
+  ]
+},
+
+featurePrioritization: {
+  heading: "Feature Prioritization",
+
+  description:
+    "I prioritized features based on what a user would need most during daily use.",
+
+  groups: [
+    {
+      level: "high",
+      title: "High Priority",
+
+      items: [
+        "Battery Percentage & Distance Left",
+        "Battery Temperature Monitor",
+        "Tyre Pressure Status",
+        "Power Mode Control",
+        "Nearby Charging Points",
+        "Service Reminder & Appointment Booking",
+        "Remote Kill Switch"
+      ]
+    },
+    {
+      level: "medium",
+      title: "Medium Priority",
+
+      items: [
+        "Route Navigation",
+        "Service Status Check"
+      ]
+    },
+    {
+      level: "low",
+      title: "Low Priority",
+
+      items: [
+        "Profile and Account Screens"
+      ]
+    }
+  ],
+
+  takeaway:
+    "The main priority was to make essential EV information and controls easy to find before the user feels confused or stuck."
+},
+
+designSystem: {
+  heading: "UI Visual System",
+
+  description:
+    "The design system was planned to make the app feel modern, clean and dashboard-like. Since the app shows important scooter data, the focus was on clear layouts, simple icons, easy-to-read cards and status-based colours.",
+
+  colors: [
+    {
+      title: "Main",
+      values: [
+        "#7DDC00",
+        "#FFFFFF",
+        "#000000"
+      ]
+    },
+    {
+      title: "Background",
+      values: [
+        "#F2F2F2",
+        "#FFFFFF"
+      ]
+    },
+    {
+      title: "Text",
+      values: [
+        "#080808",
+        "#C9C9CF",
+        "#7DDC00"
+      ]
+    },
+    {
+      title: "Other",
+      values: [
+        "#7DDC00",
+        "#FFE600",
+        "#FF9600",
+        "#FF0B55",
+        "#FF8700",
+        "#F2294A",
+        "#5A5CEB",
+        "#68B7E7",
+        "#00CF86"
+      ]
+    }
+  ],
+
+  typography: [
+    {
+      label: "H1",
+      sample: "Outfit 37px Bold",
+      className: "h1"
+    },
+    {
+      label: "H2",
+      sample: "Outfit 28px Bold",
+      className: "h2"
+    },
+    {
+      label: "H3",
+      sample: "Outfit 18px Bold",
+      className: "h3"
+    },
+    {
+      label: "Body Copy",
+      sample: "Menu Option Text 12px Regular",
+      className: "body"
+    }
+  ]
+},
+
+finalUIScreens: {
+  heading: "Final UI Screens",
+
+  introduction:
+    "The final screens were planned as one connected EV ownership system. The user enters through login/register, reaches the home dashboard, checks the scooter’s condition, and then takes action through pages for battery, vehicle health, charging, navigation, servicing and remote control.",
+
+  groups: [
+    {
+      number: "01",
+      title: "Entry Screens",
+      subtitle: "Login & Registration",
+      layout: "half",
+
+      items: [
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-01.jpg",
+          alt: "OLA app welcome and entry screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-02.jpg",
+          alt: "OLA app login screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-03.jpg",
+          alt: "OLA app registration screen"
+        }
+      ]
+    },
+
+    {
+      number: "02",
+      title: "Main Control Centre & Vehicle Health Screens",
+      subtitle: "Home Dashboard",
+      layout: "half",
+
+      items: [
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-04.jpg",
+          alt: "OLA app battery dashboard"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-05.jpg",
+          alt: "OLA app battery temperature dashboard"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-06.jpg",
+          alt: "OLA app tyre pressure dashboard"
+        }
+      ]
+    },
+
+    {
+      number: "03",
+      title: "Travel Support Screens",
+      subtitle: "Route Navigation & Nearby Charging Points",
+      layout: "full",
+
+      items: [
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-07.jpg",
+          alt: "OLA app route navigation screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-08.jpg",
+          alt: "OLA app nearby charging point screen"
+        }
+      ]
+    },
+
+    {
+      number: "04",
+      title: "Service Support Screens",
+      subtitle: "Service Reminder, Service Status & Appointment Booking",
+      layout: "full",
+
+      items: [
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-09.jpg",
+          alt: "OLA app service notifications screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-10.jpg",
+          alt: "OLA app servicing status check screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-11.jpg",
+          alt: "OLA app vehicle service up-to-date screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-12.jpg",
+          alt: "OLA app missed service reminder screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-13.jpg",
+          alt: "OLA app appointment booking screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-14.jpg",
+          alt: "OLA app appointment confirmation screen"
+        }
+      ]
+    },
+
+    {
+      number: "05",
+      title: "Safety & Utility Screens",
+      subtitle: "Remote Kill Switch, Notifications & Other Controls",
+      layout: "full",
+
+      items: [
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-15.jpg",
+          alt: "OLA app remote power control screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-16.jpg",
+          alt: "OLA app settings screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-17.jpg",
+          alt: "OLA app ride history screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-18.jpg",
+          alt: "OLA app account screen"
+        },
+        {
+          src: "./assets/images/Portfolio/Uiux/OLA/Final-UI-19.jpg",
+          alt: "OLA app documents screen"
+        }
+      ]
+    }
+  ]
+}	  
+
+},
+
+relatedProjectsTitle: "View Other Projects",
+  relatedProjects: [
+    {
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
+      },
+      imageLabel: "La Mom & Miiracle"
+    },
+    {
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
+      },
+      imageLabel: "Wilo"
+    },
+    {
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
+      },
+      imageLabel: "Samartha Seva Mandal"
+    }
+   ]
  }
-}
+};
