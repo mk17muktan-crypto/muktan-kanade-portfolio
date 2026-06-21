@@ -254,6 +254,14 @@ document.body.classList.toggle(
   )
 );	
 	
+document.body.classList.toggle(
+  "ux-ssms-page",
+  Boolean(
+    isUXCaseStudy &&
+    projectId === "ui-ux-ssms-website"
+  )
+);	
+	
   if (!uxRoot) return;
 
   if (!isUXCaseStudy) {

@@ -4925,7 +4925,422 @@ relatedProjects: [
 
     imageLabel:
       "Samartha Seva Mandal Sajjangad UI UX"
-   }
+    }
   ]
- }
+ },
+
+"ui-ux-ssms-website": {
+  title: "Shri Samartha Seva Mandal, Sajjangad Website",
+  fullTitle: "Shri Samartha Seva Mandal, Sajjangad Website",
+  category: "UI/UX",
+  categorySlug: "ui-ux",
+  industry: "Religious / Spiritual Organisation",
+  projectType: "Website Design",
+  role: "Graphic Designer",
+  deliverables: "Branding, Campaign, Social Media Creatives",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    },
+    {
+      name: "Figma",
+      icon: "./assets/images/software Icons/Figma-icon.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl: "./index.html?section=portfolio",
+    categoryLabel: "UI/UX",
+    categoryUrl: "./index.html?section=portfolio&category=ui-ux",
+    currentLabel: "Shri Samartha Seva Mandal, Sajjangad Website"
+  },
+
+  tabs: [
+    {
+      id: "about-project",
+      label: "About the Project",
+      desktopLabel: "About the<br>Project"
+    },
+    {
+      id: "unique-selling-proposition",
+      label: "Unique Selling Proposition",
+      desktopLabel: "Unique Selling<br>Proposition"
+    },
+    {
+      id: "target-audience",
+      label: "Target Audience",
+      desktopLabel: "Target<br>Audience"
+    },
+    {
+      id: "user-problems-identified",
+      label: "User Problems Identified",
+      desktopLabel: "User Problems<br>Identified"
+    },
+    {
+      id: "user-personas",
+      label: "User Personas",
+      desktopLabel: "User<br>Personas"
+    },
+    {
+      id: "key-user-needs",
+      label: "Key User Needs",
+      desktopLabel: "Key<br>User Needs"
+    },
+    {
+      id: "feature-prioritization",
+      label: "Feature Prioritization",
+      desktopLabel: "Feature<br>Prioritization"
+    },
+    {
+      id: "design-system",
+      label: "Design System",
+      desktopLabel: "Design<br>System"
+    },
+    {
+      id: "final-ui-screens",
+      label: "Final UI Screens",
+      desktopLabel: "Final<br>UI Screens"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src: "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+      alt: "Shri Samartha Seva Mandal Sajjangad website portfolio cover image"
+    },
+    mobile: {
+      src: "./assets/images/Thumbnails/Uiux/Mobile/SSMS.jpg",
+      alt: "Shri Samartha Seva Mandal Sajjangad website mobile portfolio cover image"
+    }
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  bestWork: {
+    title: "",
+    items: []
+  },
+
+  uxCaseStudy: {
+    aboutProject: {
+      title: "About The Project",
+      leftParagraphs: [
+        "This was a <strong>Website design project</strong> of the official <strong>Shree Samarth Seva Mandal, Sajjangad</strong> website. The website brings together the Mandal’s <strong>history, life and philosophy of Shri. Samarth Ramdas Swami</strong>, information about <strong>sacred places, initiatives, workshop and projects</strong>. It serves both <strong>committed devotees</strong> and people discovering the <strong>tradition for the first time</strong>, while making authoritative information available through one trusted source.",
+        "Alongside spiritual and historical content, the website supports practical tasks such as <strong>planning a visit, understanding available facilities, following programmes, exploring publications & study initiatives</strong> and <strong>contacting the Mandal directly</strong>."
+      ],
+      keyContext:
+        "A Key Context We Considered Was That Users Arrive With Different Intentions - Some Are Planning A Pilgrimage, Following Programmes, Studying The Tradition, While Others Want To Connect With Or Support The Institution."
+    },
+
+    researchContext: {
+      title: "Research & Context",
+      paragraphs: [
+        "The main context was that this is <strong>not only a religious information website</strong>. Users may visit before travelling to Sajjangad, while looking for a nearby programme, when researching Samarth philosophy, or while assessing the Mandal’s activities and legitimacy.",
+        "The website therefore needed to <strong>connect spiritual depth, practical pilgrimage information and institutional communication</strong> without treating every visitor as the same kind of devotee."
+      ],
+      purposeLabel: "This gave the website a clear purpose:",
+      purposeStatement:
+        "It Works As An Official Digital Gateway For Discovering, Visiting, Studying And Connecting With The Living Samarth Tradition."
+    },
+
+    keyResearchPoints: {
+      title: "Key Research Points",
+      points: [
+        "Users need to recognize the website as the <strong>official source of information</strong> immediately.",
+        "Pilgrims first look for <strong>stay arrangements, food, office timings & arrival guidance</strong>.",
+        "Programme followers search by <strong>date, region & participation opportunity</strong>, rather than just history.",
+        "Spiritual learners move between <strong>biographies, sacred places & educational initiatives</strong>.",
+        "Users need to <strong>understand the Mandal as an institution</strong>, not only a pilgrimage destination.",
+        "Long-form devotional content requires a <strong>clear structure & strong information hierarchy</strong>.",
+        "Contact and social channels help turn interest into <strong>enquiry, participation, connection and/or support</strong>."
+      ],
+      conclusion:
+        "The Website Was Planned As One Connected Knowledge & Service Hub - Bringing Together Devotion, Pilgrimage, Learning, Programmes And Institutional Information."
+    },
+
+    usp: {
+      title: "USP",
+      statement:
+        "The Official Digital Gateway To Samarth Ramdas Swami’s Living Tradition - Connecting Devotion, Pilgrimage, Knowledge, Programmes And Institutional Services In One Trusted Platform."
+    },
+
+    targetAudience: {
+      title: "Target Audience",
+      introduction:
+        "The website is designed for people who want to visit, follow, understand or support the Samarth tradition through an official digital source.",
+      cards: [
+        {
+          title: "Primary Audience",
+          body:
+            "<strong>Existing devotees & pilgrims</strong> who need info about <strong>Sajjangad, stay, meals, timings, programmes & contact details</strong> before travelling."
+        },
+        {
+          title: "Secondary Audience",
+          body:
+            "<strong>Programme followers, students and spiritual learners</strong> looking for <strong>festival information, biographies and sacred-place histories</strong>."
+        },
+        {
+          title: "Tertiary Audience",
+          body:
+            "<strong>Community members, volunteers & supporters</strong> who want to <strong>understand the Mandal’s work</strong> & find a route to <strong>enquire, connect or contribute</strong>."
+        }
+      ]
+    },
+
+    userProblemsIdentified: {
+      title: "User Problems Identified",
+      introduction:
+        "The main challenge was to <strong>organize a large heritage and institutional ecosystem</strong> without making essential information difficult to locate.",
+      problems: [
+        "Uncertainty Around Stay, Food & Arrival Arrangements",
+        "Difficulty Finding Programme Dates & Regions Quickly",
+        "Information Spread Across Multiple Sections",
+        "Need To Verify Identity & Organization Legitimacy",
+        "No Journey For Enquiry, Participation Or Support"
+      ],
+      conclusion:
+        "The Main UX Challenge Was To Turn A Deep Spiritual And Institutional Ecosystem Into A Clear, Trustworthy And Purposeful Digital Journey."
+    },
+
+    userPersonas: {
+      title: "User Personas",
+      introduction:
+        "I created <strong>four personas</strong> to understand how <strong>people may use the website with completely different intentions</strong>. Each person represents a distinct journey: <strong>planning a pilgrimage, following programmes, studying the tradition or supporting the institution</strong>.",
+      items: [
+        {
+          name: "Madhav Kulkarni",
+          role: "Pilgrimage Planner",
+          image: "./assets/images/Portfolio/Uiux/SSMS Website/Persona-1.jpg",
+          alt: "Madhav Kulkarni user persona",
+          background:
+            "Travels to important pilgrimage destinations with his spouse or family and prefers to confirm practical arrangements before leaving.",
+          mainNeed:
+            "Reach Sajjangad confidently with clear information about <strong>stay, meals, office timings & arrival procedures</strong>."
+        },
+        {
+          name: "Radhika Ranade",
+          role: "Programme Follower",
+          image: "./assets/images/Portfolio/Uiux/SSMS Website/Persona-2.jpg",
+          alt: "Radhika Ranade user persona",
+          background:
+            "Grew up around Samarth devotion & follows the Mandal’s touring programmes through her mobile phone and local devotional network.",
+          mainNeed:
+            "Quickly find <strong>programme dates, regions, routes & participation details</strong>."
+        },
+        {
+          name: "Ashwini Joshi",
+          role: "Spiritual Learner",
+          image: "./assets/images/Portfolio/Uiux/SSMS Website/Persona-3.jpg",
+          alt: "Ashwini Joshi user persona",
+          background:
+            "A postgraduate student interested in Samarth Ramdas Swami, Dasbodh, spiritual history & saint traditions.",
+          mainNeed:
+            "Access authoritative <strong>biographies, place histories, publications, libraries & study-related resources</strong>."
+        },
+        {
+          name: "Nikhil Rao",
+          role: "Institutional Supporter",
+          image: "./assets/images/Portfolio/Uiux/SSMS Website/Persona-4.jpg",
+          alt: "Nikhil Rao user persona",
+          background:
+            "An IT professional & community volunteer connected to the tradition through family and devotional networks.",
+          mainNeed:
+            "Understand the Mandal’s initiatives and find a clear route to <strong>enquire, connect or support</strong>."
+        }
+      ]
+    },
+
+    keyUserNeeds: {
+      title: "Key User Needs",
+      introduction:
+        "The primary user needs were based on the different ways people engage with the Samarth tradition and the Mandal.",
+      items: [
+        {
+          title: "Visit Confidence",
+          body:
+            "Clear information about <strong>stay, meals, timings</strong> & where to go <strong>after arrival</strong>."
+        },
+        {
+          title: "Programme Discovery",
+          body:
+            "Access to <strong>fest. dates, touring regions, activity details & participation info</strong>."
+        },
+        {
+          title: "Authoritative Spiritual Knowledge",
+          body:
+            "Reliable biographies & historical information about <strong>Samarth Ramdas Swami, Shridhar Swami & associated sacred places</strong>."
+        },
+        {
+          title: "Study And Resource Access",
+          body:
+            "Visibility of <strong>publications, Dasbodh study initiatives, libraries, educational activities and cultural resources</strong>."
+        },
+        {
+          title: "Institutional Trust & Connection",
+          body:
+            "Clear official identity, organisational history, contact channels and ways to <strong>enquire, participate or offer support</strong>."
+        }
+      ]
+    },
+
+    featurePrioritization: {
+      title: "Feature Prioritization",
+      introduction:
+        "Features were prioritized according to the urgency of the user’s task and the role each feature plays in building trust & supporting meaningful engagement.",
+      groups: [
+        {
+          title: "High Priority",
+          tone: "high",
+          items: [
+            "Visit Information And Accommodation",
+            "Programme Dates And Regional Details",
+            "Biographies And Sacred-Place Information",
+            "Festivals, Workshops and Projects Information",
+            "Contact, Enquiry And Support Routes"
+          ]
+        },
+        {
+          title: "Medium Priority",
+          tone: "medium",
+          items: [
+            "Detailed Institutional History",
+            "Programme Participation Information",
+            "Social Media & Video Channels"
+          ]
+        },
+        {
+          title: "Low Priority",
+          tone: "low",
+          items: [
+            "Legal And Policy Information",
+            "Secondary Archives And Supporting Content"
+          ]
+        }
+      ],
+      conclusion:
+        "The Main Priority Was To Keep Urgent Pilgrimage And Programme Tasks Easy To Find While Preserving The Depth Of The Mandal’s Spiritual And Institutional Legacy."
+    },
+
+    designSystem: {
+      title: "UI Visual System",
+      description:
+        "The visual system should feel <strong>devotional, dignified & contemporary</strong> rather than decorative or commercially promotional. The design should use <strong>clear typography, culturally appropriate colors, authentic temple imagery, consistent cards, recognizable icons</strong> & strong visual hierarchy to guide users through information & transactions.",
+
+      colors: [
+        {
+          label: "Main",
+          swatches: ["#E8DBB2", "#FFFFFF"]
+        },
+        {
+          label: "Text",
+          swatches: ["#000000", "#C8C5CC"]
+        },
+        {
+          label: "Background",
+          swatches: ["#FFFFFF"]
+        },
+        {
+          label: "Other",
+          swatches: ["#0B6D9C", "#456B4C", "#6A382F", "#A41458", "#EDC74D"]
+        }
+      ],
+
+      buttons: [
+        {
+          label: "Learn More",
+          color: "linear-gradient(135deg, #f3d46a 0%, #f5ad4d 100%)"
+        },
+        {
+          label: "Plan a Visit",
+          color: "linear-gradient(135deg, #f2d15f 0%, #efbf4d 100%)"
+        },
+        {
+          label: "Become a Volunteer",
+          color: "linear-gradient(135deg, #ffb04a 0%, #ff7c2d 100%)"
+        }
+      ],
+
+      typography: [
+        {
+          label: "H1",
+          sample: "Mukta 33px Bold",
+          className: "h1"
+        },
+        {
+          label: "H2",
+          sample: "Mukta 18px Bold",
+          className: "h2"
+        },
+        {
+          label: "Body Copy",
+          sample: "Mukta 18px Bold",
+          className: "body"
+        }
+      ]
+    },
+
+    finalUIScreens: {
+      variant: "live-website",
+      heading: "Final UI Screens",
+      introduction:
+        "To see the full Live Website, visit:",
+      liveUrl: "https://ramdasswami.com/",
+      liveLabel: "https://ramdasswami.com/",
+      image: {
+        src: "./assets/images/Portfolio/Uiux/SSMS Website/Final-UI-Screens.jpg",
+        alt: "Shri Samartha Seva Mandal Sajjangad website final UI screen"
+      }
+    }
+  },
+
+  relatedProjectsTitle: "View Other Projects",
+
+  relatedProjects: [
+    {
+      title: "UX - OLA Scooty App",
+      industry: "Mobility / Electric Vehicles",
+      url: "./portfolio-detail.html?project=ui-ux-ola-scooty-app",
+      image: {
+        src: "./assets/images/Thumbnails/Uiux/OLA.jpg",
+        alt: "OLA Scooty App UI UX project thumbnail"
+      },
+      imageLabel: "UX - OLA Scooty App"
+    },
+    {
+      title: "UX - Shrimant Dagdusheth Halwai Ganpati Website",
+      industry: "Religious / Devotional Organisation",
+      url: "./portfolio-detail.html?project=ui-ux-dagdusheth-website",
+      image: {
+        src: "./assets/images/Thumbnails/Uiux/Dagdusheth.jpg",
+        alt: "Shrimant Dagdusheth Halwai Ganpati Website UI UX project thumbnail"
+      },
+      imageLabel: "UX - Dagdusheth Ganpati Website"
+    },
+    {
+      title: "UX - La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=ui-ux-la-mom-miiracle",
+      image: {
+        src: "./assets/images/Thumbnails/Uiux/LMM.jpg",
+        alt: "La Mom and Miiracle UI UX project thumbnail"
+      },
+      imageLabel: "UX - La Mom & Miiracle"
+    }
+  ]
+}
 };
