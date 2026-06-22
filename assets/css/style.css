@@ -11436,3 +11436,52 @@ body.ux-ssms-page
     font-size: 13px;
   }
 }
+
+/*-----------------------------------*\
+  #UI UX DESKTOP BODY COPY CONSISTENCY
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  /*
+   * Match the About the Project body-copy size
+   * throughout every UI/UX case-study section.
+   */
+
+  body.ux-case-study-page .ux-section-intro,
+  body.ux-case-study-page .ux-personas-intro,
+  body.ux-case-study-page .ux-design-system-intro,
+  body.ux-case-study-page .ux-audience-card p,
+  body.ux-case-study-page .ux-persona-details strong,
+  body.ux-case-study-page .ux-persona-details p,
+  body.ux-case-study-page .ux-need-card p,
+  body.ux-case-study-page .ux-priority-card li {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+}
+
+/*-----------------------------------*\
+  #UI UX MOBILE BODY COPY CONSISTENCY
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.ux-case-study-page .ux-about-copy p,
+  body.ux-case-study-page .ux-research-context > p,
+  body.ux-case-study-page .ux-purpose-card p,
+  body.ux-case-study-page .ux-research-point p,
+  body.ux-case-study-page .ux-section-intro,
+  body.ux-case-study-page .ux-personas-intro,
+  body.ux-case-study-page .ux-design-system-intro,
+  body.ux-case-study-page .ux-audience-card p,
+  body.ux-case-study-page .ux-persona-details p,
+  body.ux-case-study-page .ux-need-card p,
+  body.ux-case-study-page .ux-priority-card li,
+  body.ux-case-study-page .ux-live-final-copy p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+}
