@@ -11485,3 +11485,64 @@ body.ux-ssms-page
   }
 
 }
+
+/*-----------------------------------*\
+  #LMM WEBSITE CASE STUDY DETAILS
+\*-----------------------------------*/
+
+/*
+ * The LMM visual system contains only
+ * Main and Text colour groups.
+ */
+
+body.ux-lmm-page .ux-color-groups {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+}
+
+body.ux-lmm-page
+.ux-color-group:last-child {
+  grid-column: auto;
+}
+
+
+/*
+ * The single consultation-style button
+ * uses dark text.
+ */
+
+body.ux-lmm-page
+.ux-simple-demo-button {
+  color: var(--smoky-black);
+}
+
+
+/*
+ * The LMM style guide uses Mukta.
+ */
+
+body.ux-lmm-page
+.ux-typography-block
+.ux-type-row > strong {
+  font-family:
+    "Mukta",
+    var(--ff-poppins);
+}
+
+
+@media (max-width: 580px) {
+
+  body.ux-lmm-page .ux-color-groups {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  body.ux-lmm-page
+  .ux-color-group:last-child {
+    grid-column: auto;
+  }
+}
+
+body.ux-case-study-page strong {
+  font-weight: 600;
+}

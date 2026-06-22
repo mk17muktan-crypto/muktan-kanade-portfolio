@@ -246,21 +246,52 @@ const renderUXCaseStudy = function () {
     Boolean(isUXCaseStudy)
   );
 
+const usesWebsiteUXTemplate = [
+  "ui-ux-dagdusheth-website",
+  "ui-ux-ssms-website",
+  "ui-ux-la-mom-miiracle"
+].includes(projectId);
+
+
+/*
+ * Shared website UI/UX template.
+ * This reuses the Dagdusheth website CSS for:
+ * Dagdusheth, SSMS and La Mom & Miiracle.
+ */
+
 document.body.classList.toggle(
   "ux-dagdusheth-page",
   Boolean(
     isUXCaseStudy &&
-    projectId === "ui-ux-dagdusheth-website"
+    usesWebsiteUXTemplate
   )
-);	
-	
+);
+
+
+/*
+ * Project-specific SSMS adjustments.
+ */
+
 document.body.classList.toggle(
   "ux-ssms-page",
   Boolean(
     isUXCaseStudy &&
     projectId === "ui-ux-ssms-website"
   )
-);	
+);
+
+
+/*
+ * Project-specific La Mom & Miiracle adjustments.
+ */
+
+document.body.classList.toggle(
+  "ux-lmm-page",
+  Boolean(
+    isUXCaseStudy &&
+    projectId === "ui-ux-la-mom-miiracle"
+  )
+);
 	
   if (!uxRoot) return;
 

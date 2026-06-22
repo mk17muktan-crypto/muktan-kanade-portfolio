@@ -3917,7 +3917,7 @@ personas: {
       type: "Urban Commuter",
 
       image:
-        "./assets/images/Portfolio/Uiux/OLA/Persona-Rohan-Mehta.jpg",
+        "./assets/images/Portfolio/Uiux/OLA/Persona-1.jpg",
 
       background:
         "Uses the scooter daily for work and needs to check battery, range and route before leaving.",
@@ -3930,7 +3930,7 @@ personas: {
       type: "First-Time EV User",
 
       image:
-        "./assets/images/Portfolio/Uiux/OLA/Persona-Neha-Patil.jpg",
+        "./assets/images/Portfolio/Uiux/OLA/Persona-2.jpg",
 
       background:
         "Recently shifted from a petrol scooter to an EV and needs simple updates about battery, charging and vehicle health.",
@@ -3943,7 +3943,7 @@ personas: {
       type: "Brand-Conscious Urban User",
 
       image:
-        "./assets/images/Portfolio/Uiux/OLA/Persona-Priya-Sharma.jpg",
+        "./assets/images/Portfolio/Uiux/OLA/Persona-3.jpg",
 
       background:
         "Values smart technology, convenience and a polished ownership experience.",
@@ -3956,7 +3956,7 @@ personas: {
       type: "Environmentally Conscious User",
 
       image:
-        "./assets/images/Portfolio/Uiux/OLA/Persona-Akhil-Deshmukh.jpg",
+        "./assets/images/Portfolio/Uiux/OLA/Persona-4.jpg",
 
       background:
         "Uses the scooter as a practical and eco-friendly travel choice.",
@@ -4261,7 +4261,7 @@ relatedProjects: [
     industry: "Religious / Devotional Organisation",
 
     url:
-      "./portfolio/ui-ux-ux-dagdushet-ganpati.html",
+      "./portfolio-detail.html?project=ui-ux-dagdusheth-website",
 
     image: {
       src:
@@ -4280,7 +4280,7 @@ relatedProjects: [
     industry: "Healthcare / Fertility Clinic",
 
     url:
-      "./portfolio/ui-ux-ux-la-mom-and-miiracle.html",
+      "./portfolio-detail.html?project=ui-ux-la-mom-miiracle",
 
     image: {
       src:
@@ -4295,22 +4295,25 @@ relatedProjects: [
   },
 
   {
-    title: "Samartha Seva Mandal Sajjangad",
-    industry: "Religious / Spiritual Organisation",
+    title:
+        "UX - Samartha Seva Mandal Sajjangad",
 
-    url:
-      "./portfolio/ui-ux-ux-samartha-seva-mandal.html",
+      industry:
+        "Religious / Spiritual Organisation",
 
-    image: {
-      src:
-        "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+      url:
+        "./portfolio-detail.html?project=ui-ux-ssms-website",
 
-      alt:
-        "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
-    },
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/SSMS.jpg",
 
-    imageLabel:
-      "Samartha Seva Mandal Sajjangad UI UX"
+        alt:
+          "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - Samartha Seva Mandal Sajjangad"
    }
   ]
  },
@@ -4529,7 +4532,7 @@ tools: [
           type: "Local Regular Devotee",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Vilas-Kulkarni.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-1.jpg",
 
           background:
             "Lives near Pune and regularly plans visits around aarti timings, Sankashti Chaturthi and other important temple days.",
@@ -4542,7 +4545,7 @@ tools: [
           type: "First-Time Festival Pilgrim",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Pallavi-Kumbhar.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-2.jpg",
 
           background:
             "Knows Dagdusheth Ganpati by reputation but needs help choosing an event, date and practical travel plan.",
@@ -4555,7 +4558,7 @@ tools: [
           type: "Remote Devotee",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Nikhil-Deshpande.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-3.jpg",
 
           background:
             "Lives outside Pune and uses Live Darshan and E-Seva to remain spiritually connected to Bappa.",
@@ -4568,7 +4571,7 @@ tools: [
           type: "Cause-Led Donor",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-Sanjay-Shah.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-4.jpg",
 
           background:
             "Wants his religious contribution to support a credible social initiative.",
@@ -4752,8 +4755,8 @@ finalUIScreens: {
     "https://www.dagdushethganpati.com/",
 
   image: {
-    type: "placeholder",
-    label: "Final UI Website Preview",
+        src:
+          "./assets/images/Portfolio/Uiux/Dagdusheth Website/Final-UI-Screens.jpg",
     alt:
       "Shrimant Dagdusheth Halwai Ganpati live website homepage design"
   }
@@ -4765,22 +4768,25 @@ relatedProjectsTitle: "View Other Projects",
 
 relatedProjects: [
   {
-    title: "Dagdusheth Ganpati",
-    industry: "Religious / Devotional Organisation",
+    title:
+        "UX - OLA Scooty App",
 
-    url:
-      "./portfolio/ui-ux-ux-dagdushet-ganpati.html",
+      industry:
+        "Mobility / Electric Vehicles",
 
-    image: {
-      src:
-        "./assets/images/Thumbnails/Uiux/DG.jpg",
+      url:
+        "./portfolio-detail.html?project=ui-ux-ola-scooty-app",
 
-      alt:
-        "Dagdusheth Ganpati UI UX project thumbnail"
-    },
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/OLA.jpg",
 
-    imageLabel:
-      "Dagdusheth Ganpati UI UX"
+        alt:
+          "OLA Scooty App UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - OLA Scooty App"
   },
 
   {
@@ -4788,7 +4794,7 @@ relatedProjects: [
     industry: "Healthcare / Fertility Clinic",
 
     url:
-      "./portfolio/ui-ux-ux-la-mom-and-miiracle.html",
+      "./portfolio-detail.html?project=ui-ux-la-mom-miiracle",
 
     image: {
       src:
@@ -4803,22 +4809,25 @@ relatedProjects: [
   },
 
   {
-    title: "Samartha Seva Mandal Sajjangad",
-    industry: "Religious / Spiritual Organisation",
+    title:
+        "UX - Samartha Seva Mandal Sajjangad",
 
-    url:
-      "./portfolio/ui-ux-ux-samartha-seva-mandal.html",
+      industry:
+        "Religious / Spiritual Organisation",
 
-    image: {
-      src:
-        "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+      url:
+        "./portfolio-detail.html?project=ui-ux-ssms-website",
 
-      alt:
-        "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
-    },
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/SSMS.jpg",
 
-    imageLabel:
-      "Samartha Seva Mandal Sajjangad UI UX"
+        alt:
+          "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - Samartha Seva Mandal Sajjangad"
     }
   ]
  },
@@ -5321,7 +5330,7 @@ uxCaseStudy: {
       industry: "Religious / Devotional Organisation",
       url: "./portfolio-detail.html?project=ui-ux-dagdusheth-website",
       image: {
-        src: "./assets/images/Thumbnails/Uiux/Dagdusheth.jpg",
+        src: "./assets/images/Thumbnails/Uiux/DG.jpg",
         alt: "Shrimant Dagdusheth Halwai Ganpati Website UI UX project thumbnail"
       },
       imageLabel: "UX - Dagdusheth Ganpati Website"
@@ -5337,5 +5346,514 @@ uxCaseStudy: {
       imageLabel: "UX - La Mom & Miiracle"
     }
   ]
+},
+	
+"ui-ux-la-mom-miiracle": {
+  title: "UX - La Mom & Miiracle Website",
+  fullTitle: "La Mom & Miiracle Website Redesign",
+
+  category: "UI/UX",
+  categorySlug: "ui%2Fux",
+
+  industry: "Healthcare / Fertility Clinic",
+  projectType: "UI/UX Website Case Study",
+
+  layout: "ux-case-study",
+
+  role: "UI/UX Designer",
+
+  deliverables:
+    "User Research, Website Interface Design, Website Style Guide",
+
+  tools: [
+    {
+      name: "Figma",
+      icon: "./assets/images/software Icons/Figma-logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel: "UI/UX",
+    categoryUrl:
+      "./index.html?section=portfolio&category=ui%2Fux",
+
+    currentLabel:
+      "UX - La Mom & Miiracle Website"
+  },
+
+  tabs: [
+    {
+      id: "about-project",
+      label: "About the Project",
+      desktopLabel: "About the<br>Project"
+    },
+    {
+      id: "unique-selling-proposition",
+      label: "Unique Selling Proposition",
+      desktopLabel: "Unique Selling<br>Proposition"
+    },
+    {
+      id: "target-audience",
+      label: "Target Audience",
+      desktopLabel: "Target<br>Audience"
+    },
+    {
+      id: "user-problems-identified",
+      label: "User Problems Identified",
+      desktopLabel: "User Problems<br>Identified"
+    },
+    {
+      id: "user-personas",
+      label: "User Personas",
+      desktopLabel: "User<br>Personas"
+    },
+    {
+      id: "key-user-needs",
+      label: "Key User Needs",
+      desktopLabel: "Key<br>User Needs"
+    },
+    {
+      id: "feature-prioritization",
+      label: "Feature Prioritization",
+      desktopLabel: "Feature<br>Prioritization"
+    },
+    {
+      id: "design-system",
+      label: "Design System",
+      desktopLabel: "Design<br>System"
+    },
+    {
+      id: "final-ui-screens",
+      label: "Final UI Screens",
+      desktopLabel: "Final<br>UI Screens"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Uiux/LMM.jpg",
+
+      alt:
+        "La Mom and Miiracle website UI UX portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Uiux/LMM.jpg",
+
+      alt:
+        "La Mom and Miiracle website mobile UI UX portfolio cover"
+    }
+  },
+
+  uxCaseStudy: {
+    about: {
+      heading: "About the Project",
+
+      primaryText: [
+        "This project focused on analyzing and restructuring the <strong>La Mom & Miiracle website</strong>, a Pune-based fertility and pregnancy-care clinic. The website supports users exploring <strong>IVF, infertility treatment, PCOS care, fertility counselling, pregnancy monitoring and high-risk pregnancy management</strong> under specialist-led care.",
+
+        "The goal was to make the experience feel <strong>clearer, more reassuring and action-oriented</strong> for users who may already feel anxious or overwhelmed. The redesigned journey helps patients identify the right service, <strong>understand their next steps, assess the clinic’s credibility, select a convenient branch and move confidently towards a consultation</strong>."
+      ],
+
+      goalText: [],
+
+      contextHighlight:
+        "A key context I considered was that most users would visit the website during an emotionally sensitive healthcare decision and would need reassurance, clarity and trust before they were ready to book a consultation."
+    },
+
+    research: {
+      heading: "Research & Context",
+
+      contextText: [
+        "The website serves users at <strong>different stages of the reproductive-health journey</strong>—from investigating fertility concerns and PCOS to considering IVF or managing a high-risk pregnancy.",
+
+        "Although the clinic provides a <strong>broad range of services</strong>, users need <strong>clearer pathways based on their immediate concern instead of navigating one general information journey</strong>."
+      ],
+
+      purposeLabel:
+        "This gave the website a clear purpose:",
+
+      purposeStatement:
+        "It works as a patient decision-support platform that helps users understand their concern, find relevant care, build trust in the doctor and take the next step.",
+
+      pointsHeading:
+        "Key Research Points",
+
+      points: [
+        "Fertility and pregnancy visitors arrive feeling <strong>anxious, uncertain and information-heavy</strong>.",
+
+        "Users enter with different needs: <strong>IVF, PCOS, male infertility and high-risk pregnancy care</strong>.",
+
+        "The doctor’s <strong>qualifications, experience and approach</strong> are factors in building patient trust.",
+
+        "Multiple services are available, but <strong>users need clearer paths for each treatment</strong>.",
+
+        "IVF users want clarity regarding <strong>candidacy, treatment steps, preparation and possible costs</strong>.",
+
+        "<strong>Branch location and timings matter</strong> because treatment may require frequent clinic visits."
+      ],
+
+      remoteControlPoint:
+        "The navigation relies on scrolling, “Learn More” links and manual phone or email contact.",
+
+      takeaway:
+        "The website needed to move beyond being a general clinic brochure and become a clear, reassuring journey from concern to consultation."
+    },
+
+    usp: {
+      heading: "USP",
+
+      statement:
+        "A Specialist-Led Fertility And Pregnancy-Care Platform That Combines IVF Expertise, Personalised Guidance And Continued Support From Preconception Through Pregnancy And Delivery."
+    },
+
+    targetAudience: {
+      heading: "Target Audience",
+
+      description:
+        "The website is designed for <strong>women, couples and families seeking reliable fertility, reproductive-health and pregnancy care in Pune</strong>.",
+
+      groups: [
+        {
+          title: "Primary Audience",
+
+          description:
+            "Women and couples <strong>actively exploring infertility diagnosis, IVF, IUI, PCOS treatment or assisted-reproduction options</strong>."
+        },
+        {
+          title: "Secondary Audience",
+
+          description:
+            "Pregnant women seeking <strong>routine monitoring, high-risk pregnancy management, delivery care or post-IVF pregnancy support</strong>."
+        },
+        {
+          title: "Tertiary Audience",
+
+          description:
+            "Partners and family members who help evaluate <strong>treatments, finances, clinic credibility, location and long-term care decisions</strong>."
+        }
+      ]
+    },
+
+    userProblems: {
+      heading: "User Problems Identified",
+
+      description:
+        "Users need <strong>clear and reassuring information</strong> while making sensitive healthcare decisions.",
+
+      items: [
+        "Unclear Start For Fertility & Pregnancy Concerns",
+
+        "Treatments & Services Grouped Without Clear Paths",
+
+        "No Visibility Of Appointment Booking & Immediate Next Steps",
+
+        "No Clarity Around Costs, Financing & Preparation",
+
+        "Trust & Successes Need Stronger Supporting Evidence"
+      ],
+
+      takeaway:
+        "The Main UX Challenge Was To Transform A Content-Heavy Clinic Website Into A Simple, Trustworthy And Action-Oriented Patient Journey."
+    },
+
+    personas: {
+      heading: "User Personas",
+
+      introduction:
+        "We created <strong>four personas</strong> to understand how different users may approach the website. Each shows a distinct journey—<strong>first-time IVF research, PCOS-led fertility concerns, high-risk pregnancy monitoring and male-factor infertility</strong>. These personas helped define the <strong>information, trust and actions for different decision stages</strong>.",
+
+      items: [
+        {
+          name: "Aditi Kulkarni",
+          type: "First-Time IVF Seeker",
+
+          image:
+            "./assets/images/Portfolio/Uiux/LMM Website/Persona-1.jpg",
+
+          background:
+            "Has been trying to conceive and may have <strong>experienced unexplained infertility or an unsuccessful IUI cycle.</strong>",
+
+          mainNeed:
+            "Understand <strong>IVF candidacy, treatment stages and costs before confidently booking her first consultation.</strong>"
+        },
+        {
+          name: "Sneha Joshi",
+          type: "PCOS-Led Fertility Seeker",
+
+          image:
+            "./assets/images/Portfolio/Uiux/LMM Website/Persona-2.jpg",
+
+          background:
+            "A working professional <strong>experiencing irregular cycles and concerned about how PCOS may affect her fertility.</strong>",
+
+          mainNeed:
+            "Understand the <strong>connection between PCOS and fertility and find a clear treatment pathway.</strong>"
+        },
+        {
+          name: "Meera Deshpande",
+          type: "High-Risk Pregnancy Patient",
+
+          image:
+            "./assets/images/Portfolio/Uiux/LMM Website/Persona-3.jpg",
+
+          background:
+            "Already pregnant and <strong>concerned about gestational diabetes, hypertension, pre-eclampsia, twins or pregnancy after IVF.</strong>",
+
+          mainNeed:
+            "Secure <strong>specialist monitoring</strong> and choose the most convenient <strong>clinic for pregnancy care.</strong>"
+        },
+        {
+          name: "Rohan Patil",
+          type: "Male-Factor Infertility",
+
+          image:
+            "./assets/images/Portfolio/Uiux/LMM Website/Persona-4.jpg",
+
+          background:
+            "Part of a couple <strong>experiencing difficulty conceiving and researching possible sperm-related fertility concerns.</strong>",
+
+          mainNeed:
+            "Confirm that male infertility is <strong>treated discreetly</strong> and understand the <strong>available tests and procedures.</strong>"
+        }
+      ]
+    },
+
+    keyUserNeeds: {
+      heading: "Key User Needs",
+
+      description:
+        "The main user needs were based on the emotional, informational and practical challenges involved in seeking fertility and pregnancy care.",
+
+      items: [
+        {
+          title: "Treatment Clarity",
+
+          description:
+            "Simple explanations of available treatments, who they are suitable for and what each process involves."
+        },
+        {
+          title: "Specialist Trust",
+
+          description:
+            "Clear visibility of the doctor’s qualifications, experience, approach and supporting evidence behind clinic claims."
+        },
+        {
+          title: "Emotional Reassurance",
+
+          description:
+            "Compassionate language and guidance that make users feel supported rather than judged, pressured or overwhelmed."
+        },
+        {
+          title: "Appointment Confidence",
+
+          description:
+            "A straightforward process for choosing a concern, selecting a clinic and requesting a consultation."
+        },
+        {
+          title: "Cost And Preparation Visibility",
+
+          description:
+            "Early guidance regarding possible expenses, payment support and what patients should bring to their first visit."
+        }
+      ]
+    },
+
+    featurePrioritization: {
+      heading: "Feature Prioritization",
+
+      description:
+        "Features were prioritised according to what users need most to move from initial concern to informed consultation without becoming confused.",
+
+      groups: [
+        {
+          level: "high",
+          title: "High Priority",
+
+          items: [
+            "Patient-Intent Selector",
+            "Dedicated Treatment And Service Pages",
+            "Consultation Booking And Callback Flow",
+            "Doctor Credentials, Testimonials And Trust Evidence",
+            "Branch Selection, Timings And Direct Contact"
+          ]
+        },
+        {
+          level: "medium",
+          title: "Medium Priority",
+
+          items: [
+            "Searchable FAQs And Preparation Guides",
+            "Cost And Financing Information",
+            "Patient Stories And Clinic-Facility Content"
+          ]
+        },
+        {
+          level: "low",
+          title: "Low Priority",
+
+          items: [
+            "Advanced Media-Gallery Filtering",
+            "Blog Categories And Content Discovery",
+            "Non-Essential Social Or Community Features"
+          ]
+        }
+      ],
+
+      takeaway:
+        "The Main Priority Was To Make Relevant Care, Trust Information And Consultation Actions Easy To Find Before The User Feels Confused Or Emotionally Overwhelmed."
+    },
+
+    designSystem: {
+      heading: "UI Visual System",
+
+      description:
+        "The visual system was planned to make the website feel <strong>warm, calm and medically trustworthy</strong>. The focus was on a <strong>soft colour palette, reassuring photography, generous spacing, accessible contrast, readable typography, consistent information cards and highly visible consultation actions</strong>.",
+
+      colors: [
+        {
+          title: "Main",
+
+          values: [
+            "#FFFFFF",
+            "#F5F0FF"
+          ]
+        },
+        {
+          title: "Text",
+
+          values: [
+            "#333333",
+            "#777777"
+          ]
+        }
+      ],
+
+      buttons: [
+        {
+          label: "Button",
+          color: "#FFCC00"
+        }
+      ],
+
+      typography: [
+        {
+          label: "H1",
+          sample: "Mukta 33px Bold",
+          className: "h1"
+        },
+        {
+          label: "H2",
+          sample: "Mukta 18px Bold",
+          className: "h2"
+        },
+        {
+          label: "Body Copy",
+          sample: "Mukta 18px Bold",
+          className: "body"
+        }
+      ]
+    },
+
+    finalUIScreens: {
+      variant: "live-website",
+
+      heading: "Final UI Screens",
+
+      introduction:
+        "To see the full Live Website, visit:",
+
+      liveUrl:
+        "https://lmmivf.com/",
+
+      liveLabel:
+        "https://lmmivf.com/",
+
+      image: {
+        src:
+          "./assets/images/Portfolio/Uiux/LMM Website/Final-UI-Screens.jpg",
+
+        alt:
+          "La Mom and Miiracle fertility clinic website final UI screen"
+      }
+    }
+  },
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "UX - Shrimant Dagdusheth Halwai Ganpati Website",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ui-ux-dagdusheth-website",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/DG.jpg",
+
+        alt:
+          "Dagdusheth Ganpati UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - Dagdusheth Ganpati Website"
+    },
+    {
+      title:
+        "UX - Samartha Seva Mandal Sajjangad",
+
+      industry:
+        "Religious / Spiritual Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ui-ux-ssms-website",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/SSMS.jpg",
+
+        alt:
+          "Samartha Seva Mandal Sajjangad UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - Samartha Seva Mandal Sajjangad"
+    },
+    {
+      title:
+        "UX - OLA Scooty App",
+
+      industry:
+        "Mobility / Electric Vehicles",
+
+      url:
+        "./portfolio-detail.html?project=ui-ux-ola-scooty-app",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Uiux/OLA.jpg",
+
+        alt:
+          "OLA Scooty App UI UX project thumbnail"
+      },
+
+      imageLabel:
+        "UX - OLA Scooty App"
+    }
+  ]
 }
+	
 };
+

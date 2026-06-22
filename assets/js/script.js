@@ -713,25 +713,59 @@ const pageUrlParams = new URLSearchParams(window.location.search);
 const requestedSection = pageUrlParams.get("section");
 const requestedCategory = pageUrlParams.get("category");
 
+const normalizeCategoryValue = function (value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/-/g, " ");
+};
+
+const getFilterButtonValue = function (button) {
+  if (!button) return "";
+
+  const categoryText = button.querySelector(
+    ".portfolio-category-text"
+  );
+
+  return normalizeCategoryValue(
+    button.dataset.filterValue ||
+    (categoryText ? categoryText.innerText : "")
+  );
+};
+
 const openRequestedSectionAndCategory = function () {
   if (!requestedSection) return;
 
-  const targetNav = document.querySelector(`[data-nav-target="${requestedSection}"]`);
+  const targetNav = document.querySelector(
+    `[data-nav-target="${requestedSection}"]`
+  );
 
   if (targetNav) {
     targetNav.click();
   }
 
-  if (requestedSection === "portfolio" && requestedCategory) {
-    const categoryText = requestedCategory.replace(/-/g, " ");
+  if (
+    requestedSection === "portfolio" &&
+    requestedCategory
+  ) {
+    const categoryValue =
+      normalizeCategoryValue(requestedCategory);
 
-    filterFunc(categoryText);
+    filterFunc(categoryValue);
 
     for (let i = 0; i < filterBtn.length; i++) {
-      const buttonText = filterBtn[i].querySelector(".portfolio-category-text").innerText.toLowerCase();
+      const buttonValue =
+        getFilterButtonValue(filterBtn[i]);
 
-      if (buttonText === categoryText) {
-        filterBtn[i].classList.add("active");
+      const isActive =
+        buttonValue === categoryValue;
+
+      filterBtn[i].classList.toggle(
+        "active",
+        isActive
+      );
+
+      if (isActive) {
         lastClickedBtn = filterBtn[i];
 
         filterBtn[i].scrollIntoView({
@@ -739,8 +773,6 @@ const openRequestedSectionAndCategory = function () {
           inline: "center",
           block: "nearest"
         });
-      } else {
-        filterBtn[i].classList.remove("active");
       }
     }
   }
