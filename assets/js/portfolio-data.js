@@ -6442,8 +6442,8 @@ uxCaseStudy: {
 },
 	
 "print-design-kumbh-2027": {
-  title: "Kumbh 2027 - Book Jacket",
-  fullTitle: "Kumbh 2027 - Book Jacket",
+  title: "Kumbh 2027",
+  fullTitle: "Kumbh 2027",
 
   category: "Print Design",
   categorySlug: "print-design",
@@ -6452,7 +6452,7 @@ uxCaseStudy: {
   projectType: "Print Design",
 
   role: "Print Designer",
-  deliverables: "Hoardings, Magazine & Booklet",
+  deliverables: "Book Jacket, Inner Page Template",
 
   tools: [
     {
@@ -6482,7 +6482,7 @@ uxCaseStudy: {
       "./index.html?section=portfolio&category=print-design",
 
     currentLabel:
-      "Kumbh 2027 - Book Jacket"
+      "Kumbh 2027"
   },
 
   tabs: [
@@ -6741,7 +6741,7 @@ uxCaseStudy: {
   projectType: "Print Design",
 
   role: "Print Designer",
-  deliverables: "Hoardings, Magazine & Booklet",
+  deliverables: "Book Cover",
 
   tools: [
     {
@@ -6987,8 +6987,8 @@ uxCaseStudy: {
 
 
 "print-design-core-essence-tarot-cards": {
-  title: "Core Essence - Tarot Cards",
-  fullTitle: "Core Essence - Tarot Cards",
+  title: "Core Essence",
+  fullTitle: "Core Essence",
 
   category: "Print Design",
   categorySlug: "print-design",
@@ -6997,7 +6997,7 @@ uxCaseStudy: {
   projectType: "Print Design",
 
   role: "Print Designer",
-  deliverables: "Hoardings, Magazine & Booklet",
+  deliverables: "Tarot Cards",
 
   tools: [
     {
@@ -7027,7 +7027,7 @@ uxCaseStudy: {
       "./index.html?section=portfolio&category=print-design",
 
     currentLabel:
-      "Core Essence - Tarot Cards"
+      "Core Essence"
   },
 
   tabs: [
