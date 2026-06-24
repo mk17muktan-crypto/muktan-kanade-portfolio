@@ -1421,10 +1421,13 @@ const mobileCarouselKeys = [
         gallery.appendChild(galleryItem);
       });
 
-      subsection.appendChild(subsectionTitle);
-      subsection.appendChild(gallery);
+      if (group.title) {
+  subsection.appendChild(subsectionTitle);
+}
 
-      sectionElement.appendChild(subsection);
+subsection.appendChild(gallery);
+
+sectionElement.appendChild(subsection);
 
       if (mobileCarouselKeys.includes(group.key)) {
         createMobileGalleryDots(gallery, items);

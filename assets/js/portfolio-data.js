@@ -5853,7 +5853,1745 @@ uxCaseStudy: {
         "UX - OLA Scooty App"
     }
   ]
-}
+},
+
+"print-design-dagdusheth-ganpati": {
+  title: "Dagdusheth Ganpati",
+  fullTitle: "Shrimant Dagdusheth Halwai Ganpati",
+
+  category: "Print Design",
+  categorySlug: "print-design",
+
+  industry: "Religious / Devotional Organisation",
+  projectType: "Print Design",
+
+  role: "Print Designer",
+  deliverables: "Hoardings, Magazine & Booklet",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon:
+        "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon:
+        "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon:
+        "./assets/images/software Icons/corel-draw.png"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel: "Print Design",
+    categoryUrl:
+      "./index.html?section=portfolio&category=print-design",
+
+    currentLabel:
+      "Dagdusheth Ganpati"
+  },
+
+  tabs: [
+    {
+      id: "project-info",
+      label: "Project Info"
+    },
+    {
+      id: "design-thinking",
+      label: "Design Thinking"
+    },
+    {
+      id: "visual-system",
+      label: "Visual System"
+    },
+    {
+      id: "festival-hoardings",
+      label: "Festival Hoardings"
+    },
+    {
+      id: "hirabagh-rugna-seva-booth",
+      label: "Rugna Seva Booth"
+    },
+    {
+      id: "dagdusheth-ahwal",
+      label: "Dagdusheth Ahwal"
+    },
+    {
+      id: "social-initiatives-booklet",
+      label: "Social Initiatives Booklet"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Print Design/DG.jpg",
+
+      alt:
+        "Shrimant Dagdusheth Halwai Ganpati Print Design cover image"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Mobile/DG.jpg",
+
+      alt:
+        "Shrimant Dagdusheth Halwai Ganpati mobile Print Design cover image"
+    }
+  },
+
+  projectOverview: {
+    title:
+      "Shrimant Dagdusheth Halwai Ganpati",
+
+    sections: [
+      {
+        heading:
+          "Who is the client?",
+
+        body:
+          "Shrimant Dagdusheth Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdusheth Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdusheth Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdusheth Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdusheth’s family but the entire neighborhood."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  designThinking: {
+    heading:
+      "Design Thinking",
+
+    points: [
+      "This client was a unique case because their needs work across various formats, occasions & daily requirements.",
+
+      "With a very high volume of social media posts going out every day, the biggest challenge was to bring structure to the chaos.",
+
+      "The demand was not only about designing individual posts, but about creating a system that could manage speed, variety & consistency at the same time.",
+
+      "The goal was to make every post feel different enough to stay engaging, but still connected enough to look like it belonged to one larger visual family.",
+
+      "Overall, we focused on creating a visual system that could handle scale, repetition & daily updates without losing clarity."
+    ],
+
+    pointsMobile: [
+      "This client was a unique case because their requirements worked across different formats, occasions and daily communication needs.",
+
+      "The biggest challenge was to bring structure, speed and consistency to a large volume of communication.",
+
+      "The goal was to create a visual system that could handle scale, repetition and frequent updates without losing clarity."
+    ]
+  },
+
+  visualSystem: {
+    heading:
+      "Visual System",
+
+    points: [
+      "The design language was challenging because the brand needed to publish multiple posts every day while still maintaining a consistent visual identity.",
+
+      "Each post had to feel fresh, but also connected to the larger Dagdusheth communication style.",
+
+      "Colors were kept more flexible instead of fixed brand colors. A palette inspired by the Paithani saree was chosen because it was contextually appropriate for the brand.",
+
+      "For major occasions, a separate design language was created to make those festivals feel more grand, special & emotionally elevated.",
+
+      "The final system balanced daily consistency with festive distinction, making the brand feel organized, devotional & visually rich."
+    ],
+
+    pointsMobile: [
+      "The design language needed to support frequent communication while maintaining a consistent visual identity.",
+
+      "Colors were kept flexible, using a palette inspired by the Paithani saree because it felt culturally appropriate for the brand.",
+
+      "The final system balanced daily consistency with festive distinction."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id:
+        "festival-hoardings",
+
+      title:
+        "Festival Hoardings",
+
+      groups: [
+        {
+          key:
+            "printDGFestivalHoardings",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Festival Hoardings",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-1-A.jpg",
+
+              alt:
+                "Dagdusheth Ganpati festival hoarding design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-1-B.jpg",
+
+              alt:
+                "Dagdusheth Ganpati festival hoarding design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-1-C.jpg",
+
+              alt:
+                "Dagdusheth Ganpati festival hoarding design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-1-D.jpg",
+
+              alt:
+                "Dagdusheth Ganpati festival hoarding design 04"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "hirabagh-rugna-seva-booth",
+
+      title:
+        "Hirabagh Koti Rugna Seva Booth — 109 ft × 25.5 ft",
+
+      groups: [
+        {
+          key:
+            "printDGRugnaSevaBooth",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Hirabagh Koti Rugna Seva Booth",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-2-A.jpg",
+
+              alt:
+                "Hirabagh Koti Rugna Seva Booth design"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "dagdusheth-ahwal",
+
+      title:
+        "Dagdusheth Ahwal — Magazine, A4 Horizontal",
+
+      groups: [
+        {
+          key:
+            "printDGAhwal",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Dagdusheth Ahwal Magazine",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-A.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-B.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-C.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-D.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 04"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-E.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 05"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-F.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 06"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-G.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 07"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-H.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 08"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-I.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 09"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-J.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 10"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-K.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 11"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-L.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 12"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-M.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 13"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-N.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 14"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-O.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 15"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-P.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 16"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-Q.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 17"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-R.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 18"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-3-S.jpg",
+
+              alt:
+                "Dagdusheth Ahwal magazine design 19"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "social-initiatives-booklet",
+
+      title:
+        "Social Initiatives Booklet",
+
+      groups: [
+        {
+          key:
+            "printDGSocialInitiativesBooklet",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Social Initiatives Booklet",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-A.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-B.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-C.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-D.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 04"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-E.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 05"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-F.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 06"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-G.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 07"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-H.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 08"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-I.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 09"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-J.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 10"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-K.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 11"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/DG/Design-4-L.jpg",
+
+              alt:
+                "Dagdusheth Social Initiatives Booklet design 12"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Kumbh 2027 - Book Jacket",
+
+      industry:
+        "Publishing / Spiritual Event",
+
+      url:
+        "./portfolio-detail.html?project=print-design-kumbh-2027",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Kumbh 2027.jpg",
+
+        alt:
+          "Kumbh 2027 Book Jacket thumbnail"
+      },
+
+      imageLabel:
+        "Kumbh 2027 - Book Jacket"
+    },
+
+    {
+      title:
+        "Autobiography Book Cover",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=print-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Autobiography Book Cover"
+    },
+
+    {
+      title:
+        "Core Essence - Tarot Cards",
+
+      industry:
+        "Wellness / Tarot",
+
+      url:
+        "./portfolio-detail.html?project=print-design-core-essence-tarot-cards",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Core essence.jpg",
+
+        alt:
+          "Core Essence Tarot Cards thumbnail"
+      },
+
+      imageLabel:
+        "Core Essence - Tarot Cards"
+    }
+  ]
+},
+	
+"print-design-kumbh-2027": {
+  title: "Kumbh 2027 - Book Jacket",
+  fullTitle: "Kumbh 2027 - Book Jacket",
+
+  category: "Print Design",
+  categorySlug: "print-design",
+
+  industry: "Publishing / Spiritual Event",
+  projectType: "Print Design",
+
+  role: "Print Designer",
+  deliverables: "Hoardings, Magazine & Booklet",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon:
+        "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon:
+        "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon:
+        "./assets/images/software Icons/corel-draw.png"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel: "Print Design",
+    categoryUrl:
+      "./index.html?section=portfolio&category=print-design",
+
+    currentLabel:
+      "Kumbh 2027 - Book Jacket"
+  },
+
+  tabs: [
+    {
+      id: "project-info",
+      label: "Project Info"
+    },
+    {
+      id: "design-thinking",
+      label: "Design Thinking"
+    },
+    {
+      id: "visual-system",
+      label: "Visual System"
+    },
+    {
+      id: "book-jacket",
+      label: "Book Jacket"
+    },
+    {
+      id: "inner-page-template",
+      label: "Inner Page Template"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Kumbh 2027.jpg",
+
+      alt:
+        "Kumbh 2027 Book Jacket Print Design cover image"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Mobile/Kumbh 2027.jpg",
+
+      alt:
+        "Kumbh 2027 Book Jacket mobile Print Design cover image"
+    }
+  },
+
+  projectOverview: {
+    title:
+      "Kumbh 2027 - Book Jacket",
+
+    sections: [
+      {
+        heading:
+          "About the Project",
+
+        body:
+          "This was a pitching project for Kumbh 2027, created for the authorities of Trimbakeshwar Temple. The project carried a much larger context, as the Kumbh Mela is one of India’s most significant spiritual gatherings, bringing together faith, culture, administration & mass public participation on an extraordinary scale. Because of the sheer size and importance of the festival, the planning and pitching process had to begin well in advance. The objective was to present a thoughtful and organized approach that could support an event of this magnitude — one that demanded not only creative thinking, but also sensitivity towards tradition, crowd experience & the spiritual importance of Trimbakeshwar."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  designThinking: {
+    heading:
+      "Design Thinking",
+
+    points: [
+      "The overall design language was planned to feel simple, elegant, monochrome & spacious.",
+
+      "The inspiration came from a coffee-table book, where every element has room to breathe.",
+
+      "The aim was to create a design that felt premium & calm, rather than crowded or overly decorative.",
+
+      "A minimal approach was chosen so the subject could feel more important & visually dignified."
+    ],
+
+    pointsMobile: [
+      "The overall design language was planned to feel simple, elegant, monochrome and spacious.",
+
+      "The inspiration came from a coffee-table book, where every element has room to breathe.",
+
+      "A minimal approach allowed the subject to feel more important, calm and visually dignified."
+    ]
+  },
+
+  visualSystem: {
+    heading:
+      "Visual System",
+
+    points: [
+      "The typography, colour scheme & imagery were all selected to stay relevant to the subject.",
+
+      "AI-generated images were used to create visuals that matched the concept.",
+
+      "The execution followed a contrasting monochrome style, giving the design a strong yet elegant appearance.",
+
+      "The layouts were kept spacious so the cover could feel more premium, composed & editorial."
+    ],
+
+    pointsMobile: [
+      "The typography, colour scheme and imagery were selected to remain relevant to the subject.",
+
+      "AI-generated images were used to create visuals that matched the concept.",
+
+      "A contrasting monochrome style and spacious layouts gave the design a premium editorial quality."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id:
+        "book-jacket",
+
+      title:
+        "Book Jacket",
+
+      groups: [
+        {
+          key:
+            "printKumbhBookJacket",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Kumbh 2027 Book Jacket",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Kumbh 2027/Design-1-A.jpg",
+
+              alt:
+                "Kumbh 2027 Book Jacket design"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "inner-page-template",
+
+      title:
+        "Inner Page Template",
+
+      groups: [
+        {
+          key:
+            "printKumbhInnerPageTemplate",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Kumbh 2027 Inner Page Template",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Kumbh 2027/Design-2-A.jpg",
+
+              alt:
+                "Kumbh 2027 inner page template design"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Dagdusheth Ganpati",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=print-design-dagdusheth-ganpati",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/DG.jpg",
+
+        alt:
+          "Dagdusheth Ganpati Print Design thumbnail"
+      },
+
+      imageLabel:
+        "Dagdusheth Ganpati"
+    },
+
+    {
+      title:
+        "Autobiography Book Cover",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=print-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Autobiography Book Cover"
+    },
+
+    {
+      title:
+        "Core Essence - Tarot Cards",
+
+      industry:
+        "Wellness / Tarot",
+
+      url:
+        "./portfolio-detail.html?project=print-design-core-essence-tarot-cards",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Core essence.jpg",
+
+        alt:
+          "Core Essence Tarot Cards thumbnail"
+      },
+
+      imageLabel:
+        "Core Essence - Tarot Cards"
+    }
+  ]
+},
+
+
+"print-design-autobiography-book-cover": {
+  title: "Autobiography Book Cover",
+  fullTitle: "Autobiography Book Cover",
+
+  category: "Print Design",
+  categorySlug: "print-design",
+
+  industry: "Publishing / Biography",
+  projectType: "Print Design",
+
+  role: "Print Designer",
+  deliverables: "Hoardings, Magazine & Booklet",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon:
+        "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon:
+        "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon:
+        "./assets/images/software Icons/corel-draw.png"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel: "Print Design",
+    categoryUrl:
+      "./index.html?section=portfolio&category=print-design",
+
+    currentLabel:
+      "Autobiography Book Cover"
+  },
+
+  tabs: [
+    {
+      id: "project-info",
+      label: "Project Info"
+    },
+    {
+      id: "design-thinking",
+      label: "Design Thinking"
+    },
+    {
+      id: "visual-system",
+      label: "Visual System"
+    },
+    {
+      id: "book-cover",
+      label: "Book Cover"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
+
+      alt:
+        "Autobiography Book Cover Print Design cover image"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Mobile/Mahesh Bhau.jpg",
+
+      alt:
+        "Autobiography Book Cover mobile Print Design cover image"
+    }
+  },
+
+  projectOverview: {
+    title:
+      "Autobiography Book Cover",
+
+    sections: [
+      {
+        heading:
+          "About the Project",
+
+        body:
+          "This project was created as a memoir-style autobiography based on the life of Mahesh Bhau’s father, who was closely associated with Dagdusheth Ganpati as one of its trustees. The book was designed to present his life journey through separate chapters, with each section capturing an important phase, memory or turning point from his personal & public life. The visual approach had to be deeply sensitive & story-driven. Every image & design element needed to support the emotion of that particular chapter — whether it reflected family, devotion, responsibility, service, struggle or legacy. At its heart, the project was not just about designing a book. It was about giving visual form to a life lived with purpose, faith & contribution."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  designThinking: {
+    heading:
+      "Design Thinking",
+
+    points: [
+      "The cover was built around the idea of showing Mahesh Bhau’s father’s life as a complete journey.",
+
+      "The focus was to show his transformation from a young boy to the person he eventually became.",
+
+      "The cover had to feel personal, emotional & respectful, while still carrying a strong visual impact.",
+
+      "Instead of showing just one moment from his life, we decided to bring together different phases, memories & milestones into one meaningful composition."
+    ],
+
+    pointsMobile: [
+      "The cover was built around the idea of showing his life as a complete journey.",
+
+      "The focus was to show his transformation from a young boy to the person he eventually became.",
+
+      "Different phases, memories and milestones were brought together into one emotional and respectful composition."
+    ]
+  },
+
+  visualSystem: {
+    heading:
+      "Visual System",
+
+    points: [
+      "AI-generated visuals were used to maintain one consistent art style.",
+
+      "Every clothing detail was planned carefully to match the time period and context of each particular phase in his life.",
+
+      "His journey was presented through a collage-style composition, allowing multiple moments to come together in one frame.",
+
+      "The collage was inspired by movie-poster-style layouts, giving the cover a sense of drama, depth & storytelling.",
+
+      "The layout was balanced carefully so that the cover felt cinematic and emotional, without becoming overcrowded."
+    ],
+
+    pointsMobile: [
+      "AI-generated visuals were used to maintain one consistent art style.",
+
+      "Clothing details were planned carefully to match the time period and context of each phase in his life.",
+
+      "A movie-poster-inspired collage brought multiple moments together while keeping the cover cinematic, emotional and balanced."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id:
+        "book-cover",
+
+      title:
+        "Book Cover",
+
+      groups: [
+        {
+          key:
+            "printMaheshBookCover",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Autobiography Book Cover",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Mahesh Bhau/Design-1-A.jpg",
+
+              alt:
+                "Autobiography Book Cover design"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Dagdusheth Ganpati",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=print-design-dagdusheth-ganpati",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/DG.jpg",
+
+        alt:
+          "Dagdusheth Ganpati Print Design thumbnail"
+      },
+
+      imageLabel:
+        "Dagdusheth Ganpati"
+    },
+
+    {
+      title:
+        "Kumbh 2027 - Book Jacket",
+
+      industry:
+        "Publishing / Spiritual Event",
+
+      url:
+        "./portfolio-detail.html?project=print-design-kumbh-2027",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Kumbh 2027.jpg",
+
+        alt:
+          "Kumbh 2027 Book Jacket thumbnail"
+      },
+
+      imageLabel:
+        "Kumbh 2027 - Book Jacket"
+    },
+
+    {
+      title:
+        "Core Essence - Tarot Cards",
+
+      industry:
+        "Wellness / Tarot",
+
+      url:
+        "./portfolio-detail.html?project=print-design-core-essence-tarot-cards",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Core essence.jpg",
+
+        alt:
+          "Core Essence Tarot Cards thumbnail"
+      },
+
+      imageLabel:
+        "Core Essence - Tarot Cards"
+    }
+  ]
+},
+
+
+"print-design-core-essence-tarot-cards": {
+  title: "Core Essence - Tarot Cards",
+  fullTitle: "Core Essence - Tarot Cards",
+
+  category: "Print Design",
+  categorySlug: "print-design",
+
+  industry: "Wellness / Tarot",
+  projectType: "Print Design",
+
+  role: "Print Designer",
+  deliverables: "Hoardings, Magazine & Booklet",
+
+  tools: [
+    {
+      name: "Adobe Illustrator",
+      icon:
+        "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
+    },
+    {
+      name: "Adobe Photoshop",
+      icon:
+        "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
+    },
+    {
+      name: "Corel Draw",
+      icon:
+        "./assets/images/software Icons/corel-draw.png"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel: "Print Design",
+    categoryUrl:
+      "./index.html?section=portfolio&category=print-design",
+
+    currentLabel:
+      "Core Essence - Tarot Cards"
+  },
+
+  tabs: [
+    {
+      id: "project-info",
+      label: "Project Info"
+    },
+    {
+      id: "design-thinking",
+      label: "Design Thinking"
+    },
+    {
+      id: "visual-system",
+      label: "Visual System"
+    },
+    {
+      id: "emotion-sketches",
+      label: "Emotion Sketches"
+    },
+    {
+      id: "monochrome-front-and-back",
+      label: "Monochrome Front & Back"
+    },
+    {
+      id: "color-foldable-card",
+      label: "Color Foldable Card"
+    },
+    {
+      id: "color-and-monochrome",
+      label: "Color & Monochrome"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Core essence.jpg",
+
+      alt:
+        "Core Essence Tarot Cards Print Design cover image"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Print Design/Mobile/Core essence.jpg",
+
+      alt:
+        "Core Essence Tarot Cards mobile Print Design cover image"
+    }
+  },
+
+  projectOverview: {
+    title:
+      "Core Essence - Tarot Cards",
+
+    sections: [
+      {
+        heading:
+          "About the Project",
+
+        body:
+          "Core Essence is a psychology & Bach flower remedy brand that helps people understand their emotions & receive gentle, personalized herbal support. This project was created as an emotional discovery card game for patients who may find it difficult to clearly express what they are feeling. Instead of expecting them to immediately explain their emotions in words, the cards give them a more visual & intuitive way to identify their inner state. A patient can go through the stack and choose the card that feels closest to their current emotion. This simple act helps open up conversation, making it easier for the therapist to understand the patient’s emotional condition & suggest a more suitable Bach flower remedy. At its heart, the card game is designed to make emotional expression feel less intimidating, more personal & easier to begin."
+      }
+    ]
+  },
+
+  summaryBlock: {
+    roleHeading: "My Role",
+    deliverablesHeading: "Deliverables",
+    toolsHeading: "Tools Used"
+  },
+
+  designThinking: {
+    heading:
+      "Design Thinking",
+
+    points: [
+      "The strategy was to create a visual language that felt soft, sensitive & emotionally approachable.",
+
+      "Since the cards were meant to help patients understand what they were feeling, the visuals had to be abstract, but still clear enough to interpret.",
+
+      "The aim was not to show emotions in a literal way, but to create visuals that could gently help the patient recognize and connect with their inner state.",
+
+      "The leaf form was chosen intentionally because it was already a part of the Core Essence logo, helping maintain brand consistency.",
+
+      "At the same time, the leaf also worked beautifully for this subject because it feels natural, soothing & emotionally gentle."
+    ],
+
+    pointsMobile: [
+      "The strategy was to create a visual language that felt soft, sensitive and emotionally approachable.",
+
+      "The visuals needed to remain abstract while still being clear enough for patients to interpret.",
+
+      "The leaf form connected the cards to the Core Essence identity while feeling natural, soothing and emotionally gentle."
+    ]
+  },
+
+  visualSystem: {
+    heading:
+      "Visual System",
+
+    points: [
+      "The color palette was designed so that each emotion had its own visual mood and color combination.",
+
+      "The design did not rely on color alone to express emotion.",
+
+      "The line formations, shapes, flow & structure were also created to reflect the nature of each feeling.",
+
+      "Some visuals were kept calm and open, while others carried more movement, tension or depth depending on the emotion.",
+
+      "This helped each card express not only the emotion itself, but also the sensitivity, weight & feeling behind that emotion."
+    ],
+
+    pointsMobile: [
+      "Each emotion was given its own visual mood and colour combination.",
+
+      "The design also used line formations, shapes, flow and structure to reflect the nature of each feeling.",
+
+      "Some visuals felt calm and open, while others carried movement, tension or emotional depth."
+    ]
+  },
+
+  gallerySections: [
+    {
+      id:
+        "emotion-sketches",
+
+      title:
+        "Emotion Sketches",
+
+      groups: [
+        {
+          key:
+            "printCoreEmotionSketches",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Core Essence Emotion Sketches",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-1-A.jpg",
+
+              alt:
+                "Core Essence emotion sketch 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-1-B.jpg",
+
+              alt:
+                "Core Essence emotion sketch 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-1-C.jpg",
+
+              alt:
+                "Core Essence emotion sketch 03"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "monochrome-front-and-back",
+
+      title:
+        "Monochrome Front and Back",
+
+      groups: [
+        {
+          key:
+            "printCoreMonochromeFrontBack",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Core Essence Monochrome Front and Back",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-A.jpg",
+
+              alt:
+                "Core Essence monochrome card design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-B.jpg",
+
+              alt:
+                "Core Essence monochrome card design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-C.jpg",
+
+              alt:
+                "Core Essence monochrome card design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-D.jpg",
+
+              alt:
+                "Core Essence monochrome card design 04"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-E.jpg",
+
+              alt:
+                "Core Essence monochrome card design 05"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-F.jpg",
+
+              alt:
+                "Core Essence monochrome card design 06"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-G.jpg",
+
+              alt:
+                "Core Essence monochrome card design 07"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-H.jpg",
+
+              alt:
+                "Core Essence monochrome card design 08"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-I.jpg",
+
+              alt:
+                "Core Essence monochrome card design 09"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-J.jpg",
+
+              alt:
+                "Core Essence monochrome card design 10"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-K.jpg",
+
+              alt:
+                "Core Essence monochrome card design 11"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-L.jpg",
+
+              alt:
+                "Core Essence monochrome card design 12"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-M.jpg",
+
+              alt:
+                "Core Essence monochrome card design 13"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-N.jpg",
+
+              alt:
+                "Core Essence monochrome card design 14"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-O.jpg",
+
+              alt:
+                "Core Essence monochrome card design 15"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-2-P.jpg",
+
+              alt:
+                "Core Essence monochrome card design 16"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "color-foldable-card",
+
+      title:
+        "Color Foldable Card",
+
+      groups: [
+        {
+          key:
+            "printCoreColorFoldableCard",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Core Essence Color Foldable Card",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-A.jpg",
+
+              alt:
+                "Core Essence color foldable card design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-B.jpg",
+
+              alt:
+                "Core Essence color foldable card design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-C.jpg",
+
+              alt:
+                "Core Essence color foldable card design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-D.jpg",
+
+              alt:
+                "Core Essence color foldable card design 04"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-E.jpg",
+
+              alt:
+                "Core Essence color foldable card design 05"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-F.jpg",
+
+              alt:
+                "Core Essence color foldable card design 06"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-G.jpg",
+
+              alt:
+                "Core Essence color foldable card design 07"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-H.jpg",
+
+              alt:
+                "Core Essence color foldable card design 08"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-I.jpg",
+
+              alt:
+                "Core Essence color foldable card design 09"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-3-J.jpg",
+
+              alt:
+                "Core Essence color foldable card design 10"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      id:
+        "color-and-monochrome",
+
+      title:
+        "Color and Monochrome",
+
+      groups: [
+        {
+          key:
+            "printCoreColorAndMonochrome",
+
+          title:
+            "",
+
+          previewGroupName:
+            "Core Essence Color and Monochrome Cards",
+
+          items: [
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-A.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-B.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-C.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-D.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 04"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-E.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 05"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-F.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 06"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-G.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 07"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-H.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 08"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-I.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 09"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/Print Design/Core/Design-4-J.jpg",
+
+              alt:
+                "Core Essence color and monochrome card design 10"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Dagdusheth Ganpati",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=print-design-dagdusheth-ganpati",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/DG.jpg",
+
+        alt:
+          "Dagdusheth Ganpati Print Design thumbnail"
+      },
+
+      imageLabel:
+        "Dagdusheth Ganpati"
+    },
+
+    {
+      title:
+        "Kumbh 2027 - Book Jacket",
+
+      industry:
+        "Publishing / Spiritual Event",
+
+      url:
+        "./portfolio-detail.html?project=print-design-kumbh-2027",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Kumbh 2027.jpg",
+
+        alt:
+          "Kumbh 2027 Book Jacket thumbnail"
+      },
+
+      imageLabel:
+        "Kumbh 2027 - Book Jacket"
+    },
+
+    {
+      title:
+        "Autobiography Book Cover",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=print-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Autobiography Book Cover"
+    }
+  ]
+}	
 	
 };
 

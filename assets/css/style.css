@@ -11546,3 +11546,611 @@ body.ux-lmm-page
 body.ux-case-study-page strong {
   font-weight: 600;
 }
+
+/*-----------------------------------*\
+  #PRINT DESIGN INNER PAGE GALLERIES
+\*-----------------------------------*/
+
+
+/*
+ * Shared gallery reset.
+ * Prevents the general portfolio gallery rules
+ * from turning these print galleries into carousels.
+ */
+
+body.portfolio-detail-page
+.case-gallery-printDGFestivalHoardings,
+
+body.portfolio-detail-page
+.case-gallery-printDGRugnaSevaBooth,
+
+body.portfolio-detail-page
+.case-gallery-printDGAhwal,
+
+body.portfolio-detail-page
+.case-gallery-printDGSocialInitiativesBooklet,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhBookJacket,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhInnerPageTemplate,
+
+body.portfolio-detail-page
+.case-gallery-printMaheshBookCover,
+
+body.portfolio-detail-page
+.case-gallery-printCoreEmotionSketches,
+
+body.portfolio-detail-page
+.case-gallery-printCoreMonochromeFrontBack,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorFoldableCard,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorAndMonochrome {
+  display: grid !important;
+
+  width: 100% !important;
+
+  overflow: visible !important;
+
+  scroll-snap-type: none !important;
+}
+
+
+body.portfolio-detail-page
+.case-gallery-printDGFestivalHoardings
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printDGRugnaSevaBooth
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printDGAhwal
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printDGSocialInitiativesBooklet
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhBookJacket
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhInnerPageTemplate
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printMaheshBookCover
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printCoreEmotionSketches
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printCoreMonochromeFrontBack
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorFoldableCard
+.case-gallery-item,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorAndMonochrome
+.case-gallery-item {
+  width: 100% !important;
+  height: auto !important;
+
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  flex: none !important;
+
+  scroll-snap-align: unset !important;
+}
+
+
+body.portfolio-detail-page
+.case-gallery-printDGFestivalHoardings
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printDGRugnaSevaBooth
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printDGAhwal
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printDGSocialInitiativesBooklet
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhBookJacket
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printKumbhInnerPageTemplate
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printMaheshBookCover
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printCoreEmotionSketches
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printCoreMonochromeFrontBack
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorFoldableCard
+.case-gallery-item img,
+
+body.portfolio-detail-page
+.case-gallery-printCoreColorAndMonochrome
+.case-gallery-item img {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+}
+
+
+/*-----------------------------------*\
+  #PRINT DESIGN DESKTOP
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  /*
+   * Four-column galleries.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGFestivalHoardings,
+
+  body.portfolio-detail-page
+  .case-gallery-printDGSocialInitiativesBooklet,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreMonochromeFrontBack,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorFoldableCard,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorAndMonochrome {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr)) !important;
+
+    gap: 18px !important;
+  }
+
+
+  /*
+   * Three-column gallery.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreEmotionSketches {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 18px !important;
+  }
+
+
+  /*
+   * Two-column Ahwal magazine gallery.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 18px !important;
+  }
+
+
+  /*
+   * Single-column galleries.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGRugnaSevaBooth,
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhBookJacket,
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhInnerPageTemplate,
+
+  body.portfolio-detail-page
+  .case-gallery-printMaheshBookCover {
+    grid-template-columns:
+      1fr !important;
+
+    gap: 18px !important;
+  }
+
+
+  /*
+   * Dagdusheth Festival Hoardings.
+   * Four columns, 1:1.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGFestivalHoardings
+  .case-gallery-item {
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Hirabagh Rugna Seva Booth.
+   * Single column, 16:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGRugnaSevaBooth
+  .case-gallery-item {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+  }
+
+
+  /*
+   * Dagdusheth Ahwal.
+   * First two images: 4:3.
+   * Remaining images: 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal
+  .case-gallery-item:nth-child(-n + 2) {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 10px !important;
+  }
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal
+  .case-gallery-item:nth-child(n + 3) {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Social Initiatives Booklet.
+   * Four columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGSocialInitiativesBooklet
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Kumbh Book Jacket.
+   * Single column, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhBookJacket
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 12px !important;
+  }
+
+
+  /*
+   * Kumbh Inner Page Template.
+   * Single column, 16:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhInnerPageTemplate
+  .case-gallery-item {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 12px !important;
+  }
+
+
+  /*
+   * Autobiography Book Cover.
+   * Single column, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printMaheshBookCover
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 12px !important;
+  }
+
+
+  /*
+   * Core Essence Emotion Sketches.
+   * Three columns, 3:4.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreEmotionSketches
+  .case-gallery-item {
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Core Essence Monochrome Front and Back.
+   * Four columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreMonochromeFrontBack
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Core Essence Color Foldable Card.
+   * Four columns, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorFoldableCard
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 10px !important;
+  }
+
+
+  /*
+   * Core Essence Color and Monochrome.
+   * Four columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorAndMonochrome
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 10px !important;
+  }
+}
+
+
+/*-----------------------------------*\
+  #PRINT DESIGN MOBILE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /*
+   * Two-column mobile galleries.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGFestivalHoardings,
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal,
+
+  body.portfolio-detail-page
+  .case-gallery-printDGSocialInitiativesBooklet,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreEmotionSketches,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreMonochromeFrontBack,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorFoldableCard,
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorAndMonochrome {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 10px !important;
+  }
+
+
+  /*
+   * Single-column mobile galleries.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGRugnaSevaBooth,
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhBookJacket,
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhInnerPageTemplate,
+
+  body.portfolio-detail-page
+  .case-gallery-printMaheshBookCover {
+    grid-template-columns:
+      1fr !important;
+
+    gap: 12px !important;
+  }
+
+
+  /*
+   * Festival Hoardings.
+   * Two columns, 1:1.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGFestivalHoardings
+  .case-gallery-item {
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Rugna Seva Booth.
+   * Single column, 16:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGRugnaSevaBooth
+  .case-gallery-item {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Dagdusheth Ahwal.
+   * Images 1 and 2 remain two-column, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal
+  .case-gallery-item:nth-child(-n + 2) {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Ahwal images 3 onwards become
+   * full-width single-column, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGAhwal
+  .case-gallery-item:nth-child(n + 3) {
+    grid-column: 1 / -1 !important;
+
+    aspect-ratio: 21 / 9 !important;
+
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Social Initiatives Booklet.
+   * Two columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printDGSocialInitiativesBooklet
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Kumbh Book Jacket.
+   * Single column, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhBookJacket
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Kumbh Inner Page Template.
+   * Single column, 16:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printKumbhInnerPageTemplate
+  .case-gallery-item {
+    aspect-ratio: 16 / 9 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Autobiography Book Cover.
+   * Single column, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printMaheshBookCover
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Core Essence Emotion Sketches.
+   * Two columns, 3:4.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreEmotionSketches
+  .case-gallery-item {
+    aspect-ratio: 3 / 4 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Core Essence Monochrome Front and Back.
+   * Two columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreMonochromeFrontBack
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Core Essence Color Foldable Card.
+   * Two columns, 21:9.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorFoldableCard
+  .case-gallery-item {
+    aspect-ratio: 21 / 9 !important;
+    border-radius: 9px !important;
+  }
+
+
+  /*
+   * Core Essence Color and Monochrome.
+   * Two columns, 4:3.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-printCoreColorAndMonochrome
+  .case-gallery-item {
+    aspect-ratio: 4 / 3 !important;
+    border-radius: 9px !important;
+  }
+}
