@@ -2969,7 +2969,7 @@ body.page-contact .contact-info .contact-link:focus {
     display: flex !important;
     flex-wrap: nowrap;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
 
     width: 100%;
     margin-bottom: 24px;
@@ -2994,13 +2994,13 @@ body.page-contact .contact-info .contact-link:focus {
   }
 
   .portfolio-category-menu .filter-item {
-    flex: 0 0 76px;
-    width: 76px;
+    flex: 0 0 80px;
+    width: 85px;
     scroll-snap-align: start;
   }
 
   .portfolio-category-menu .filter-item button {
-    width: 76px;
+    width: 85px;
     min-width: 0;
     height: auto;
     min-height: 0;
@@ -3034,8 +3034,8 @@ body.page-contact .contact-info .contact-link:focus {
   }
 
   .portfolio-category-icon {
-    width: 70px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     flex: 0 0 80px;
 
     display: flex;
@@ -3060,8 +3060,8 @@ body.page-contact .contact-info .contact-link:focus {
   }
 
   .portfolio-category-icon img {
-    width: 50px;
-    height: 50px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
 
     transition:
@@ -3096,6 +3096,15 @@ body.page-contact .contact-info .contact-link:focus {
     transform: scale(1.08) translateY(-1px);
     animation: none !important;
   }
+}
+
+.portfolio-category-text .mobile-break {
+  display: initial;
+}
+
+.portfolio-category-text {
+  min-height: 32px;
+  line-height: 1.2;
 }
 
 /*-----------------------------------*\
