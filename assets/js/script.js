@@ -342,13 +342,57 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+const resetMainPageScroll = function () {
+  const mainNavbar =
+    document.querySelector(".navbar");
+
+  const scrollToTop = function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "auto"
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    /*
+     * Make sure the mobile navigation
+     * is visible on the newly opened page.
+     */
+    if (mainNavbar) {
+      mainNavbar.classList.remove("is-hidden");
+    }
+  };
+
+  /*
+   * Reset immediately.
+   */
+  scrollToTop();
+
+  /*
+   * Reset again after the new article
+   * and sidebar layout have recalculated.
+   */
+  requestAnimationFrame(function () {
+    requestAnimationFrame(scrollToTop);
+  });
+};
+
 // add event to all nav links
 for (let i = 0; i < navigationLinks.length; i++) {
 navigationLinks[i].addEventListener("click", function () {
 
   const targetPage = this.dataset.navTarget;
 
-  document.body.classList.remove("page-about", "page-resume", "page-portfolio", "page-contact");
+  document.body.classList.remove(
+  "page-home",
+  "page-about",
+  "page-resume",
+  "page-portfolio",
+  "page-contact"
+);
+	
   document.body.classList.add("page-" + targetPage);
 	
     for (let j = 0; j < pages.length; j++) {
@@ -365,7 +409,7 @@ navigationLinks[i].addEventListener("click", function () {
 
     this.classList.add("active");
 
-    window.scrollTo(0, 0);
+    resetMainPageScroll();
 
   });
 }
@@ -710,8 +754,16 @@ if (portfolioCategoryMenu) {
 
 // open correct section/category when coming back from portfolio-detail.html
 const pageUrlParams = new URLSearchParams(window.location.search);
-const requestedSection = pageUrlParams.get("section");
-const requestedCategory = pageUrlParams.get("category");
+const requestedSectionValue =
+  pageUrlParams.get("section");
+
+const requestedSection =
+  requestedSectionValue === "about"
+    ? "home"
+    : requestedSectionValue;
+
+const requestedCategory =
+  pageUrlParams.get("category");
 
 const normalizeCategoryValue = function (value) {
   return String(value || "")
@@ -813,3 +865,4 @@ const initMobileMainNavHideOnScroll = function () {
 initMobileMainNavHideOnScroll();
 
 openRequestedSectionAndCategory();
+

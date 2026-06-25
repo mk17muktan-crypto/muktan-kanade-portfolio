@@ -1734,26 +1734,49 @@ const initMobileTabsMenu = function () {
       button.setAttribute("aria-current", "false");
     }
 
-    button.addEventListener("click", function () {
-      const targetSection = document.getElementById(sectionId);
+button.addEventListener("click", function () {
+  const targetSection =
+    document.getElementById(sectionId);
 
-      if (!targetSection) return;
+  if (!targetSection) return;
 
-      setActiveMobileTab(button);
-      setMenuOpen(false);
+  setActiveMobileTab(button);
+  setMenuOpen(false);
 
-      window.setTimeout(function () {
-        const targetTop =
-          targetSection.getBoundingClientRect().top +
-          window.scrollY -
-          24;
+  /*
+   * Explicitly remove the body scroll lock.
+   * This is necessary for mobile Safari.
+   */
+  document.body.classList.remove(
+    "case-mobile-tabs-open"
+  );
 
-        window.scrollTo({
-          top: targetTop,
-          behavior: "smooth"
-        });
-      }, 160);
+  const scrollToTargetSection = function () {
+    const targetTop =
+      targetSection.getBoundingClientRect().top +
+      window.scrollY -
+      24;
+
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      left: 0,
+      behavior: "smooth"
     });
+  };
+
+  /*
+   * Wait until the menu closes and the browser
+   * restores normal page scrolling.
+   */
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      window.setTimeout(
+        scrollToTargetSection,
+        60
+      );
+    });
+  });
+});
 
     mobileTabsList.appendChild(button);
     mobileTabButtons.push(button);
@@ -1831,14 +1854,26 @@ const initMobileTabsMenu = function () {
 };
 
 const initHideNavOnScroll = function () {
-  const mobileNav = document.querySelector("[data-case-mobile-nav]");
+  const mobileNav =
+    document.querySelector(
+      "[data-case-mobile-nav]"
+    );
 
   if (!mobileNav) return;
 
-  let lastScrollY = window.scrollY;
+  let lastScrollY =
+    Math.max(window.scrollY, 0);
 
-  const setMobileNavHidden = function (shouldHide) {
-    mobileNav.classList.toggle("is-hidden", shouldHide);
+  let scrollFrame = null;
+
+
+  const setMobileNavHidden = function (
+    shouldHide
+  ) {
+    mobileNav.classList.toggle(
+      "is-hidden",
+      shouldHide
+    );
 
     document.body.classList.toggle(
       "case-mobile-nav-hidden",
@@ -1846,41 +1881,122 @@ const initHideNavOnScroll = function () {
     );
   };
 
+
+  const updateMobileNav = function () {
+    const currentScrollY =
+      Math.max(window.scrollY, 0);
+
+    if (window.innerWidth > 580) {
+      setMobileNavHidden(false);
+      lastScrollY = currentScrollY;
+      scrollFrame = null;
+      return;
+    }
+
+    const scrollDifference =
+      currentScrollY - lastScrollY;
+
+
+    /*
+     * Always show the navbar near
+     * the beginning of the page.
+     */
+    if (currentScrollY <= 40) {
+      setMobileNavHidden(false);
+    }
+
+    /*
+     * Page moving downward:
+     * hide the bottom navbar.
+     */
+    else if (scrollDifference > 5) {
+      setMobileNavHidden(true);
+    }
+
+    /*
+     * Page moving upward:
+     * reveal the bottom navbar.
+     */
+    else if (scrollDifference < -5) {
+      setMobileNavHidden(false);
+    }
+
+
+    if (Math.abs(scrollDifference) > 5) {
+      lastScrollY = currentScrollY;
+    }
+
+    scrollFrame = null;
+  };
+
+
+  const requestMobileNavUpdate =
+    function () {
+      if (scrollFrame !== null) return;
+
+      scrollFrame =
+        requestAnimationFrame(
+          updateMobileNav
+        );
+    };
+
+
   setMobileNavHidden(false);
 
   window.addEventListener(
     "scroll",
-    function () {
-      const currentScrollY = window.scrollY;
-
-      if (window.innerWidth > 580) {
-        setMobileNavHidden(false);
-        lastScrollY = Math.max(currentScrollY, 0);
-        return;
-      }
-
-      const scrollingDown = currentScrollY > lastScrollY + 4;
-      const scrollingUp = currentScrollY < lastScrollY - 4;
-
-      if (currentScrollY > 90 && scrollingDown) {
-        setMobileNavHidden(true);
-      }
-
-      if (scrollingUp || currentScrollY <= 40) {
-        setMobileNavHidden(false);
-      }
-
-      lastScrollY = Math.max(currentScrollY, 0);
-    },
+    requestMobileNavUpdate,
     { passive: true }
   );
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 580) {
+
+  window.addEventListener(
+    "resize",
+    function () {
+      lastScrollY =
+        Math.max(window.scrollY, 0);
+
+      if (window.innerWidth > 580) {
+        setMobileNavHidden(false);
+      }
+    }
+  );
+
+
+  /*
+   * Restore a clean navbar state when
+   * the browser returns from its cache.
+   */
+  window.addEventListener(
+    "pageshow",
+    function () {
+      lastScrollY =
+        Math.max(window.scrollY, 0);
+
       setMobileNavHidden(false);
     }
-  });
+  );
 };
+
+const resetDetailPageScrollLocks =
+  function () {
+    document.body.classList.remove(
+      "case-mobile-tabs-open",
+      "case-preview-open",
+      "case-mobile-nav-hidden"
+    );
+
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  };
+
+
+resetDetailPageScrollLocks();
+
+window.addEventListener(
+  "pageshow",
+  resetDetailPageScrollLocks
+);
 
 fillTextContent();
 renderTabs();
