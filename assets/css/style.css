@@ -13780,3 +13780,60 @@ body.page-home
   }
 
 }
+
+/*-----------------------------------*\
+  #CONTACT PAGE MOBILE SIDEBAR CLEANUP
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /*
+   * Hide the value statement only
+   * on the Contact page.
+   */
+  body.page-contact
+  .home-value-statement {
+    display: none !important;
+  }
+
+
+  /*
+   * Hide See My Work and the first
+   * Download Resume button.
+   */
+  body.page-contact
+  .home-mobile-actions {
+    display: none !important;
+  }
+
+
+  /*
+   * Hide the second Download Resume
+   * button above the contact details.
+   */
+  body.page-contact
+  .sidebar-resume-download-item {
+    display: none !important;
+  }
+
+}
+
+/*-----------------------------------*\
+  #RESTORE HOME PROFILE TEXT SIZE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.page-home
+  .info-content
+  .title {
+    font-size: 13px;
+  }
+
+  body.page-home
+  .home-value-statement {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+}
