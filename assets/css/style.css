@@ -13837,3 +13837,576 @@ body.page-home
   }
 
 }
+
+/*-----------------------------------*\
+  #GLOBAL PORTFOLIO THUMBNAIL RATIO
+\*-----------------------------------*/
+
+/*
+ * Portfolio-page thumbnails,
+ * Home notable-project thumbnails,
+ * and related-project thumbnails.
+ *
+ * Applies on desktop and mobile.
+ */
+
+.project-img,
+.case-next-thumb {
+  width: 100% !important;
+  height: auto !important;
+
+  aspect-ratio: 16 / 9 !important;
+
+  overflow: hidden;
+}
+
+
+/*
+ * Support thumbnails that contain either
+ * an img, picture element or placeholder.
+ */
+
+.project-img > img,
+.project-img > picture,
+.project-img > picture > img,
+.project-img > .case-img-placeholder,
+.case-next-thumb > img,
+.case-next-thumb > picture,
+.case-next-thumb > picture > img,
+.case-next-thumb > .case-img-placeholder {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+
+  object-fit: cover !important;
+}
+
+
+/*-----------------------------------*\
+  #DESKTOP INNER-PAGE MAIN BANNER
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  /*
+   * Fill the available horizontal space
+   * inside the left and right hero padding.
+   */
+
+  body.portfolio-detail-page
+  .case-cover-placeholder {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+
+  body.portfolio-detail-page
+  .case-cover-placeholder-box {
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+
+    overflow: hidden;
+  }
+
+
+  body.portfolio-detail-page
+  .case-cover-placeholder-box > * {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+
+  body.portfolio-detail-page
+  .case-cover-placeholder-box img {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block;
+
+    object-fit: cover !important;
+  }
+
+}
+
+/*-----------------------------------*\
+  #EXPERTISE TEXT AND CONTACT BUTTONS
+\*-----------------------------------*/
+
+/*
+ * Larger expertise-box text:
+ * desktop and tablet.
+ */
+
+.home-expertise-pill {
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+
+/*
+ * Resume contact buttons:
+ * one below another and full-width
+ * inside the right-side action column.
+ */
+
+.resume-contact-actions {
+  flex: 0 0 230px;
+  width: 230px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  align-self: stretch;
+}
+
+
+.resume-contact-button {
+  width: 100%;
+}
+
+
+/*
+ * Both Email Me and Call Me use
+ * the filled-yellow primary style.
+ */
+
+.home-contact-button-primary,
+.resume-contact-button-primary {
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+}
+
+
+/* Mobile adjustments */
+
+@media (max-width: 580px) {
+
+  /*
+   * Larger expertise text on mobile.
+   * The labels remain on one line.
+   */
+
+  .home-expertise-pill {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+
+  /*
+   * Home contact buttons already stack
+   * vertically; keep all three full-width.
+   */
+
+  .home-contact-actions {
+    grid-template-columns: 1fr;
+  }
+
+
+  .home-contact-button {
+    width: 100%;
+  }
+
+
+  /*
+   * Resume card becomes a single-column
+   * layout on mobile.
+   */
+
+  .resume-contact-actions {
+    width: 100%;
+    flex: none;
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .resume-contact-button {
+    width: 100%;
+  }
+
+}
+
+/*-----------------------------------*\
+  #PORTFOLIO INNER PAGE CONTACT CTA
+\*-----------------------------------*/
+
+body.portfolio-detail-page
+.case-contact-cta {
+  width: 100%;
+
+  margin-bottom: 42px;
+  padding: 0 28px;
+}
+
+
+body.portfolio-detail-page
+.case-contact-card {
+  width: 100%;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    hsla(0, 0%, 100%, 0.08);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      hsla(45, 100%, 72%, 0.11),
+      hsla(240, 2%, 14%, 0.88) 46%
+    );
+
+  box-shadow: var(--shadow-2);
+}
+
+
+body.portfolio-detail-page
+.case-contact-card h2 {
+  max-width: 860px;
+
+  margin-bottom: 10px;
+
+  color: var(--white-2);
+
+  font-size: 24px;
+  font-weight: var(--fw-600);
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+
+body.portfolio-detail-page
+.case-contact-card > p {
+  max-width: 790px;
+
+  color: var(--light-gray);
+
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.65;
+
+  text-align: left;
+}
+
+
+body.portfolio-detail-page
+.case-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+
+body.portfolio-detail-page
+.case-contact-button {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: var(--fw-600);
+  line-height: 1;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+
+body.portfolio-detail-page
+.case-contact-button ion-icon {
+  font-size: 17px;
+}
+
+
+body.portfolio-detail-page
+.case-contact-button-primary {
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+
+  box-shadow:
+    0 10px 24px
+    hsla(45, 100%, 72%, 0.18);
+}
+
+
+body.portfolio-detail-page
+.case-contact-button-outline {
+  border:
+    1px solid
+    var(--orange-yellow-crayola);
+
+  background: transparent;
+  color: var(--orange-yellow-crayola);
+}
+
+
+body.portfolio-detail-page
+.case-contact-button:hover {
+  transform: translateY(-2px);
+}
+
+
+body.portfolio-detail-page
+.case-contact-button:active {
+  transform: scale(0.96);
+}
+
+
+/* Mobile */
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page
+  .case-contact-cta {
+    margin-bottom: 30px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+  body.portfolio-detail-page
+  .case-contact-card {
+    padding: 22px 18px;
+
+    border-radius: 18px;
+  }
+
+
+  body.portfolio-detail-page
+  .case-contact-card h2 {
+    font-size: 20px;
+    line-height: 1.35;
+
+    text-align: left;
+  }
+
+
+  body.portfolio-detail-page
+  .case-contact-card > p {
+    font-size: 14px;
+    line-height: 1.65;
+
+    text-align: left;
+  }
+
+
+  body.portfolio-detail-page
+  .case-contact-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    width: 100%;
+  }
+
+
+  body.portfolio-detail-page
+  .case-contact-button {
+    width: 100%;
+    min-height: 46px;
+
+    font-size: 13px;
+  }
+
+}
+
+/*-----------------------------------*\
+  #REMOVE PRINT PAGE TAB OVERLAY
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  body.portfolio-detail-page
+  .case-tabs::before {
+    transition:
+      opacity 0.32s ease,
+      visibility 0.32s ease,
+      transform 0.42s
+        cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+
+  body.portfolio-detail-page.print-design-page
+  .case-tabs::before {
+    content: none !important;
+
+    display: none !important;
+
+    background: transparent !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    box-shadow: none !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+}
+
+/*-----------------------------------*\
+  #PHASE 1 PERFORMANCE IMPROVEMENTS
+\*-----------------------------------*/
+
+
+/*
+ * Skip layout and painting for safe,
+ * lower-page sections until they are
+ * near the viewport.
+ *
+ * The browser still keeps the content
+ * and accessibility structure intact.
+ */
+
+article[data-page]
+> section:not(:first-of-type),
+
+body.portfolio-detail-page
+.case-contact-cta,
+
+body.portfolio-detail-page
+.case-next-projects {
+  content-visibility: auto;
+
+  contain-intrinsic-size:
+    auto 600px;
+}
+
+
+/*
+ * Section reveal.
+ *
+ * These styles apply only after
+ * JavaScript adds .reveal-enabled.
+ */
+
+html.reveal-enabled
+.reveal-on-scroll {
+  opacity: 0;
+
+  transform:
+    translate3d(0, 20px, 0);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.72s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+
+  will-change:
+    opacity,
+    transform;
+}
+
+
+html.reveal-enabled
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+
+  transform:
+    translate3d(0, 0, 0);
+}
+
+
+/*
+ * Remove will-change after reveal
+ * so the browser does not permanently
+ * reserve extra compositor memory.
+ */
+
+html.reveal-enabled
+.reveal-on-scroll.is-visible {
+  will-change: auto;
+}
+
+
+/*
+ * Accessibility:
+ * disable reveal movement for users
+ * who request reduced motion.
+ */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  html.reveal-enabled
+  .reveal-on-scroll,
+
+  html.reveal-enabled
+  .reveal-on-scroll.is-visible {
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    transition: none !important;
+
+    will-change: auto !important;
+  }
+
+}
+
+/*-----------------------------------*\
+  #LAZY PORTFOLIO GALLERIES
+\*-----------------------------------*/
+
+body.portfolio-detail-page
+.case-gallery-lazy-placeholder {
+  width: 100%;
+
+  display: block;
+
+  pointer-events: none;
+}
+
+
+/*
+ * Once rendered, remove any remaining
+ * placeholder influence immediately.
+ */
+
+body.portfolio-detail-page
+.case-gallery-section[
+  data-gallery-rendered="true"
+]
+.case-gallery-lazy-placeholder {
+  display: none;
+}
+
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page
+  .case-gallery-lazy-placeholder {
+    width: 100%;
+  }
+
+}

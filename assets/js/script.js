@@ -336,7 +336,86 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+/*-----------------------------------*\
+  #MAIN PAGE SECTION REVEAL
+\*-----------------------------------*/
 
+const initMainSectionReveal =
+  function () {
+    document.documentElement.classList.add(
+      "reveal-enabled"
+    );
+
+
+    const revealTargets =
+      document.querySelectorAll(
+        "article[data-page] > section"
+      );
+
+
+    if (
+      !(
+        "IntersectionObserver"
+        in window
+      )
+    ) {
+      revealTargets.forEach(
+        function (target) {
+          target.classList.add(
+            "is-visible"
+          );
+        }
+      );
+
+      return;
+    }
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(
+            function (entry) {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "is-visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.08,
+
+          rootMargin:
+            "0px 0px -8% 0px"
+        }
+      );
+
+
+    revealTargets.forEach(
+      function (target) {
+        target.classList.add(
+          "reveal-on-scroll"
+        );
+
+        revealObserver.observe(
+          target
+        );
+      }
+    );
+  };
+
+
+initMainSectionReveal();
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
@@ -483,44 +562,175 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// soft background glow follow + idle drift
-const root = document.documentElement;
+/*-----------------------------------*\
+  #PAUSABLE BACKGROUND GLOW
+\*-----------------------------------*/
 
-let glowX = window.innerWidth / 2;
-let glowY = window.innerHeight / 2;
+const root =
+  document.documentElement;
 
-let targetGlowX = glowX;
-let targetGlowY = glowY;
+let glowX =
+  window.innerWidth / 2;
 
-let lastMouseMoveTime = Date.now();
+let glowY =
+  window.innerHeight / 2;
+
+let targetGlowX =
+  glowX;
+
+let targetGlowY =
+  glowY;
+
+let lastMouseMoveTime =
+  Date.now();
+
 let idleAngle = 0;
 
-const updateGlowPosition = function () {
-  const isIdle = Date.now() - lastMouseMoveTime > 1800;
+let glowAnimationFrame = null;
+let glowIsRunning = false;
 
-  if (isIdle) {
-    idleAngle += 0.006;
 
-    targetGlowX = window.innerWidth / 2 + Math.cos(idleAngle) * 220;
-    targetGlowY = window.innerHeight / 2 + Math.sin(idleAngle * 0.8) * 160;
+const updateGlowPosition =
+  function () {
+    if (document.hidden) {
+      glowAnimationFrame = null;
+      glowIsRunning = false;
+      return;
+    }
+
+
+    const isIdle =
+      Date.now() -
+      lastMouseMoveTime >
+      1800;
+
+
+    if (isIdle) {
+      idleAngle += 0.006;
+
+      targetGlowX =
+        window.innerWidth / 2 +
+        Math.cos(idleAngle) * 220;
+
+      targetGlowY =
+        window.innerHeight / 2 +
+        Math.sin(
+          idleAngle * 0.8
+        ) * 160;
+    }
+
+
+    glowX +=
+      (
+        targetGlowX -
+        glowX
+      ) * 0.12;
+
+    glowY +=
+      (
+        targetGlowY -
+        glowY
+      ) * 0.12;
+
+
+    root.style.setProperty(
+      "--glow-x",
+      glowX + "px"
+    );
+
+    root.style.setProperty(
+      "--glow-y",
+      glowY + "px"
+    );
+
+
+    glowAnimationFrame =
+      requestAnimationFrame(
+        updateGlowPosition
+      );
+  };
+
+
+const startGlowAnimation =
+  function () {
+    if (
+      glowIsRunning ||
+      document.hidden
+    ) {
+      return;
+    }
+
+    glowIsRunning = true;
+
+    glowAnimationFrame =
+      requestAnimationFrame(
+        updateGlowPosition
+      );
+  };
+
+
+const stopGlowAnimation =
+  function () {
+    if (
+      glowAnimationFrame !== null
+    ) {
+      cancelAnimationFrame(
+        glowAnimationFrame
+      );
+    }
+
+    glowAnimationFrame = null;
+    glowIsRunning = false;
+  };
+
+
+document.addEventListener(
+  "mousemove",
+  function (event) {
+    targetGlowX =
+      event.clientX;
+
+    targetGlowY =
+      event.clientY;
+
+    lastMouseMoveTime =
+      Date.now();
+  },
+  {
+    passive: true
   }
+);
 
-  glowX += (targetGlowX - glowX) * 0.12;
-  glowY += (targetGlowY - glowY) * 0.12;
-	
-  root.style.setProperty("--glow-x", glowX + "px");
-  root.style.setProperty("--glow-y", glowY + "px");
 
-  requestAnimationFrame(updateGlowPosition);
-};
+document.addEventListener(
+  "visibilitychange",
+  function () {
+    if (document.hidden) {
+      stopGlowAnimation();
+      return;
+    }
 
-document.addEventListener("mousemove", function (event) {
-  targetGlowX = event.clientX;
-  targetGlowY = event.clientY;
-  lastMouseMoveTime = Date.now();
-});
+    lastMouseMoveTime =
+      Date.now();
 
-updateGlowPosition();
+    startGlowAnimation();
+  }
+);
+
+
+window.addEventListener(
+  "pagehide",
+  stopGlowAnimation
+);
+
+
+window.addEventListener(
+  "pageshow",
+  startGlowAnimation
+);
+
+
+startGlowAnimation();
 
 // core strengths mobile carousel dots
 const serviceList = document.querySelector(".service-list");

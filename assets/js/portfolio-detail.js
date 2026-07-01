@@ -12,6 +12,11 @@ if (!project) {
   throw new Error("Portfolio project not found: " + projectId);
 }
 
+document.body.classList.toggle(
+  "print-design-page",
+  project.category === "Print Design"
+);
+
 const getSectionId = function (tabId) {
   const sectionMap = {
     "project-info": "client-info",
@@ -36,22 +41,131 @@ const getResponsiveText = function (item) {
 };
 
 
+const createImageItem = function (
+  item,
+  options = {}
+) {
+  const finalItem = item || {
+    type: "placeholder",
+    label: "Image"
+  };
 
-const createImageItem = function (item) {
-  const finalItem = item || { type: "placeholder", label: "Image" };
-  const imageSrc = finalItem.src || finalItem.image || finalItem.url || "";
 
-  if (finalItem.type === "placeholder" || !imageSrc) {
-    const placeholder = document.createElement("div");
-    placeholder.classList.add("case-img-placeholder");
-    placeholder.innerText = finalItem.label || "Image";
+  const imageSrc =
+    options.src ||
+    finalItem.previewSrc ||
+    finalItem.src ||
+    finalItem.image ||
+    finalItem.url ||
+    "";
+
+
+  if (
+    finalItem.type === "placeholder" ||
+    !imageSrc
+  ) {
+    const placeholder =
+      document.createElement("div");
+
+    placeholder.classList.add(
+      "case-img-placeholder"
+    );
+
+    placeholder.innerText =
+      finalItem.label || "Image";
+
     return placeholder;
   }
 
-  const image = document.createElement("img");
+
+  const loadingMode =
+    options.loading ||
+    finalItem.loading ||
+    "lazy";
+
+
+  const priority =
+    options.fetchPriority ||
+    finalItem.fetchPriority ||
+    (
+      loadingMode === "eager"
+        ? "high"
+        : "low"
+    );
+
+
+  const image =
+    document.createElement("img");
+
+
   image.src = imageSrc;
-  image.alt = finalItem.alt || finalItem.label || project.title || "Portfolio image";
-  image.loading = "lazy";
+
+  image.alt =
+    finalItem.alt ||
+    finalItem.label ||
+    project.title ||
+    "Portfolio image";
+
+
+  image.loading = loadingMode;
+  image.decoding = "async";
+
+  image.setAttribute(
+    "fetchpriority",
+    priority
+  );
+
+
+  /*
+   * Optional responsive-image support.
+   * Existing image objects do not need
+   * these properties to keep working.
+   */
+
+  const imageSrcset =
+    options.srcset ||
+    finalItem.srcset ||
+    "";
+
+  const imageSizes =
+    options.sizes ||
+    finalItem.sizes ||
+    "";
+
+
+  if (imageSrcset) {
+    image.srcset =
+      imageSrcset;
+  }
+
+
+  if (imageSizes) {
+    image.sizes =
+      imageSizes;
+  }
+
+
+  /*
+   * Reserve image space when dimensions
+   * are available, reducing layout shifts.
+   */
+
+  if (finalItem.width) {
+    image.setAttribute(
+      "width",
+      finalItem.width
+    );
+  }
+
+
+  if (finalItem.height) {
+    image.setAttribute(
+      "height",
+      finalItem.height
+    );
+  }
+
+
   return image;
 };
 
@@ -129,28 +243,56 @@ if (project.layout === "ux-case-study" && tab.desktopLabel) {
 };
 
 const renderCoverImage = function () {
-  const coverBox = document.querySelector("[data-case-cover]");
+  const coverBox =
+    document.querySelector(
+      "[data-case-cover]"
+    );
 
   if (!coverBox) return;
 
-  const isMobile = window.innerWidth <= 580;
+  const isMobile =
+    window.innerWidth <= 580;
 
   let coverItem = null;
 
+
   if (project.hero) {
-    coverItem = isMobile ? project.hero.mobile : project.hero.desktop;
+    coverItem =
+      isMobile
+        ? project.hero.mobile
+        : project.hero.desktop;
   }
 
-  if (!coverItem && project.heroImages && project.heroImages.length > 0) {
-    coverItem = project.heroImages[0];
+
+  if (
+    !coverItem &&
+    project.heroImages &&
+    project.heroImages.length > 0
+  ) {
+    coverItem =
+      project.heroImages[0];
   }
+
 
   if (!coverItem) {
-    coverItem = { type: "placeholder", label: "Cover Image" };
+    coverItem = {
+      type: "placeholder",
+      label: "Cover Image"
+    };
   }
 
+
   coverBox.innerHTML = "";
-  coverBox.appendChild(createImageItem(coverItem));
+
+  coverBox.appendChild(
+    createImageItem(
+      coverItem,
+      {
+        loading: "eager",
+        fetchPriority: "high"
+      }
+    )
+  );
 };
 
 const renderProjectOverview = function () {
@@ -1079,7 +1221,17 @@ const renderPreviewImage = function () {
 
   const frame = document.createElement("div");
   frame.classList.add("case-preview-frame");
-  frame.appendChild(createImageItem(currentPreviewItems[currentPreviewIndex]));
+  frame.appendChild(
+  createImageItem(
+    currentPreviewItems[
+      currentPreviewIndex
+    ],
+    {
+      loading: "eager",
+      fetchPriority: "high"
+    }
+  )
+);
 
   casePreviewStage.appendChild(frame);
 
@@ -1345,58 +1497,73 @@ const createMobileGalleryDots = function (gallery, items) {
   updateGalleryDots();
 };
 
-const renderGallerySections = function () {
-  const galleryRoot = document.querySelector("[data-gallery-sections]");
+/*-----------------------------------*\
+  #LAZY GALLERY RENDERING
+\*-----------------------------------*/
 
-  if (!galleryRoot) return;
+let gallerySectionRenderers =
+  Object.create(null);
 
-  galleryRoot.innerHTML = "";
+let galleryLazyObserver = null;
 
-  const sections = project.gallerySections || [];
 
-const mobileCarouselKeys = [
-  "atirudraMahayadnya2025",
-  "shahaleMohotsav2025",
-  "dailyPostingRugnaseva",
-  "dailyPostingTopical",
+const renderGallerySectionContent =
+  function (
+    sectionElement,
+    section
+  ) {
+    if (
+      !sectionElement ||
+      !section ||
+      sectionElement.dataset
+        .galleryRendered === "true"
+    ) {
+      return;
+    }
 
-  "celestialFeatures",
-  "coepPostStyle4",
-  "lmmPostStyle3",
-  "preetiPostStyle1"
 
-];
+    sectionElement.dataset
+      .galleryRendered = "true";
 
-  sections.forEach(function (section) {
-    const sectionElement = document.createElement("section");
 
-    sectionElement.classList.add(
-      "case-section",
-      "case-gallery-section",
-      "case-gallery-section-" + section.id
-    );
+    const mobileCarouselKeys = [
+      "atirudraMahayadnya2025",
+      "shahaleMohotsav2025",
+      "dailyPostingRugnaseva",
+      "dailyPostingTopical",
+      "celestialFeatures",
+      "coepPostStyle4",
+      "lmmPostStyle3",
+      "preetiPostStyle1"
+    ];
 
-    sectionElement.id = section.id;
 
-    const sectionTitle = document.createElement("h2");
-    sectionTitle.innerText = section.title;
+    const contentFragment =
+      document.createDocumentFragment();
 
-    sectionElement.appendChild(sectionTitle);
+    const groups =
+      section.groups || [];
 
-    const groups = section.groups || [];
 
     groups.forEach(function (group) {
-      const subsection = document.createElement("div");
+      const subsection =
+        document.createElement("div");
 
       subsection.classList.add(
         "case-subsection",
         "case-subsection-" + group.key
       );
 
-      const subsectionTitle = document.createElement("h3");
-      subsectionTitle.innerText = group.title;
 
-      const gallery = document.createElement("div");
+      const subsectionTitle =
+        document.createElement("h3");
+
+      subsectionTitle.innerText =
+        group.title || "";
+
+
+      const gallery =
+        document.createElement("div");
 
       gallery.classList.add(
         "case-gallery",
@@ -1404,39 +1571,356 @@ const mobileCarouselKeys = [
         "case-gallery-" + group.key
       );
 
-      const items = group.items || [];
 
-      items.forEach(function (item, index) {
-        const galleryItem = document.createElement("button");
+      const items =
+        group.items || [];
 
-        galleryItem.type = "button";
-        galleryItem.classList.add("case-gallery-item");
 
-        galleryItem.appendChild(createImageItem(item));
+      items.forEach(
+        function (item, index) {
+          const galleryItem =
+            document.createElement(
+              "button"
+            );
 
-        galleryItem.addEventListener("click", function () {
-          openCasePreview(items, index);
-        });
+          galleryItem.type = "button";
 
-        gallery.appendChild(galleryItem);
-      });
+          galleryItem.classList.add(
+            "case-gallery-item"
+          );
+
+
+          galleryItem.appendChild(
+            createImageItem(
+              item,
+              {
+                loading: "lazy",
+                fetchPriority: "low"
+              }
+            )
+          );
+
+
+          galleryItem.addEventListener(
+            "click",
+            function () {
+              openCasePreview(
+                items,
+                index
+              );
+            }
+          );
+
+
+          gallery.appendChild(
+            galleryItem
+          );
+        }
+      );
+
 
       if (group.title) {
-  subsection.appendChild(subsectionTitle);
-}
+        subsection.appendChild(
+          subsectionTitle
+        );
+      }
 
-subsection.appendChild(gallery);
 
-sectionElement.appendChild(subsection);
+      subsection.appendChild(
+        gallery
+      );
 
-      if (mobileCarouselKeys.includes(group.key)) {
-        createMobileGalleryDots(gallery, items);
+      contentFragment.appendChild(
+        subsection
+      );
+
+
+      if (
+        mobileCarouselKeys.includes(
+          group.key
+        )
+      ) {
+        createMobileGalleryDots(
+          gallery,
+          items
+        );
       }
     });
 
-    galleryRoot.appendChild(sectionElement);
-  });
-};
+
+    sectionElement.appendChild(
+      contentFragment
+    );
+
+
+    const placeholder =
+      sectionElement.querySelector(
+        "[data-gallery-lazy-placeholder]"
+      );
+
+    if (placeholder) {
+      placeholder.remove();
+    }
+
+
+    if (galleryLazyObserver) {
+      galleryLazyObserver.unobserve(
+        sectionElement
+      );
+    }
+  };
+
+
+const ensureCaseSectionRendered =
+  function (targetElement) {
+    if (!targetElement) return;
+
+
+    const gallerySection =
+      targetElement.classList.contains(
+        "case-gallery-section"
+      )
+        ? targetElement
+        : targetElement.closest(
+            ".case-gallery-section"
+          );
+
+
+    if (!gallerySection) return;
+
+
+    const renderSection =
+  gallerySectionRenderers[
+    gallerySection.id
+  ];
+
+
+    if (renderSection) {
+      renderSection();
+    }
+  };
+
+const renderGallerySections =
+  function () {
+    const galleryRoot =
+      document.querySelector(
+        "[data-gallery-sections]"
+      );
+
+    if (!galleryRoot) return;
+
+
+    galleryRoot.innerHTML = "";
+
+    gallerySectionRenderers =
+  Object.create(null);
+
+
+    if (galleryLazyObserver) {
+      galleryLazyObserver.disconnect();
+      galleryLazyObserver = null;
+    }
+
+
+    const sections =
+      project.gallerySections || [];
+
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+      galleryLazyObserver =
+        new IntersectionObserver(
+          function (entries) {
+            entries.forEach(
+              function (entry) {
+                if (
+                  !entry.isIntersecting
+                ) {
+                  return;
+                }
+
+
+                ensureCaseSectionRendered(
+                  entry.target
+                );
+              }
+            );
+          },
+          {
+            /*
+             * Build the gallery before
+             * the visitor reaches it.
+             */
+            rootMargin:
+              "900px 0px 900px 0px",
+
+            threshold: 0.01
+          }
+        );
+    }
+
+
+    sections.forEach(
+      function (section) {
+        const sectionElement =
+          document.createElement(
+            "section"
+          );
+
+
+        sectionElement.classList.add(
+          "case-section",
+          "case-gallery-section",
+          "case-gallery-section-" +
+            section.id
+        );
+
+        sectionElement.id =
+          section.id;
+
+        sectionElement.dataset
+          .galleryRendered = "false";
+
+
+        const sectionTitle =
+          document.createElement("h2");
+
+        sectionTitle.innerText =
+          section.title;
+
+
+        const placeholder =
+          document.createElement("div");
+
+        placeholder.classList.add(
+          "case-gallery-lazy-placeholder"
+        );
+
+        placeholder.setAttribute(
+          "data-gallery-lazy-placeholder",
+          ""
+        );
+
+        placeholder.setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+
+        /*
+         * Reserve approximately the space
+         * the gallery will eventually use.
+         * This reduces scroll jumping.
+         */
+
+        const groups =
+          section.groups || [];
+
+        const isMobile =
+          window.innerWidth <= 580;
+
+
+        let estimatedHeight = 280;
+
+
+        if (isMobile) {
+          estimatedHeight =
+            Math.max(
+              280,
+              160 +
+                groups.length * 390
+            );
+        } else {
+          const estimatedRows =
+            groups.reduce(
+              function (
+                rowCount,
+                group
+              ) {
+                const itemCount =
+                  (
+                    group.items || []
+                  ).length;
+
+                return (
+                  rowCount +
+                  Math.max(
+                    1,
+                    Math.ceil(
+                      itemCount / 3
+                    )
+                  )
+                );
+              },
+              0
+            );
+
+
+          estimatedHeight =
+            Math.max(
+              280,
+              140 +
+                estimatedRows * 260 +
+                groups.length * 65
+            );
+        }
+
+
+        /*
+         * Prevent extremely large
+         * placeholder areas.
+         */
+
+        placeholder.style.minHeight =
+          Math.min(
+            estimatedHeight,
+            1600
+          ) + "px";
+
+
+        sectionElement.appendChild(
+          sectionTitle
+        );
+
+        sectionElement.appendChild(
+          placeholder
+        );
+
+        galleryRoot.appendChild(
+          sectionElement
+        );
+
+
+        const renderSection =
+          function () {
+            renderGallerySectionContent(
+              sectionElement,
+              section
+            );
+          };
+
+
+        gallerySectionRenderers[
+  section.id
+] = renderSection;
+
+
+        if (galleryLazyObserver) {
+          galleryLazyObserver.observe(
+            sectionElement
+          );
+        } else {
+          /*
+           * Safe fallback for browsers
+           * without IntersectionObserver.
+           */
+          renderSection();
+        }
+      }
+    );
+  };
 
 const renderNextProjects = function () {
   const nextGrid = document.querySelector("[data-next-projects]");
@@ -1509,13 +1993,28 @@ const initTabs = function () {
     tab.addEventListener("click", function (event) {
       event.preventDefault();
 
-      const target = document.querySelector(this.getAttribute("href"));
+const target =
+  document.querySelector(
+    this.getAttribute("href")
+  );
 
-      if (!target) return;
+if (!target) return;
+
+
+/*
+ * A gallery tab may point to a section
+ * that has not been built yet.
+ */
+
+ensureCaseSectionRendered(
+  target
+);
+
+
 
       lockedTab = this;
       setActiveTab(this);
-
+		
       clearTimeout(scrollSettleTimer);
 
       window.scrollTo({
@@ -1557,45 +2056,176 @@ const initTabs = function () {
   });
 };
 
-const initCaseBackgroundGlow = function () {
-  const root = document.documentElement;
+const initCaseBackgroundGlow =
+  function () {
+    const root =
+      document.documentElement;
 
-  let glowX = window.innerWidth / 2;
-  let glowY = window.innerHeight / 2;
+    let glowX =
+      window.innerWidth / 2;
 
-  let targetGlowX = glowX;
-  let targetGlowY = glowY;
+    let glowY =
+      window.innerHeight / 2;
 
-  let lastMouseMoveTime = Date.now();
-  let idleAngle = 0;
+    let targetGlowX =
+      glowX;
 
-  const updateGlowPosition = function () {
-    const isIdle = Date.now() - lastMouseMoveTime > 1800;
+    let targetGlowY =
+      glowY;
 
-    if (isIdle) {
-      idleAngle += 0.006;
+    let lastMouseMoveTime =
+      Date.now();
 
-      targetGlowX = window.innerWidth / 2 + Math.cos(idleAngle) * 220;
-      targetGlowY = window.innerHeight / 2 + Math.sin(idleAngle * 0.8) * 160;
-    }
+    let idleAngle = 0;
 
-    glowX += (targetGlowX - glowX) * 0.12;
-    glowY += (targetGlowY - glowY) * 0.12;
+    let animationFrame = null;
+    let isRunning = false;
 
-    root.style.setProperty("--glow-x", glowX + "px");
-    root.style.setProperty("--glow-y", glowY + "px");
 
-    requestAnimationFrame(updateGlowPosition);
+    const updateGlowPosition =
+      function () {
+        if (document.hidden) {
+          animationFrame = null;
+          isRunning = false;
+          return;
+        }
+
+
+        const isIdle =
+          Date.now() -
+          lastMouseMoveTime >
+          1800;
+
+
+        if (isIdle) {
+          idleAngle += 0.006;
+
+          targetGlowX =
+            window.innerWidth / 2 +
+            Math.cos(
+              idleAngle
+            ) * 220;
+
+          targetGlowY =
+            window.innerHeight / 2 +
+            Math.sin(
+              idleAngle * 0.8
+            ) * 160;
+        }
+
+
+        glowX +=
+          (
+            targetGlowX -
+            glowX
+          ) * 0.12;
+
+        glowY +=
+          (
+            targetGlowY -
+            glowY
+          ) * 0.12;
+
+
+        root.style.setProperty(
+          "--glow-x",
+          glowX + "px"
+        );
+
+        root.style.setProperty(
+          "--glow-y",
+          glowY + "px"
+        );
+
+
+        animationFrame =
+          requestAnimationFrame(
+            updateGlowPosition
+          );
+      };
+
+
+    const startGlow =
+      function () {
+        if (
+          isRunning ||
+          document.hidden
+        ) {
+          return;
+        }
+
+        isRunning = true;
+
+        animationFrame =
+          requestAnimationFrame(
+            updateGlowPosition
+          );
+      };
+
+
+    const stopGlow =
+      function () {
+        if (
+          animationFrame !== null
+        ) {
+          cancelAnimationFrame(
+            animationFrame
+          );
+        }
+
+        animationFrame = null;
+        isRunning = false;
+      };
+
+
+    document.addEventListener(
+      "mousemove",
+      function (event) {
+        targetGlowX =
+          event.clientX;
+
+        targetGlowY =
+          event.clientY;
+
+        lastMouseMoveTime =
+          Date.now();
+      },
+      {
+        passive: true
+      }
+    );
+
+
+    document.addEventListener(
+      "visibilitychange",
+      function () {
+        if (document.hidden) {
+          stopGlow();
+          return;
+        }
+
+        lastMouseMoveTime =
+          Date.now();
+
+        startGlow();
+      }
+    );
+
+
+    window.addEventListener(
+      "pagehide",
+      stopGlow
+    );
+
+
+    window.addEventListener(
+      "pageshow",
+      startGlow
+    );
+
+
+    startGlow();
   };
-
-  document.addEventListener("mousemove", function (event) {
-    targetGlowX = event.clientX;
-    targetGlowY = event.clientY;
-    lastMouseMoveTime = Date.now();
-  });
-
-  updateGlowPosition();
-};
 
 const initBackButtonStickyAlignment = function () {
   const tabs = document.querySelector("[data-case-tabs]");
@@ -1738,10 +2368,21 @@ button.addEventListener("click", function () {
   const targetSection =
     document.getElementById(sectionId);
 
-  if (!targetSection) return;
+if (!targetSection) return;
 
-  setActiveMobileTab(button);
-  setMenuOpen(false);
+
+/*
+ * Build the selected gallery before
+ * calculating its mobile scroll position.
+ */
+
+ensureCaseSectionRendered(
+  targetSection
+);
+
+
+setActiveMobileTab(button);
+setMenuOpen(false);
 
   /*
    * Explicitly remove the body scroll lock.
@@ -1978,25 +2619,271 @@ const initHideNavOnScroll = function () {
   );
 };
 
-const resetDetailPageScrollLocks =
-  function () {
-    document.body.classList.remove(
-      "case-mobile-tabs-open",
-      "case-preview-open",
-      "case-mobile-nav-hidden"
+/*-----------------------------------*\
+  #CATEGORY-SPECIFIC CONTACT CTA
+\*-----------------------------------*/
+
+const caseContactContent = {
+  "Graphic Design": {
+    heading:
+      "Feels like a good fit? Let’s talk.",
+
+    body:
+      "You have already seen how I approach different briefs and formats. A quick conversation could help us understand whether the way I work matches what your team is looking for."
+  },
+
+  "UI/UX": {
+    heading:
+      "Think this approach could work for your product?",
+
+    body:
+      "You have seen how I organise information, build structure and think through digital experiences. It would be good to hear what your team is working on and see whether there is a fit."
+  },
+
+  "AI-Assisted Design": {
+    heading:
+      "Exploring where AI could fit into your creative process?",
+
+    body:
+      "You have seen how I use AI with direction, judgement and control. A quick chat could help us understand where this approach might genuinely help your team."
+  },
+
+  "Print Design": {
+    heading:
+      "Need someone who understands both design and real-world use?",
+
+    body:
+      "You have already seen the work. The next step is simply to discuss the kind of print, packaging or collateral your team handles and whether my approach fits those needs."
+  }
+};
+
+
+const renderCaseContactCta = function () {
+  const ctaSection =
+    document.querySelector(
+      "[data-case-contact-cta]"
     );
 
-    document.documentElement.style.overflow = "";
-    document.body.style.overflow = "";
+  const ctaHeading =
+    document.querySelector(
+      "[data-case-contact-heading]"
+    );
+
+  const ctaCopy =
+    document.querySelector(
+      "[data-case-contact-copy]"
+    );
+
+  if (
+    !ctaSection ||
+    !ctaHeading ||
+    !ctaCopy
+  ) {
+    return;
+  }
+
+
+  const categoryContent =
+    caseContactContent[project.category];
+
+
+  /*
+   * Prevent the Graphic Design placeholder
+   * from appearing on unsupported categories.
+   */
+
+  if (!categoryContent) {
+    ctaSection.hidden = true;
+    return;
+  }
+
+
+  ctaSection.hidden = false;
+
+  ctaHeading.textContent =
+    categoryContent.heading;
+
+  ctaCopy.textContent =
+    categoryContent.body;
+};
+
+/*-----------------------------------*\
+  #RESET DETAIL PAGE SCROLL LOCKS
+\*-----------------------------------*/
+
+const resetDetailPageScrollLocks = function () {
+  document.body.classList.remove(
+    "case-mobile-tabs-open",
+    "case-preview-open",
+    "case-mobile-nav-hidden"
+  );
+
+  document.documentElement.style.overflow = "";
+  document.body.style.overflow = "";
+};
+
+/*-----------------------------------*\
+  #IMAGE LOADING HINTS
+\*-----------------------------------*/
+
+const optimiseRenderedCaseImages =
+  function () {
+    const heroImage =
+      document.querySelector(
+        "[data-case-cover] img"
+      );
+
+    const images =
+      document.querySelectorAll(
+        "body.portfolio-detail-page img"
+      );
+
+
+    images.forEach(function (image) {
+      image.decoding = "async";
+
+
+      if (image === heroImage) {
+        image.loading = "eager";
+
+        image.setAttribute(
+          "fetchpriority",
+          "high"
+        );
+
+        return;
+      }
+
+
+      if (
+        !image.hasAttribute("loading")
+      ) {
+        image.loading = "lazy";
+      }
+
+
+      if (
+        !image.hasAttribute(
+          "fetchpriority"
+        )
+      ) {
+        image.setAttribute(
+          "fetchpriority",
+          "low"
+        );
+      }
+    });
   };
 
+/*-----------------------------------*\
+  #CASE SECTION REVEAL
+\*-----------------------------------*/
 
+const initCaseSectionReveal =
+  function () {
+    document.documentElement.classList.add(
+      "reveal-enabled"
+    );
+
+
+    const revealTargets =
+      document.querySelectorAll([
+        "#client-info",
+        ".case-two-column",
+        "[data-gallery-sections] > .case-gallery-section",
+        ".case-contact-cta",
+        ".case-next-projects",
+        "[data-ux-case-study] > *"
+      ].join(","));
+
+
+    if (
+      !(
+        "IntersectionObserver"
+        in window
+      )
+    ) {
+      revealTargets.forEach(
+        function (target) {
+          target.classList.add(
+            "is-visible"
+          );
+        }
+      );
+
+      return;
+    }
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(
+            function (entry) {
+              if (
+                !entry.isIntersecting
+              ) {
+                return;
+              }
+
+              entry.target.classList.add(
+                "is-visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+            }
+          );
+        },
+        {
+          threshold: 0.08,
+
+          rootMargin:
+            "0px 0px -8% 0px"
+        }
+      );
+
+
+    revealTargets.forEach(
+      function (target) {
+        target.classList.add(
+          "reveal-on-scroll"
+        );
+
+        revealObserver.observe(
+          target
+        );
+      }
+    );
+  };	
+	
+const renderInitialHashSection =
+  function () {
+    if (!window.location.hash) return;
+
+
+    const target =
+      document.querySelector(
+        window.location.hash
+      );
+
+
+    if (target) {
+      ensureCaseSectionRendered(
+        target
+      );
+    }
+  };
+	
 resetDetailPageScrollLocks();
 
 window.addEventListener(
   "pageshow",
   resetDetailPageScrollLocks
 );
+
+
 
 fillTextContent();
 renderTabs();
@@ -2006,7 +2893,12 @@ renderProjectSummary();
 renderUXCaseStudy();
 renderThinkingSections();
 renderGallerySections();
+renderInitialHashSection();
+renderCaseContactCta();
 renderNextProjects();
+optimiseRenderedCaseImages();
+initCaseSectionReveal();
+
 initTabs();
 initMobileTabsMenu();
 initCaseBackgroundGlow();
