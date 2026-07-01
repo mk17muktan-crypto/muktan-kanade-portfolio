@@ -5968,11 +5968,11 @@ body.testimonial-modal-open {
   }
 
   .testimonial-carousel-arrow-prev {
-    left: -18px;
+    left: 10px;
   }
 
   .testimonial-carousel-arrow-next {
-    right: -18px;
+    right: 10px;
   }
 
   .testimonial-carousel:hover .testimonial-carousel-arrow:not(.is-hidden) {
@@ -14410,3 +14410,4 @@ body.portfolio-detail-page
   }
 
 }
+
