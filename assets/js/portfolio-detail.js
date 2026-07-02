@@ -394,7 +394,6 @@ const usesWebsiteUXTemplate = [
   "ui-ux-la-mom-miiracle"
 ].includes(projectId);
 
-
 /*
  * Shared website UI/UX template.
  * This reuses the Dagdusheth website CSS for:
@@ -542,7 +541,7 @@ const renderPersonas = function () {
     })
     .join("");
 };
-
+	
 const renderUserNeeds = function () {
   return (uxData.keyUserNeeds.items || [])
     .map(function (item) {
@@ -1203,6 +1202,112 @@ if (
 	
 };
 
+/*-----------------------------------*\
+  #EMPLOYMENT DISCLOSURE
+\*-----------------------------------*/
+
+const renderEmploymentDisclosure =
+  function () {
+
+    /*
+     * OLA was an independent,
+     * hypothetical college project.
+     */
+
+    if (
+      projectId ===
+      "ui-ux-ola-scooty-app"
+    ) {
+      return;
+    }
+
+
+    /*
+     * UI/UX projects use .ux-summary-card.
+     * Other reusable projects use
+     * .case-project-summary-card.
+     */
+
+    const summaryCard =
+      document.querySelector(
+        ".ux-summary-card"
+      ) ||
+      document.querySelector(
+        ".case-project-summary-card"
+      );
+
+
+    if (!summaryCard) return;
+
+
+    /*
+     * Prevent duplicate cards if the
+     * function is ever called again.
+     */
+
+    if (
+      summaryCard.closest(
+        ".project-summary-stack"
+      )
+    ) {
+      return;
+    }
+
+
+    const summaryStack =
+      document.createElement("div");
+
+    summaryStack.classList.add(
+      "project-summary-stack"
+    );
+
+
+    /*
+     * Put the stack exactly where the
+     * current yellow summary card sits.
+     */
+
+    summaryCard.parentNode.insertBefore(
+      summaryStack,
+      summaryCard
+    );
+
+    summaryStack.appendChild(
+      summaryCard
+    );
+
+
+    const disclosureCard =
+      document.createElement("aside");
+
+    disclosureCard.classList.add(
+      "employment-disclosure-card"
+    );
+
+    disclosureCard.setAttribute(
+      "aria-label",
+      "Employment disclosure"
+    );
+
+
+    disclosureCard.innerHTML = `
+      <p class="employment-disclosure-text">
+        I have worked for this client when I was employed by
+      </p>
+
+      <img
+        class="employment-disclosure-logo"
+        src="./assets/images/H_Logo No BG.png"
+        alt="Indian Magic Eye"
+        loading="lazy"
+        decoding="async">
+    `;
+
+
+    summaryStack.appendChild(
+      disclosureCard
+    );
+  };	
 
 let currentPreviewItems = [];
 let currentPreviewIndex = 0;
@@ -2891,6 +2996,7 @@ renderCoverImage();
 renderProjectOverview();
 renderProjectSummary();
 renderUXCaseStudy();
+renderEmploymentDisclosure();
 renderThinkingSections();
 renderGallerySections();
 renderInitialHashSection();

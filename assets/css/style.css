@@ -14411,3 +14411,358 @@ body.portfolio-detail-page
 
 }
 
+/*-----------------------------------*\
+  #EMPLOYMENT DISCLOSURE CARD
+\*-----------------------------------*/
+
+/*
+ * Holds the existing yellow summary
+ * card and the new disclosure card.
+ */
+
+.project-summary-stack {
+  width: 100%;
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+
+/*
+ * New yellow card.
+ * Styling follows the existing project
+ * summary card.
+ */
+
+.employment-disclosure-card {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    var(--summary-card-padding-y, 25px)
+    var(--summary-card-padding-x, 25px);
+
+  border-radius:
+    var(--summary-card-radius, 20px);
+
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      hsla(45, 100%, 78%, 0.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 76%,
+      hsla(35, 100%, 68%, 0.18),
+      transparent 30%
+    ),
+    var(--text-gradient-yellow);
+
+  color: var(--smoky-black);
+
+  text-align: left;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 24px 58px
+    hsla(0, 0%, 0%, 0.30),
+
+    0 10px 28px
+    hsla(45, 100%, 72%, 0.18);
+}
+
+
+.employment-disclosure-text {
+  max-width: 270px;
+
+  margin: 0;
+
+  color: var(--smoky-black);
+
+  font-size:
+    var(--summary-body-size, 16px);
+
+  font-weight:
+    var(--summary-body-weight, 600);
+
+  line-height:
+    var(--summary-body-line-height, 1.35);
+
+  text-align: left;
+}
+
+
+.employment-disclosure-logo {
+  display: block;
+
+  width: min(175px, 100%);
+  height: auto;
+
+  margin: 18px 0 0;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/*-----------------------------------*\
+  #STANDARD PORTFOLIO PAGES
+\*-----------------------------------*/
+
+@media (min-width: 581px) {
+
+  /*
+   * The old summary card was floated.
+   * Float the complete two-card stack
+   * instead so both cards remain together.
+   */
+
+  body.portfolio-detail-page:not(
+    .ux-case-study-page
+  )
+  .project-summary-stack {
+    float: right;
+
+    width: 360px;
+
+    margin:
+      0
+      0
+      28px
+      56px;
+  }
+
+
+  body.portfolio-detail-page:not(
+    .ux-case-study-page
+  )
+  .project-summary-stack
+  .case-project-summary-card {
+    float: none !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+}
+
+
+/*-----------------------------------*\
+  #UI/UX CASE-STUDY PAGES
+\*-----------------------------------*/
+
+body.ux-case-study-page
+.project-summary-stack {
+  width: 100%;
+
+  margin: 0;
+
+  float: none;
+}
+
+
+body.ux-case-study-page
+.project-summary-stack
+.ux-summary-card {
+  width: 100%;
+
+  margin: 0;
+}
+
+
+body.ux-case-study-page
+.employment-disclosure-card {
+  padding: 24px 22px;
+
+  border-radius: 18px;
+}
+
+
+body.ux-case-study-page
+.employment-disclosure-text {
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+
+/*-----------------------------------*\
+  #MOBILE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page
+  .project-summary-stack {
+    order: 1;
+
+    width: 100%;
+
+    margin: 0;
+  }
+
+
+  body.portfolio-detail-page
+  .project-summary-stack
+  .case-project-summary-card {
+    float: none !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+
+  body.portfolio-detail-page
+  .employment-disclosure-card {
+    width: 100%;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    text-align: left;
+  }
+
+
+  body.portfolio-detail-page
+  .employment-disclosure-text {
+    max-width: none;
+
+    font-size: 16px;
+    line-height: 1.4;
+
+    text-align: left;
+  }
+
+
+  body.portfolio-detail-page
+  .employment-disclosure-logo {
+    width: min(160px, 70%);
+
+    margin:
+      16px
+      0
+      0;
+  }
+
+}
+
+/*-----------------------------------*\
+  #EMPLOYMENT CARD STACK FIX
+\*-----------------------------------*/
+
+/*
+ * The existing summary card and the
+ * disclosure card must always form
+ * one vertical stack.
+ */
+
+body.portfolio-detail-page
+.project-summary-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+
+  gap: 14px !important;
+
+  min-width: 0;
+}
+
+
+/*
+ * Stop the original yellow summary
+ * card from floating inside the stack.
+ */
+
+body.portfolio-detail-page
+.project-summary-stack
+> .case-project-summary-card,
+
+body.portfolio-detail-page
+.project-summary-stack
+> .ux-summary-card,
+
+body.portfolio-detail-page
+.project-summary-stack
+> .employment-disclosure-card {
+  float: none !important;
+  clear: both !important;
+
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+}
+
+
+/*
+ * Standard Graphic Design and Print
+ * pages: float the complete stack,
+ * not the individual summary card.
+ */
+
+@media (min-width: 581px) {
+
+  body.portfolio-detail-page:not(
+    .ux-case-study-page
+  )
+  .project-summary-stack {
+    float: right !important;
+
+    width: 360px !important;
+    max-width: 360px !important;
+
+    margin:
+      0
+      0
+      28px
+      56px !important;
+  }
+
+}
+
+
+/*
+ * UI/UX pages:
+ * the stack occupies the grid position
+ * formerly used by .ux-summary-card.
+ */
+
+@media (min-width: 581px) {
+
+  body.ux-case-study-page
+  .ux-about-grid
+  > .project-summary-stack {
+    width: 100% !important;
+    min-width: 0;
+
+    align-self: start;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 580px) {
+
+  body.portfolio-detail-page
+  .project-summary-stack {
+    order: 1;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    float: none !important;
+  }
+
+}
