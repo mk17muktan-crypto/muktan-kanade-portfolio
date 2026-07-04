@@ -161,30 +161,6 @@ gallerySections: [
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/Logo-3.jpg",
             alt: "Logos 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-4.jpg",
-            alt: "Logos 04"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-5.jpg",
-            alt: "Logos 05"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-6.jpg",
-            alt: "Logos 06"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-7.jpg",
-            alt: "Logos 07"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-8.jpg",
-            alt: "Logos 08"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Logo-9.jpg",
-            alt: "Logos 09"
           }
         ]
       },
