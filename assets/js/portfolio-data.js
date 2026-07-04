@@ -10,7 +10,7 @@ const makePlaceholders = function (count, labelPrefix) {
 const portfolioProjects = {
 "graphic-design-dagdushet-ganpati": {
   title: "Dagdusheth Ganpati",
-  fullTitle: "Shrimant Dagdushethh Halwai Ganpati",
+  fullTitle: "Shrimant Dagdusheth Halwai Ganpati",
   category: "Graphic Design",
   categorySlug: "graphic-design",
   industry: "Religious / Devotional Organisation",
@@ -42,7 +42,7 @@ const portfolioProjects = {
     rootUrl: "./index.html?section=portfolio",
     categoryLabel: "Graphic Design",
     categoryUrl: "./index.html?section=portfolio&category=graphic-design",
-    currentLabel: "Dagdusheth Ganpati"
+    currentLabel: "Dagdushet Ganpati"
   },
 
   tabs: [
@@ -57,26 +57,26 @@ const portfolioProjects = {
   hero: {
     desktop: {
     src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
-    alt: "Shrimant Dagdushethh Halwai Ganpati cover image"
+    alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
   },
     mobile: {
     src: "./assets/images/Thumbnails/Graphic Design/Mobile/DG.jpg",
-    alt: "Shrimant Dagdushethh Halwai Ganpati cover image"
+    alt: "Shrimant Dagdusheth Halwai Ganpati cover image"
   },
   },
 
   projectOverview: {
-    title: "Shrimant Dagdushethh Halwai Ganpati",
+    title: "Shrimant Dagdusheth Halwai Ganpati",
     sections: [
       {
         heading: "Who is the client?",
-        bodyDesktop: "Shrimant Dagdushethh Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdushethh Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdushethh Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdushethh Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdushethh’s family but the entire neighborhood.",
-        bodyMobile: "Shrimant Dagdushethh Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdushethh Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdushethh Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdushethh Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdushethh’s family but the entire neighborhood."
+        bodyDesktop: "Shrimant Dagdusheth Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdusheth Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdusheth Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdusheth Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdusheth’s family but the entire neighborhood.",
+        bodyMobile: "Shrimant Dagdusheth Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdusheth Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdusheth Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdusheth Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdusheth’s family but the entire neighborhood."
       },
       {
         heading: "What was the design need?",
-        bodyDesktop: "The design need was to create communication that felt devotional, respectful and visually strong, while still being suitable for modern digital platforms. The work had to maintain the sacred identity of Shrimant Dagdushethh Halwai Ganpati, but also make the campaign and social media creatives feel clear, engaging and easy to connect with for today’s audience.",
-        bodyMobile: "The design needed to feel devotional, respectful and visually strong, while working well on modern digital platforms.<br>It had to keep the sacred identity of Shrimant Dagdushethh Halwai Ganpati intact and still feel clear, engaging and campaign-ready."
+        bodyDesktop: "The design need was to create communication that felt devotional, respectful and visually strong, while still being suitable for modern digital platforms. The work had to maintain the sacred identity of Shrimant Dagdusheth Halwai Ganpati, but also make the campaign and social media creatives feel clear, engaging and easy to connect with for today’s audience.",
+        bodyMobile: "The design needed to feel devotional, respectful and visually strong, while working well on modern digital platforms.<br>It had to keep the sacred identity of Shrimant Dagdusheth Halwai Ganpati intact and still feel clear, engaging and campaign-ready."
       },
       {
         heading: "What kind of audience was this for?",
@@ -118,7 +118,7 @@ const portfolioProjects = {
   pointsMobile: [
     "This client needed designs across daily posts, special occasions and multiple content formats.",
     "Since many posts had to go out every day, the main challenge was to bring structure, speed and consistency to a high-volume design process.",
-    "The goal was not just to design individual posts, but to create a visual system where every post felt fresh while still belonging to one larger Dagdushethh visual family."
+    "The goal was not just to design individual posts, but to create a visual system where every post felt fresh while still belonging to one larger Dagdusheth visual family."
   ]
 },
 
@@ -127,14 +127,14 @@ const portfolioProjects = {
 
   points: [
     "The design language was challenging because the brand needed to publish multiple posts every day while still maintaining a consistent visual identity.",
-    "Each post had to feel fresh, but also connected to the larger Dagdushethh communication style.",
+    "Each post had to feel fresh, but also connected to the larger Dagdusheth communication style.",
     "Colours were kept more flexible instead of fixed brand colors. A palette inspired by the Paithani saree was chosen because it was, in context perfect of the brand.",
     "For major occasions, a separate design language was created to make those festivals feel more grand, special & emotionally elevated.",
     "The final system balanced daily consistency with festive distinction, making the brand feel organized, devotional & visually rich."
   ],
 
   pointsMobile: [
-    "Instead of using fixed colours repeatedly, the colour direction was kept more rich and flexible. A palette inspired by the Paithani saree was chosen because it felt traditional, premium and culturally right for Dagdushethh.",
+    "Instead of using fixed colours repeatedly, the colour direction was kept more rich and flexible. A palette inspired by the Paithani saree was chosen because it felt traditional, premium and culturally right for Dagdusheth.",
     "For major occasions, a separate design language was created to make the festivals feel more grand, special and emotionally elevated.",
     "The final system balanced daily consistency with festive distinction."
   ]
@@ -1036,14 +1036,14 @@ relatedProjects: [
       imageLabel: "Rainbow Umbrella"
     },
     {
-      title: "Dagdusheth Ganpati",
+      title: "Dagdushet Ganpati",
       industry: "Religious / Devotional Organisation",
       url: "./portfolio-detail.html?project=graphic-design-dagdushet-ganpati",
       image: {
         src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
-        alt: "Dagdusheth Ganpati thumbnail"
+        alt: "Dagdushet Ganpati thumbnail"
       },
-      imageLabel: "Dagdusheth Ganpati"
+      imageLabel: "Dagdushet Ganpati"
     }
    ]
  },
@@ -1974,14 +1974,14 @@ relatedProjects: [
       imageLabel: "Rainbow Umbrella"
     },
     {
-      title: "Dagdusheth Ganpati",
+      title: "Dagdushet Ganpati",
       industry: "Religious / Devotional Organisation",
       url: "./portfolio-detail.html?project=graphic-design-dagdushet-ganpati",
       image: {
         src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
-        alt: "Dagdusheth Ganpati thumbnail"
+        alt: "Dagdushet Ganpati thumbnail"
       },
-      imageLabel: "Dagdusheth Ganpati"
+      imageLabel: "Dagdushet Ganpati"
     }
   ]
 },
@@ -3422,7 +3422,7 @@ relatedProjectsTitle: "View Other Projects",
 
 relatedProjects: [
   {
-    title: "Dagdushethh Ganpati",
+    title: "Dagdusheth Ganpati",
     industry: "Religious / Devotional Organisation",
 
     url:
@@ -3433,11 +3433,11 @@ relatedProjects: [
         "./assets/images/Thumbnails/Uiux/DG.jpg",
 
       alt:
-        "Dagdushethh Ganpati UI UX project thumbnail"
+        "Dagdusheth Ganpati UI UX project thumbnail"
     },
 
     imageLabel:
-      "Dagdushethh Ganpati UI UX"
+      "Dagdusheth Ganpati UI UX"
   },
 
   {
@@ -3484,8 +3484,8 @@ relatedProjects: [
  },
 	
 "ui-ux-dagdusheth-website": {
-  title: "UX - Dagdushethh Ganpati Website",
-  fullTitle: "Shrimant Dagdushethh Halwai Ganpati Website Redesign",
+  title: "UX - Dagdusheth Ganpati Website",
+  fullTitle: "Shrimant Dagdusheth Halwai Ganpati Website Redesign",
 
   category: "UI/UX",
   categorySlug: "ui%2Fux",
@@ -3515,7 +3515,7 @@ tools: [
     categoryUrl:
       "./index.html?section=portfolio&category=ui%2Fux",
 
-    currentLabel: "UX - Dagdushethh Ganpati Website"
+    currentLabel: "UX - Dagdusheth Ganpati Website"
   },
 
   tabs: [
@@ -3569,12 +3569,12 @@ tools: [
   hero: {
     desktop: {
       src: "./assets/images/Thumbnails/Uiux/DG.jpg",
-      alt: "Shrimant Dagdushethh Halwai Ganpati website redesign cover"
+      alt: "Shrimant Dagdusheth Halwai Ganpati website redesign cover"
     },
 
     mobile: {
       src: "./assets/images/Thumbnails/Uiux/DG.jpg",
-      alt: "Shrimant Dagdushethh Halwai Ganpati mobile website redesign cover"
+      alt: "Shrimant Dagdusheth Halwai Ganpati mobile website redesign cover"
     }
   },
 
@@ -3583,7 +3583,7 @@ tools: [
       heading: "About the Project",
 
       primaryText: [
-        "This was a <strong>website redesign project</strong> of the official Shrimant Dagdushethh Halwai Ganpati website. The platform serves devotees who visit the temple physically, participate remotely, book religious services, explore festivals, donate to social causes and learn about the Trust’s cultural legacy.",
+        "This was a <strong>website redesign project</strong> of the official Shrimant Dagdusheth Halwai Ganpati website. The platform serves devotees who visit the temple physically, participate remotely, book religious services, explore festivals, donate to social causes and learn about the Trust’s cultural legacy.",
 
         "The goal was to <strong>organize</strong> these different experiences into a <strong>clear, trustworthy and task-focused digital journey.</strong> The redesign prioritizes <strong>temple timings, festival information, Live Darshan, E-Seva, donations and practical visitor guidance</strong> while preserving the temple’s <strong>devotional identity and emotional significance.</strong>"
       ],
@@ -3636,7 +3636,7 @@ tools: [
       heading: "USP",
 
       statement:
-        "One trusted digital gateway to experience Dagdushethh Ganpati—plan darshan, participate remotely, book authentic sevas and support meaningful social causes."
+        "One trusted digital gateway to experience Dagdusheth Ganpati—plan darshan, participate remotely, book authentic sevas and support meaningful social causes."
     },
 
     targetAudience: {
@@ -3697,7 +3697,7 @@ tools: [
           type: "Local Regular Devotee",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdushethh Website/Persona-1.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-1.jpg",
 
           background:
             "Lives near Pune and regularly plans visits around aarti timings, Sankashti Chaturthi and other important temple days.",
@@ -3710,10 +3710,10 @@ tools: [
           type: "First-Time Festival Pilgrim",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdushethh Website/Persona-2.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-2.jpg",
 
           background:
-            "Knows Dagdushethh Ganpati by reputation but needs help choosing an event, date and practical travel plan.",
+            "Knows Dagdusheth Ganpati by reputation but needs help choosing an event, date and practical travel plan.",
 
           mainNeed:
             "Plan a crowded festival visit confidently and quickly."
@@ -3723,7 +3723,7 @@ tools: [
           type: "Remote Devotee",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdushethh Website/Persona-3.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-3.jpg",
 
           background:
             "Lives outside Pune and uses Live Darshan and E-Seva to remain spiritually connected to Bappa.",
@@ -3736,7 +3736,7 @@ tools: [
           type: "Cause-Led Donor",
 
           image:
-            "./assets/images/Portfolio/Uiux/Dagdushethh Website/Persona-4.jpg",
+            "./assets/images/Portfolio/Uiux/Dagdusheth Website/Persona-4.jpg",
 
           background:
             "Wants his religious contribution to support a credible social initiative.",
@@ -3921,9 +3921,9 @@ finalUIScreens: {
 
   image: {
         src:
-          "./assets/images/Portfolio/Uiux/Dagdushethh Website/Final-UI-Screens.jpg",
+          "./assets/images/Portfolio/Uiux/Dagdusheth Website/Final-UI-Screens.jpg",
     alt:
-      "Shrimant Dagdushethh Halwai Ganpati live website homepage design"
+      "Shrimant Dagdusheth Halwai Ganpati live website homepage design"
   }
 }
 
@@ -4491,14 +4491,14 @@ uxCaseStudy: {
       imageLabel: "UX - OLA Scooty App"
     },
     {
-      title: "UX - Shrimant Dagdushethh Halwai Ganpati Website",
+      title: "UX - Shrimant Dagdusheth Halwai Ganpati Website",
       industry: "Religious / Devotional Organisation",
       url: "./portfolio-detail.html?project=ui-ux-dagdusheth-website",
       image: {
         src: "./assets/images/Thumbnails/Uiux/DG.jpg",
-        alt: "Shrimant Dagdushethh Halwai Ganpati Website UI UX project thumbnail"
+        alt: "Shrimant Dagdusheth Halwai Ganpati Website UI UX project thumbnail"
       },
-      imageLabel: "UX - Dagdushethh Ganpati Website"
+      imageLabel: "UX - Dagdusheth Ganpati Website"
     },
     {
       title: "UX - La Mom & Miiracle",
@@ -4956,7 +4956,7 @@ uxCaseStudy: {
   relatedProjects: [
     {
       title:
-        "UX - Shrimant Dagdushethh Halwai Ganpati Website",
+        "UX - Shrimant Dagdusheth Halwai Ganpati Website",
 
       industry:
         "Religious / Devotional Organisation",
@@ -4969,11 +4969,11 @@ uxCaseStudy: {
           "./assets/images/Thumbnails/Uiux/DG.jpg",
 
         alt:
-          "Dagdushethh Ganpati UI UX project thumbnail"
+          "Dagdusheth Ganpati UI UX project thumbnail"
       },
 
       imageLabel:
-        "UX - Dagdushethh Ganpati Website"
+        "UX - Dagdusheth Ganpati Website"
     },
     {
       title:
@@ -5021,8 +5021,8 @@ uxCaseStudy: {
 },
 
 "print-design-dagdusheth-ganpati": {
-  title: "Dagdushethh Ganpati",
-  fullTitle: "Shrimant Dagdushethh Halwai Ganpati",
+  title: "Dagdusheth Ganpati",
+  fullTitle: "Shrimant Dagdusheth Halwai Ganpati",
 
   category: "Print Design",
   categorySlug: "print-design",
@@ -5061,7 +5061,7 @@ uxCaseStudy: {
       "./index.html?section=portfolio&category=print-design",
 
     currentLabel:
-      "Dagdushethh Ganpati"
+      "Dagdusheth Ganpati"
   },
 
   tabs: [
@@ -5087,7 +5087,7 @@ uxCaseStudy: {
     },
     {
       id: "dagdusheth-ahwal",
-      label: "Dagdushethh Ahwal"
+      label: "Dagdusheth Ahwal"
     },
     {
       id: "social-initiatives-booklet",
@@ -5101,7 +5101,7 @@ uxCaseStudy: {
         "./assets/images/Thumbnails/Print Design/DG.jpg",
 
       alt:
-        "Shrimant Dagdushethh Halwai Ganpati Print Design cover image"
+        "Shrimant Dagdusheth Halwai Ganpati Print Design cover image"
     },
 
     mobile: {
@@ -5109,13 +5109,13 @@ uxCaseStudy: {
         "./assets/images/Thumbnails/Print Design/Mobile/DG.jpg",
 
       alt:
-        "Shrimant Dagdushethh Halwai Ganpati mobile Print Design cover image"
+        "Shrimant Dagdusheth Halwai Ganpati mobile Print Design cover image"
     }
   },
 
   projectOverview: {
     title:
-      "Shrimant Dagdushethh Halwai Ganpati",
+      "Shrimant Dagdusheth Halwai Ganpati",
 
     sections: [
       {
@@ -5123,7 +5123,7 @@ uxCaseStudy: {
           "Who is the client?",
 
         body:
-          "Shrimant Dagdushethh Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdushethh Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdushethh Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdushethh Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdushethh’s family but the entire neighborhood."
+          "Shrimant Dagdusheth Halwai Ganpati – the most endearing deity to the devotees. Shrimant Dagdusheth Halwai Ganpati is the epitome of pride and honor to the city of Pune. Devotees from every part of India and the world come here to pray to Lord Ganesha every year. Today, Shrimant Dagdusheth Halwai Temple is not only one of the most highly revered places of worship in India but an institution that is actively engaged in social welfare and cultural development through Shrimant Dagdusheth Halwai Sarvajanik Ganpati Trust. Every year, the Ganpati festival was celebrated with deep faith and enthusiasm, not only by Dagdusheth’s family but the entire neighborhood."
       }
     ]
   },
@@ -5166,7 +5166,7 @@ uxCaseStudy: {
     points: [
       "The design language was challenging because the brand needed to publish multiple posts every day while still maintaining a consistent visual identity.",
 
-      "Each post had to feel fresh, but also connected to the larger Dagdushethh communication style.",
+      "Each post had to feel fresh, but also connected to the larger Dagdusheth communication style.",
 
       "Colors were kept more flexible instead of fixed brand colors. A palette inspired by the Paithani saree was chosen because it was contextually appropriate for the brand.",
 
@@ -5209,28 +5209,28 @@ uxCaseStudy: {
                 "./assets/images/Portfolio/Print Design/DG/Design-1-A.jpg",
 
               alt:
-                "Dagdushethh Ganpati festival hoarding design 01"
+                "Dagdusheth Ganpati festival hoarding design 01"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-1-B.jpg",
 
               alt:
-                "Dagdushethh Ganpati festival hoarding design 02"
+                "Dagdusheth Ganpati festival hoarding design 02"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-1-C.jpg",
 
               alt:
-                "Dagdushethh Ganpati festival hoarding design 03"
+                "Dagdusheth Ganpati festival hoarding design 03"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-1-D.jpg",
 
               alt:
-                "Dagdushethh Ganpati festival hoarding design 04"
+                "Dagdusheth Ganpati festival hoarding design 04"
             }
           ]
         }
@@ -5273,7 +5273,7 @@ uxCaseStudy: {
         "dagdusheth-ahwal",
 
       title:
-        "Dagdushethh Ahwal — Magazine, A4 Horizontal",
+        "Dagdusheth Ahwal — Magazine, A4 Horizontal",
 
       groups: [
         {
@@ -5284,7 +5284,7 @@ uxCaseStudy: {
             "",
 
           previewGroupName:
-            "Dagdushethh Ahwal Magazine",
+            "Dagdusheth Ahwal Magazine",
 
           items: [
             {
@@ -5292,133 +5292,133 @@ uxCaseStudy: {
                 "./assets/images/Portfolio/Print Design/DG/Design-3-A.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 01"
+                "Dagdusheth Ahwal magazine design 01"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-B.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 02"
+                "Dagdusheth Ahwal magazine design 02"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-C.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 03"
+                "Dagdusheth Ahwal magazine design 03"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-D.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 04"
+                "Dagdusheth Ahwal magazine design 04"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-E.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 05"
+                "Dagdusheth Ahwal magazine design 05"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-F.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 06"
+                "Dagdusheth Ahwal magazine design 06"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-G.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 07"
+                "Dagdusheth Ahwal magazine design 07"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-H.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 08"
+                "Dagdusheth Ahwal magazine design 08"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-I.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 09"
+                "Dagdusheth Ahwal magazine design 09"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-J.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 10"
+                "Dagdusheth Ahwal magazine design 10"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-K.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 11"
+                "Dagdusheth Ahwal magazine design 11"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-L.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 12"
+                "Dagdusheth Ahwal magazine design 12"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-M.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 13"
+                "Dagdusheth Ahwal magazine design 13"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-N.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 14"
+                "Dagdusheth Ahwal magazine design 14"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-O.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 15"
+                "Dagdusheth Ahwal magazine design 15"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-P.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 16"
+                "Dagdusheth Ahwal magazine design 16"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-Q.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 17"
+                "Dagdusheth Ahwal magazine design 17"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-R.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 18"
+                "Dagdusheth Ahwal magazine design 18"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-3-S.jpg",
 
               alt:
-                "Dagdushethh Ahwal magazine design 19"
+                "Dagdusheth Ahwal magazine design 19"
             }
           ]
         }
@@ -5449,84 +5449,84 @@ uxCaseStudy: {
                 "./assets/images/Portfolio/Print Design/DG/Design-4-A.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 01"
+                "Dagdusheth Social Initiatives Booklet design 01"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-B.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 02"
+                "Dagdusheth Social Initiatives Booklet design 02"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-C.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 03"
+                "Dagdusheth Social Initiatives Booklet design 03"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-D.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 04"
+                "Dagdusheth Social Initiatives Booklet design 04"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-E.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 05"
+                "Dagdusheth Social Initiatives Booklet design 05"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-F.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 06"
+                "Dagdusheth Social Initiatives Booklet design 06"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-G.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 07"
+                "Dagdusheth Social Initiatives Booklet design 07"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-H.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 08"
+                "Dagdusheth Social Initiatives Booklet design 08"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-I.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 09"
+                "Dagdusheth Social Initiatives Booklet design 09"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-J.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 10"
+                "Dagdusheth Social Initiatives Booklet design 10"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-K.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 11"
+                "Dagdusheth Social Initiatives Booklet design 11"
             },
             {
               src:
                 "./assets/images/Portfolio/Print Design/DG/Design-4-L.jpg",
 
               alt:
-                "Dagdushethh Social Initiatives Booklet design 12"
+                "Dagdusheth Social Initiatives Booklet design 12"
             }
           ]
         }
@@ -5828,7 +5828,7 @@ uxCaseStudy: {
   relatedProjects: [
     {
       title:
-        "Dagdushethh Ganpati",
+        "Dagdusheth Ganpati",
 
       industry:
         "Religious / Devotional Organisation",
@@ -5841,11 +5841,11 @@ uxCaseStudy: {
           "./assets/images/Thumbnails/Print Design/DG.jpg",
 
         alt:
-          "Dagdushethh Ganpati Print Design thumbnail"
+          "Dagdusheth Ganpati Print Design thumbnail"
       },
 
       imageLabel:
-        "Dagdushethh Ganpati"
+        "Dagdusheth Ganpati"
     },
 
     {
@@ -5986,7 +5986,7 @@ uxCaseStudy: {
           "About the Project",
 
         body:
-          "This project was created as a memoir-style autobiography based on the life of Mahesh Bhau’s father, who was closely associated with Dagdushethh Ganpati as one of its trustees. The book was designed to present his life journey through separate chapters, with each section capturing an important phase, memory or turning point from his personal & public life. The visual approach had to be deeply sensitive & story-driven. Every image & design element needed to support the emotion of that particular chapter — whether it reflected family, devotion, responsibility, service, struggle or legacy. At its heart, the project was not just about designing a book. It was about giving visual form to a life lived with purpose, faith & contribution."
+          "This project was created as a memoir-style autobiography based on the life of Mahesh Bhau’s father, who was closely associated with Dagdusheth Ganpati as one of its trustees. The book was designed to present his life journey through separate chapters, with each section capturing an important phase, memory or turning point from his personal & public life. The visual approach had to be deeply sensitive & story-driven. Every image & design element needed to support the emotion of that particular chapter — whether it reflected family, devotion, responsibility, service, struggle or legacy. At its heart, the project was not just about designing a book. It was about giving visual form to a life lived with purpose, faith & contribution."
       }
     ]
   },
@@ -6084,7 +6084,7 @@ uxCaseStudy: {
   relatedProjects: [
     {
       title:
-        "Dagdushethh Ganpati",
+        "Dagdusheth Ganpati",
 
       industry:
         "Religious / Devotional Organisation",
@@ -6097,11 +6097,11 @@ uxCaseStudy: {
           "./assets/images/Thumbnails/Print Design/DG.jpg",
 
         alt:
-          "Dagdushethh Ganpati Print Design thumbnail"
+          "Dagdusheth Ganpati Print Design thumbnail"
       },
 
       imageLabel:
-        "Dagdushethh Ganpati"
+        "Dagdusheth Ganpati"
     },
 
     {
@@ -6692,7 +6692,7 @@ uxCaseStudy: {
   relatedProjects: [
     {
       title:
-        "Dagdushethh Ganpati",
+        "Dagdusheth Ganpati",
 
       industry:
         "Religious / Devotional Organisation",
@@ -6705,11 +6705,11 @@ uxCaseStudy: {
           "./assets/images/Thumbnails/Print Design/DG.jpg",
 
         alt:
-          "Dagdushethh Ganpati Print Design thumbnail"
+          "Dagdusheth Ganpati Print Design thumbnail"
       },
 
       imageLabel:
-        "Dagdushethh Ganpati"
+        "Dagdusheth Ganpati"
     },
 
     {
