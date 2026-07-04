@@ -220,124 +220,44 @@ gallerySections: [
     title: "Campaign",
     groups: [
       {
-        key: "ganeshUtsav2024",
-        title: "Ganesh Utsav 2024",
-        previewGroupName: "Ganesh Utsav 2024",
+        key: "ganeshUtsav",
+        title: "Ganesh Utsav",
+        previewGroupName: "Ganesh Utsav",
         items: [
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/GU 2024 Image 1.jpg",
             alt: "Ganesh Utsav 2024 creative 01"
           },
           {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-2.jpg",
-            alt: "Ganesh Utsav 2024 creative 02"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-3.jpg",
-            alt: "Ganesh Utsav 2024 creative 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2024-Image-4.jpg",
-            alt: "Ganesh Utsav 2024 creative 04"
-          }
-        ]
-      },
-
-      {
-        key: "ganeshUtsav2025",
-        title: "Ganesh Utsav 2025",
-        previewGroupName: "Ganesh Utsav 2025",
-        items: [
-          {
             src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-1.jpg",
             alt: "Ganesh Utsav 2025 creative 01"
           },
           {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-2.jpg",
-            alt: "Ganesh Utsav 2025 creative 02"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-3.jpg",
-            alt: "Ganesh Utsav 2025 creative 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-4.jpg",
-            alt: "Ganesh Utsav 2025 creative 04"
+            src: "./assets/images/Portfolio/Graphic Design/DG/GU-2026-Image-3.jpg",
+            alt: "Ganesh Utsav 2026 creative 03"
           }
         ]
       },
 
       {
-        key: "ganeshJanmaSohola2025",
-        title: "Ganesh Janma Sohola 2025",
-        previewGroupName: "Ganesh Janma Sohola 2025",
+        key: "festivals",
+        title: "Festivals",
+        previewGroupName: "Festivals",
         items: [
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-1.jpg",
             alt: "Ganesh Janma Sohola 2025 creative 01"
           },
           {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-2.jpg",
-            alt: "Ganesh Janma Sohola 2025 creative 02"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-3.jpg",
-            alt: "Ganesh Janma Sohola 2025 creative 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Ganesh-Janma-4.jpg",
-            alt: "Ganesh Janma Sohola 2025 creative 04"
-          }
-        ]
-      },
-
-      {
-        key: "atirudraMahayadnya2025",
-        title: "Atirudra Mahayadnya 2025",
-        previewGroupName: "Atirudra Mahayadnya 2025",
-        items: [
-          {
             src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-1.jpg",
             alt: "Atirudra Mahayadnya 2025 creative 01"
           },
           {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-2.jpg",
-            alt: "Atirudra Mahayadnya 2025 creative 02"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-3.jpg",
-            alt: "Atirudra Mahayadnya 2025 creative 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Atirudra-4.jpg",
-            alt: "Atirudra Mahayadnya 2025 creative 04"
-          }
-        ]
-      },
-
-      {
-        key: "shahaleMohotsav2025",
-        title: "Shahale Mohotsav 2025",
-        previewGroupName: "Shahale Mohotsav 2025",
-        items: [
-          {
             src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-1.jpg",
             alt: "Shahale Mohotsav 2025 creative 01"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-2.jpg",
-            alt: "Shahale Mohotsav 2025 creative 02"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-3.jpg",
-            alt: "Shahale Mohotsav 2025 creative 03"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Shahale-4.jpg",
-            alt: "Shahale Mohotsav 2025 creative 04"
           }
         ]
-      }
+      }, 
     ]
   },
 
@@ -353,10 +273,6 @@ gallerySections: [
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/Daily-1.jpg",
             alt: "Daily Posting creative 01"
-          },
-          {
-            src: "./assets/images/Portfolio/Graphic Design/DG/Daily-2.jpg",
-            alt: "Daily Posting creative 02"
           },
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/Daily-3.jpg",
@@ -376,35 +292,35 @@ relatedProjectsTitle: "View Other Projects",
 
 relatedProjects: [
   {
-    title: "Samartha Seva Mandal Sajjangad",
-    industry: "Religious / Spiritual Organisation",
-    url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
-    image: {
-      src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
-      alt: "Samartha Seva Mandal Sajjangad thumbnail"
+      title: "Victory Polychem",
+      industry: "Industrial Chemicals",
+      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
+        alt: "Victory Polychem thumbnail"
+      },
+      imageLabel: "Victory Polychem"
     },
-    imageLabel: "Samartha Seva Mandal Sajjangad"
-  },
   {
-    title: "Kesariya@100",
-    industry: "Heritage / Commemorative Design",
-    url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
-    image: {
-      src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
-      alt: "Kesariya@100 thumbnail"
+      title: "Raptech Engineering",
+      industry: "Engineering / Manufacturing",
+      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
+        alt: "Raptech Engineering thumbnail"
+      },
+      imageLabel: "Raptech Engineering"
     },
-    imageLabel: "Kesariya@100"
-  },
   {
-    title: "Autobiography Book Cover",
-    industry: "Publishing / Print Design",
-    url: "./portfolio-detail.html?project=graphic-design-autobiography-book-cover",
-    image: {
-      src: "./assets/images/Thumbnails/Print Design/Mahesh Bhau.jpg",
-      alt: "Autobiography Book Cover thumbnail"
-    },
-    imageLabel: "Autobiography Book Cover"
-  },
+      title: "Celestial",
+      industry: "Education / E-learning",
+      url: "./portfolio-detail.html?project=graphic-design-celestial",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
+        alt: "Celestial thumbnail"
+      },
+      imageLabel: "Celestial"
+    }
 ]
 
 },
@@ -532,81 +448,24 @@ relatedProjects: [
       title: "Social Media Posts",
       groups: [
         {
-          key: "victoryPostStyle1",
-          title: "Post Style 1: Image Based",
-          previewGroupName: "Post Style 1: Image Based",
+          key: "allvictoryPostStyles",
+          title: "Post Styles: Image, Product and Image with Product Based Layouts",
+          previewGroupName: "All Post Styles",
           items: [
             {
               src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-1-A.jpg",
               alt: "Victory Polychem image based post style 01"
             },
             {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-1-B.jpg",
-              alt: "Victory Polychem image based post style 02"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-1-C.jpg",
-              alt: "Victory Polychem image based post style 03"
-            }
-          ]
-        },
-        {
-          key: "victoryPostStyle2",
-          title: "Post Style 2: Image & Product Based",
-          previewGroupName: "Post Style 2: Image & Product Based",
-          items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-2-A.jpg",
-              alt: "Victory Polychem image and product based post style 01"
-            },
-            {
               src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-2-B.jpg",
               alt: "Victory Polychem image and product based post style 02"
             },
             {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-2-C.jpg",
-              alt: "Victory Polychem image and product based post style 03"
-            }
-          ]
-        },
-        {
-          key: "victoryPostStyle3",
-          title: "Post Style 3: Product Based",
-          previewGroupName: "Post Style 3: Product Based",
-          items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-3-A.jpg",
-              alt: "Victory Polychem product based post style 01"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-3-B.jpg",
-              alt: "Victory Polychem product based post style 02"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-3-C.jpg",
-              alt: "Victory Polychem product based post style 03"
-            }
-          ]
-        },
-        {
-          key: "victoryPostStyle4",
-          title: "Post Style 4: Text & Product Based",
-          previewGroupName: "Post Style 4: Text & Product Based",
-          items: [
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-4-A.jpg",
-              alt: "Victory Polychem text and product based post style 01"
-            },
-            {
               src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-4-B.jpg",
               alt: "Victory Polychem text and product based post style 02"
-            },
-            {
-              src: "./assets/images/Portfolio/Graphic Design/Victory Polychem/Post-style-4-C.jpg",
-              alt: "Victory Polychem text and product based post style 03"
             }
           ]
-        }
+        },
       ]
     }
   ],
@@ -615,14 +474,21 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Raptech Engineering",
-      industry: "Engineering / Manufacturing",
-      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
+      title: "COEPian's Academy",
+      industry: "Education / Coaching",
+      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
+      image: { src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg", alt: "COEPian's Academy thumbnail" },
+      imageLabel: "COEPian's Academy"
+    },
+    {
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
-        alt: "Raptech Engineering thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
       },
-      imageLabel: "Raptech Engineering"
+      imageLabel: "La Mom & Miiracle"
     },
     {
       title: "Wilo",
@@ -633,16 +499,6 @@ relatedProjects: [
         alt: "Wilo thumbnail"
       },
       imageLabel: "Wilo"
-    },
-    {
-      title: "Celestial",
-      industry: "Education / E-learning",
-      url: "./portfolio-detail.html?project=graphic-design-celestial",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
-        alt: "Celestial thumbnail"
-      },
-      imageLabel: "Celestial"
     }
   ]
 },
@@ -768,7 +624,7 @@ relatedProjects: [
       groups: [
         {
           key: "raptechPostStyle1",
-          title: "Post Style 1: Image Based Hiring Posts",
+          title: "Post Style 1: Image Based Layouts Hiring Posts",
           previewGroupName: "Raptech Post Style 1",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-1-A.jpg", alt: "Raptech image based hiring post 01" },
@@ -777,30 +633,20 @@ relatedProjects: [
         },
         {
           key: "raptechPostStyle2",
-          title: "Post Style 2: Image & Product Based",
+          title: "Post Style 2: Product Based Layouts",
           previewGroupName: "Raptech Post Style 2",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-A.jpg", alt: "Raptech image and product based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-2-B.jpg", alt: "Raptech image and product based post 02" }
-          ]
-        },
-        {
-          key: "raptechPostStyle3",
-          title: "Post Style 3: Product Based",
-          previewGroupName: "Raptech Post Style 3",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-A.jpg", alt: "Raptech product based post 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-3-B.jpg", alt: "Raptech product based post 02" }
           ]
         },
         {
-          key: "raptechPostStyle4",
-          title: "Post Style 4: Text & Product Based",
-          previewGroupName: "Raptech Post Style 4",
+          key: "raptechPostStyle3",
+          title: "Post Style 3: Text & Product Based Layouts",
+          previewGroupName: "Raptech Post Style 3",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-A.jpg", alt: "Raptech text and product based post 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-B.jpg", alt: "Raptech text and product based post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Raptech/Post-style-4-C.jpg", alt: "Raptech text and product based post 03" }
           ]
         }
       ]
@@ -811,173 +657,14 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Trelawny",
-      industry: "Industrial Tools / Engineering",
-      url: "./portfolio-detail.html?project=graphic-design-trelawny",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg", alt: "Trelawny thumbnail" },
-      imageLabel: "Trelawny"
-    },
-    {
-      title: "COEPian's Academy",
-      industry: "Education / Coaching",
-      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg", alt: "COEPian's Academy thumbnail" },
-      imageLabel: "COEPian's Academy"
-    },
-    {
-      title: "Sundar Sanskar",
-      industry: "Education / Child Development",
-      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg", alt: "Sundar Sanskar thumbnail" },
-      imageLabel: "Sundar Sanskar"
-    }
-  ]
-},
-
-"graphic-design-trelawny": {
-  title: "Trelawny",
-  fullTitle: "Trelawny",
-  category: "Graphic Design",
-  categorySlug: "graphic-design",
-  industry: "Industrial Tools / Engineering",
-  projectType: "",
-  role: "Graphic Designer",
-  deliverables: "Social Media Creatives",
-
-  tools: [
-    { name: "Adobe Illustrator", icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg" },
-    { name: "Adobe Photoshop", icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg" }
-  ],
-
-  breadcrumb: {
-    rootLabel: "Portfolio",
-    rootUrl: "./index.html?section=portfolio",
-    categoryLabel: "Graphic Design",
-    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
-    currentLabel: "Trelawny"
-  },
-
-  tabs: [
-    { id: "project-info", label: "Project Info" },
-    { id: "design-thinking", label: "Design Thinking" },
-    { id: "visual-system", label: "Visual System" },
-    { id: "social-posts", label: "Social Media Posts" }
-  ],
-
-  hero: {
-    desktop: { src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg", alt: "Trelawny portfolio cover image" },
-    mobile: { src: "./assets/images/Thumbnails/Graphic Design/Mobile/Trelawny.jpg", alt: "Trelawny mobile portfolio cover image" }
-  },
-
-  projectOverview: {
-    title: "Trelawny",
-    sections: [
-      {
-        heading: "Who is the client?",
-        bodyDesktop: "Trelawny SPT Ltd is the surface preparation equipment specialist, part of the Indutrade Group, Sweden. The company manufactures a range of pneumatic tools and surface preparation equipment in the engineering heart of the UK, Leamington Spa. Established 80 years ago, Trelawny has been offering a range of equipment for preparing concrete, steel and stone.",
-        bodyMobile: "Trelawny SPT Ltd is a surface preparation equipment specialist and part of the Indutrade Group, Sweden. Established 80 years ago, the company offers equipment for preparing concrete, steel and stone."
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
       },
-      {
-        heading: "What was the design need?",
-        bodyDesktop: "As an already well known brand, the designs needed to present Trelawny for the Indian construction market. Since the industry depends heavily on trust, quality & delivery, the communication had to feel clean, confident & professional.",
-        bodyMobile: "The designs needed to present Trelawny for the Indian construction market with a clean, confident and professional communication style."
-      },
-      {
-        heading: "What kind of audience was this for?",
-        bodyDesktop: "The audience they wanted to focus on was Indian industrial clients, manufacturers & project heads. These are people who look for clarity, dependability & practical value, so the design had to communicate information in a direct and trustworthy way.",
-        bodyMobile: "The audience included Indian industrial clients, manufacturers and project heads who look for clarity, dependability and practical value."
-      },
-      {
-        heading: "What emotion should the design create?",
-        bodyDesktop: "The design had to create a feeling of trust, stability & confidence. It needed to make Trelawny feel dependable, organized & professional, while giving the brand a polished presence in a competitive construction market.",
-        bodyMobile: "The design had to create a feeling of trust, stability and confidence while giving the brand a polished professional presence."
-      }
-    ]
-  },
-
-  summaryBlock: {
-    roleHeading: "My Role",
-    deliverablesHeading: "Deliverables",
-    toolsHeading: "Tools Used"
-  },
-
-  designThinking: {
-    heading: "Design Thinking",
-    points: [
-      "The project needed a more thoughtful & layered approach, because the communication had to work for two different audience groups.",
-      "The challenge was to speak to both audiences through one consistent brand language, without making the communication feel scattered.",
-      "Each template was planned with relevance — from the content flow and image choice to the overall visual hierarchy.",
-      "The aim was to make sure that both audience groups could connect with the message quickly & clearly.",
-      "At the same time, the design had to maintain the client’s core brand identity without losing consistency."
-    ],
-    pointsMobile: [
-      "The project needed a thoughtful approach because the communication had to work for two different audience groups.",
-      "Each template was planned with relevance — from content flow and image choice to visual hierarchy.",
-      "The design had to maintain the client’s core brand identity without losing consistency."
-    ]
-  },
-
-  visualSystem: {
-    heading: "Visual System",
-    points: [
-      "The client already had a clear brand language, so the colours, logo, and identity system gave us a strong starting point.",
-      "The main focus was on choosing the right images that would feel relevant to both audience groups.",
-      "Background images, main subject visuals, and supporting elements were selected to match the audience’s environment, lifestyle, and expectations.",
-      "The visuals were designed to feel brand-consistent, but still specific enough for each audience segment.",
-      "Overall, the design approach helped create communication that felt familiar, relevant, and easy for the audience to relate to."
-    ],
-    pointsMobile: [
-      "The client already had a clear brand language, so the colours, logo and identity system gave us a strong starting point.",
-      "The main focus was on choosing the right images for each audience group.",
-      "The design approach helped create communication that felt familiar, relevant and easy to relate to."
-    ]
-  },
-
-  gallerySections: [
-    {
-      id: "social-posts",
-      title: "Social Media Posts",
-      groups: [
-        {
-          key: "trelawnyPostStyle1",
-          title: "Post Style 1: Product and Content Based",
-          previewGroupName: "Trelawny Post Style 1",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-A.jpg", alt: "Trelawny product and content based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-1-B.jpg", alt: "Trelawny product and content based post 02" }
-          ]
-        },
-        {
-          key: "trelawnyPostStyle2",
-          title: "Post Style 2: Audience Based",
-          previewGroupName: "Trelawny Post Style 2",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-A.jpg", alt: "Trelawny audience based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-2-B.jpg", alt: "Trelawny audience based post 02" }
-          ]
-        },
-        {
-          key: "trelawnyPostStyle3",
-          title: "Post Style 3: Text Based",
-          previewGroupName: "Trelawny Post Style 3",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-A.jpg", alt: "Trelawny text based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Trelawney/Post-Style-3-B.jpg", alt: "Trelawny text based post 02" }
-          ]
-        }
-      ]
-    }
-  ],
-
-  relatedProjectsTitle: "View Other Projects",
-
-  relatedProjects: [
-    {
-      title: "La Mom & Miiracle",
-      industry: "Healthcare / Fertility Clinic",
-      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg", alt: "La Mom & Miiracle thumbnail" },
-      imageLabel: "La Mom & Miiracle"
+      imageLabel: "Samartha Seva Mandal"
     },
     {
       title: "Yogalaya",
@@ -987,14 +674,18 @@ relatedProjects: [
       imageLabel: "Yogalaya"
     },
     {
-      title: "BNI Champs",
-      industry: "Business Networking",
-      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
-      image: { src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg", alt: "BNI Champs thumbnail" },
-      imageLabel: "BNI Champs"
+      title: "Preeti Garments",
+      industry: "Fashion / Apparel",
+      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
+        alt: "Preeti Garments thumbnail"
+      },
+      imageLabel: "Preeti Garments"
     }
   ]
 },
+
   "graphic-design-celestial": {
   title: "Celestial Institute of Technology",
   fullTitle: "Celestial Institute of Technology",
@@ -1114,7 +805,7 @@ relatedProjects: [
       groups: [
         {
           key: "celestialPostStyle1",
-          title: "Post Style 1: Infographic Based",
+          title: "Post Style 1: Infographic Based Layouts",
           previewGroupName: "Celestial Infographic Posts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-1-A.jpg", alt: "Celestial infographic post 01" },
@@ -1124,17 +815,7 @@ relatedProjects: [
         },
         {
           key: "celestialPostStyle2",
-          title: "Post Style 2: Image Based",
-          previewGroupName: "Celestial Image Based Posts",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-2-A.jpg", alt: "Celestial image based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-2-B.jpg", alt: "Celestial image based post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-2-C.jpg", alt: "Celestial image based post 03" }
-          ]
-        },
-        {
-          key: "celestialPostStyle3",
-          title: "Post Style 3: Image and Text Based",
+          title: "Post Style 2: Image and Text Based Layouts",
           previewGroupName: "Celestial Image and Text Posts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-3-A.jpg", alt: "Celestial image and text post 01" },
@@ -1158,19 +839,6 @@ relatedProjects: [
             { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-4-C.jpg", alt: "Celestial offerings web banner 03" }
           ]
         },
-        {
-          key: "celestialFeatures",
-          title: "Features Section",
-          previewGroupName: "Celestial Features Section",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-A.jpg", alt: "Celestial feature graphic 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-B.jpg", alt: "Celestial feature graphic 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-C.jpg", alt: "Celestial feature graphic 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-D.jpg", alt: "Celestial feature graphic 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-E.jpg", alt: "Celestial feature graphic 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Celestial/Post-Style-5-F.jpg", alt: "Celestial feature graphic 06" }
-          ]
-        }
       ]
     }
   ],
@@ -1178,16 +846,6 @@ relatedProjects: [
   relatedProjectsTitle: "View Other Projects",
 
   relatedProjects: [
-    {
-      title: "Preeti Garments",
-      industry: "Fashion / Apparel",
-      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
-        alt: "Preeti Garments thumbnail"
-      },
-      imageLabel: "Preeti Garments"
-    },
     {
       title: "Aai Foods",
       industry: "Food / FMCG",
@@ -1207,6 +865,16 @@ relatedProjects: [
         alt: "Serene Veda thumbnail"
       },
       imageLabel: "Serene Veda"
+    },
+    {
+      title: "Kesariya@100",
+      industry: "Cultural / Community Event",
+      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+        alt: "Kesariya@100 thumbnail"
+      },
+      imageLabel: "Kesariya@100"
     }
   ]
 },
@@ -1331,49 +999,15 @@ relatedProjects: [
       title: "Social Media Posts",
       groups: [
         {
-          key: "coepPostStyle1",
-          title: "Post Style 1",
-          previewGroupName: "COEP Post Style 1",
+          key: "coepPosttemplatelayouts",
+          title: "Post Template Layouts",
+          previewGroupName: "Post Template Layouts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-A.jpg", alt: "COEP post style 1 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-B.jpg", alt: "COEP post style 1 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-C.jpg", alt: "COEP post style 1 creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-D.jpg", alt: "COEP post style 1 creative 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-E.jpg", alt: "COEP post style 1 creative 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-1-F.jpg", alt: "COEP post style 1 creative 06" }
+			{ src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-2-B.jpg", alt: "COEP post style 2 creative 02" },
+			{ src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-E.jpg", alt: "COEP post style 4 creative 05" }
           ]
         },
-        {
-          key: "coepPostStyle2",
-          title: "Post Style 2",
-          previewGroupName: "COEP Post Style 2",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-2-A.jpg", alt: "COEP post style 2 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-2-B.jpg", alt: "COEP post style 2 creative 02" }
-          ]
-        },
-        {
-          key: "coepPostStyle3",
-          title: "Post Style 3",
-          previewGroupName: "COEP Post Style 3",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-3-A.jpg", alt: "COEP post style 3 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-3-B.jpg", alt: "COEP post style 3 creative 02" }
-          ]
-        },
-        {
-          key: "coepPostStyle4",
-          title: "Post Style 4",
-          previewGroupName: "COEP Post Style 4",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-A.jpg", alt: "COEP post style 4 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-B.jpg", alt: "COEP post style 4 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-C.jpg", alt: "COEP post style 4 creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-D.jpg", alt: "COEP post style 4 creative 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-E.jpg", alt: "COEP post style 4 creative 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/COEP/Post-Style-4-F.jpg", alt: "COEP post style 4 creative 06" }
-          ]
-        }
       ]
     }
   ],
@@ -1381,6 +1015,16 @@ relatedProjects: [
   relatedProjectsTitle: "View Other Projects",
 
   relatedProjects: [
+    {
+      title: "Beyond Bandish",
+      industry: "Music / Performing Arts",
+      url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Beyond Bandish thumbnail"
+      },
+      imageLabel: "Beyond Bandish"
+     },
     {
       title: "Rainbow Umbrella",
       industry: "Social / CSR",
@@ -1392,25 +1036,15 @@ relatedProjects: [
       imageLabel: "Rainbow Umbrella"
     },
     {
-      title: "Preeti Garments",
-      industry: "Fashion / Apparel",
-      url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
+      title: "Dagdushet Ganpati",
+      industry: "Religious / Devotional Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-dagdushet-ganpati",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Preeti Garments.jpg",
-        alt: "Preeti Garments thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/DG.jpg",
+        alt: "Dagdushet Ganpati thumbnail"
       },
-      imageLabel: "Preeti Garments"
-    },
-    {
-      title: "Beyond Bandish",
-      industry: "Music / Performing Arts",
-      url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
-        alt: "Beyond Bandish thumbnail"
-      },
-      imageLabel: "Beyond Bandish"
-     }
+      imageLabel: "Dagdushet Ganpati"
+    }
    ]
  },
 	
@@ -1537,38 +1171,15 @@ relatedProjects: [
       title: "Social Media Posts",
       groups: [
         {
-          key: "lmmPostStyle1",
-          title: "Post Style 1",
-          previewGroupName: "La Mom & Miiracle Post Style 1",
+          key: "lmmPostcolourtemplatelayouts",
+          title: "Post Colour Template Layouts",
+          previewGroupName: "Post Colour Template Layouts",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-A.jpg", alt: "La Mom & Miiracle post style 1 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-B.jpg", alt: "La Mom & Miiracle post style 1 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-1-C.jpg", alt: "La Mom & Miiracle post style 1 creative 03" }
-          ]
-        },
-        {
-          key: "lmmPostStyle2",
-          title: "Post Style 2",
-          previewGroupName: "La Mom & Miiracle Post Style 2",
-          items: [
             { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-A.jpg", alt: "La Mom & Miiracle post style 2 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-B.jpg", alt: "La Mom & Miiracle post style 2 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-2-C.jpg", alt: "La Mom & Miiracle post style 2 creative 03" }
+            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-B.jpg", alt: "La Mom & Miiracle post style 3 creative 02" }
           ]
         },
-        {
-          key: "lmmPostStyle3",
-          title: "Post Style 3",
-          previewGroupName: "La Mom & Miiracle Post Style 3",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-A.jpg", alt: "La Mom & Miiracle post style 3 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-B.jpg", alt: "La Mom & Miiracle post style 3 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-C.jpg", alt: "La Mom & Miiracle post style 3 creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-D.jpg", alt: "La Mom & Miiracle post style 3 creative 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-E.jpg", alt: "La Mom & Miiracle post style 3 creative 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/LMM/Post-Style-3-F.jpg", alt: "La Mom & Miiracle post style 3 creative 06" }
-          ]
-        }
       ]
     }
   ],
@@ -1577,35 +1188,35 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Sundar Sanskar",
-      industry: "Education / Child Development",
-      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
+      title: "Victory Polychem",
+      industry: "Industrial Chemicals",
+      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
-        alt: "Sundar Sanskar thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
+        alt: "Victory Polychem thumbnail"
       },
-      imageLabel: "Sundar Sanskar"
+      imageLabel: "Victory Polychem"
     },
     {
-      title: "Yogalaya",
-      industry: "Wellness / Yoga",
-      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      title: "Raptech Engineering",
+      industry: "Engineering / Manufacturing",
+      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
-        alt: "Yogalaya thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
+        alt: "Raptech Engineering thumbnail"
       },
-      imageLabel: "Yogalaya"
+      imageLabel: "Raptech Engineering"
     },
     {
-      title: "BNI Champs",
-      industry: "Business Networking",
-      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      title: "Celestial",
+      industry: "Education / E-learning",
+      url: "./portfolio-detail.html?project=graphic-design-celestial",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-        alt: "BNI Champs thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
+        alt: "Celestial thumbnail"
       },
-      imageLabel: "BNI Champs"
-    }
+      imageLabel: "Celestial"
+    },
   ]
 },
 
@@ -1731,58 +1342,16 @@ relatedProjects: [
       title: "Social Media Posts",
       groups: [
         {
-          key: "wiloPostStyle1",
-          title: "Post Style 1: Amazon Posts",
-          previewGroupName: "Wilo Amazon Posts",
+          key: "wiloPostTemplateStyles",
+          title: "Post Template Styles",
+          previewGroupName: "Post Template Styles",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-A.jpg", alt: "Wilo Amazon post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-B.jpg", alt: "Wilo Amazon post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-C.jpg", alt: "Wilo Amazon post 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-1-D.jpg", alt: "Wilo Amazon post 04" }
-          ]
-        },
-        {
-          key: "wiloPostStyle2",
-          title: "Post Style 2: Event Invites",
-          previewGroupName: "Wilo Event Invites",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-A.jpg", alt: "Wilo event invite 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-B.jpg", alt: "Wilo event invite 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-C.jpg", alt: "Wilo event invite 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-D.jpg", alt: "Wilo event invite 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-E.jpg", alt: "Wilo event invite 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-2-F.jpg", alt: "Wilo event invite 06" }
-          ]
-        },
-        {
-          key: "wiloPostStyle3",
-          title: "Post Style 3: Hiring Posts",
-          previewGroupName: "Wilo Hiring Posts",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-3-A.jpg", alt: "Wilo hiring post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-3-B.jpg", alt: "Wilo hiring post 02" }
-          ]
-        },
-        {
-          key: "wiloPostStyle4",
-          title: "Post Style 4: Image Based Posts",
-          previewGroupName: "Wilo Image Based Posts",
-          items: [
             { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-A.jpg", alt: "Wilo image based post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-B.jpg", alt: "Wilo image based post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-4-C.jpg", alt: "Wilo image based post 03" }
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-A.jpg", alt: "Wilo image and content post 01" },
+            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-3-A.jpg", alt: "Wilo hiring post 01" }
           ]
         },
-        {
-          key: "wiloPostStyle5",
-          title: "Post Style 5: Image & Content Based Posts",
-          previewGroupName: "Wilo Image and Content Posts",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-A.jpg", alt: "Wilo image and content post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-B.jpg", alt: "Wilo image and content post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Wilo/Post-Style-5-C.jpg", alt: "Wilo image and content post 03" }
-          ]
-        }
       ]
     }
   ],
@@ -1791,34 +1360,34 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Sundar Sanskar",
-      industry: "Education / Child Development",
-      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
+      title: "COEPian's Academy",
+      industry: "Education / Coaching",
+      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
-        alt: "Sundar Sanskar thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg",
+        alt: "COEPian's Academy thumbnail"
       },
-      imageLabel: "Sundar Sanskar"
+      imageLabel: "COEPian's Academy"
     },
     {
-      title: "Yogalaya",
-      industry: "Wellness / Yoga",
-      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
-        alt: "Yogalaya thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
       },
-      imageLabel: "Yogalaya"
+      imageLabel: "La Mom & Miiracle"
     },
     {
-      title: "BNI Champs",
-      industry: "Business Networking",
-      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-        alt: "BNI Champs thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
       },
-      imageLabel: "BNI Champs"
+      imageLabel: "Samartha Seva Mandal"
     }
   ]
 },
@@ -1946,36 +1515,14 @@ relatedProjects: [
       title: "Branding",
       groups: [
         {
-          key: "ssmsLogos",
-          title: "Logos",
-          previewGroupName: "Samartha Seva Mandal Logos",
+          key: "ssmsLogoModernisation",
+          title: "Logo Modernisation",
+          previewGroupName: "Logo Modernisation",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-1.jpg", alt: "Samartha Seva Mandal logo 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-2.jpg", alt: "Samartha Seva Mandal logo 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-3.jpg", alt: "Samartha Seva Mandal logo 03" }
-          ]
-        }
-      ]
-    },
-    {
-      id: "symbols",
-      title: "Symbols",
-      groups: [
-        {
-          key: "ssmsSymbols",
-          title: "Iconic Elements",
-          previewGroupName: "Samartha Seva Mandal Symbols",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-A.png", alt: "Samartha Seva Mandal symbol A" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.png", alt: "Samartha Seva Mandal symbol B" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-C.png", alt: "Samartha Seva Mandal symbol C" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-D.png", alt: "Samartha Seva Mandal symbol D" },
+			{ src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.png", alt: "Samartha Seva Mandal symbol B" },
             { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-E.png", alt: "Samartha Seva Mandal symbol E" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.png", alt: "Samartha Seva Mandal symbol F" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-G.png", alt: "Samartha Seva Mandal symbol G" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-H.png", alt: "Samartha Seva Mandal symbol H" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-I.png", alt: "Samartha Seva Mandal symbol I" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-J.png", alt: "Samartha Seva Mandal symbol J" }
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.png", alt: "Samartha Seva Mandal symbol F" }
           ]
         }
       ]
@@ -2005,7 +1552,24 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Preeti Garments",
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
+      },
+      imageLabel: "Wilo"
+    },
+    {
+      title: "Yogalaya",
+      industry: "Wellness / Yoga",
+      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      image: { src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg", alt: "Yogalaya thumbnail" },
+      imageLabel: "Yogalaya"
+    },
+    {
+     title: "Preeti Garments",
       industry: "Fashion / Apparel",
       url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
       image: {
@@ -2013,213 +1577,10 @@ relatedProjects: [
         alt: "Preeti Garments thumbnail"
       },
       imageLabel: "Preeti Garments"
-    },
-    {
-      title: "Aai Foods",
-      industry: "Food / FMCG",
-      url: "./portfolio-detail.html?project=graphic-design-aai-foods",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
-        alt: "Aai Foods thumbnail"
-      },
-      imageLabel: "Aai Foods"
-    },
-    {
-      title: "Serene Veda",
-      industry: "Ayurveda / Wellness",
-      url: "./portfolio-detail.html?project=graphic-design-serene-veda",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
-        alt: "Serene Veda thumbnail"
-      },
-      imageLabel: "Serene Veda"
     }
   ]
  },
 
-"graphic-design-sundar-sanskar": {
-  title: "Sundar Sanskar",
-  fullTitle: "Sundar Sanskar",
-  category: "Graphic Design",
-  categorySlug: "graphic-design",
-  industry: "Education / Child Development",
-  projectType: "",
-  role: "Graphic Designer",
-  deliverables: "Social Media Creatives",
-
-  tools: [
-    {
-      name: "Adobe Illustrator",
-      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
-    },
-    {
-      name: "Adobe Photoshop",
-      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
-    },
-    {
-      name: "Canva",
-      icon: "./assets/images/software Icons/canva-icon.svg"
-    }
-  ],
-
-  breadcrumb: {
-    rootLabel: "Portfolio",
-    rootUrl: "./index.html?section=portfolio",
-    categoryLabel: "Graphic Design",
-    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
-    currentLabel: "Sundar Sanskar"
-  },
-
-  tabs: [
-    { id: "project-info", label: "Project Info" },
-    { id: "design-thinking", label: "Design Thinking" },
-    { id: "visual-system", label: "Visual System" },
-    { id: "social-posts", label: "Social Media Posts" }
-  ],
-
-  hero: {
-    desktop: {
-      src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
-      alt: "Sundar Sanskar portfolio cover image"
-    },
-    mobile: {
-      src: "./assets/images/Thumbnails/Graphic Design/Mobile/Sundar Sanskar.jpg",
-      alt: "Sundar Sanskar mobile portfolio cover image"
-    }
-  },
-
-  projectOverview: {
-    title: "Sundar Sanskar",
-    sections: [
-      {
-        heading: "Who is the client?",
-        bodyDesktop: "Spirituality is the basis of a prosperous life. According to the founder, Prampujya Sadguru Shri Nana, spirituality has the power to bring mental and physical changes in a human being. Sundar Sanskar and Swadhyay focus on good teachings, values and self-development through study, practice and cultural grounding.",
-        bodyMobile: "Sundar Sanskar focuses on values, spirituality and self-development through good teachings and Swadhyay. It is built around cultural grounding, discipline and positive development."
-      },
-      {
-        heading: "What was the design need?",
-        bodyDesktop: "The design needed to present Sundar Sanskar as a warm, value-driven and culturally rooted brand. Since the work was connected to learning, values and positive development, the communication had to feel simple, trustworthy and emotionally meaningful, while still looking clean and engaging for modern audiences.",
-        bodyMobile: "The design needed to present Sundar Sanskar as a warm, value-driven and culturally rooted brand while still feeling clean and engaging for modern audiences."
-      },
-      {
-        heading: "What kind of audience was this for?",
-        bodyDesktop: "The audience included parents, children, families and people who value culture, discipline and good upbringing. The design needed to connect with parents through trust, while also feeling friendly and approachable for younger audiences.",
-        bodyMobile: "The audience included parents, children, families and people who value culture, discipline and good upbringing."
-      },
-      {
-        heading: "What emotion should the design create?",
-        bodyDesktop: "The design had to create a feeling of trust, warmth, positivity and cultural connection. It needed to make the audience feel that Sundar Sanskar is not just about learning, but about building values, confidence and character in a gentle and meaningful way.",
-        bodyMobile: "The design had to create trust, warmth, positivity and cultural connection while making the brand feel gentle and meaningful."
-      }
-    ]
-  },
-
-  summaryBlock: {
-    roleHeading: "My Role",
-    deliverablesHeading: "Deliverables",
-    toolsHeading: "Tools Used"
-  },
-
-  designThinking: {
-    heading: "Design Thinking",
-    points: [
-      "The strategy was to create a visual style that felt old-school in its values, but modern in its presentation.",
-      "The tone of the words and the design language had to work together, so the brand felt trustworthy, rooted and still relevant to today’s students and parents.",
-      "The aim was to make the organization feel familiar and dependable, without making it look outdated.",
-      "Every piece of communication was planned to create curiosity, confidence and emotional interest.",
-      "The overall direction was to make parents and students feel that this is an organization worth understanding, trusting and engaging with further."
-    ],
-    pointsMobile: [
-      "The strategy was to create a visual style that felt old-school in its values, but modern in its presentation.",
-      "The aim was to make the organization feel familiar and dependable without making it look outdated.",
-      "Every piece of communication was planned to create curiosity, confidence and emotional interest."
-    ]
-  },
-
-  visualSystem: {
-    heading: "Visual System",
-    points: [
-      "The design elements followed the same idea of being old-school yet modern.",
-      "The visuals were treated in a way that felt personal, layered and expressive rather than flat or overly digital.",
-      "Photographs were used like collected memories, almost as if they had been printed, cut and thoughtfully placed together.",
-      "At the same time, the layout and execution kept the design looking clean, structured and contemporary.",
-      "The final visual language created a balance of warmth, credibility, creativity and modern appeal."
-    ],
-    pointsMobile: [
-      "The design elements followed the idea of being old-school yet modern.",
-      "Photographs were treated like collected memories, giving the visuals a personal and expressive feel.",
-      "The final visual language created a balance of warmth, credibility and modern appeal."
-    ]
-  },
-
-  gallerySections: [
-    {
-      id: "social-posts",
-      title: "Social Media Posts",
-      groups: [
-        {
-          key: "sundarPostStyle1",
-          title: "Post Style 1",
-          previewGroupName: "Sundar Sanskar Post Style 1",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-A.jpg", alt: "Sundar Sanskar post style 1 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-B.jpg", alt: "Sundar Sanskar post style 1 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-C.jpg", alt: "Sundar Sanskar post style 1 creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-1-D.jpg", alt: "Sundar Sanskar post style 1 creative 04" }
-          ]
-        },
-        {
-          key: "sundarPostStyle2",
-          title: "Post Template Options",
-          previewGroupName: "Sundar Sanskar Post Templates",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-A.jpg", alt: "Sundar Sanskar post template 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-B.jpg", alt: "Sundar Sanskar post template 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-C.jpg", alt: "Sundar Sanskar post template 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-D.jpg", alt: "Sundar Sanskar post template 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-E.jpg", alt: "Sundar Sanskar post template 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Sundar Sanskar/Post-Style-2-F.jpg", alt: "Sundar Sanskar post template 06" }
-          ]
-        }
-      ]
-    }
-  ],
-
-  relatedProjectsTitle: "View Other Projects",
-
-  relatedProjects: [
-    {
-      title: "Kesariya@100",
-      industry: "Cultural / Community Event",
-      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
-        alt: "Kesariya@100 thumbnail"
-      },
-      imageLabel: "Kesariya@100"
-    },
-    {
-      title: "Beyond Bandish",
-      industry: "Music / Performing Arts",
-      url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BB.jpg",
-        alt: "Beyond Bandish thumbnail"
-      },
-      imageLabel: "Beyond Bandish"
-    },
-    {
-      title: "BNI Champs",
-      industry: "Business Networking",
-      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-        alt: "BNI Champs thumbnail"
-      },
-      imageLabel: "BNI Champs"
-    }
-  ]
-},
 
 "graphic-design-yogalaya": {
   title: "Yogalaya Pune",
@@ -2359,18 +1720,8 @@ relatedProjects: [
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-A.jpg", alt: "Yogalaya post template 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-B.jpg", alt: "Yogalaya post template 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-C.jpg", alt: "Yogalaya post template 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-D.jpg", alt: "Yogalaya post template 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-E.jpg", alt: "Yogalaya post template 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-F.jpg", alt: "Yogalaya post template 06" },
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-G.jpg", alt: "Yogalaya post template 07" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-H.jpg", alt: "Yogalaya post template 08" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-I.jpg", alt: "Yogalaya post template 09" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-J.jpg", alt: "Yogalaya post template 10" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-K.jpg", alt: "Yogalaya post template 11" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-L.jpg", alt: "Yogalaya post template 12" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-M.jpg", alt: "Yogalaya post template 13" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-N.jpg", alt: "Yogalaya post template 14" }
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-H.jpg", alt: "Yogalaya post template 08" }
           ]
         }
       ]
@@ -2381,207 +1732,34 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Trelawny",
-      industry: "Industrial Tools / Engineering",
-      url: "./portfolio-detail.html?project=graphic-design-trelawny",
+      title: "Aai Foods",
+      industry: "Food / FMCG",
+      url: "./portfolio-detail.html?project=graphic-design-aai-foods",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Trelawny.jpg",
-        alt: "Trelawny thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
+        alt: "Aai Foods thumbnail"
       },
-      imageLabel: "Trelawny"
+      imageLabel: "Aai Foods"
     },
     {
-      title: "Celestial",
-      industry: "Education / E-learning",
-      url: "./portfolio-detail.html?project=graphic-design-celestial",
+      title: "Serene Veda",
+      industry: "Ayurveda / Wellness",
+      url: "./portfolio-detail.html?project=graphic-design-serene-veda",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
-        alt: "Celestial thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Serene Veda thumbnail"
       },
-      imageLabel: "Celestial"
+      imageLabel: "Serene Veda"
     },
     {
-      title: "COEPian's Academy",
-      industry: "Education / Coaching",
-      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
+      title: "Kesariya@100",
+      industry: "Cultural / Community Event",
+      url: "./portfolio-detail.html?project=graphic-design-kesariya-100",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg",
-        alt: "COEPian's Academy thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Kesariya.jpg",
+        alt: "Kesariya@100 thumbnail"
       },
-      imageLabel: "COEPian's Academy"
-    }
-  ]
-},
-
-"graphic-design-bni-champs": {
-  title: "BNI Champs",
-  fullTitle: "BNI Champs",
-  category: "Graphic Design",
-  categorySlug: "graphic-design",
-  industry: "Business Networking",
-  projectType: "",
-  role: "Graphic Designer",
-  deliverables: "Social Media Creatives",
-
-  tools: [
-    {
-      name: "Adobe Illustrator",
-      icon: "./assets/images/software Icons/Adobe_Illustrator_CC_icon.svg"
-    },
-    {
-      name: "Adobe Photoshop",
-      icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
-    },
-    {
-      name: "Canva",
-      icon: "./assets/images/software Icons/canva-icon.svg"
-    }
-  ],
-
-  breadcrumb: {
-    rootLabel: "Portfolio",
-    rootUrl: "./index.html?section=portfolio",
-    categoryLabel: "Graphic Design",
-    categoryUrl: "./index.html?section=portfolio&category=graphic-design",
-    currentLabel: "BNI Champs"
-  },
-
-  tabs: [
-    { id: "project-info", label: "Project Info" },
-    { id: "design-thinking", label: "Design Thinking" },
-    { id: "visual-system", label: "Visual System" },
-    { id: "social-posts", label: "Social Media Posts" }
-  ],
-
-  hero: {
-    desktop: {
-      src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-      alt: "BNI Champs portfolio cover image"
-    },
-    mobile: {
-      src: "./assets/images/Thumbnails/Graphic Design/Mobile/BNI.jpg",
-      alt: "BNI Champs mobile portfolio cover image"
-    }
-  },
-
-  projectOverview: {
-    title: "BNI Champs",
-    sections: [
-      {
-        heading: "Who is the client?",
-        bodyDesktop: "Founded by Dr. Ivan Misner in 1985, BNI is now the world’s largest networking organization with decades of continuous growth. A BNI Membership provides the environment, training and support to build trusted relationships. Members attend weekly chapter meetings that follow a structured agenda designed to maximise referrals and long-term business collaboration.",
-        bodyMobile: "BNI is one of the world’s largest business networking organizations, helping members build trusted relationships, exchange referrals and grow through structured networking."
-      },
-      {
-        heading: "What was the design need?",
-        bodyDesktop: "The design needed to present BNI as a professional, high-trust and opportunity-driven business networking platform. Since the communication was meant for entrepreneurs and professionals, it had to feel sharp, credible and well-structured, while clearly highlighting the value of referrals, networking and business growth.",
-        bodyMobile: "The design needed to present BNI as a professional, high-trust and opportunity-driven business networking platform."
-      },
-      {
-        heading: "What kind of audience was this for?",
-        bodyDesktop: "The audience included business owners, entrepreneurs, professionals, consultants, service providers and decision-makers who are looking to grow through meaningful business connections. The design needed to speak to people who value trust, credibility, referrals and long-term professional relationships.",
-        bodyMobile: "The audience included business owners, entrepreneurs, professionals, consultants and decision-makers looking to grow through meaningful business connections."
-      },
-      {
-        heading: "What emotion should the design create?",
-        bodyDesktop: "The design had to create a feeling of confidence, ambition and professional trust. It needed to make BNI feel like a serious growth platform where people can build strong relationships, find opportunities and move their business forward.",
-        bodyMobile: "The design had to create confidence, ambition and professional trust, making BNI feel like a serious growth platform."
-      }
-    ]
-  },
-
-  summaryBlock: {
-    roleHeading: "My Role",
-    deliverablesHeading: "Deliverables",
-    toolsHeading: "Tools Used"
-  },
-
-  designThinking: {
-    heading: "Design Thinking",
-    points: [
-      "Since the client operated in a corporate and networking-driven environment, the design approach had to feel professional, structured and dynamic.",
-      "The communication was centered around people and their stories, so the portraits and member images needed to have a strong visual presence.",
-      "The layout had to give enough importance to each individual while still keeping the overall communication clean and business-like.",
-      "The information hierarchy was planned in a simple, repeatable format, making it easy to create multiple posts in bulk.",
-      "The overall strategy was to build a system that could present each story with clarity, consistency and impact."
-    ],
-    pointsMobile: [
-      "The design approach had to feel professional, structured and dynamic.",
-      "The communication was centered around people and their stories, so portraits needed strong visual presence.",
-      "The strategy was to build a system that could present each story with clarity, consistency and impact."
-    ]
-  },
-
-  visualSystem: {
-    heading: "Visual System",
-    points: [
-      "BNI already had a clear and established brand language, so the focus was not on reinventing the identity.",
-      "The design system worked within the existing brand colours, structure and visual expectations.",
-      "Modular elements were used so that the layouts could be replicated easily across different posts and member stories.",
-      "Consistency was a key focus, especially because the communication had to work at scale.",
-      "The final design language felt corporate, organized, people-focused and easy to extend across the campaign."
-    ],
-    pointsMobile: [
-      "BNI already had a clear and established brand language, so the focus was not on reinventing the identity.",
-      "Modular elements were used so the layouts could be replicated easily across posts.",
-      "The final design language felt corporate, organised, people-focused and easy to extend."
-    ]
-  },
-
-  gallerySections: [
-    {
-      id: "social-posts",
-      title: "Social Media Posts",
-      groups: [
-        {
-          key: "bniSocialPosts",
-          title: "FInal Post Template",
-          previewGroupName: "BNI Champs Social Media Posts",
-          items: [
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-A.jpg", alt: "BNI Champs social post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-B.jpg", alt: "BNI Champs social post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-C.jpg", alt: "BNI Champs social post 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-D.jpg", alt: "BNI Champs social post 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-E.jpg", alt: "BNI Champs social post 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/BNI/Post-Style-2-F.jpg", alt: "BNI Champs social post 06" }
-          ]
-        }
-      ]
-    }
-  ],
-
-  relatedProjectsTitle: "View Other Projects",
-
-  relatedProjects: [
-    {
-      title: "La Mom & Miiracle",
-      industry: "Healthcare / Fertility Clinic",
-      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
-        alt: "La Mom & Miiracle thumbnail"
-      },
-      imageLabel: "La Mom & Miiracle"
-    },
-    {
-      title: "Wilo",
-      industry: "Pumps / Water Technology",
-      url: "./portfolio-detail.html?project=graphic-design-wilo",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
-        alt: "Wilo thumbnail"
-      },
-      imageLabel: "Wilo"
-    },
-    {
-      title: "Samartha Seva Mandal",
-      industry: "Religious / Spiritual Organisation",
-      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
-        alt: "Samartha Seva Mandal thumbnail"
-      },
-      imageLabel: "Samartha Seva Mandal"
+      imageLabel: "Kesariya@100"
     }
   ]
 },
@@ -2765,10 +1943,7 @@ relatedProjects: [
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-A.jpg", alt: "Preeti Garments post template 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-B.jpg", alt: "Preeti Garments post template 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-C.jpg", alt: "Preeti Garments post template 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-D.jpg", alt: "Preeti Garments post template 04" },
-            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-E.jpg", alt: "Preeti Garments post template 05" },
-            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-F.jpg", alt: "Preeti Garments post template 06" }
+            { src: "./assets/images/Portfolio/Graphic Design/Preeti Garments/Post-Style-2-C.jpg", alt: "Preeti Garments post template 03" }
           ]
         }
       ]
@@ -2779,6 +1954,26 @@ relatedProjects: [
 
   relatedProjects: [
     {
+      title: "Beyond Bandish",
+      industry: "Music / Performing Arts",
+      url: "./portfolio-detail.html?project=graphic-design-beyond-bandish",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
+        alt: "Beyond Bandish thumbnail"
+      },
+      imageLabel: "Beyond Bandish"
+     },
+    {
+      title: "Rainbow Umbrella",
+      industry: "Social / CSR",
+      url: "./portfolio-detail.html?project=graphic-design-rainbow-umbrella",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/RU.jpg",
+        alt: "Rainbow Umbrella thumbnail"
+      },
+      imageLabel: "Rainbow Umbrella"
+    },
+    {
       title: "Dagdushet Ganpati",
       industry: "Religious / Devotional Organisation",
       url: "./portfolio-detail.html?project=graphic-design-dagdushet-ganpati",
@@ -2787,26 +1982,6 @@ relatedProjects: [
         alt: "Dagdushet Ganpati thumbnail"
       },
       imageLabel: "Dagdushet Ganpati"
-    },
-    {
-      title: "Victory Polychem",
-      industry: "Industrial Chemicals",
-      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
-        alt: "Victory Polychem thumbnail"
-      },
-      imageLabel: "Victory Polychem"
-    },
-    {
-      title: "Raptech Engineering",
-      industry: "Engineering / Manufacturing",
-      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Raptech Engineering.jpg",
-        alt: "Raptech Engineering thumbnail"
-      },
-      imageLabel: "Raptech Engineering"
     }
   ]
 },
@@ -2968,34 +2143,34 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "La Mom & Miiracle",
-      industry: "Healthcare / Fertility Clinic",
-      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      title: "Victory Polychem",
+      industry: "Industrial Chemicals",
+      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
-        alt: "La Mom & Miiracle thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
+        alt: "Victory Polychem thumbnail"
       },
-      imageLabel: "La Mom & Miiracle"
+      imageLabel: "Victory Polychem"
     },
-    {
-      title: "Wilo",
-      industry: "Pumps / Water Technology",
-      url: "./portfolio-detail.html?project=graphic-design-wilo",
+  {
+      title: "Raptech Engineering",
+      industry: "Engineering / Manufacturing",
+      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
-        alt: "Wilo thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
+        alt: "Raptech Engineering thumbnail"
       },
-      imageLabel: "Wilo"
+      imageLabel: "Raptech Engineering"
     },
-    {
-      title: "Samartha Seva Mandal",
-      industry: "Religious / Spiritual Organisation",
-      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+  {
+      title: "Celestial",
+      industry: "Education / E-learning",
+      url: "./portfolio-detail.html?project=graphic-design-celestial",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
-        alt: "Samartha Seva Mandal thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
+        alt: "Celestial thumbnail"
       },
-      imageLabel: "Samartha Seva Mandal"
+      imageLabel: "Celestial"
     }
   ]
 },
@@ -3156,34 +2331,31 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "Sundar Sanskar",
-      industry: "Education / Child Development",
-      url: "./portfolio-detail.html?project=graphic-design-sundar-sanskar",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Sundar Sanskar.jpg",
-        alt: "Sundar Sanskar thumbnail"
-      },
-      imageLabel: "Sundar Sanskar"
+      title: "COEPian's Academy",
+      industry: "Education / Coaching",
+      url: "./portfolio-detail.html?project=graphic-design-coepians-academy",
+      image: { src: "./assets/images/Thumbnails/Graphic Design/COEP.jpg", alt: "COEPian's Academy thumbnail" },
+      imageLabel: "COEPian's Academy"
     },
     {
-      title: "Yogalaya",
-      industry: "Wellness / Yoga",
-      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      title: "La Mom & Miiracle",
+      industry: "Healthcare / Fertility Clinic",
+      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg",
-        alt: "Yogalaya thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
+        alt: "La Mom & Miiracle thumbnail"
       },
-      imageLabel: "Yogalaya"
+      imageLabel: "La Mom & Miiracle"
     },
     {
-      title: "BNI Champs",
-      industry: "Business Networking",
-      url: "./portfolio-detail.html?project=graphic-design-bni-champs",
+      title: "Wilo",
+      industry: "Pumps / Water Technology",
+      url: "./portfolio-detail.html?project=graphic-design-wilo",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/BNI.jpg",
-        alt: "BNI Champs thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
+        alt: "Wilo thumbnail"
       },
-      imageLabel: "BNI Champs"
+      imageLabel: "Wilo"
     }
   ]
  },
@@ -3301,9 +2473,9 @@ relatedProjects: [
       title: "Branding",
       groups: [
         {
-          key: "kesariyaBranding",
-          title: "Logo",
-          previewGroupName: "Kesariya@100 Branding",
+          key: "kesariyaProposedLogoOptions",
+          title: "Proposed Logo Options",
+          previewGroupName: "Proposed Logo Options",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-A.jpg", alt: "Kesariya@100 branding creative 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Kesariya@100/Branding-1-B.jpg", alt: "Kesariya@100 branding creative 02" },
@@ -3320,6 +2492,23 @@ relatedProjects: [
 
   relatedProjects: [
     {
+      title: "Samartha Seva Mandal",
+      industry: "Religious / Spiritual Organisation",
+      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+      image: {
+        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
+        alt: "Samartha Seva Mandal thumbnail"
+      },
+      imageLabel: "Samartha Seva Mandal"
+    },
+    {
+      title: "Yogalaya",
+      industry: "Wellness / Yoga",
+      url: "./portfolio-detail.html?project=graphic-design-yogalaya",
+      image: { src: "./assets/images/Thumbnails/Graphic Design/Yogalaya.jpg", alt: "Yogalaya thumbnail" },
+      imageLabel: "Yogalaya"
+    },
+    {
       title: "Preeti Garments",
       industry: "Fashion / Apparel",
       url: "./portfolio-detail.html?project=graphic-design-preeti-garments",
@@ -3328,26 +2517,6 @@ relatedProjects: [
         alt: "Preeti Garments thumbnail"
       },
       imageLabel: "Preeti Garments"
-    },
-    {
-      title: "Aai Foods",
-      industry: "Food / FMCG",
-      url: "./portfolio-detail.html?project=graphic-design-aai-foods",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Aai Foods.jpg",
-        alt: "Aai Foods thumbnail"
-      },
-      imageLabel: "Aai Foods"
-    },
-    {
-      title: "Serene Veda",
-      industry: "Ayurveda / Wellness",
-      url: "./portfolio-detail.html?project=graphic-design-serene-veda",
-      image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Serene Veda.jpg",
-        alt: "Serene Veda thumbnail"
-      },
-      imageLabel: "Serene Veda"
     }
   ]
 },
@@ -3490,8 +2659,7 @@ relatedProjects: [
           previewGroupName: "Beyond Bandish Stage Backdrops",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-A.jpg", alt: "Beyond Bandish stage backdrop 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-B.jpg", alt: "Beyond Bandish stage backdrop 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-C.jpg", alt: "Beyond Bandish stage backdrop 03" }
+            { src: "./assets/images/Portfolio/Graphic Design/BB/Backdrops-1-B.jpg", alt: "Beyond Bandish stage backdrop 02" }
           ]
         }
       ]
@@ -3648,12 +2816,9 @@ relatedProjects: [
       groups: [
         {
           key: "rainbowSocialPosts",
-          title: "Post Styles",
-          previewGroupName: "Rainbow Umbrella Social Media Posts",
+          title: "Topical Day Posts",
+          previewGroupName: "Rainbow Umbrella Topical Day Posts",
           items: [
-            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-A.jpg", alt: "Rainbow Umbrella social media post 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-B.jpg", alt: "Rainbow Umbrella social media post 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-C.jpg", alt: "Rainbow Umbrella social media post 03" },
             { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-D.jpg", alt: "Rainbow Umbrella social media post 04" },
             { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-E.jpg", alt: "Rainbow Umbrella social media post 05" },
             { src: "./assets/images/Portfolio/Graphic Design/RU/Social-Media-Post-1-F.jpg", alt: "Rainbow Umbrella social media post 06" }
@@ -3667,34 +2832,34 @@ relatedProjects: [
 
   relatedProjects: [
     {
-      title: "La Mom & Miiracle",
-      industry: "Healthcare / Fertility Clinic",
-      url: "./portfolio-detail.html?project=graphic-design-la-mom-miiracle",
+      title: "Victory Polychem",
+      industry: "Industrial Chemicals",
+      url: "./portfolio-detail.html?project=graphic-design-victory-polychem",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/LMM.jpg",
-        alt: "La Mom & Miiracle thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Victory Polychem.jpg",
+        alt: "Victory Polychem thumbnail"
       },
-      imageLabel: "La Mom & Miiracle"
+      imageLabel: "Victory Polychem"
     },
-    {
-      title: "Wilo",
-      industry: "Pumps / Water Technology",
-      url: "./portfolio-detail.html?project=graphic-design-wilo",
+  {
+      title: "Raptech Engineering",
+      industry: "Engineering / Manufacturing",
+      url: "./portfolio-detail.html?project=graphic-design-raptech-engineering",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/Wilo.jpg",
-        alt: "Wilo thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Raptech.jpg",
+        alt: "Raptech Engineering thumbnail"
       },
-      imageLabel: "Wilo"
+      imageLabel: "Raptech Engineering"
     },
-    {
-      title: "Samartha Seva Mandal",
-      industry: "Religious / Spiritual Organisation",
-      url: "./portfolio-detail.html?project=graphic-design-samartha-seva-mandal",
+  {
+      title: "Celestial",
+      industry: "Education / E-learning",
+      url: "./portfolio-detail.html?project=graphic-design-celestial",
       image: {
-        src: "./assets/images/Thumbnails/Graphic Design/SSMS.jpg",
-        alt: "Samartha Seva Mandal thumbnail"
+        src: "./assets/images/Thumbnails/Graphic Design/Celestial.jpg",
+        alt: "Celestial thumbnail"
       },
-      imageLabel: "Samartha Seva Mandal"
+      imageLabel: "Celestial"
     }
   ]
  },
@@ -4646,7 +3811,7 @@ tools: [
           title: "Medium Priority",
 
           items: [
-            "Cause-Based Donations",
+            "Cause-Based Layouts Donations",
             "Social-Initiative Types",
             "Multilingual Content",
             "Contact & Directions"

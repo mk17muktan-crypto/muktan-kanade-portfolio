@@ -1210,8 +1210,26 @@ const renderEmploymentDisclosure =
   function () {
 
     /*
-     * OLA was an independent,
-     * hypothetical college project.
+     * Remove any disclosure card that
+     * already exists outside or inside
+     * the intended summary stack.
+     *
+     * This prevents duplicated or orphaned
+     * full-width cards.
+     */
+
+    document
+      .querySelectorAll(
+        "body.portfolio-detail-page " +
+        ".employment-disclosure-card"
+      )
+      .forEach(function (card) {
+        card.remove();
+      });
+
+
+    /*
+     * OLA is excluded completely.
      */
 
     if (
@@ -1223,59 +1241,71 @@ const renderEmploymentDisclosure =
 
 
     /*
-     * UI/UX projects use .ux-summary-card.
-     * Other reusable projects use
-     * .case-project-summary-card.
+     * Select only the correct summary card
+     * for the current page structure.
      */
 
-    const summaryCard =
-      document.querySelector(
-        ".ux-summary-card"
-      ) ||
-      document.querySelector(
-        ".case-project-summary-card"
+    const isUXProject =
+      document.body.classList.contains(
+        "ux-case-study-page"
       );
+
+
+    const summaryCard =
+      isUXProject
+        ? document.querySelector(
+            "[data-ux-case-study] " +
+            ".ux-summary-card"
+          )
+        : document.querySelector(
+            "#client-info " +
+            ".case-project-summary-card"
+          );
 
 
     if (!summaryCard) return;
 
 
     /*
-     * Prevent duplicate cards if the
-     * function is ever called again.
+     * Use the existing stack if one has
+     * already been created.
      */
 
-    if (
+    let summaryStack =
       summaryCard.closest(
         ".project-summary-stack"
-      )
-    ) {
-      return;
-    }
-
-
-    const summaryStack =
-      document.createElement("div");
-
-    summaryStack.classList.add(
-      "project-summary-stack"
-    );
+      );
 
 
     /*
-     * Put the stack exactly where the
-     * current yellow summary card sits.
+     * Otherwise create one around the
+     * existing yellow summary card.
      */
 
-    summaryCard.parentNode.insertBefore(
-      summaryStack,
-      summaryCard
-    );
+    if (!summaryStack) {
+      summaryStack =
+        document.createElement("div");
 
-    summaryStack.appendChild(
-      summaryCard
-    );
+      summaryStack.classList.add(
+        "project-summary-stack"
+      );
 
+
+      summaryCard.parentNode.insertBefore(
+        summaryStack,
+        summaryCard
+      );
+
+
+      summaryStack.appendChild(
+        summaryCard
+      );
+    }
+
+
+    /*
+     * Create exactly one disclosure card.
+     */
 
     const disclosureCard =
       document.createElement("aside");
