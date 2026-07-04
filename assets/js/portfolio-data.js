@@ -9,7 +9,7 @@ const makePlaceholders = function (count, labelPrefix) {
 
 const portfolioProjects = {
 "graphic-design-dagdushet-ganpati": {
-  title: "Dagdusheth Ganpati",
+  title: "Dagdushet Ganpati",
   fullTitle: "Shrimant Dagdusheth Halwai Ganpati",
   category: "Graphic Design",
   categorySlug: "graphic-design",
