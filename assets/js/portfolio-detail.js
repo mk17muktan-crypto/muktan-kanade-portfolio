@@ -17,6 +17,11 @@ document.body.classList.toggle(
   project.category === "Print Design"
 );
 
+document.body.classList.toggle(
+  "graphic-design-page",
+  project.category === "Graphic Design"
+);
+
 const getSectionId = function (tabId) {
   const sectionMap = {
     "project-info": "client-info",

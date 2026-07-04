@@ -2294,9 +2294,7 @@ relatedProjects: [
           previewGroupName: "Serene Veda Packaging",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-A.jpg", alt: "Serene Veda packaging creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-B.jpg", alt: "Serene Veda packaging creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-C.jpg", alt: "Serene Veda packaging creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-D.jpg", alt: "Serene Veda packaging creative 04" }
+            { src: "./assets/images/Portfolio/Graphic Design/Serene Veda/Packaging-1-C.jpg", alt: "Serene Veda packaging creative 03" }
           ]
         }
       ]
