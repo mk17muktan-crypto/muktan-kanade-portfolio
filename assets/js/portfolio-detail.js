@@ -1558,84 +1558,6 @@ const renderThinkingSections = function () {
   renderList("[data-visual-system]", project.visualSystem || project.elementsUsed);
 };
 
-const createMobileGalleryDots = function (gallery, items) {
-  if (!gallery || !items || items.length <= 1) return;
-
-  const dots = document.createElement("div");
-  dots.classList.add("case-mobile-gallery-dots");
-
-  const getGalleryItems = function () {
-    return Array.from(gallery.querySelectorAll(".case-gallery-item"));
-  };
-
-  const updateGalleryDots = function () {
-    const galleryItems = getGalleryItems();
-    const dotButtons = dots.querySelectorAll(".case-dot");
-
-    if (galleryItems.length === 0 || dotButtons.length === 0) return;
-
-    const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
-
-    let activeIndex = 0;
-
-    if (gallery.scrollLeft >= maxScrollLeft - 3) {
-      activeIndex = galleryItems.length - 1;
-    } else {
-      const galleryCenter = gallery.scrollLeft + gallery.clientWidth / 2;
-      let closestDistance = Infinity;
-
-      galleryItems.forEach(function (item, index) {
-        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-        const distance = Math.abs(galleryCenter - itemCenter);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          activeIndex = index;
-        }
-      });
-    }
-
-    dotButtons.forEach(function (dot, index) {
-      dot.classList.toggle("active", index === activeIndex);
-    });
-  };
-
-  items.forEach(function (_, index) {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.classList.add("case-dot");
-
-    if (index === 0) {
-      dot.classList.add("active");
-    }
-
-    dot.addEventListener("click", function () {
-      const galleryItems = getGalleryItems();
-      const targetItem = galleryItems[index];
-
-      if (!targetItem) return;
-
-      const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
-
-      gallery.scrollTo({
-        left: index === galleryItems.length - 1 ? maxScrollLeft : targetItem.offsetLeft,
-        behavior: "smooth"
-      });
-    });
-
-    dots.appendChild(dot);
-  });
-
-  gallery.after(dots);
-
-  gallery.addEventListener("scroll", function () {
-    window.requestAnimationFrame(updateGalleryDots);
-  });
-
-  window.addEventListener("resize", updateGalleryDots);
-
-  updateGalleryDots();
-};
 
 /*-----------------------------------*\
   #LAZY GALLERY RENDERING
@@ -1646,6 +1568,43 @@ let gallerySectionRenderers =
 
 let galleryLazyObserver = null;
 
+const getMobileGalleryLayoutClass =
+  function (itemCount) {
+
+    /*
+     * 3, 6, 9 and 12 images:
+     * two small images followed by
+     * one full-width image.
+     */
+
+    if (
+      itemCount === 3 ||
+      itemCount === 6 ||
+      itemCount === 9 ||
+      itemCount === 12
+    ) {
+      return "case-gallery-layout-featured";
+    }
+
+
+    /*
+     * Exactly four images:
+     * two-column grid.
+     */
+
+    if (itemCount === 4) {
+      return "case-gallery-layout-two-column";
+    }
+
+
+    /*
+     * One, two, five or any other
+     * unspecified quantity:
+     * single-column layout.
+     */
+
+    return "case-gallery-layout-single";
+  };
 
 const renderGallerySectionContent =
   function (
@@ -1664,18 +1623,6 @@ const renderGallerySectionContent =
 
     sectionElement.dataset
       .galleryRendered = "true";
-
-
-    const mobileCarouselKeys = [
-      "atirudraMahayadnya2025",
-      "shahaleMohotsav2025",
-      "dailyPostingRugnaseva",
-      "dailyPostingTopical",
-      "celestialFeatures",
-      "coepPostStyle4",
-      "lmmPostStyle3",
-      "preetiPostStyle1"
-    ];
 
 
     const contentFragment =
@@ -1714,6 +1661,24 @@ const renderGallerySectionContent =
 
       const items =
         group.items || [];
+
+
+      /*
+       * Assign one mobile layout class
+       * according to the number of images.
+       *
+       * These classes do not affect desktop
+       * because their CSS is mobile-only.
+       */
+
+      gallery.classList.add(
+        getMobileGalleryLayoutClass(
+          items.length
+        )
+      );
+
+      gallery.dataset.itemCount =
+        String(items.length);
 
 
       items.forEach(
@@ -1773,18 +1738,6 @@ const renderGallerySectionContent =
       contentFragment.appendChild(
         subsection
       );
-
-
-      if (
-        mobileCarouselKeys.includes(
-          group.key
-        )
-      ) {
-        createMobileGalleryDots(
-          gallery,
-          items
-        );
-      }
     });
 
 

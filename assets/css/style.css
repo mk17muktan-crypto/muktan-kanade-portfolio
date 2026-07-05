@@ -3299,42 +3299,6 @@ button.active
   margin-bottom: 28px;
 }
 
-.case-hero-carousel {
-  margin-bottom: 22px;
-}
-
-.case-carousel-viewport {
-  position: relative;
-  width: 100%;
-  max-width: 920px;
-  height: 360px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.case-carousel-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.case-carousel-slide {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 66%;
-  height: 100%;
-  padding: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0.72);
-  transition:
-    transform 0.85s cubic-bezier(0.22, 1.35, 0.36, 1),
-    opacity 0.55s ease,
-    filter 0.55s ease;
-  filter: brightness(0.82);
-}
-
 .case-carousel-slide.is-active {
   opacity: 1;
   z-index: 3;
@@ -3375,27 +3339,6 @@ button.active
   border-radius: inherit;
 }
 
-.case-carousel-dots,
-.case-mobile-gallery-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  margin-top: 12px;
-}
-
-.case-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: hsla(45, 100%, 72%, 0.28);
-  transition: width 0.3s ease, background 0.3s ease;
-}
-
-.case-dot.active {
-  width: 20px;
-  background: var(--orange-yellow-crayola);
-}
 
 .case-tabs {
   position: sticky;
@@ -3645,29 +3588,6 @@ button.active
     scroll-margin-top: 120px;
   }
 
-  .case-gallery {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .case-gallery::-webkit-scrollbar {
-    display: none;
-  }
-
-  .case-gallery-item {
-    flex: 0 0 82%;
-    height: 300px;
-    scroll-snap-align: start;
-  }
-
-  .case-mobile-gallery-dots {
-    display: flex;
-  }
 
 .case-next-grid {
   grid-template-columns: 1fr;
@@ -4524,41 +4444,6 @@ body.portfolio-detail-page .case-gallery-item:active {
   transform: translateY(-1px) scale(0.99);
 }
 
-/*-----------------------------------*\
-  #HERO CAROUSEL IMAGE HOVER EFFECT
-\*-----------------------------------*/
-
-body.portfolio-detail-page .case-carousel-slide {
-  pointer-events: auto;
-  cursor: zoom-in;
-}
-
-body.portfolio-detail-page .case-carousel-slide > * {
-  transform-origin: center;
-  transition:
-    transform 0.85s cubic-bezier(0.22, 1.15, 0.36, 1),
-    filter 0.65s ease,
-    box-shadow 0.65s ease;
-  will-change: transform;
-}
-
-/* Active/hovered carousel image slowly grows from centre */
-body.portfolio-detail-page .case-carousel-slide:hover > * {
-  transform: scale(1.055);
-  filter: brightness(1.06);
-  box-shadow: 0 20px 46px hsla(0, 0%, 0%, 0.34);
-}
-
-/* Piano-like handover: other carousel images gently settle */
-body.portfolio-detail-page .case-carousel-track:hover .case-carousel-slide:not(:hover) > * {
-  transform: scale(0.985);
-  filter: brightness(0.90);
-}
-
-/* Keep the hidden slide from interfering */
-body.portfolio-detail-page .case-carousel-slide:not(.is-active):not(.is-prev):not(.is-next) {
-  pointer-events: none;
-}
 
 /*-----------------------------------*\
   #CASE TAB BAR DROP SHADOW
@@ -4679,112 +4564,6 @@ body.portfolio-detail-page .case-breadcrumb span {
   font-weight: var(--fw-400);
 }
 
-/*-----------------------------------*\
-  #MOBILE CASE DETAIL CARD + HERO CAROUSEL FIX
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  /* Make the inner page feel like an article/card, like desktop */
-  body.portfolio-detail-page main.case-main {
-    width: calc(100% - 10px) !important;
-    margin: 10px auto 80px !important;
-    padding: 0 0 28px !important;
-
-    background: hsla(240, 2%, 12%, 0.78);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    border: 1px solid hsla(0, 0%, 100%, 0.08);
-    border-radius: 18px;
-    box-shadow: var(--shadow-5);
-
-    overflow: hidden;
-  }
-
-  /* Hero spacing inside the card */
-  body.portfolio-detail-page .case-hero {
-    padding: 52px 0 18px !important;
-  }
-
-  body.portfolio-detail-page .case-breadcrumb {
-    padding: 0 18px;
-    font-size: 10px;
-    gap: 5px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-  }
-
-  body.portfolio-detail-page .case-title {
-    font-size: 23px;
-    line-height: 1.12;
-    padding: 0 14px;
-    margin-bottom: 8px;
-  }
-
-  body.portfolio-detail-page .case-industry {
-    font-size: 12px;
-    padding: 0 18px;
-    margin-bottom: 26px;
-  }
-
-  /* Figma-like mobile hero carousel */
-  body.portfolio-detail-page .case-hero-carousel {
-    margin-bottom: 16px;
-  }
-
-  body.portfolio-detail-page .case-carousel-viewport {
-    width: 100%;
-    max-width: none;
-    height: 330px;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-
-  body.portfolio-detail-page .case-carousel-track {
-    height: 100%;
-  }
-
-  body.portfolio-detail-page .case-carousel-slide {
-    width: 64%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-  }
-
-  body.portfolio-detail-page .case-carousel-slide.is-active {
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  body.portfolio-detail-page .case-carousel-slide.is-prev {
-    transform: translate(-128%, -50%) scale(0.76);
-  }
-
-  body.portfolio-detail-page .case-carousel-slide.is-next {
-    transform: translate(28%, -50%) scale(0.76);
-  }
-
-  body.portfolio-detail-page .case-carousel-slide > * {
-    width: 100%;
-    height: 100% !important;
-    border-radius: 14px;
-  }
-
-  body.portfolio-detail-page .case-carousel-dots {
-    margin-top: 13px;
-  }
-
-  /* Back button should sit inside the card neatly */
-  body.portfolio-detail-page .case-back-btn {
-    position: fixed;
-    top: 18px;
-    left: 16px;
-    width: 34px;
-    height: 34px;
-    font-size: 18px;
-    z-index: 100;
-  }
-}
 
 /*-----------------------------------*\
   #MOBILE CASE BACK BUTTON SIZE
@@ -5140,75 +4919,6 @@ body.portfolio-detail-page .case-breadcrumb span {
 }
 
 /*-----------------------------------*\
-  #MOBILE CLIENT INFO IMAGE CAROUSEL
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  /* Sticky tab needs this parent to stay visible */
-  body.portfolio-detail-page main.case-main {
-    overflow: visible !important;
-  }
-
-  /* Only the client carousel area should control its own overflow */
-  body.portfolio-detail-page #client-info {
-    overflow: hidden;
-  }
-
-  body.portfolio-detail-page .client-image-strip {
-    width: 100%;
-    max-width: 100%;
-
-    display: flex;
-    gap: 12px;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-
-    animation: none !important;
-    transform: none !important;
-
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-
-    padding-bottom: 4px;
-  }
-
-  body.portfolio-detail-page .client-image-strip::-webkit-scrollbar {
-    display: none;
-  }
-
-  body.portfolio-detail-page .client-strip-item {
-    flex: 0 0 82%;
-    width: auto;
-    height: 120px;
-
-    scroll-snap-align: start;
-
-    border-radius: 14px;
-    overflow: hidden;
-  }
-
-  body.portfolio-detail-page .client-strip-item > * {
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-  }
-
-  body.portfolio-detail-page .client-mobile-carousel-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    margin-top: 12px;
-  }
-}
-
-/*-----------------------------------*\
   #MOBILE PORTFOLIO DETAIL PAGE SIDE PADDING
 \*-----------------------------------*/
 
@@ -5274,17 +4984,6 @@ body.portfolio-detail-page .case-industry {
   }
 }
 
-/*-----------------------------------*\
-  #HIDE CASE CAROUSEL DOTS ON DESKTOP
-\*-----------------------------------*/
-
-@media (min-width: 581px) {
-  body.portfolio-detail-page .case-carousel-dots,
-  body.portfolio-detail-page .case-mobile-gallery-dots,
-  body.portfolio-detail-page .client-mobile-carousel-dots {
-    display: none !important;
-  }
-}
 
 /*-----------------------------------*\
   #MOBILE INNER PAGE WITHOUT TAB BAR
@@ -7439,20 +7138,6 @@ body.portfolio-detail-page .case-tool-item img {
   object-fit: contain;
 }
 
-body.portfolio-detail-page .case-best-work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-body.portfolio-detail-page .case-best-work-item {
-  height: 360px;
-  border-radius: 18px;
-  overflow: hidden;
-  background: var(--onyx);
-  cursor: zoom-in;
-}
-
 body.portfolio-detail-page .case-best-work-item > * {
   width: 100%;
   height: 100%;
@@ -7516,274 +7201,6 @@ body.portfolio-detail-page .case-best-work-item img {
     flex: 0 0 82%;
     height: 300px;
     scroll-snap-align: start;
-  }
-}
-
-
-
-/*-----------------------------------*\
-  #DAGDUSHETH MOBILE SECTION LAYOUTS
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  /* ----------------------------------
-     BEST WORK
-     Remove title/ellipse/carousel feel.
-     Show all 4 images one below another.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-best-work-section > h2,
-  body.portfolio-detail-page .case-best-work-section > h2::after {
-    display: none !important;
-  }
-
-  body.portfolio-detail-page .case-best-work-section {
-    margin-bottom: 20px !important;
-  }
-
-  body.portfolio-detail-page .case-best-work-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-best-work-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-
-  /* ----------------------------------
-     BRANDING: FESTIVAL LOGOS
-     2-column grid for first 6.
-     Last 3 full-width horizontal banners.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-festivalLogos {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-festivalLogos .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1.48 / 1 !important;
-
-    flex: none !important;
-    scroll-snap-align: unset !important;
-
-    border-radius: 9px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-festivalLogos .case-gallery-item:nth-child(n + 7) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3.05 / 1 !important;
-  }
-
-
-  /* ----------------------------------
-     BRANDING: WALLPAPERS
-     2-column grid.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-wallpapers {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-wallpapers .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1.55 / 1 !important;
-
-    flex: none !important;
-    scroll-snap-align: unset !important;
-
-    border-radius: 8px !important;
-  }
-
-
-  /* ----------------------------------
-     CAMPAIGN:
-     Ganesh Utsav 2025 + Ganesh Janma Sohola 2025
-     2-column full grid, no carousel.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-ganeshUtsav2024,
-body.portfolio-detail-page .case-gallery-ganeshUtsav2025,
-body.portfolio-detail-page .case-gallery-ganeshJanmaSohola2025 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ganeshUtsav2024 .case-gallery-item,
-body.portfolio-detail-page .case-gallery-ganeshUtsav2025 .case-gallery-item,
-body.portfolio-detail-page .case-gallery-ganeshJanmaSohola2025 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 0.72 / 1 !important;
-
-    flex: none !important;
-    scroll-snap-align: unset !important;
-
-    border-radius: 8px !important;
-  }
-
-
-  /* ----------------------------------
-     CAMPAIGN:
-     Atirudra + Shahale
-     Horizontal carousel with dots.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-atirudraMahayadnya2025,
-  body.portfolio-detail-page .case-gallery-shahaleMohotsav2025 {
-    display: flex !important;
-    gap: 12px !important;
-
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-
-    scroll-snap-type: x mandatory !important;
-    scroll-behavior: smooth !important;
-    -webkit-overflow-scrolling: touch !important;
-
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-atirudraMahayadnya2025::-webkit-scrollbar,
-  body.portfolio-detail-page .case-gallery-shahaleMohotsav2025::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-atirudraMahayadnya2025 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-shahaleMohotsav2025 .case-gallery-item {
-    flex: 0 0 82% !important;
-    width: auto !important;
-    height: auto !important;
-    aspect-ratio: 0.72 / 1 !important;
-
-    scroll-snap-align: start !important;
-
-    border-radius: 9px !important;
-  }
-
-
-  /* ----------------------------------
-     SOCIAL MEDIA POSTS:
-     Both daily posting subsections become carousel.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-dailyPostingRugnaseva,
-  body.portfolio-detail-page .case-gallery-dailyPostingTopical {
-    display: flex !important;
-    gap: 12px !important;
-
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-
-    scroll-snap-type: x mandatory !important;
-    scroll-behavior: smooth !important;
-    -webkit-overflow-scrolling: touch !important;
-
-    scrollbar-width: none !important;
-    -ms-overflow-style: none !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-dailyPostingRugnaseva::-webkit-scrollbar,
-  body.portfolio-detail-page .case-gallery-dailyPostingTopical::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-dailyPostingRugnaseva .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-dailyPostingTopical .case-gallery-item {
-    flex: 0 0 82% !important;
-    width: auto !important;
-    height: auto !important;
-    aspect-ratio: 0.72 / 1 !important;
-
-    scroll-snap-align: start !important;
-
-    border-radius: 9px !important;
-  }
-
-
-  /* ----------------------------------
-     Shared image behaviour
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-gallery-item img,
-  body.portfolio-detail-page .case-best-work-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-item .case-img-placeholder,
-  body.portfolio-detail-page .case-best-work-item .case-img-placeholder {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-
-  /* ----------------------------------
-     Dots only where JS creates carousel dots.
-  ---------------------------------- */
-
-  body.portfolio-detail-page .case-mobile-gallery-dots {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    gap: 6px !important;
-    margin-top: 10px !important;
-    margin-bottom: 26px !important;
-  }
-
-  body.portfolio-detail-page .case-mobile-gallery-dots .case-dot {
-    width: 5px !important;
-    height: 5px !important;
-    border-radius: 999px !important;
-    background: hsla(45, 100%, 72%, 0.35) !important;
-  }
-
-  body.portfolio-detail-page .case-mobile-gallery-dots .case-dot.active {
-    width: 20px !important;
-    background: var(--orange-yellow-crayola) !important;
-  }
-}
-
-/* Best Work: only 2 items */
-@media (min-width: 581px) {
-  body.portfolio-detail-page .case-best-work-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-best-work-grid {
-    grid-template-columns: 1fr !important;
   }
 }
 
@@ -7902,52 +7319,6 @@ body.portfolio-detail-page .case-gallery-ganeshJanmaSohola2025 .case-gallery-ite
   }
 }
 
-/*-----------------------------------*\
-  #MOBILE BEST WORK WIDTH FIX
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  /* Stop the yellow summary card float from affecting mobile sections */
-  body.portfolio-detail-page .case-project-summary-card {
-    float: none !important;
-    width: 100% !important;
-    margin: 0 0 28px 0 !important;
-  }
-
-  /* Force Best Work to start below everything */
-  body.portfolio-detail-page .case-best-work-section {
-    clear: both !important;
-    width: 100% !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-
-  /* Full-width single-column Best Work layout */
-  body.portfolio-detail-page .case-best-work-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 16px !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-best-work-item {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    flex: none !important;
-  }
-
-  body.portfolio-detail-page .case-best-work-item > *,
-  body.portfolio-detail-page .case-best-work-item .case-img-placeholder,
-  body.portfolio-detail-page .case-best-work-item img {
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
 
 /*-----------------------------------*\
   #DESKTOP MAIN WEB BANNER HEIGHT
@@ -7998,632 +7369,6 @@ body.portfolio-detail-page .case-best-work-section {
   }
 }
 
-
-/* Mobile: attached 3-image layout */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-victoryPostStyle1,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle2,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle3,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle4 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-victoryPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-victoryPostStyle4 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-
-    flex: none !important;
-    scroll-snap-align: unset !important;
-
-    border-radius: 9px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-victoryPostStyle1 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-victoryPostStyle2 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-victoryPostStyle3 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-victoryPostStyle4 .case-gallery-item:nth-child(3) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-}
-
-@media (max-width: 580px) {
-
-  /* Existing Celestial, Serene Branding
-     and Serene Packaging rules here. */
-body.portfolio-detail-page .case-gallery-celestialOfferingsBanners {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 18px !important;
-  width: 100% !important;
-  overflow: visible !important;
-}
-
-body.portfolio-detail-page .case-gallery-celestialOfferingsBanners .case-gallery-item {
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 3 / 1 !important;
-  border-radius: 12px !important;
-}
-
-/* Desktop + Mobile: Serene branding 1-column 1:1 */
-body.portfolio-detail-page .case-gallery-sereneBranding {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 18px !important;
-  width: min(100%, 520px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  overflow: visible !important;
-}
-
-body.portfolio-detail-page .case-gallery-sereneBranding .case-gallery-item {
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 1 / 1 !important;
-  border-radius: 12px !important;
-}
-
-/* Desktop + Mobile: Serene packaging 4-column 3:4 */
-body.portfolio-detail-page .case-gallery-serenePackaging {
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 14px !important;
-  width: 100% !important;
-  overflow: visible !important;
-}
-
-body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 3 / 4 !important;
-  border-radius: 10px !important;
-}
-	
-	
-}
-
-/* Desktop + Mobile: 1-column web banner sections */
-
-/* Mobile: 2-column square grids */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-raptechPostStyle1,
-  body.portfolio-detail-page .case-gallery-raptechPostStyle2,
-  body.portfolio-detail-page .case-gallery-raptechPostStyle3,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3,
-  body.portfolio-detail-page .case-gallery-coepPostStyle2,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle1,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle3,
-  body.portfolio-detail-page .case-gallery-ssmsSymbols {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-raptechPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-raptechPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-raptechPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-trelawnyPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-ssmsSymbols .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/* Mobile: 3-column square grids */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 8px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/* Mobile: Samartha logos 1-column grid */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-ssmsLogos {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-  }
-}
-
-/* Mobile: Victory-style layout */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle1,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle2,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle3,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle4,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle5,
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    overflow: visible !important;
-    width: 100% !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-raptechPostStyle4 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-celestialPostStyle1 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-celestialPostStyle2 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-celestialPostStyle3 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item:nth-child(3) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 1.55 / 1 !important;
-  }
-}
-
-/* Mobile: carousel sections */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-celestialFeatures,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle3 {
-    display: flex !important;
-    gap: 12px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 8px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-celestialFeatures .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle4 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item {
-    flex: 0 0 76% !important;
-    width: 76% !important;
-    aspect-ratio: 1 / 1 !important;
-    scroll-snap-align: start !important;
-    border-radius: 12px !important;
-  }
-}
-
-/* Mobile: 2-column 1:1 grids */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-sundarPostStyle1,
-  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-sundarPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-yogalayaPostStyle2 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/* Mobile: 2-column 3:4 grid */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-yogalayaPostStyle1 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/* Mobile: single-column 16:9 branding grids */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption1,
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption2,
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption3,
-  body.portfolio-detail-page .case-gallery-aaiBranding {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-preetiBrandingOption3 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-aaiBranding .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/* Mobile: repeated Victory-style 1:1 layout */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-sundarPostStyle2,
-  body.portfolio-detail-page .case-gallery-bniSocialPosts {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-sundarPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-bniSocialPosts .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-sundarPostStyle2 .case-gallery-item:nth-child(3n),
-  body.portfolio-detail-page .case-gallery-bniSocialPosts .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-}
-
-/* Mobile: repeated Victory-style 3:4 layout */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-preetiPostStyle2,
-  body.portfolio-detail-page .case-gallery-aaiPackaging {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-preetiPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-aaiPackaging .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-preetiPostStyle2 .case-gallery-item:nth-child(3n),
-  body.portfolio-detail-page .case-gallery-aaiPackaging .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3 / 4 !important;
-  }
-}
-
-/* Mobile: Preeti Post Style 1 carousel */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-preetiPostStyle1 {
-    display: flex !important;
-    gap: 12px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 8px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-preetiPostStyle1 .case-gallery-item {
-    flex: 0 0 76% !important;
-    width: 76% !important;
-    aspect-ratio: 1 / 1 !important;
-    scroll-snap-align: start !important;
-    border-radius: 12px !important;
-  }
-}
-
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-kesariyaBranding {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(1),
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(2),
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(3) {
-    aspect-ratio: 3 / 4 !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(4),
-  body.portfolio-detail-page .case-gallery-kesariyaBranding .case-gallery-item:nth-child(5) {
-    aspect-ratio: 16 / 9 !important;
-  }
-}
-
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-beyondBranding {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-beyondBranding .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-  }
-}
-
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-beyondBackdrops {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-beyondBackdrops .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-  }
-}
-
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-rainbowSocialPosts {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-rainbowSocialPosts .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-rainbowSocialPosts .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3 / 4 !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-coepPostStyle1 .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3 / 4 !important;
-  }
-}
-
-
-
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-coepPostStyle2,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-coepPostStyle2 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-coepPostStyle3 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-/*-----------------------------------*\
-  #LA MOM & MIIRACLE INNER PAGE TWEAKS
-\*-----------------------------------*/
-
-/* Post Style 1 and 2
-   Mobile: Victory-style layout
-   First 2 images: 1:1
-   3rd image: full-width but still 1:1
-*/
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item,
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-lmmPostStyle1 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-lmmPostStyle2 .case-gallery-item:nth-child(3) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-}
-
-
-/* Post Style 3 carousel
-   Mobile carousel images: 1:1
-*/
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-lmmPostStyle3 {
-    display: flex !important;
-    gap: 12px !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-    padding-bottom: 8px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item {
-    flex: 0 0 76% !important;
-    width: 76% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important;
-    scroll-snap-align: start !important;
-    border-radius: 12px !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-lmmPostStyle3 .case-gallery-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-wiloPostStyle1 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-wiloPostStyle1 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-}
-
-
 /* Wilo Post Style 2: Event Invites
    Desktop: 3-column grid
    Mobile: repeated Victory-style layout
@@ -8648,128 +7393,6 @@ body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
   }
 }
 
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2 {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-wiloPostStyle2 .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3 / 4 !important;
-  }
-}
-
-
-/* Wilo Post Style 4 and 5
-   Mobile: 3rd image should be full-width and 1:1
-*/
-
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-wiloPostStyle4 .case-gallery-item:nth-child(3),
-  body.portfolio-detail-page .case-gallery-wiloPostStyle5 .case-gallery-item:nth-child(3) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 1 / 1 !important;
-  }
-}
-
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-ssmsLogos {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsLogos .case-gallery-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-}
-
-
-
-/* Mobile */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item:nth-child(3n) {
-    grid-column: 1 / -1 !important;
-    aspect-ratio: 3 / 4 !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-ssmsSocialPosts .case-gallery-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-}
-
-/* Mobile: Serene Veda packaging 2-column grid */
-@media (max-width: 580px) {
-  body.portfolio-detail-page .case-gallery-serenePackaging {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    overflow: visible !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-    flex: none !important;
-    scroll-snap-align: unset !important;
-  }
-
-  body.portfolio-detail-page .case-gallery-serenePackaging .case-gallery-item img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
-}
 
 /*-----------------------------------*\
   #GRAPHIC DESIGN DESKTOP GALLERIES
@@ -11374,10 +9997,9 @@ body.portfolio-detail-page
 body.portfolio-detail-page
 .case-gallery-printCoreColorAndMonochrome
 .case-gallery-item img {
-  width: 100% !important;
-  height: 100% !important;
-
-  object-fit: cover !important;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -11611,223 +10233,12 @@ body.portfolio-detail-page
   }
 }
 
-
-/*-----------------------------------*\
-  #PRINT DESIGN MOBILE
-\*-----------------------------------*/
-
-@media (max-width: 580px) {
-
-  /*
-   * Two-column mobile galleries.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGFestivalHoardings,
-
-  body.portfolio-detail-page
-  .case-gallery-printDGAhwal,
-
-  body.portfolio-detail-page
-  .case-gallery-printDGSocialInitiativesBooklet,
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreEmotionSketches,
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreMonochromeFrontBack,
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreColorFoldableCard,
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreColorAndMonochrome {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr)) !important;
-
-    gap: 10px !important;
-  }
-
-
-  /*
-   * Single-column mobile galleries.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGRugnaSevaBooth,
-
-  body.portfolio-detail-page
-  .case-gallery-printKumbhBookJacket,
-
-  body.portfolio-detail-page
-  .case-gallery-printKumbhInnerPageTemplate,
-
-  body.portfolio-detail-page
-  .case-gallery-printMaheshBookCover {
-    grid-template-columns:
-      1fr !important;
-
-    gap: 12px !important;
-  }
-
-
-  /*
-   * Festival Hoardings.
-   * Two columns, 1:1.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGFestivalHoardings
-  .case-gallery-item {
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Rugna Seva Booth.
-   * Single column, 16:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGRugnaSevaBooth
-  .case-gallery-item {
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Dagdusheth Ahwal.
-   * Images 1 and 2 remain two-column, 4:3.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGAhwal
-  .case-gallery-item:nth-child(-n + 2) {
-    aspect-ratio: 4 / 3 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Ahwal images 3 onwards become
-   * full-width single-column, 21:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGAhwal
-  .case-gallery-item:nth-child(n + 3) {
-    grid-column: 1 / -1 !important;
-
-    aspect-ratio: 21 / 9 !important;
-
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Social Initiatives Booklet.
-   * Two columns, 4:3.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printDGSocialInitiativesBooklet
-  .case-gallery-item {
-    aspect-ratio: 4 / 3 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Kumbh Book Jacket.
-   * Single column, 21:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printKumbhBookJacket
-  .case-gallery-item {
-    aspect-ratio: 21 / 9 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Kumbh Inner Page Template.
-   * Single column, 16:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printKumbhInnerPageTemplate
-  .case-gallery-item {
-    aspect-ratio: 16 / 9 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Autobiography Book Cover.
-   * Single column, 21:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printMaheshBookCover
-  .case-gallery-item {
-    aspect-ratio: 21 / 9 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Core Essence Emotion Sketches.
-   * Two columns, 3:4.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreEmotionSketches
-  .case-gallery-item {
-    aspect-ratio: 3 / 4 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Core Essence Monochrome Front and Back.
-   * Two columns, 4:3.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreMonochromeFrontBack
-  .case-gallery-item {
-    aspect-ratio: 4 / 3 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Core Essence Color Foldable Card.
-   * Two columns, 21:9.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreColorFoldableCard
-  .case-gallery-item {
-    aspect-ratio: 21 / 9 !important;
-    border-radius: 9px !important;
-  }
-
-
-  /*
-   * Core Essence Color and Monochrome.
-   * Two columns, 4:3.
-   */
-
-  body.portfolio-detail-page
-  .case-gallery-printCoreColorAndMonochrome
-  .case-gallery-item {
-    aspect-ratio: 4 / 3 !important;
-    border-radius: 9px !important;
-  }
+body.portfolio-detail-page
+[class*="case-gallery-print"]
+.case-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*-----------------------------------*\
@@ -14275,6 +12686,159 @@ body.portfolio-detail-page
     margin: 0 !important;
 
     float: none !important;
+  }
+
+}
+
+/*-----------------------------------*\
+  #PORTFOLIO MOBILE IMAGE GRIDS
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /*
+   * Shared mobile gallery foundation.
+   * No horizontal scrolling.
+   * No snap behaviour.
+   * No fixed image height.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+
+    align-items: start;
+
+    width: 100%;
+    max-width: none;
+
+    gap: 10px;
+
+    overflow: visible;
+  }
+
+
+  /*
+   * One image, two images, five images
+   * and all unspecified quantities.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-layout-single {
+    grid-template-columns: 1fr;
+  }
+
+
+  /*
+   * Exactly four images:
+   * two equal columns.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-layout-two-column {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  /*
+   * 3, 6, 9 and 12 images:
+   *
+   * Images 1 and 2 are half width.
+   * Image 3 is full width.
+   * Images 4 and 5 are half width.
+   * Image 6 is full width.
+   * The pattern continues every three images.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-layout-featured {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  body.portfolio-detail-page
+  .case-gallery-layout-featured
+  > .case-gallery-item:nth-child(3n) {
+    grid-column: 1 / -1;
+  }
+
+
+  /*
+   * Gallery cards follow their image height.
+   * No inherited fixed ratio or height.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-item {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    min-width: 0;
+    min-height: 0;
+
+    height: auto;
+    aspect-ratio: auto;
+
+    margin: 0;
+    padding: 0;
+
+    align-self: start;
+
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+
+  /*
+   * Preserve the natural dimensions
+   * of every image.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-item > * {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    min-width: 0;
+    min-height: 0;
+
+    aspect-ratio: auto;
+
+    border-radius: inherit;
+  }
+
+  body.portfolio-detail-page
+  .case-gallery-item img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: auto;
+
+    object-fit: contain;
+    object-position: center;
+  }
+
+
+  /*
+   * Placeholder fallback only.
+   * Real images are unaffected.
+   */
+
+  body.portfolio-detail-page
+  .case-gallery-item
+  .case-img-placeholder {
+    min-height: 160px;
   }
 
 }

@@ -1495,10 +1495,7 @@ relatedProjects: [
           title: "Logo Modernisation",
           previewGroupName: "Logo Modernisation",
           items: [
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-1.jpg", alt: "Samartha Seva Mandal logo 01" },
-			{ src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-B.png", alt: "Samartha Seva Mandal symbol B" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-E.png", alt: "Samartha Seva Mandal symbol E" },
-            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Symbol-F.png", alt: "Samartha Seva Mandal symbol F" }
+            { src: "./assets/images/Portfolio/Graphic Design/SSMS/Logo-1.jpg", alt: "Samartha Seva Mandal logo 01" }
           ]
         }
       ]
@@ -1679,20 +1676,18 @@ relatedProjects: [
       title: "Social Media Posts",
       groups: [
         {
-          key: "yogalayaPostStyle1",
-          title: "Post Style 1",
-          previewGroupName: "Yogalaya Post Style 1",
+          key: "yogalayaPostStyles1",
+          title: "Post Styles",
+          previewGroupName: "Yogalaya Post Styles",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-A.jpg", alt: "Yogalaya post style 1 creative 01" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-B.jpg", alt: "Yogalaya post style 1 creative 02" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-C.jpg", alt: "Yogalaya post style 1 creative 03" },
-            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-D.jpg", alt: "Yogalaya post style 1 creative 04" }
+            { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-1-C.jpg", alt: "Yogalaya post style 1 creative 03" }
           ]
         },
         {
-          key: "yogalayaPostStyle2",
+          key: "yogalayaPostStyles2",
           title: "Chakra Info Posts",
-          previewGroupName: "Yogalaya Post Templates",
+          previewGroupName: "Yogalaya Post Styles",
           items: [
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-A.jpg", alt: "Yogalaya post template 01" },
             { src: "./assets/images/Portfolio/Graphic Design/Yogalaya/Post-Style-2-B.jpg", alt: "Yogalaya post template 02" },
