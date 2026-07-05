@@ -27,7 +27,10 @@ const portfolioProjects = {
       name: "Adobe Photoshop",
       icon: "./assets/images/software Icons/Adobe_Photoshop_CC_icon.svg"
     },
-    
+    {
+      name: "Canva",
+      icon: "./assets/images/software Icons/canva-icon.svg"
+    },
     {
       name: "Corel Draw",
       icon: "./assets/images/software Icons/corel-draw.png"
