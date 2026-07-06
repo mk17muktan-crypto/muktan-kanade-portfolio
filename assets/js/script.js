@@ -274,12 +274,48 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
 
+  /*
+   * Category names may come from:
+   *
+   * 1. An HTML button:
+   *    "ai-assisted design"
+   *
+   * 2. A page URL:
+   *    "ai-assisted-design"
+   *
+   * Convert both versions into the same
+   * format before comparing them.
+   */
+
+  const normalizedSelectedValue =
+    String(selectedValue || "")
+      .trim()
+      .toLowerCase()
+      .replace(/-/g, " ");
+
+
   for (let i = 0; i < filterItems.length; i++) {
 
-    if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+    const normalizedItemCategory =
+      String(
+        filterItems[i].dataset.category || ""
+      )
+        .trim()
+        .toLowerCase()
+        .replace(/-/g, " ");
+
+
+    if (
+      normalizedSelectedValue ===
+      normalizedItemCategory
+    ) {
+      filterItems[i].classList.add(
+        "active"
+      );
     } else {
-      filterItems[i].classList.remove("active");
+      filterItems[i].classList.remove(
+        "active"
+      );
     }
 
   }

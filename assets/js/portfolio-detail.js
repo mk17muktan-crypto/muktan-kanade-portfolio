@@ -22,6 +22,12 @@ document.body.classList.toggle(
   project.category === "Graphic Design"
 );
 
+
+document.body.classList.toggle(
+  "ai-assisted-design-page",
+  project.category === "AI-Assisted Design"
+);
+
 const getSectionId = function (tabId) {
   const sectionMap = {
     "project-info": "client-info",
@@ -234,7 +240,20 @@ const renderTabs = function () {
 
 link.href = "#" + sectionId;
 
-if (project.layout === "ux-case-study" && tab.desktopLabel) {
+/*
+ * Normal UI/UX projects may use
+ * two-line desktop tab labels.
+ *
+ * AI-Assisted Design projects use
+ * the standard Graphic Design and
+ * Print Design single-line labels.
+ */
+
+if (
+  project.layout === "ux-case-study" &&
+  project.caseStudyVariant !== "ai-assisted-design" &&
+  tab.desktopLabel
+) {
   link.innerHTML = tab.desktopLabel;
 } else {
   link.innerText = tab.label;
@@ -379,14 +398,819 @@ const renderProjectSummary = function () {
   }
 };
 
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN CASE STUDY
+\*-----------------------------------*/
+
+const renderAIAssistedCaseStudy =
+  function (uxRoot, aiData) {
+
+    if (!uxRoot || !aiData) return;
+
+
+    /*
+     * Every clickable image group is
+     * stored here so the existing image
+     * preview can open the correct set.
+     */
+
+    const previewCollections = {};
+
+
+    const renderParagraphs =
+      function (paragraphs) {
+
+        return (
+          Array.isArray(paragraphs)
+            ? paragraphs
+            : []
+        )
+          .map(function (paragraph) {
+
+            return `
+              <p>
+                ${paragraph}
+              </p>
+            `;
+
+          })
+          .join("");
+
+      };
+
+
+    /*
+     * Reuse the existing UI/UX software
+     * icon structure.
+     */
+
+    const renderTools =
+      function () {
+
+        return (project.tools || [])
+          .map(function (tool) {
+
+            return `
+              <div class="ux-summary-tool">
+
+                <img
+                  src="${tool.icon}"
+                  alt="${tool.name}"
+                  title="${tool.name}"
+                  loading="lazy">
+
+              </div>
+            `;
+
+          })
+          .join("");
+
+      };
+
+
+    /*
+     * Create clickable image buttons.
+     *
+     * The group name connects each button
+     * to the correct preview collection.
+     */
+
+    const renderPreviewButtons =
+      function (items, groupName) {
+
+        const safeItems =
+          Array.isArray(items)
+            ? items
+            : [];
+
+
+        previewCollections[groupName] =
+          safeItems;
+
+
+        return safeItems
+          .map(function (item, index) {
+
+            return `
+              <button
+                class="ux-final-screen"
+                type="button"
+                data-ai-preview-group="${groupName}"
+                data-ai-preview-index="${index}"
+                aria-label="Open ${item.alt || "portfolio image"}">
+
+                <img
+                  src="${item.src}"
+                  alt="${item.alt || project.title}"
+                  loading="lazy">
+
+              </button>
+            `;
+
+          })
+          .join("");
+
+      };
+
+
+    /*
+     * Reuse the red UI/UX problem cards.
+     */
+
+    const renderChallengeItems =
+      function (items) {
+
+        return (
+          Array.isArray(items)
+            ? items
+            : []
+        )
+          .map(function (item) {
+
+            return `
+              <div class="ux-problem-item">
+
+                <p>
+                  ${item}
+                </p>
+
+              </div>
+            `;
+
+          })
+          .join("");
+
+      };
+
+
+    /*
+     * Reuse the dark gold-bordered
+     * research cards.
+     */
+
+    const renderDecisionItems =
+      function (items) {
+
+        return (
+          Array.isArray(items)
+            ? items
+            : []
+        )
+          .map(function (item) {
+
+            return `
+              <div class="ux-research-point">
+
+                <p>
+                  ${item}
+                </p>
+
+              </div>
+            `;
+
+          })
+          .join("");
+
+      };
+
+
+    /*
+     * ABOUT THE PROJECT
+     */
+
+    const renderAboutContent =
+      function () {
+
+        const about =
+          aiData.about;
+
+
+        if (!about) return "";
+
+
+        return `
+          <div class="ux-research-context">
+
+            <h2>
+              ${about.heading || "About The Project"}
+            </h2>
+
+            ${renderParagraphs(
+              about.paragraphs
+            )}
+
+          </div>
+        `;
+
+      };
+
+
+    /*
+     * CREATIVE DIRECTION
+     *
+     * The whole section disappears when
+     * no reference images are supplied.
+     */
+
+    const renderCreativeDirection =
+  function () {
+
+    const creativeDirection =
+      aiData.creativeDirection;
+
+
+    if (!creativeDirection) {
+      return "";
+    }
+
+
+    const paragraphs =
+      Array.isArray(
+        creativeDirection.paragraphs
+      )
+        ? creativeDirection.paragraphs
+        : [];
+
+
+    const images =
+      Array.isArray(
+        creativeDirection.images
+      )
+        ? creativeDirection.images
+        : [];
+
+
+    /*
+     * Hide the complete section only
+     * when it contains neither written
+     * content nor reference images.
+     */
+
+    if (
+      paragraphs.length === 0 &&
+      images.length === 0
+    ) {
+      return "";
+    }
+
+
+    /*
+     * The image area is optional.
+     *
+     * Pooja Path and the Autobiography
+     * project contain Creative Direction
+     * text but no reference images.
+     */
+
+    const imageMarkup =
+      images.length > 0
+        ? `
+          <div
+            class="ux-final-group ux-final-group-full ai-reference-group">
+
+            <div class="ux-final-screens-grid">
+
+              ${renderPreviewButtons(
+                images,
+                "creative-direction"
+              )}
+
+            </div>
+
+          </div>
+        `
+        : "";
+
+
+    return `
+      <div
+        class="ux-research-context ai-creative-direction ux-tab-section"
+        id="creative-direction">
+
+        <h2>
+          ${
+            creativeDirection.heading ||
+            "Creative Direction"
+          }
+        </h2>
+
+        ${renderParagraphs(
+          paragraphs
+        )}
+
+        ${imageMarkup}
+
+      </div>
+    `;
+
+  };
+
+
+    /*
+     * CHALLENGE + KEY DECISIONS
+     *
+     * These sections appear only when
+     * their content exists.
+     */
+
+    const renderChallengeDecisionSection =
+      function () {
+
+        const challengeItems =
+          aiData.challenge &&
+          Array.isArray(
+            aiData.challenge.items
+          )
+            ? aiData.challenge.items
+            : [];
+
+
+        const decisionItems =
+          aiData.keyDecisions &&
+          Array.isArray(
+            aiData.keyDecisions.items
+          )
+            ? aiData.keyDecisions.items
+            : [];
+
+
+        if (
+          challengeItems.length === 0 &&
+          decisionItems.length === 0
+        ) {
+          return "";
+        }
+
+
+        const challengeBlock =
+          challengeItems.length > 0
+            ? `
+              <div
+                class="ux-user-problems ux-tab-section"
+                id="the-challenge">
+
+                <h2>
+                  ${
+                    aiData.challenge.heading ||
+                    "The Challenge"
+                  }
+                </h2>
+
+                <div class="ux-problems-list">
+
+                  ${renderChallengeItems(
+                    challengeItems
+                  )}
+
+                </div>
+
+              </div>
+            `
+            : "";
+
+
+        const decisionBlock =
+          decisionItems.length > 0
+            ? `
+              <div
+                class="ux-user-problems ux-tab-section"
+                id="key-decisions">
+
+                <h2>
+                  ${
+                    aiData.keyDecisions.heading ||
+                    "Key Decisions"
+                  }
+                </h2>
+
+                <div class="ux-problems-list">
+
+                  ${renderDecisionItems(
+                    decisionItems
+                  )}
+
+                </div>
+
+              </div>
+            `
+            : "";
+
+
+        return `
+          <section
+            class="ux-section ux-audience-problems-section ai-challenge-decisions-section">
+
+            <div class="ux-audience-problems-grid">
+
+              ${challengeBlock}
+
+              ${decisionBlock}
+
+            </div>
+
+          </section>
+        `;
+
+      };
+
+
+    /*
+     * FINAL OUTPUT SECTIONS
+     *
+     * New projects may contain:
+     *
+     * - one simple Final Outputs section
+     * - several department sections
+     * - several subsections inside a section
+     *
+     * The old Kumbh finalOutputs format
+     * is also converted automatically.
+     */
+
+    const getOutputSections =
+      function () {
+
+        if (
+          Array.isArray(
+            aiData.outputSections
+          ) &&
+          aiData.outputSections.length > 0
+        ) {
+          return aiData.outputSections;
+        }
+
+
+        if (aiData.finalOutputs) {
+
+          return [
+            {
+              id:
+                "final-outputs",
+
+              heading:
+                aiData.finalOutputs.heading ||
+                "Final Outputs",
+
+              groups: [
+                {
+                  title: "",
+
+                  images:
+                    aiData.finalOutputs.images ||
+                    []
+                }
+              ]
+            }
+          ];
+
+        }
+
+
+        return [];
+
+      };
+
+
+    const renderOutputSections =
+      function () {
+
+        const outputSections =
+          getOutputSections();
+
+
+        return outputSections
+          .map(
+            function (
+              outputSection,
+              sectionIndex
+            ) {
+
+              const sectionId =
+                outputSection.id ||
+                (
+                  "final-outputs-" +
+                  sectionIndex
+                );
+
+
+              const groups =
+                Array.isArray(
+                  outputSection.groups
+                ) &&
+                outputSection.groups.length > 0
+
+                  ? outputSection.groups
+
+                  : [
+                      {
+                        title: "",
+
+                        images:
+                          outputSection.images ||
+                          []
+                      }
+                    ];
+
+
+              const groupsMarkup =
+                groups
+                  .map(
+                    function (
+                      group,
+                      groupIndex
+                    ) {
+
+                      const previewGroupName =
+                        sectionId +
+                        "-group-" +
+                        groupIndex;
+
+
+                      const groupHeading =
+                        group.title
+                          ? `
+                            <div class="ux-final-group-heading">
+
+                              <h3>
+                                ${group.title}
+                              </h3>
+
+                            </div>
+                          `
+                          : "";
+
+
+                      return `
+                        <div
+                          class="ux-final-group ux-final-group-full ai-final-output-group">
+
+                          ${groupHeading}
+
+                          <div class="ux-final-screens-grid">
+
+                            ${renderPreviewButtons(
+                              group.images,
+                              previewGroupName
+                            )}
+
+                          </div>
+
+                        </div>
+                      `;
+
+                    }
+                  )
+                  .join("");
+
+
+              return `
+                <section
+                  class="ux-section ux-final-ui-section ux-tab-section"
+                  id="${sectionId}">
+
+                  <h2>
+                    ${
+                      outputSection.heading ||
+                      "Final Outputs"
+                    }
+                  </h2>
+
+
+                  <div class="ux-final-groups">
+
+                    ${groupsMarkup}
+
+                  </div>
+
+                </section>
+              `;
+
+            }
+          )
+          .join("");
+
+      };
+
+
+    /*
+     * BUILD THE COMPLETE CASE STUDY
+     */
+
+    uxRoot.hidden = false;
+
+
+    uxRoot.innerHTML = `
+
+      <section
+        class="ux-section ai-about-section ux-tab-section"
+        id="about-project">
+
+        <div class="ai-about-layout">
+
+
+          <div class="ai-about-content">
+
+            ${renderAboutContent()}
+
+            ${renderCreativeDirection()}
+
+          </div>
+
+
+          <aside class="ux-summary-card">
+
+            <div class="ux-summary-section">
+
+              <p>
+                My Role
+              </p>
+
+              <h3>
+                ${project.role}
+              </h3>
+
+            </div>
+
+
+            <div class="ux-summary-section">
+
+              <p>
+                Deliverables
+              </p>
+
+              <h3>
+                ${project.deliverables}
+              </h3>
+
+            </div>
+
+
+            <div class="ux-summary-section">
+
+              <p>
+                Tools Used
+              </p>
+
+              <div class="ux-summary-tools">
+
+                ${renderTools()}
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+        </div>
+
+      </section>
+
+
+      ${renderChallengeDecisionSection()}
+
+
+      ${renderOutputSections()}
+
+    `;
+
+
+    /*
+     * Connect every rendered image button
+     * to the existing full-screen preview.
+     */
+
+    const previewButtons =
+      uxRoot.querySelectorAll(
+        "[data-ai-preview-group]"
+      );
+
+
+    previewButtons.forEach(
+      function (button) {
+
+        button.addEventListener(
+          "click",
+          function () {
+
+            const groupName =
+              button.dataset
+                .aiPreviewGroup;
+
+
+            const itemIndex =
+              Number(
+                button.dataset
+                  .aiPreviewIndex
+              );
+
+
+            const previewItems =
+              previewCollections[
+                groupName
+              ] || [];
+
+
+            if (
+              previewItems.length === 0
+            ) {
+              return;
+            }
+
+
+            openCasePreview(
+              previewItems,
+              itemIndex
+            );
+
+          }
+        );
+
+      }
+    );
+
+  };
+
 const renderUXCaseStudy = function () {
-  const uxRoot = document.querySelector("[data-ux-case-study]");
-  const uxData = project.uxCaseStudy;
+
+  const uxRoot =
+    document.querySelector(
+      "[data-ux-case-study]"
+    );
+
+
+  /*
+   * Check whether the current project
+   * uses the AI-assisted variation of
+   * the shared UI/UX template.
+   */
+
+  const isAIAssistedCaseStudy =
+    project.layout ===
+      "ux-case-study" &&
+
+    project.caseStudyVariant ===
+      "ai-assisted-design" &&
+
+    uxRoot &&
+
+    project.aiCaseStudy;
+
+
+  /*
+   * Render the AI template and stop
+   * before the normal UI/UX renderer.
+   */
+
+  if (isAIAssistedCaseStudy) {
+
+    document.body.classList.add(
+      "ux-case-study-page",
+      "ai-assisted-case-study-page"
+    );
+
+
+    document.body.classList.remove(
+      "ux-dagdusheth-page",
+      "ux-ssms-page",
+      "ux-lmm-page"
+    );
+
+
+    renderAIAssistedCaseStudy(
+      uxRoot,
+      project.aiCaseStudy
+    );
+
+
+    return;
+
+  }
+
+
+  /*
+   * Remove the AI variation class from
+   * normal UI/UX projects.
+   */
+
+  document.body.classList.remove(
+    "ai-assisted-case-study-page"
+  );
+
+
+  const uxData =
+    project.uxCaseStudy;
+
 
   const isUXCaseStudy =
-    project.layout === "ux-case-study" &&
+    project.layout ===
+      "ux-case-study" &&
+
     uxRoot &&
+
     uxData;
+
 
   document.body.classList.toggle(
     "ux-case-study-page",

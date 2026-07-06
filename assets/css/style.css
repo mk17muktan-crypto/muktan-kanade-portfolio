@@ -12842,3 +12842,498 @@ body.portfolio-detail-page
   }
 
 }
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN CASE STUDY
+  #REUSES THE UI/UX TEMPLATE
+\*-----------------------------------*/
+
+
+/*
+ * AI-ASSISTED DESIGN TAB BAR
+ *
+ * The AI case-study content continues
+ * using the existing UI/UX section styles.
+ *
+ * The tab bar itself is reset to use the
+ * standard Graphic Design and Print Design
+ * pill-style tab-bar behaviour.
+ */
+
+@media (min-width: 581px) {
+
+  body.ai-assisted-case-study-page
+  .case-tabs {
+    display: flex !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    flex-wrap: nowrap !important;
+
+    width: max-content !important;
+    max-width: calc(100% - 56px) !important;
+
+    margin:
+      0 auto 42px
+      !important;
+
+    padding: 8px !important;
+    gap: 8px !important;
+
+    transition: none !important;
+  }
+
+
+  /*
+   * Prevent the UI/UX tab bar from
+   * changing width and moving sideways
+   * after it becomes sticky.
+   */
+
+  body.ai-assisted-case-study-page.case-tabs-stuck
+  .case-tabs {
+    width: max-content !important;
+    max-width: calc(100% - 56px) !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 42px !important;
+  }
+
+
+  /*
+   * Restore the standard single-line
+   * Graphic Design / Print Design pills.
+   */
+
+  body.ai-assisted-case-study-page
+  .case-tabs a {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding:
+      9px 13px
+      !important;
+
+    display: block !important;
+
+    white-space: nowrap !important;
+    text-align: center !important;
+
+    font-size: 12px !important;
+    line-height: normal !important;
+  }
+
+
+  /*
+   * Match the normal Graphic Design
+   * back-button alignment when the
+   * tab bar becomes sticky.
+   */
+
+  /*
+ * AI-ASSISTED DESIGN BACK BUTTON
+ *
+ * State 1:
+ * Match the normal portfolio-detail
+ * starting position.
+ */
+
+body.portfolio-detail-page.ai-assisted-case-study-page
+.case-back-btn {
+  top: 50px !important;
+
+  left: max(
+    14px,
+    calc((100vw - 1300px) / 2 + 14px)
+  ) !important;
+
+  transition:
+    left 0.45s
+      cubic-bezier(0.22, 1.25, 0.36, 1),
+
+    top 0.45s
+      cubic-bezier(0.22, 1.25, 0.36, 1),
+
+    transform 0.35s ease;
+}
+
+
+/*
+ * State 2:
+ * Once the project tab bar becomes
+ * sticky, align the Back button with
+ * the compact Graphic/Print-style tabs.
+ */
+
+body.portfolio-detail-page.ai-assisted-case-study-page.case-tabs-stuck
+.case-back-btn {
+  top:
+    calc(
+      var(--case-sticky-top) + 9px
+    )
+    !important;
+
+  left: max(
+    14px,
+    calc((100vw - 1300px) / 2 + 14px)
+  ) !important;
+}
+
+}
+
+
+/*
+ * ABOUT + CREATIVE DIRECTION
+ *
+ * The written content occupies the
+ * larger left column.
+ *
+ * The existing yellow summary card and
+ * employment card occupy the smaller
+ * right column.
+ */
+
+body.ai-assisted-case-study-page
+.ai-about-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.72fr)
+    minmax(250px, 0.62fr);
+
+  align-items: start;
+
+  gap: 34px;
+}
+
+
+body.ai-assisted-case-study-page
+.ai-about-content {
+  min-width: 0;
+}
+
+
+body.ai-assisted-case-study-page
+.ai-creative-direction {
+  margin-top: 42px;
+}
+
+
+/*
+ * CREATIVE DIRECTION REFERENCES
+ *
+ * Reuse the UI/UX final-screen buttons
+ * and their hover and preview behaviour.
+ */
+
+body.ai-assisted-case-study-page
+.ai-reference-group {
+  margin-top: 22px;
+}
+
+
+/*
+ * CREATIVE DIRECTION IMAGES
+ *
+ * Desktop: four images in one row.
+ */
+
+body.ai-assisted-case-study-page
+.ai-reference-group
+.ux-final-screens-grid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr))
+    !important;
+
+  align-items: start;
+
+  gap: 18px;
+}
+
+
+/*
+ * FINAL OUTPUT IMAGES
+ *
+ * Desktop: two images in each row.
+ */
+
+body.ai-assisted-case-study-page
+.ai-final-output-group
+.ux-final-screens-grid {
+  display: grid !important;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr))
+    !important;
+
+  align-items: start;
+
+  gap: 18px;
+}
+
+
+/*
+ * IMAGE-ASPECT-RATIO RULE
+ *
+ * The original UI/UX final-screen style
+ * assumes phone-screen proportions.
+ *
+ * These AI images can have different
+ * proportions, so their natural source
+ * dimensions must control their height.
+ */
+
+body.ai-assisted-case-study-page
+.ai-reference-group
+.ux-final-screen img,
+
+body.ai-assisted-case-study-page
+.ai-final-output-group
+.ux-final-screen img {
+  display: block;
+
+  width: 100% !important;
+  height: auto !important;
+
+  min-height: 0 !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center;
+
+  background: transparent;
+}
+
+
+/*
+ * THE CHALLENGE + KEY DECISIONS
+ *
+ * The Challenge column is wider, matching
+ * the supplied desktop layout reference.
+ */
+
+body.ai-assisted-case-study-page
+.ai-challenge-decisions-section
+.ux-audience-problems-grid {
+  grid-template-columns:
+    minmax(0, 1.52fr)
+    minmax(250px, 0.72fr);
+
+  gap: 28px;
+}
+
+
+/*
+ * Key Decisions reuse the existing
+ * dark, gold-bordered research card.
+ */
+
+body.ai-assisted-case-study-page
+#key-decisions
+.ux-research-point {
+  min-height: 55px;
+}
+
+
+body.ai-assisted-case-study-page
+#key-decisions
+.ux-research-point p {
+  color: var(--white-2);
+
+  font-size: 14px;
+  font-weight: var(--fw-600);
+  line-height: 1.35;
+
+  text-transform: capitalize;
+}
+
+
+body.ai-assisted-case-study-page
+.ai-final-output-group {
+  margin-top: 18px;
+}
+
+
+/*-----------------------------------*\
+  #AI CASE STUDY — MOBILE
+\*-----------------------------------*/
+
+@media (max-width: 580px) {
+
+  /*
+   * Stack the written content and
+   * project-summary stack vertically.
+   */
+
+  body.ai-assisted-case-study-page
+  .ai-about-layout {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+
+  body.ai-assisted-case-study-page
+  .ai-creative-direction {
+    margin-top: 34px;
+  }
+
+
+  /*
+   * Reference and final-output images
+   * use two columns on mobile.
+   *
+   * Their natural aspect ratios remain
+   * unchanged.
+   */
+
+  /*
+ * CREATIVE DIRECTION IMAGES
+ *
+ * Mobile: two images in each row.
+ */
+
+body.ai-assisted-case-study-page
+.ai-reference-group
+.ux-final-screens-grid {
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr))
+    !important;
+
+  gap: 12px;
+}
+
+
+/*
+ * FINAL OUTPUT IMAGES
+ *
+ * Mobile: one full-width image
+ * followed by the next.
+ */
+
+body.ai-assisted-case-study-page
+.ai-final-output-group
+.ux-final-screens-grid {
+  grid-template-columns:
+    1fr
+    !important;
+
+  gap: 16px;
+}
+
+
+  /*
+   * On mobile, The Challenge appears
+   * first and Key Decisions follows it.
+   */
+
+  body.ai-assisted-case-study-page
+  .ai-challenge-decisions-section
+  .ux-audience-problems-grid {
+    grid-template-columns: 1fr;
+
+    gap: 44px;
+  }
+
+}
+
+/*
+ * AI-ASSISTED DESIGN STICKY TAB BACKGROUND
+ *
+ * Recreates the same sticky control
+ * background used by the standard
+ * Graphic Design tab bar.
+ */
+
+@media (min-width: 581px) {
+
+  body.portfolio-detail-page.ai-assisted-case-study-page
+  .case-tabs::before {
+    content: "";
+
+    position: fixed;
+
+    top:
+      calc(
+        var(--case-sticky-top) - 8px
+      );
+
+    left:
+      max(
+        14px,
+        calc(
+          (100vw - 1200px) / 2 + 14px
+        )
+      );
+
+    right:
+      max(
+        14px,
+        calc(
+          (100vw - 1200px) / 2 + 14px
+        )
+      );
+
+    height: 72px;
+
+    border-radius: 20px;
+
+    background:
+      hsla(
+        240,
+        2%,
+        12%,
+        0.72
+      );
+
+    border: 0;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+      0 18px 42px
+      hsla(0, 0%, 0%, 0.42),
+
+      0 6px 16px
+      hsla(0, 0%, 0%, 0.28);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+      translateY(-8px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    transition:
+      opacity 0.32s ease,
+      visibility 0.32s ease,
+      transform 0.42s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+  }
+
+
+  body.portfolio-detail-page.ai-assisted-case-study-page.case-tabs-stuck
+  .case-tabs::before {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+      translateY(0);
+  }
+
+}

@@ -8,6 +8,1671 @@ const makePlaceholders = function (count, labelPrefix) {
 };
 
 const portfolioProjects = {
+
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN
+  #IMEPL WEBSITE VISUALS
+\*-----------------------------------*/
+
+"ai-assisted-design-imepl-website": {
+
+  title:
+    "IMEPL Website Visuals",
+
+  fullTitle:
+    "IMEPL Website Visuals",
+
+  category:
+    "AI-Assisted Design",
+
+  categorySlug:
+    "ai-assisted-design",
+
+  industry:
+    "Design / Advertising Agency",
+
+  projectType:
+    "AI-Assisted Website Visuals",
+
+  layout:
+    "ux-case-study",
+
+  caseStudyVariant:
+    "ai-assisted-design",
+
+  role:
+    "Prompt Engineer",
+
+  deliverables:
+    "AI Visuals",
+
+  tools: [
+    {
+      name:
+        "ChatGPT",
+
+      icon:
+        "./assets/images/software Icons/ChatGPT_logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel:
+      "Portfolio",
+
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel:
+      "AI-Assisted Design",
+
+    categoryUrl:
+      "./index.html?section=portfolio&category=ai-assisted-design",
+
+    currentLabel:
+      "IMEPL Website Visuals"
+  },
+
+  tabs: [
+  {
+    id: "about-project",
+    label: "About"
+  },
+  {
+    id: "creative-direction",
+    label: "Creative Direction"
+  },
+  {
+    id: "the-challenge",
+    label: "Challenge"
+  },
+  {
+    id: "key-decisions",
+    label: "Key Decisions"
+  },
+  {
+    id: "events-department",
+    label: "Events"
+  },
+  {
+    id: "av-production-department",
+    label: "AV Production"
+  },
+  {
+    id: "digital-department",
+    label: "Digital"
+  }
+],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/ime.jpg",
+
+      alt:
+        "IMEPL Website Visuals desktop portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Mobile/ime.jpg",
+
+      alt:
+        "IMEPL Website Visuals mobile portfolio cover"
+    }
+  },
+
+  aiCaseStudy: {
+
+  about: {
+    heading:
+      "About The Project",
+
+    paragraphs: [
+      "The IMEPL website was being completely redesigned, and the new direction needed to feel fresher, more colourful and more visually experimental than the previous version.",
+
+      "To support this change, a new set of 3D isometric icons was created to represent each department. The icons were designed to make the website feel more engaging while giving every section its own clear visual identity."
+    ]
+  },
+
+
+  creativeDirection: {
+    heading:
+      "Creative Direction",
+
+    paragraphs: [
+      "The creative direction was inspired by a soft, bubbly 3D isometric style seen in a game. That visual language felt right for the redesigned website because it was fresh, colourful and different, without becoming childish. It gave the icons a more approachable personality while still keeping them suitable for a professional agency website.",
+
+      "The final direction combined playful forms, controlled proportions & semi-realistic materials to create one icon family."
+    ],
+
+    images: [
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/ime/Ref 1.jpg",
+
+        alt:
+          "IMEPL Website creative direction reference 01"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/ime/Ref 2.jpg",
+
+        alt:
+          "IMEPL Website creative direction reference 02"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/ime/Ref 3.jpg",
+
+        alt:
+          "IMEPL Website creative direction reference 03"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/ime/Ref 4.jpg",
+
+        alt:
+          "IMEPL Website creative direction reference 04"
+      }
+    ]
+  },
+
+
+  challenge: {
+    heading:
+      "The Challenge",
+
+    items: [
+      "Maintaining The Same Isometric Perspective And Exact Viewing Angle Across Every Department Icon.",
+
+      "All Icon Proportions Needed To Feel Professional, Consistent And Visually Balanced As One Complete Set.",
+
+      "The Style Had To Feel Colourful And Playful Without Becoming Too Childish Or Informal.",
+
+      "Different Materials Needed Distinct Finishes While Still Belonging To One Cohesive Visual Language."
+    ]
+  },
+
+
+  keyDecisions: {
+    heading:
+      "Key Decisions",
+
+    items: [
+      "Exact Isometric Perspective",
+
+      "Consistent Icon Proportions",
+
+      "Material-Specific Finishes",
+
+      "Soft, Controlled Lighting",
+
+      "Cohesive Colour Palette"
+    ]
+  },
+
+
+  outputSections: [
+
+    {
+      id:
+        "events-department",
+
+      heading:
+        "Events Department Final Outputs",
+
+      groups: [
+        {
+          title:
+            "“Our Services” Visuals",
+
+          images: [
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 1.jpg",
+
+              alt:
+                "IMEPL Events Our Services visual 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 2.jpg",
+
+              alt:
+                "IMEPL Events Our Services visual 02"
+            }
+          ]
+        },
+
+        {
+          title:
+            "“Why Choose Events” Visuals",
+
+          images: [
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 3.jpg",
+
+              alt:
+                "IMEPL Why Choose Events visual 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 4.jpg",
+
+              alt:
+                "IMEPL Why Choose Events visual 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 5.jpg",
+
+              alt:
+                "IMEPL Why Choose Events visual 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Event 6.jpg",
+
+              alt:
+                "IMEPL Why Choose Events visual 04"
+            }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      id:
+        "av-production-department",
+
+      heading:
+        "AV Production Department Final Outputs",
+
+      groups: [
+        {
+          title:
+            "“Our Services” Visuals",
+
+          images: [
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 1.jpg",
+
+              alt:
+                "IMEPL AV Production Our Services visual 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 2.jpg",
+
+              alt:
+                "IMEPL AV Production Our Services visual 02"
+            }
+          ]
+        },
+
+        {
+          title:
+            "“Why Choose AV Production” Visuals",
+
+          images: [
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 3.jpg",
+
+              alt:
+                "IMEPL Why Choose AV Production visual 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 4.jpg",
+
+              alt:
+                "IMEPL Why Choose AV Production visual 02"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 5.jpg",
+
+              alt:
+                "IMEPL Why Choose AV Production visual 03"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/AV 6.jpg",
+
+              alt:
+                "IMEPL Why Choose AV Production visual 04"
+            }
+          ]
+        }
+      ]
+    },
+
+
+    {
+      id:
+        "digital-department",
+
+      heading:
+        "Digital Department Final Outputs",
+
+      groups: [
+        {
+          title:
+            "“Our Services” Visuals",
+
+          images: [
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Digital 1.jpg",
+
+              alt:
+                "IMEPL Digital Our Services visual 01"
+            },
+            {
+              src:
+                "./assets/images/Portfolio/ai-assisted-design/ime/Digital 2.jpg",
+
+              alt:
+                "IMEPL Digital Our Services visual 02"
+            }
+          ]
+        }
+      ]
+    }
+
+  ]
+},
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Book Cover Visuals",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Book Cover Visuals.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Book Cover Visuals"
+    },
+
+    {
+      title:
+        "Kumbh 2027 - Book Jacket Visuals",
+
+      industry:
+        "Publishing / Spiritual Event",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-kumbh-2027",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Kumbh 2027.jpg",
+
+        alt:
+          "Kumbh 2027 Book Jacket thumbnail"
+      },
+
+      imageLabel:
+        "Kumbh 2027 - Book Jacket Visuals"
+    },
+
+    {
+      title:
+        "Swaraseva Website Visuals",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-swaraseva",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Swaraseva.jpg",
+
+        alt:
+          "Swaraseva Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Swaraseva Website Visuals"
+    }
+  ]
+},
+
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN
+  #POOJA PATH
+\*-----------------------------------*/
+
+"ai-assisted-design-pooja-path": {
+
+  title:
+    "Pooja Path Visuals",
+
+  fullTitle:
+    "Pooja Path Visuals",
+
+  category:
+    "AI-Assisted Design",
+
+  categorySlug:
+    "ai-assisted-design",
+
+  industry:
+    "Spiritual / Devotional Organisation",
+
+  projectType:
+    "AI-Assisted Visuals",
+
+  layout:
+    "ux-case-study",
+
+  caseStudyVariant:
+    "ai-assisted-design",
+
+  role:
+    "Prompt Engineer",
+
+  deliverables:
+    "AI Visuals",
+
+  tools: [
+    {
+      name:
+        "ChatGPT",
+
+      icon:
+        "./assets/images/software Icons/ChatGPT_logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel:
+      "Portfolio",
+
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel:
+      "AI-Assisted Design",
+
+    categoryUrl:
+      "./index.html?section=portfolio&category=ai-assisted-design",
+
+    currentLabel:
+      "Pooja Path Visuals"
+  },
+
+  tabs: [
+  {
+    id: "about-project",
+    label: "About the Project"
+  },
+  {
+    id: "creative-direction",
+    label: "Creative Direction"
+  },
+  {
+    id: "the-challenge",
+    label: "The Challenge"
+  },
+  {
+    id: "key-decisions",
+    label: "Key Decisions"
+  },
+  {
+    id: "final-outputs",
+    label: "Final Outputs"
+  }
+],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Pooja.jpg",
+
+      alt:
+        "Pooja Path Visuals desktop portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Mobile/Pooja.jpg",
+
+      alt:
+        "Pooja Path Visuals mobile portfolio cover"
+    }
+  },
+
+  aiCaseStudy: {
+
+  about: {
+    heading:
+      "About The Project",
+
+    paragraphs: [
+      "Pooja Path is a temple and ground-staff management platform developed by Indian Magic Eye.",
+
+      "The system helps temple authorities manage sevas, devotee appointments, available time slots and on-ground coordination from one place. It also gives the ground staff a quicker way to check schedules, organise bookings and fill available slots while working at the temple.",
+
+      "The presentation was created to explain this system clearly to potential temple clients and show how it could make everyday operations more organised and easier to manage."
+    ]
+  },
+
+
+  creativeDirection: {
+    heading:
+      "Creative Direction",
+
+    paragraphs: [
+      "Instead of illustrating each service literally, I focused on the feeling and value that the service would provide to temple authorities. The images were designed to make the system feel like a meaningful solution to problems such as crowded processes, manual coordination, missed information and difficult on-ground management.",
+
+      "A divine, cinematic and visually dramatic style was selected so the presentation could remain connected to the temple context while still feeling modern and technology-driven.",
+
+      "The visuals gave the deck emotional depth and helped balance the large amount of text, making the overall presentation more engaging for the client."
+    ]
+  },
+
+
+  challenge: {
+    heading:
+      "The Challenge",
+
+    items: [
+      "Representing Intangible Services Visually Without Letting The Slides Feel Like Basic Flowcharts Or Software Diagrams.",
+
+      "Each Service Needed To Feel Clear, Valuable And Easy To Understand Within A Very Text-Heavy Presentation.",
+
+      "The Visuals Had To Hold Attention Across More Than Forty Slides Without Becoming Repetitive Or Generic.",
+
+      "The Final Imagery Needed To Feel Divine, Premium And Dramatic While Still Supporting The Information Clearly."
+    ]
+  },
+
+
+  keyDecisions: {
+    heading:
+      "Key Decisions",
+
+    items: [
+      "High-End Material Rendering",
+
+      "Controlled Lens Depth",
+
+      "Precise Edge Control",
+
+      "Cinematic Digital Finish",
+
+      "Three-Layer Lighting Structure"
+    ]
+  },
+
+
+  finalOutputs: {
+    heading:
+      "Final Outputs",
+
+    images: [
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/1.jpg",
+
+        alt:
+          "Pooja Path final output 01"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/2.jpg",
+
+        alt:
+          "Pooja Path final output 02"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/3.jpg",
+
+        alt:
+          "Pooja Path final output 03"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/4.jpg",
+
+        alt:
+          "Pooja Path final output 04"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/5.jpg",
+
+        alt:
+          "Pooja Path final output 05"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Pooja Path/6.jpg",
+
+        alt:
+          "Pooja Path final output 06"
+      }
+    ]
+  }
+
+},
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Swaraseva Website Visuals",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-swaraseva",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Swaraseva.jpg",
+
+        alt:
+          "Swaraseva Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Swaraseva Website Visuals"
+    },
+
+    {
+      title:
+        "IMEPL Website",
+
+      industry:
+        "Design / Advertising Agency",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-imepl-website",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/ime.jpg",
+
+        alt:
+          "IMEPL Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "IMEPL Website"
+    },
+
+    {
+      title:
+        "Book Cover Visuals",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Book Cover Visuals.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Book Cover Visuals"
+    }
+  ]
+},
+
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN
+  #SWARASEVA
+\*-----------------------------------*/
+
+"ai-assisted-design-swaraseva": {
+
+  title:
+    "Swaraseva Website Visuals",
+
+  fullTitle:
+    "Swaraseva Website Visuals",
+
+  category:
+    "AI-Assisted Design",
+
+  categorySlug:
+    "ai-assisted-design",
+
+  industry:
+    "Spiritual / Devotional Organisation",
+
+  projectType:
+    "AI-Assisted Website Visuals",
+
+  layout:
+    "ux-case-study",
+
+  caseStudyVariant:
+    "ai-assisted-design",
+
+  role:
+    "Prompt Engineer",
+
+  deliverables:
+    "AI Visuals",
+
+  tools: [
+    {
+      name:
+        "ChatGPT",
+
+      icon:
+        "./assets/images/software Icons/ChatGPT_logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel:
+      "Portfolio",
+
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel:
+      "AI-Assisted Design",
+
+    categoryUrl:
+      "./index.html?section=portfolio&category=ai-assisted-design",
+
+    currentLabel:
+      "Swaraseva Website Visuals"
+  },
+
+  tabs: [
+  {
+    id: "about-project",
+    label: "About the Project"
+  },
+  {
+    id: "creative-direction",
+    label: "Creative Direction"
+  },
+  {
+    id: "the-challenge",
+    label: "The Challenge"
+  },
+  {
+    id: "key-decisions",
+    label: "Key Decisions"
+  },
+  {
+    id: "final-outputs",
+    label: "Final Outputs"
+  }
+],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Swaraseva.jpg",
+
+      alt:
+        "Swaraseva Website Visuals desktop portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Mobile/Swaraseva.jpg",
+
+      alt:
+        "Swaraseva Website Visuals mobile portfolio cover"
+    }
+  },
+
+  aiCaseStudy: {
+
+  about: {
+    heading:
+      "About The Project",
+
+    paragraphs: [
+      "SwaraSeva is a platform developed by Indian Magic Eye to bring together information related to Indian festivals and devotional music events. The platform covers occasions such as Ganesh Utsav, Ram Navami and Pandharpur Wari, where multiple sponsors and organisers come together to support musical programmes and cultural celebrations.",
+
+      "The website acts as a central space where users can learn about each festival, event, deity and saint, along with the stories and cultural meaning connected to them. A large set of original illustrations was therefore required to give the platform a clear and recognisable visual identity."
+    ]
+  },
+
+
+  creativeDirection: {
+    heading:
+      "Creative Direction",
+
+    paragraphs: [
+      "The selected style stood out because of its simplicity, maturity and elegance. The forms were clean and easy to understand, but still carried enough detail to feel rich and expressive. This made the style suitable for devotional storytelling without making the illustrations look traditional in a predictable or outdated way.",
+
+      "The final direction focused on creating images that felt graceful, cinematic and visually interesting, while keeping the characters and environments grounded and respectful."
+    ],
+
+    images: [
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/Ref 1.jpg",
+
+        alt:
+          "Swaraseva creative direction reference 01"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/Ref 2.jpg",
+
+        alt:
+          "Swaraseva creative direction reference 02"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/Ref 3.jpg",
+
+        alt:
+          "Swaraseva creative direction reference 03"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/Ref 4.jpg",
+
+        alt:
+          "Swaraseva creative direction reference 04"
+      }
+    ]
+  },
+
+
+  challenge: {
+    heading:
+      "The Challenge",
+
+    items: [
+      "Finding An Illustration Style That Could Feel Devotional, Mature, Elegant And Suitable For A Modern Digital Platform.",
+
+      "Every Character, Gesture, Expression, Costume And Symbolic Detail Had To Stay Accurate To Its Cultural Reference.",
+
+      "The Final Artwork Needed To Feel Polished And Complete, While Still Preserving A Refined Unfinished Quality.",
+
+      "The Illustrations Had To Feel Dynamic And Visually Rich Without Becoming Over-Detailed, Dramatic Or Stylistically Inconsistent."
+    ]
+  },
+
+
+  keyDecisions: {
+    heading:
+      "Key Decisions",
+
+    items: [
+      "Semi-Real Human Faces",
+
+      "Accurate Devotional Symbolism",
+
+      "Refined, Thin Linework",
+
+      "Simplified Architectural Details",
+
+      "Consistent Finished-Unfinished Style Finish"
+    ]
+  },
+
+
+  finalOutputs: {
+    heading:
+      "Final Outputs",
+
+    images: [
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/1.jpg",
+
+        alt:
+          "Swaraseva Website final output 01"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/2.jpg",
+
+        alt:
+          "Swaraseva Website final output 02"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/3.jpg",
+
+        alt:
+          "Swaraseva Website final output 03"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/4.jpg",
+
+        alt:
+          "Swaraseva Website final output 04"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/5.jpg",
+
+        alt:
+          "Swaraseva Website final output 05"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Swaraseva/6.jpg",
+
+        alt:
+          "Swaraseva Website final output 06"
+      }
+    ]
+  }
+
+},
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Pooja Path",
+
+      industry:
+        "Religious / Devotional System",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-pooja-path",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Pooja.jpg",
+
+        alt:
+          "Pooja Path Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Pooja Path"
+    },
+
+    {
+      title:
+        "Kumbh 2027 - Book Jacket Visuals",
+
+      industry:
+        "Publishing / Spiritual Event",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-kumbh-2027",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Kumbh 2027.jpg",
+
+        alt:
+          "Kumbh 2027 Book Jacket thumbnail"
+      },
+
+      imageLabel:
+        "Kumbh 2027 - Book Jacket Visuals"
+    },
+
+    {
+      title:
+        "Book Cover Visuals",
+
+      industry:
+        "Publishing / Biography",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-autobiography-book-cover",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Book Cover Visuals.jpg",
+
+        alt:
+          "Autobiography Book Cover thumbnail"
+      },
+
+      imageLabel:
+        "Book Cover Visuals"
+    }
+  ]
+},
+
+
+/*-----------------------------------*\
+  #AI-ASSISTED DESIGN
+  #AUTOBIOGRAPHY BOOK COVER
+\*-----------------------------------*/
+
+"ai-assisted-design-autobiography-book-cover": {
+
+  title:
+    "Autobiography Book Cover",
+
+  fullTitle:
+    "Autobiography Book Cover",
+
+  category:
+    "AI-Assisted Design",
+
+  categorySlug:
+    "ai-assisted-design",
+
+  industry:
+    "Publishing / Biography",
+
+  projectType:
+    "AI-Assisted Book Cover Visuals",
+
+  layout:
+    "ux-case-study",
+
+  caseStudyVariant:
+    "ai-assisted-design",
+
+  role:
+    "Prompt Engineer",
+
+  deliverables:
+    "AI Visuals",
+
+  tools: [
+    {
+      name:
+        "ChatGPT",
+
+      icon:
+        "./assets/images/software Icons/ChatGPT_logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel:
+      "Portfolio",
+
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel:
+      "AI-Assisted Design",
+
+    categoryUrl:
+      "./index.html?section=portfolio&category=ai-assisted-design",
+
+    currentLabel:
+      "Autobiography Book Cover"
+  },
+
+  tabs: [
+  {
+    id: "about-project",
+    label: "About the Project"
+  },
+  {
+    id: "creative-direction",
+    label: "Creative Direction"
+  },
+  {
+    id: "the-challenge",
+    label: "The Challenge"
+  },
+  {
+    id: "key-decisions",
+    label: "Key Decisions"
+  },
+  {
+    id: "final-outputs",
+    label: "Final Outputs"
+  }
+],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Book Cover Visuals.jpg",
+
+      alt:
+        "Autobiography Book Cover desktop portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Mobile/Book Cover Visuals.jpg",
+
+      alt:
+        "Autobiography Book Cover mobile portfolio cover"
+    }
+  },
+
+  aiCaseStudy: {
+
+  about: {
+    heading:
+      "About The Project",
+
+    paragraphs: [
+      "This project was created as a memoir-style autobiography based on the life of Mahesh Babu’s father, who was closely associated with Dagdusheth Ganpati as one of its trustees. The book was designed to present his life journey through separate chapters, with each section capturing an important phase, memory or turning point from his personal & public life.",
+
+      "The visual approach had to be deeply sensitive and story-driven. Every image and design element needed to support the emotion of that particular chapter — whether it reflected family, devotion, responsibility, service, struggle or legacy.",
+
+      "At its heart, the project was not just about designing a book. It was about giving visual form to a life lived with purpose, faith and contribution."
+    ]
+  },
+
+
+  creativeDirection: {
+    heading:
+      "Creative Direction",
+
+    paragraphs: [
+      "An oil-painting style was chosen because it gave the illustrations a warm, mature and timeless quality.",
+
+      "Since the story followed Mahesh Bhau’s father from his childhood and reflected his upbringing and life journey, the artwork needed to feel connected to memory. Soft textures, controlled detail and a restrained colour palette helped create a vintage and nostalgic finish.",
+
+      "The final direction focused on emotional storytelling rather than visual complexity, allowing each illustration to feel personal, grounded and sincere."
+    ]
+  },
+
+
+  challenge: {
+    heading:
+      "The Challenge",
+
+    items: [
+      "Telling A Complete Life Moment Through One Single Illustration Without Depending On Heavy Symbolism Or Visual Complexity.",
+
+      "Each Scene Needed To Capture The Father’s Story, Emotion And Situation In A Clear And Immediate Way.",
+
+      "The Illustration Had To Feel Compact And Simple, While Still Carrying Enough Detail To Feel Complete And Meaningful.",
+
+      "The Final Artwork Needed To Balance Storytelling, Nostalgia And Warmth Without Becoming Overloaded Or Dramatic."
+    ]
+  },
+
+
+  keyDecisions: {
+    heading:
+      "Key Decisions",
+
+    items: [
+      "Compact Single-Scene Illustration",
+
+      "Oil Paint Finish",
+
+      "Simplified Surface Textures",
+
+      "Warm Nostalgic Tone",
+
+      "Emotion-Led Storytelling"
+    ]
+  },
+
+
+  finalOutputs: {
+    heading:
+      "Final Outputs",
+
+    images: [
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/1.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 01"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/2.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 02"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/3.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 03"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/4.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 04"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/5.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 05"
+      },
+      {
+        src:
+          "./assets/images/Portfolio/ai-assisted-design/Book/6.jpg",
+
+        alt:
+          "Autobiography Book Cover final output 06"
+      }
+    ]
+  }
+
+},
+
+  relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "Pooja Path",
+
+      industry:
+        "Religious / Devotional System",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-pooja-path",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Pooja.jpg",
+
+        alt:
+          "Pooja Path Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Pooja Path"
+    },
+
+    {
+      title:
+        "Swaraseva Website Visuals",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-swaraseva",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Swaraseva.jpg",
+
+        alt:
+          "Swaraseva Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Swaraseva Website Visuals"
+    },
+
+    {
+      title:
+        "IMEPL Website",
+
+      industry:
+        "Design / Advertising Agency",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-imepl-website",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/ime.jpg",
+
+        alt:
+          "IMEPL Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "IMEPL Website"
+    }
+  ]
+},
+
+
+"ai-assisted-design-kumbh-2027": {
+  title: "Kumbh 2027 - Book Jacket Visuals",
+  fullTitle: "Kumbh 2027 - Book Jacket Visuals",
+
+  category: "AI-Assisted Design",
+  categorySlug: "ai-assisted-design",
+
+  industry: "Publishing / Spiritual Event",
+  projectType: "AI-Assisted Design",
+
+  /*
+   * This tells the website to reuse
+   * the established UI/UX case-study system.
+   */
+  layout: "ux-case-study",
+  caseStudyVariant: "ai-assisted-design",
+
+  role: "Prompt Engineer",
+  deliverables: "Book Jacket, AI Images",
+
+  tools: [
+    {
+      name: "ChatGPT",
+      icon:
+        "./assets/images/software Icons/ChatGPT_logo.svg"
+    }
+  ],
+
+  breadcrumb: {
+    rootLabel: "Portfolio",
+
+    rootUrl:
+      "./index.html?section=portfolio",
+
+    categoryLabel:
+      "AI-Assisted Design",
+
+    categoryUrl:
+      "./index.html?section=portfolio&category=ai-assisted-design",
+
+    currentLabel:
+      "Kumbh 2027 - Book Jacket"
+  },
+
+  tabs: [
+    {
+      id: "about-project",
+      label: "About the Project",
+      desktopLabel: "About the<br>Project"
+    },
+    {
+      id: "creative-direction",
+      label: "Creative Direction",
+      desktopLabel: "Creative<br>Direction"
+    },
+    {
+      id: "the-challenge",
+      label: "The Challenge",
+      desktopLabel: "The<br>Challenge"
+    },
+    {
+      id: "key-decisions",
+      label: "Key Decisions",
+      desktopLabel: "Key<br>Decisions"
+    },
+    {
+      id: "final-outputs",
+      label: "Final Outputs",
+      desktopLabel: "Final<br>Outputs"
+    }
+  ],
+
+  hero: {
+    desktop: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Kumbh 2027.jpg",
+
+      alt:
+        "Kumbh 2027 AI-assisted book jacket portfolio cover"
+    },
+
+    mobile: {
+      src:
+        "./assets/images/Thumbnails/Ai Assisted Design/Mobile/Kumbh 2027.jpg",
+
+      alt:
+        "Kumbh 2027 AI-assisted book jacket mobile portfolio cover"
+    }
+  },
+
+  aiCaseStudy: {
+
+    about: {
+      heading:
+        "About The Project",
+
+      paragraphs: [
+        "This was a pitching project for Kumbh 2027, created for the authorities of Trimbakeshwar Temple.",
+
+        "The project carried a much larger context, as the Kumbh Mela is one of India’s most significant spiritual gatherings, bringing together faith, culture, administration & mass public participation on an extraordinary scale.",
+
+        "Because of the sheer size and importance of the festival, the planning and pitching process had to begin well in advance. The objective was to present a thoughtful and organized approach that could support an event of this magnitude — one that demanded not only creative thinking, but also sensitivity towards tradition, crowd experience & the spiritual importance of Trimbakeshwar."
+      ]
+    },
+
+    creativeDirection: {
+      heading:
+        "Creative Direction",
+
+      paragraphs: [
+        "The initial creative direction was set by my senior, who had identified a particular illustration style that he wanted the project to follow. My role was to study that style carefully and make individual visuals that fit into the Kumbh 2027 book jacket composition, while maintaining the right balance between detail, simplicity and visual consistency."
+      ],
+
+      images: [
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/Ref 1.jpg",
+
+          alt:
+            "Kumbh 2027 creative direction reference 01"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/Ref 2.jpg",
+
+          alt:
+            "Kumbh 2027 creative direction reference 02"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/Ref 3.jpg",
+
+          alt:
+            "Kumbh 2027 creative direction reference 03"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/Ref 4.jpg",
+
+          alt:
+            "Kumbh 2027 creative direction reference 04"
+        }
+      ]
+    },
+
+    challenge: {
+      heading:
+        "The Challenge",
+
+      items: [
+        "Creating A Detailed Yet Minimal Black-And-White Illustration Style, Supported By Very Soft And Muted Colours.",
+
+        "All Outputs Needed To Be According To The Reference, In Terms Of Stroke Width, Line Length, Outlines & Proportions.",
+
+        "Small Facial Expressions, Body Proportions & Architectural Details Also Had To Stay Accurate To The Reference Images.",
+
+        "The Illustration Needed Enough Detail To Feel Refined, But Not So Many Lines That It Became Over-Rendered."
+      ]
+    },
+
+    keyDecisions: {
+      heading:
+        "Key Decisions",
+
+      items: [
+        "Forensic Accuracy",
+
+        "Preserve Source Imperfections",
+
+        "Ink-Leaning Hard Line Drawing",
+
+        "Paper Balance: Airy And Balanced",
+
+        "Same Artist Finish"
+      ]
+    },
+
+    finalOutputs: {
+      heading:
+        "Final Outputs",
+
+      images: [
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/1.jpg",
+
+          alt:
+            "Kumbh 2027 final output 01"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/2.jpg",
+
+          alt:
+            "Kumbh 2027 final output 02"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/3.jpg",
+
+          alt:
+            "Kumbh 2027 final output 03"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/4.jpg",
+
+          alt:
+            "Kumbh 2027 final output 04"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/5.jpg",
+
+          alt:
+            "Kumbh 2027 final output 05"
+        },
+        {
+          src:
+            "./assets/images/Portfolio/ai-assisted-design/Kumbh/6.jpg",
+
+          alt:
+            "Kumbh 2027 final output 06"
+        }
+      ]
+    }
+  },
+
+relatedProjectsTitle:
+    "View Other Projects",
+
+  relatedProjects: [
+    {
+      title:
+        "IMEPL Website",
+
+      industry:
+        "Design / Advertising Agency",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-imepl-website",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/ime.jpg",
+
+        alt:
+          "IMEPL Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "IMEPL Website"
+    },
+
+    {
+      title:
+        "Swaraseva Website Visuals",
+
+      industry:
+        "Religious / Devotional Organisation",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-swaraseva",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Swaraseva.jpg",
+
+        alt:
+          "Swaraseva Website Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Swaraseva Website Visuals"
+    },
+
+    {
+      title:
+        "Pooja Path",
+
+      industry:
+        "Religious / Devotional System",
+
+      url:
+        "./portfolio-detail.html?project=ai-assisted-design-pooja-path",
+
+      image: {
+        src:
+          "./assets/images/Thumbnails/Ai Assisted Design/Pooja.jpg",
+
+        alt:
+          "Pooja Path Visuals thumbnail"
+      },
+
+      imageLabel:
+        "Pooja Path"
+    }
+  ]
+},
+
+	
+	
 "graphic-design-dagdushet-ganpati": {
   title: "Dagdushet Ganpati",
   fullTitle: "Shrimant Dagdusheth Halwai Ganpati",
