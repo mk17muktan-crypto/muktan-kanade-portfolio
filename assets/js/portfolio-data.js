@@ -1871,7 +1871,7 @@ gallerySections: [
           },
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/GU-2025-Image-1.jpg",
-            alt: "Ganesh Utsav 2025 creative 01"
+            alt: "Ganesh Utsav 2025 creative 02"
           },
           {
             src: "./assets/images/Portfolio/Graphic Design/DG/GU-2026-Image-3.jpg",
