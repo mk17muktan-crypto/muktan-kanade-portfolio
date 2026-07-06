@@ -353,23 +353,500 @@ if (filterBtn.length > 0) {
 }
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+/*-----------------------------------*\
+  #WORKING CONTACT FORM
+\*-----------------------------------*/
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+const form =
+  document.querySelector(
+    "[data-form]"
+  );
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
+
+const formInputs =
+  form
+    ? form.querySelectorAll(
+        "[data-form-input]"
+      )
+    : [];
+
+
+const formBtn =
+  form
+    ? form.querySelector(
+        "[data-form-btn]"
+      )
+    : null;
+
+
+const formBtnText =
+  form
+    ? form.querySelector(
+        "[data-form-btn-text]"
+      )
+    : null;
+
+
+const formStatus =
+  form
+    ? form.querySelector(
+        "[data-form-status]"
+      )
+    : null;
+
+
+/*
+ * This function is replaced later by
+ * the custom interest selector.
+ *
+ * After a successful submission, it
+ * clears the visible service tags.
+ */
+
+let resetContactInterest =
+  function () {};
+
+
+let contactFormIsSubmitting =
+  false;
+
+
+/*
+ * Show an accessible message below
+ * the button.
+ */
+
+const setContactFormStatus =
+  function (
+    message,
+    statusType
+  ) {
+
+    if (!formStatus) return;
+
+
+    formStatus.textContent =
+      message || "";
+
+
+    formStatus.classList.remove(
+      "is-success",
+      "is-error",
+      "is-info"
+    );
+
+
+    if (statusType) {
+      formStatus.classList.add(
+        "is-" + statusType
+      );
     }
 
-  });
+  };
+
+
+/*
+ * The submit button becomes active only
+ * when:
+ *
+ * - all normal fields are valid
+ * - at least one service is selected
+ * - the form is not already submitting
+ */
+
+const updateContactFormButton =
+  function () {
+
+    if (
+      !form ||
+      !formBtn
+    ) {
+      return;
+    }
+
+
+    const interestInput =
+      form.querySelector(
+        ".interest-hidden-input"
+      );
+
+
+    const hasSelectedInterest =
+      Boolean(
+        interestInput &&
+        interestInput.value.trim()
+      );
+
+
+    const formIsValid =
+      form.checkValidity() &&
+      hasSelectedInterest;
+
+
+    formBtn.disabled =
+      !formIsValid ||
+      contactFormIsSubmitting;
+
+  };
+
+
+/*
+ * Recheck the form whenever any field
+ * changes.
+ */
+
+for (
+  let i = 0;
+  i < formInputs.length;
+  i++
+) {
+
+  formInputs[i].addEventListener(
+    "input",
+    updateContactFormButton
+  );
+
+
+  formInputs[i].addEventListener(
+    "change",
+    updateContactFormButton
+  );
+
+}
+
+
+/*
+ * Submit the form to Web3Forms without
+ * leaving the portfolio website.
+ */
+
+if (form) {
+
+  form.addEventListener(
+    "submit",
+    function (event) {
+
+      event.preventDefault();
+
+
+      if (contactFormIsSubmitting) {
+        return;
+      }
+
+
+      const interestInput =
+        form.querySelector(
+          ".interest-hidden-input"
+        );
+
+
+      const customInterestSelect =
+        form.querySelector(
+          "[data-custom-select]"
+        );
+
+
+      const customInterestTrigger =
+        form.querySelector(
+          "[data-custom-select-trigger]"
+        );
+
+
+      /*
+       * Validate the custom interest field.
+       */
+
+      if (
+        !interestInput ||
+        !interestInput.value.trim()
+      ) {
+
+        if (customInterestSelect) {
+
+          customInterestSelect.classList.add(
+            "active",
+            "is-invalid"
+          );
+
+        }
+
+
+        if (customInterestTrigger) {
+
+          customInterestTrigger.setAttribute(
+            "aria-expanded",
+            "true"
+          );
+
+          customInterestTrigger.focus();
+
+        }
+
+
+        setContactFormStatus(
+          "Please select at least one service.",
+          "error"
+        );
+
+
+        updateContactFormButton();
+
+        return;
+
+      }
+
+
+      /*
+       * Validate the normal HTML fields.
+       */
+
+      if (!form.checkValidity()) {
+
+        form.reportValidity();
+
+        updateContactFormButton();
+
+        return;
+
+      }
+
+
+      contactFormIsSubmitting =
+        true;
+
+
+      formBtn.classList.add(
+        "is-sending"
+      );
+
+
+      formBtn.setAttribute(
+        "aria-busy",
+        "true"
+      );
+
+
+      formBtn.disabled =
+        true;
+
+
+      if (formBtnText) {
+
+        formBtnText.textContent =
+          "Sending...";
+
+      }
+
+
+      setContactFormStatus(
+        "Sending your message...",
+        "info"
+      );
+
+
+      /*
+       * Convert the form fields into
+       * a normal JavaScript object.
+       *
+       * This replaces Object.fromEntries,
+       * which is also newer JavaScript.
+       */
+
+      const formData =
+        new FormData(form);
+
+
+      const formObject = {};
+
+
+      formData.forEach(
+        function (value, key) {
+
+          if (
+            Object.prototype
+              .hasOwnProperty.call(
+                formObject,
+                key
+              )
+          ) {
+
+            if (
+              !Array.isArray(
+                formObject[key]
+              )
+            ) {
+
+              formObject[key] = [
+                formObject[key]
+              ];
+
+            }
+
+
+            formObject[key].push(
+              value
+            );
+
+          } else {
+
+            formObject[key] =
+              value;
+
+          }
+
+        }
+      );
+
+
+      /*
+       * Reset the button after either
+       * a successful or failed request.
+       */
+
+      const finishContactSubmission =
+        function () {
+
+          contactFormIsSubmitting =
+            false;
+
+
+          formBtn.classList.remove(
+            "is-sending"
+          );
+
+
+          formBtn.removeAttribute(
+            "aria-busy"
+          );
+
+
+          if (formBtnText) {
+
+            formBtnText.textContent =
+              "Send Message";
+
+          }
+
+
+          updateContactFormButton();
+
+        };
+
+
+      /*
+       * Submit to Web3Forms.
+       *
+       * Promise syntax is being used
+       * instead of async and await so the
+       * editor parser can understand it.
+       */
+
+            fetch(
+        form.action,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/json",
+
+            "Accept":
+              "application/json"
+          },
+
+          body:
+            JSON.stringify(
+              formObject
+            )
+        }
+      )
+
+
+        .then(
+          function (response) {
+
+            return response
+              .json()
+
+              .then(
+                function (result) {
+
+                  return {
+                    response: response,
+                    result: result
+                  };
+
+                }
+              );
+
+          }
+        )
+
+
+        .then(
+          function (payload) {
+
+            if (
+              !payload.response.ok ||
+              payload.result.success !== true
+            ) {
+
+              throw new Error(
+                payload.result.message ||
+                "The form could not be submitted."
+              );
+
+            }
+
+
+            /*
+             * Successful submission.
+             */
+
+            form.reset();
+
+            resetContactInterest();
+
+
+            setContactFormStatus(
+              "Your message has been sent successfully. I’ll get back to you soon.",
+              "success"
+            );
+
+          }
+        )
+
+
+        .catch(
+          function () {
+
+            setContactFormStatus(
+              "Your message could not be sent. Please try again, or contact me directly by email.",
+              "error"
+            );
+
+          }
+        )
+
+
+        .then(
+          function () {
+
+            finishContactSubmission();
+
+          }
+        );
+
+    }
+  );
+
+
+  /*
+   * Set the initial button state.
+   */
+
+  updateContactFormButton();
+
 }
 
 /*-----------------------------------*\
@@ -850,7 +1327,50 @@ if (customSelect) {
 
   let selectedOptions = [];
 
-  const updateSelectedTags = function () {
+
+/*
+ * Clear all selected service tags after
+ * the form has been sent successfully.
+ */
+
+resetContactInterest =
+  function () {
+
+    selectedOptions = [];
+
+
+    for (
+      let i = 0;
+      i < customSelectOptions.length;
+      i++
+    ) {
+
+      customSelectOptions[i]
+        .classList.remove(
+          "selected"
+        );
+
+    }
+
+
+    customSelect.classList.remove(
+      "active",
+      "is-invalid"
+    );
+
+
+    customSelectTrigger.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+
+    updateSelectedTags();
+
+  };
+
+
+const updateSelectedTags = function () {
     selectedTagsContainer.innerHTML = "";
 
     if (selectedOptions.length === 0) {
@@ -870,14 +1390,64 @@ if (customSelect) {
       }
     }
 
-    interestHiddenInput.value = selectedOptions.join(", ");
-    interestHiddenInput.dispatchEvent(new Event("input", { bubbles: true }));
-    interestHiddenInput.dispatchEvent(new Event("change", { bubbles: true }));
+    interestHiddenInput.value =
+  selectedOptions.join(", ");
+
+
+/*
+ * Remove the red validation state as soon
+ * as the visitor selects a service.
+ */
+
+if (selectedOptions.length > 0) {
+
+  customSelect.classList.remove(
+    "is-invalid"
+  );
+
+}
+
+
+interestHiddenInput.dispatchEvent(
+  new Event(
+    "input",
+    {
+      bubbles: true
+    }
+  )
+);
+
+
+interestHiddenInput.dispatchEvent(
+  new Event(
+    "change",
+    {
+      bubbles: true
+    }
+  )
+);
   };
 
-  customSelectTrigger.addEventListener("click", function () {
-    customSelect.classList.toggle("active");
-  });
+  customSelectTrigger.addEventListener(
+  "click",
+  function () {
+
+    customSelect.classList.toggle(
+      "active"
+    );
+
+
+    customSelectTrigger.setAttribute(
+      "aria-expanded",
+      customSelect.classList.contains(
+        "active"
+      )
+        ? "true"
+        : "false"
+    );
+
+  }
+);
 
   for (let i = 0; i < customSelectOptions.length; i++) {
     customSelectOptions[i].addEventListener("click", function () {
@@ -920,11 +1490,30 @@ if (customSelect) {
     updateSelectedTags();
   });
 
-  document.addEventListener("click", function (event) {
-    if (!customSelect.contains(event.target)) {
-      customSelect.classList.remove("active");
+  document.addEventListener(
+  "click",
+  function (event) {
+
+    if (
+      !customSelect.contains(
+        event.target
+      )
+    ) {
+
+      customSelect.classList.remove(
+        "active"
+      );
+
+
+      customSelectTrigger.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
     }
-  });
+
+  }
+);
 
   updateSelectedTags();
 }
